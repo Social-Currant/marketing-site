@@ -1,48 +1,66 @@
-<template>
+<template class="z-0">
   <div class="bg-primary h-[61px]">
-    <div class="container mx-auto px-8 h-full flex items-center">
+    <div class="container mx-auto px-4 h-full flex items-center">
       <div class="grow text-center">
-        <p class="font-bold text-white">
+        <p class="font-semibold text-white">
           <a href="" class="underline text-secondary">Sign up</a> for our
           newsletter for updates + previews of new platform features!
         </p>
       </div>
-      <div class="flex-none">
+      <div class="flex-none hidden md:block">
         <img src="~/assets/icons/close.svg" />
       </div>
     </div>
   </div>
-  <header class="container mx-auto px-8 mt-[54px] sticky top-0 bg-white">
-    <div class="flex items-center">
-      <h1 class="text-2xl font-bold underline grow">
+  <header
+    class="mt-[16px] md:mt-[54px] sticky top-0 bg-white"
+  >
+    <div class="container mx-auto px-8 flex items-center bg-white z-50">
+      <h1 class="grow">
         <img src="~/assets/images/currant-logo.svg" />
       </h1>
-      <div class="flex nav-links">
-        <a v-for="link in headerLinks" href="" class="hover:underline ml-[24px] text-[20px]">{{
-          link.text
-        }}</a>
+      <div class="flex nav-links hidden md:block">
+        <a
+          v-for="link in headerLinks"
+          href=""
+          class="hover:underline ml-[24px] text-[20px]"
+          >{{ link.text }}</a
+        >
       </div>
-      <div class="ml-[44px]">
+      <div class="ml-[44px] hidden md:block">
         <button
           class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
         >
           Get Started
         </button>
       </div>
+      <div
+        class="block sm:hidden cursor-pointer"
+        @click="headerOverlay = !headerOverlay"
+      >
+        <img src="~/assets/icons/hamburger.svg" />
+      </div>
     </div>
+    <HeaderOverlay
+      v-if="headerOverlay"
+      @close="headerOverlay = false"
+    ></HeaderOverlay>
   </header>
   <!-- Section First Impression -->
   <section class="container mx-auto px-8 mt-[71px]">
     <div class="grid md:grid-cols-2">
       <div class="md:order-last">
-        <img
-          src="~/assets/images/hero-placeholder.svg"
-          class="float-right mr-16"
-        />
-        <img
-          src="~/assets/icons/dots-bg-hero.svg"
-          class="hero-dots w-96 h-96"
-        />
+        <div class="relative">
+          <img
+            src="~/assets/images/hero-placeholder.svg"
+            class="md:float-right mx-auto"
+          />
+          <img
+            src="~/assets/icons/dots-bg-hero.svg"
+            class="hero-dots w-96 h-96"
+            style="position: absolute; top: 40%"
+          />
+        </div>
       </div>
       <div class="md:order-first">
         <h2 class="font-bold text-[38px] text-primary">
@@ -75,15 +93,31 @@
   <!-- How it works -->
   <section class="container mx-auto px-8 mt-[105px]">
     <h3
-      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold"
+      class="uppercase text-center text-primary text-[50px] font-semibold leading-10"
     >
-      How it works?
+      How it works
     </h3>
-    <img src="~/assets/images/how-it-works.svg" class="mx-auto mt-[74px]" />
+    <img
+      src="~/assets/images/how-it-works.svg"
+      class="mx-auto mt-[74px] hidden md:block"
+    />
     <div class="grid md:grid-cols-3 gap-x-16">
       <div>
-        <h4 class="text-3xl">Step 1</h4>
-        <h5 class="font-semibold mt-[20px]">Outline Your Goals</h5>
+        <img
+          src="~/assets/icons/step1.svg"
+          class="block sm:hidden mt-[32px] mx-auto mb-8"
+          style="width: 250px"
+        />
+        <h4
+          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+        >
+          Step 1
+        </h4>
+        <h5
+          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+        >
+          Outline Your Goals
+        </h5>
         <p class="mt-4">
           We know you have a lot of great ideas but not a lot of time. Our two
           step process allows for you to quickly outline your campaign, goals
@@ -91,8 +125,21 @@
         </p>
       </div>
       <div>
-        <h4 class="text-3xl">Step 2</h4>
-        <h5 class="font-semibold mt-[20px]">Review Your Matches</h5>
+        <img
+          src="~/assets/icons/step2.svg"
+          class="block sm:hidden mt-[32px] mx-auto"
+          style="width: 250px"
+        />
+        <h4
+          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+        >
+          Step 2
+        </h4>
+        <h5
+          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+        >
+          Review Your Matches
+        </h5>
         <p class="mt-4">
           Let us work our magic. Then it’s your turn to review your personalized
           creator matches with information on their issue area, audience, and
@@ -100,8 +147,22 @@
         </p>
       </div>
       <div>
-        <h4 class="text-3xl">Step 3</h4>
-        <h5 class="font-semibold mt-[20px]">Run Your Campaign</h5>
+        <img
+          src="~/assets/icons/step3.svg"
+          class="block sm:hidden mt-[32px] mx-auto"
+          style="width: 250px"
+        />
+        <h4
+          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+        >
+          Step 3
+        </h4>
+        <h5
+          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+        >
+          Run Your Campaign
+        </h5>
+
         <p class="mt-4">
           We have your back! Let us make it easy for you to manage your creator
           campaigns with automating contracts, payments, and more all in one
@@ -115,7 +176,7 @@
   <!-- Get Involved -->
   <section class="container mx-auto px-8 mt-[105px]">
     <h3
-      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold"
+      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-10"
     >
       Get Involved
     </h3>
@@ -145,8 +206,10 @@
         Creators
       </div>
     </div>
-    <div class="grid grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8">
-      <div>
+    <div
+      class="grid md:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8"
+    >
+      <div class="mb-12">
         <img :src="activeCarouselImagePath" />
         <div class="flex mt-8 justify-center">
           <div
@@ -182,10 +245,17 @@
 
   <!-- About Us -->
   <section class="container mx-auto px-8 mt-32">
+    <div>
+      <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
+    </div>
     <div class="flex flex-row-reverse">
       <div class="w-[500px]">
-        <h4 class="uppercase text-[50px] text-primary font-semibold">About Us</h4>
-        <p class="mb-4 mt-4 uppercase text-[20px] font-semibold text-primary">From D.C. to across the world!</p>
+        <h4 class="uppercase text-[50px] text-primary font-semibold leading-10">
+          About Us
+        </h4>
+        <p class="mb-4 mt-4 uppercase text-[20px] font-semibold text-primary">
+          From D.C. to across the world!
+        </p>
         <p>
           We’re a creator led platform and managed service focusing on making a
           different through the power of social media. Once described by the New
@@ -194,12 +264,13 @@
           about.
         </p>
       </div>
-      <div>
-        <img src="~/assets/icons/about-us-egg-left.svg" style="position: absolute; left: 0%; z-index: -1; height: 800px; width: 800px">
-      </div>
     </div>
     <div class="flex">
-      <h4 class="uppercase text-primary font-semibold mt-32 text-[38px]">Meet the Team</h4>
+      <h4
+        class="uppercase text-primary font-semibold mt-32 text-[38px] leading-10"
+      >
+        Meet the Team
+      </h4>
     </div>
     <!-- First Row - Team Members -->
     <div class="flex justify-center mb-4 mt-16">
@@ -222,10 +293,175 @@
       </div>
     </div>
   </section>
+  <div class="container mx-auto px-8 mt-16 relative">
+    <img
+      src="~/assets/icons/about-us-line-left.svg"
+      style="position: absolute; left: -100px"
+      class="z-0"
+    />
+    <img
+      src="~/assets/icons/about-us-line-right.svg"
+      style="position: absolute; right: -100px"
+    />
+  </div>
   <!-- / About Us -->
+  <!-- Ways to Apply Social Currant -->
+  <section class="container mx-auto px-8 mt-64">
+    <h3 class="uppercase text-primary text-[50px] font-semibold leading-10">
+      Ways to Apply Social Currant
+    </h3>
+    <div>
+      <img
+        src="~/assets/images/apply/gradient.svg"
+        style="position: absolute; right: 0; z-index: -1; height: 420px; width: 100%;"
+      />
+    </div>
+    <div class="grid grid-cols-3 gap-4 mt-24">
+      <div class="col-span-2">
+        <!-- Persuasion -->
+        <div class="flex mt-16">
+          <div class="mr-3">
+            <img src="~/assets/images/apply/persuasion.png" />
+          </div>
+          <div>
+            <h4 class="font-semibold text-[28px]">
+              Persuasion & Narrative Change
+            </h4>
+          </div>
+        </div>
+        <p class="mr-32 mt-2">
+          Identify creators from the communities you’re trying to reach and have
+          them share their lived experiences around your issues to change
+          narrative and persuade audiences.
+        </p>
+        <!-- Activation -->
+        <div class="flex mt-16">
+          <div class="mr-3">
+            <img src="~/assets/images/apply/activation.png" />
+          </div>
+          <div>
+            <h4 class="font-semibold text-[28px]">Activation</h4>
+          </div>
+        </div>
+        <p class="mr-32 mt-2">
+          Find creators good at driving their followers to take action and work
+          with them to activate petition signatures, calls to representatives
+          and more.
+        </p>
+        <!-- Ads -->
+        <div class="flex mt-16">
+          <div class="mr-3">
+            <img src="~/assets/images/apply/ads.png" />
+          </div>
+          <div>
+            <h4 class="font-semibold text-[28px]">
+              Ads & Other Comms Strategies
+            </h4>
+          </div>
+        </div>
+        <p class="mr-32 mt-2">
+          Identify creators who create high converting content and work with
+          them to produce ads and other forms of creative.
+        </p>
+        <!-- Build -->
+        <div class="flex mt-16">
+          <div class="mr-3">
+            <img src="~/assets/images/apply/build.png" />
+          </div>
+          <div>
+            <h4 class="font-semibold text-[28px]">
+              Build an integrated strategy
+            </h4>
+          </div>
+        </div>
+        <p class="mr-32 mt-2">
+          Build an integrated communications strategy that leverages creators to
+          create content, serve as strategic partners, talk to press and a lot
+          more through our platform.
+        </p>
+        <button
+          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+        >
+          Get Started
+        </button>
+      </div>
+      <div>
+        <img src="~/assets/images/apply/phone.png" class="mt-[60px] mx-auto" />
+      </div>
+    </div>
+  </section>
+  <!-- What people are saying -->
+  <section class="container mx-auto px-8 mt-32">
+    <h3 class="uppercase text-center text-primary text-[50px] font-semibold leading-10">
+      What people are saying
+    </h3>
+    <div class="relative">
+      <div class="absolute" style="right: 0; z-index: -1; top: -90px;">
+        <img src="~/assets/icons/gradient-circle.svg" class="h-48 circle-gradient opacity-30" style="width: 600px;" />
+      </div>
+    </div>
+    <div class="flex mt-16 justify-center">
+      <div v-for="n in 4" class="mx-8">
+        <img src="~/assets/icons/review.svg" class="z-20" />
+      </div>
+    </div>
+    <div class="flex mt-8 items-center justify-center">
+      <div v-for="n in 3" class="mx-8">
+        <img src="~/assets/icons/review.svg" class="z-20" />
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute" style="left: 0; z-index: -1; top: -90px;">
+        <img src="~/assets/icons/gradient-circle.svg" class="h-48 circle-gradient opacity-30"  style="width: 600px;" />
+      </div>
+    </div>
+  </section>
 
-  <!-- test footer -->
-  <div class="mt-64"></div>
+  <!-- footer -->
+  <footer class="bg-primary text-white min-h-full relative mt-84">
+    <div class="container mx-auto px-8 mt-48 pt-32">
+      <!-- Sign Up Links -->
+      <div
+        class="bg-white text-black container mx-auto px-8 absolute w-full drop-shadow-md rounded-lg mx-auto py-8"
+        style="bottom: 90%;"
+      >
+        <div class="flex justify-between items-center">
+          <div>
+            <h4 class="text-[50px] font-bold">It's Time To Invest In People.</h4>
+            <p>Work with creators today!</p>
+          </div>
+          <div>
+            <button
+              class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+            >
+              Sign up for a Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="uppercase text-[18px] font-semibold">We can help you connect with creators</div>
+      <h4 class="text-3xl md:w-2/4  mt-16 font-semibold">Stay updated on all things trending in the influencer space.</h4>
+
+      <div class="my-16">
+        <label for="name" class="block mb-2 text-gray-700">Email Address</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your Email Address"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div class="flex">
+        <div v-for="social in [linkedin, facebook, instagram, twitter]">
+          <img :src="social" class="mx-1" />
+        </div>
+      </div>
+      <hr class="border-white my-12">
+      <img src="~/assets/icons/logo-footer.svg">
+      <p class="py-8">A platform by Social Currant.</p>
+    </div>
+  </footer>
 </template>
 
 <script setup>
@@ -241,6 +477,12 @@ import brandOne from "~/assets/images/brands/1.png";
 import brandTwo from "~/assets/images/brands/2.png";
 import brandThree from "~/assets/images/brands/3.png";
 
+// social icons
+import linkedin from "~/assets/icons/social/li.svg";
+import facebook from "~/assets/icons/social/fb.svg";
+import instagram from "~/assets/icons/social/ig.svg";
+import twitter from "~/assets/icons/social/tw.svg";
+
 import commChangeAction from "~/assets/images/hero-carousel/comm-change-action.png";
 import nextGenAmerica from "~/assets/images/hero-carousel/nextgen-america.png";
 import capitolHistorical from "~/assets/images/hero-carousel/capitol-historical.png";
@@ -252,6 +494,8 @@ useHead({
   title: "Currant | Creator Marketing Simplified",
   meta: [{ name: "description", content: "Social Currant." }],
 });
+
+const headerOverlay = ref(false);
 
 const activeBrandImageIndex = ref(1);
 const activeBrandCreatorSelector = ref("Brands");
@@ -347,11 +591,29 @@ const headerLinks = [
 <style scoped lang="scss">
 .hero-dots {
   position: absolute;
-  right: 0%;
+  right: -15%;
   top: 65.5%;
   transform: rotate(-34.49deg);
   z-index: -1;
-  height: 400px;
-  height: 400px;
+  height: 45rem;
+}
+
+.egg-left {
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  height: 680px;
+  width: 800px;
+}
+.circle-gradient {
+  background: #80A3EB;
+  filter: blur(250px);
+}
+.gradient-wrapper {
+  width: 354px;
+  height: 352px;
+  left: -70px;
+  top: 5015px;
+  z-index: -10;
 }
 </style>
