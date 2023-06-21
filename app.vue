@@ -41,7 +41,9 @@
     </div>
     <HeaderOverlay
       v-show="headerOverlay"
+      :header-nav-links="headerLinks"
       @close="headerOverlay = false"
+      @scrollDiv="scrollToDiv"
       class="z-50"
     ></HeaderOverlay>
   </header>
@@ -178,7 +180,7 @@
   <div id="getInvolved"></div>
   <section class="container mx-auto px-8 mt-[105px]">
     <h3
-      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-10"
+      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-tight"
     >
       Get Involved
     </h3>
@@ -253,7 +255,7 @@
     </div>
     <div class="flex flex-col md:flex-row-reverse">
       <div class="w-[500px]">
-        <h4 class="uppercase text-[50px] text-primary font-semibold leading-10">
+        <h4 class="uppercase text-[50px] text-primary font-semibold leading-tight">
           About Us
         </h4>
         <p class="mb-4 mt-4 uppercase text-[20px] font-semibold text-primary">
@@ -270,7 +272,7 @@
     </div>
     <div class="flex">
       <h4
-        class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-10"
+        class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-tight"
       >
         Meet the Team
       </h4>
@@ -645,27 +647,22 @@ const teamSecondRow = [
 const headerLinks = [
   {
     text: "How it works",
-    link: "/",
     scrollTo: "howItWorks"
   },
   {
     text: "Brands",
-    link: "/",
     scrollTo: "getInvolved"
   },
   {
     text: "Creators",
-    link: "/",
     scrollTo: "getInvolved"
   },
   {
     text: "About Us",
-    link: "/",
     scrollTo: "aboutUs"
   },
   {
     text: "How can we help",
-    link: "/",
     scrollTo: "help"
   },
 ];
