@@ -12,33 +12,53 @@
       </div>
     </div>
   </div>
-  <header class="mt-[16px] md:mt-[54px] sticky top-0 bg-white">
+  <header class="mt-[16px] md:mt-[54px] sticky top-0 bg-white z-50">
     <div class="container mx-auto px-8 flex items-center bg-white z-50">
       <h1 class="grow">
         <img src="~/assets/images/currant-logo.svg" />
       </h1>
       <div class="flex nav-links hidden md:block">
-        <a v-for="link in headerLinks" href="" class="hover:underline ml-[24px] text-[20px]">{{ link.text }}</a>
+        <a
+          v-for="link in headerLinks"
+          class="hover:text-primary hover:font-medium ml-[24px] text-[20px] cursor-pointer"
+          @click="scrollToDiv(link.scrollTo, link.text)"
+          >{{ link.text }}</a
+        >
       </div>
       <div class="ml-[44px] hidden md:block">
         <button
-          class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg">
+          class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+        >
           Get Started
         </button>
       </div>
-      <div class="block sm:hidden cursor-pointer" @click="headerOverlay = !headerOverlay">
+      <div
+        class="block md:hidden cursor-pointer"
+        @click="headerOverlay = !headerOverlay"
+      >
         <img src="~/assets/icons/hamburger.svg" />
       </div>
     </div>
-    <HeaderOverlay v-if="headerOverlay" @close="headerOverlay = false"></HeaderOverlay>
+    <HeaderOverlay
+      v-show="headerOverlay"
+      @close="headerOverlay = false"
+      class="z-50"
+    ></HeaderOverlay>
   </header>
   <!-- Section First Impression -->
   <section class="container mx-auto px-8 mt-[71px]">
     <div class="grid md:grid-cols-2">
       <div class="md:order-last">
         <div class="relative">
-          <img src="~/assets/images/hero-placeholder.svg" class="md:float-right mx-auto" />
-          <img src="~/assets/icons/dots-bg-hero.svg" class="hero-dots w-96 h-96" style="position: absolute; top: 40%" />
+          <img
+            src="~/assets/images/hero-placeholder.svg"
+            class="md:float-right mx-auto mb-8 md:mb-0"
+          />
+          <img
+            src="~/assets/icons/dots-bg-hero.svg"
+            class="hero-dots w-96 h-96"
+            style="position: absolute; top: 40%"
+          />
         </div>
       </div>
       <div class="md:order-first">
@@ -61,8 +81,8 @@
   <!-- / - Section First Impression -->
   <!-- Organization carousel -->
   <section class="container mx-auto px-8 mt-[83px]">
-    <div class="flex flex-col md:flex-row items-center">
-      <div v-for="image in heroCarouselImages" class="grow">
+    <div class="flex flex-wrap md:flex-nowrap items-center justify-center">
+      <div v-for="image in heroCarouselImages" class="my-4">
         <img :src="image" class="w-200 mx-4" />
       </div>
     </div>
@@ -71,18 +91,32 @@
   <!-- /  Organization carousel -->
 
   <!-- How it works -->
+  <div id="howItWorks"></div>
   <section class="container mx-auto px-8 mt-[105px]">
-    <h3 class="uppercase text-center text-primary text-[50px] font-semibold leading-10">
+    <h3
+      class="uppercase text-center text-primary text-[32px] font-semibold leading-tight"
+    >
       How it works
     </h3>
-    <img src="~/assets/images/how-it-works.svg" class="mx-auto mt-[74px] hidden md:block" />
+    <img
+      src="~/assets/images/how-it-works.svg"
+      class="mx-auto mt-[74px] hidden md:block"
+    />
     <div class="grid md:grid-cols-3 gap-x-16">
       <div>
-        <img src="~/assets/icons/step1.svg" class="block sm:hidden mt-[32px] mx-auto mb-8" style="width: 250px" />
-        <h4 class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]">
+        <img
+          src="~/assets/icons/step1.svg"
+          class="block md:hidden mt-[32px] mx-auto mb-8"
+          style="width: 250px"
+        />
+        <h4
+          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+        >
           Step 1
         </h4>
-        <h5 class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]">
+        <h5
+          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+        >
           Outline Your Goals
         </h5>
         <p class="mt-4">
@@ -92,11 +126,19 @@
         </p>
       </div>
       <div>
-        <img src="~/assets/icons/step2.svg" class="block sm:hidden mt-[32px] mx-auto" style="width: 250px" />
-        <h4 class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]">
+        <img
+          src="~/assets/icons/step2.svg"
+          class="block md:hidden mt-[32px] mx-auto"
+          style="width: 250px"
+        />
+        <h4
+          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+        >
           Step 2
         </h4>
-        <h5 class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]">
+        <h5
+          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+        >
           Review Your Matches
         </h5>
         <p class="mt-4">
@@ -106,11 +148,19 @@
         </p>
       </div>
       <div>
-        <img src="~/assets/icons/step3.svg" class="block sm:hidden mt-[32px] mx-auto" style="width: 250px" />
-        <h4 class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]">
+        <img
+          src="~/assets/icons/step3.svg"
+          class="block md:hidden mt-[32px] mx-auto"
+          style="width: 250px"
+        />
+        <h4
+          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+        >
           Step 3
         </h4>
-        <h5 class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]">
+        <h5
+          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+        >
           Run Your Campaign
         </h5>
 
@@ -125,30 +175,55 @@
   </section>
   <!-- / - How it works -->
   <!-- Get Involved -->
+  <div id="getInvolved"></div>
   <section class="container mx-auto px-8 mt-[105px]">
-    <h3 class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-10">
+    <h3
+      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-10"
+    >
       Get Involved
     </h3>
-    <div class="grid grid-cols-2 mt-[74px] rounded-lg content-center border-[3px] border-purple border-solid">
-      <div class="text-center text-[28px] cursor-pointer py-4 text-black" :class="activeBrandCreatorSelector === 'Brands'
-          ? `bg-primary rounded-tl-md rounded-bl-md text-white`
-          : ``
-        " @click="activeBrandCreatorSelector = 'Brands'">
+    <div
+      class="grid grid-cols-2 mt-[74px] rounded-lg content-center border-[3px] border-purple border-solid"
+    >
+      <div
+        class="text-center text-[28px] cursor-pointer py-4 text-black"
+        :class="
+          activeBrandCreatorSelector === 'Brands'
+            ? `bg-primary rounded-tl-md rounded-bl-md text-white`
+            : ``
+        "
+        @click="activeBrandCreatorSelector = 'Brands'"
+      >
         Brands
       </div>
-      <div class="text-center text-[28px] text-black cursor-pointer py-4" :class="activeBrandCreatorSelector === 'Creators'
-          ? `text-white bg-primary rounded-tr-md rounded-br-md`
-          : ``
-        " @click="activeBrandCreatorSelector = 'Creators'">
+      <div
+        class="text-center text-[28px] text-black cursor-pointer py-4"
+        :class="
+          activeBrandCreatorSelector === 'Creators'
+            ? `text-white bg-primary rounded-tr-md rounded-br-md`
+            : ``
+        "
+        @click="activeBrandCreatorSelector = 'Creators'"
+      >
         Creators
       </div>
     </div>
-    <div class="grid md:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8">
+    <div
+      class="grid md:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8"
+    >
       <div class="mb-12">
         <img :src="activeCarouselImagePath" />
         <div class="flex mt-8 justify-center">
-          <div v-for="n in 3" :key="`brand-carousel-img` + n" @click="activeBrandImageIndex = n">
-            <img v-if="activeBrandImageIndex === n" :src="circleActive" class="cursor-pointer h-[20px]" />
+          <div
+            v-for="n in 3"
+            :key="`brand-carousel-img` + n"
+            @click="activeBrandImageIndex = n"
+          >
+            <img
+              v-if="activeBrandImageIndex === n"
+              :src="circleActive"
+              class="cursor-pointer h-[20px]"
+            />
             <img v-else :src="circle" class="cursor-pointer h-[20px]" />
           </div>
         </div>
@@ -171,11 +246,12 @@
   <!-- / - Get Involved -->
 
   <!-- About Us -->
+  <div id="aboutUs"></div>
   <section class="container mx-auto px-8 mt-32">
     <div>
       <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
     </div>
-    <div class="flex flex-row-reverse">
+    <div class="flex flex-col md:flex-row-reverse">
       <div class="w-[500px]">
         <h4 class="uppercase text-[50px] text-primary font-semibold leading-10">
           About Us
@@ -193,30 +269,46 @@
       </div>
     </div>
     <div class="flex">
-      <h4 class="uppercase text-primary font-semibold mt-32 text-[38px] leading-10">
+      <h4
+        class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-10"
+      >
         Meet the Team
       </h4>
     </div>
     <!-- First Row - Team Members -->
-    <div class="flex flex-col md:flex-row justify-between mb-4 mt-16">
-      <div v-for="team in teamFirstRow">
+    <div
+      class="flex flex-wrap md:flex-nowrap justify-center md:justify-between mb-4 mt-16"
+    >
+      <div v-for="team in teamFirstRow" class="mb-5">
         <div class="w-40 h-40 mx-auto">
-          <img class="w-full h-full object-cover rounded-full mx-auto mb-8 mb-sm-5" :src="team.image">
+          <img
+            class="w-full h-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
+            :src="team.image"
+          />
         </div>
-        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
+        <h6
+          class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold"
+        >
           {{ team.name }}
         </h6>
         <p class="text-black text-center">{{ team.desc }}</p>
       </div>
     </div>
     <!-- Second Row - Team Members -->
-    <div class="flex flex-col md:flex-row justify-between">
+    <div
+      class="flex flex-wrap md:flex-nowrap justify-center items-center md:justify-between"
+    >
       <div></div>
-      <div v-for="team in teamSecondRow">
-        <div class="w-40 h-40">
-          <img class="w-full h-full object-cover rounded-full mx-auto mb-8" :src="team.image">
+      <div v-for="team in teamSecondRow" class="mb-5 mx-2">
+        <div class="w-40 h-40 mx-auto">
+          <img
+            class="w-full h-full object-cover rounded-full mx-auto"
+            :src="team.image"
+          />
         </div>
-        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
+        <h6
+          class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold"
+        >
           {{ team.name }}
         </h6>
         <p class="text-black text-center">{{ team.desc }}</p>
@@ -225,21 +317,29 @@
     </div>
   </section>
   <div class="container mx-auto px-8 mt-16 relative">
-    <img src="~/assets/icons/about-us-line-left.svg" style="position: absolute; left: -100px" class="z-0" />
-    <img src="~/assets/icons/about-us-line-right.svg" style="position: absolute; right: -100px" />
+    <img
+      src="~/assets/icons/about-us-line-left.svg"
+      style="position: absolute; left: -100px"
+      class="z-0"
+    />
+    <img
+      src="~/assets/icons/about-us-line-right.svg"
+      style="position: absolute; right: -100px"
+    />
   </div>
   <!-- / About Us -->
+
   <!-- Ways to Apply Social Currant -->
+  <div class="relative hidden md:block">
+    <div class="apply-currant-bg"></div>
+  </div>
+  <div id="help"></div>
   <section class="container mx-auto px-8 mt-64">
-    <h3 class="uppercase text-primary text-[50px] font-semibold leading-10">
+    <h3 class="uppercase text-primary text-[50px] font-semibold leading-tight">
       Ways to Apply Social Currant
     </h3>
-    <div>
-      <img src="~/assets/images/apply/gradient.svg"
-        style="position: absolute; right: 0; z-index: -1; height: 420px; width: 100%;" />
-    </div>
-    <div class="grid grid-cols-3 gap-4 mt-24">
-      <div class="col-span-2">
+    <div class="grid grid-cols-3 gap-4 mt-4 md:mt-24">
+      <div class="col-span-3 md:col-span-2">
         <!-- Persuasion -->
         <div class="flex mt-16">
           <div class="mr-3">
@@ -251,7 +351,7 @@
             </h4>
           </div>
         </div>
-        <p class="mr-32 mt-2">
+        <p class="md:mr-32 mt-2">
           Identify creators from the communities you’re trying to reach and have
           them share their lived experiences around your issues to change
           narrative and persuade audiences.
@@ -262,14 +362,12 @@
             <img src="~/assets/images/apply/education.png" />
           </div>
           <div>
-            <h4 class="font-semibold text-[28px]">
-              Education &amp; Awareness
-            </h4>
+            <h4 class="font-semibold text-[28px]">Education &amp; Awareness</h4>
           </div>
         </div>
-        <p class="mr-32 mt-2">
-           Identify creators who go to sources of information and work with them to spread key information in rapid
-          response moments.
+        <p class="md:mr-32 mt-2">
+           Identify creators who go to sources of information and work with them
+          to spread key information in rapid response moments.
         </p>
         <!-- Activation -->
         <div class="flex mt-16">
@@ -280,7 +378,7 @@
             <h4 class="font-semibold text-[28px]">Activation</h4>
           </div>
         </div>
-        <p class="mr-32 mt-2">
+        <p class="md:mr-32 mt-2">
           Find creators good at driving their followers to take action and work
           with them to activate petition signatures, calls to representatives
           and more.
@@ -296,7 +394,7 @@
             </h4>
           </div>
         </div>
-        <p class="mr-32 mt-2">
+        <p class="md:mr-32 mt-2">
           Identify creators who create high converting content and work with
           them to produce ads and other forms of creative.
         </p>
@@ -311,83 +409,111 @@
             </h4>
           </div>
         </div>
-        <p class="mr-32 mt-2">
+        <p class="md:mr-32 mt-2">
           Build an integrated communications strategy that leverages creators to
           create content, serve as strategic partners, talk to press and a lot
           more through our platform.
         </p>
         <button
-          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg">
+          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+        >
           Get Started
         </button>
       </div>
-      <div>
+      <div class="hidden md:block">
         <img src="~/assets/images/apply/phone.png" class="mt-[60px] mx-auto" />
       </div>
     </div>
   </section>
   <!-- What people are saying -->
   <section class="container mx-auto px-8 mt-32">
-    <h3 class="uppercase text-center text-primary text-[50px] font-semibold leading-10">
+    <h3
+      class="uppercase text-center text-primary text-[50px] font-semibold leading-tight"
+    >
       What people are saying
     </h3>
     <div class="relative">
-      <div class="absolute" style="right: 0; z-index: -1; top: -90px;">
-        <img src="~/assets/icons/gradient-circle.svg" class="h-48 circle-gradient opacity-30" style="width: 600px;" />
+      <div class="absolute" style="right: 0; z-index: -1; top: -90px">
+        <img
+          src="~/assets/icons/gradient-circle.svg"
+          class="h-48 circle-gradient opacity-30"
+          style="width: 600px"
+        />
       </div>
     </div>
-    <div class="flex mt-16 justify-center">
-      <div v-for="n in 4" class="mx-8">
-        <img src="~/assets/icons/review.svg" class="z-20" />
+    <div class="flex flex-col md:flex-row mt-16 justify-center">
+      <div v-for="n in 4" :key="`review-top-` + n" class="mx-2 mb-6">
+        <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
       </div>
     </div>
-    <div class="flex mt-8 items-center justify-center">
-      <div v-for="n in 3" class="mx-8">
-        <img src="~/assets/icons/review.svg" class="z-20" />
+    <div class="flex flex-col md:flex-row mt-8 items-center justify-center">
+      <div
+        v-for="n in 3"
+        :key="`review-bottom-` + n"
+        class="mx-2 hidden md:block"
+      >
+        <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
       </div>
     </div>
     <div class="relative">
-      <div class="absolute" style="left: 0; z-index: -1; top: -90px;">
-        <img src="~/assets/icons/gradient-circle.svg" class="h-48 circle-gradient opacity-30" style="width: 600px;" />
+      <div class="absolute" style="left: 0; z-index: -1; top: -90px">
+        <img
+          src="~/assets/icons/gradient-circle.svg"
+          class="h-48 circle-gradient opacity-30"
+          style="width: 600px"
+        />
       </div>
     </div>
   </section>
 
   <!-- footer -->
   <footer class="bg-primary text-white min-h-full relative mt-84">
-    <div class="container mx-auto px-8 mt-48 pt-32">
+    <div class="container mx-auto px-8 mt-48 pt-28">
       <!-- Sign Up Links -->
-      <div class="bg-white text-black container mx-auto px-8 absolute w-full drop-shadow-md rounded-lg mx-auto py-8"
-        style="bottom: 90%;">
-        <div class="flex justify-between items-center">
+      <div
+        class="bg-white text-black container mx-auto px-8 absolute drop-shadow-md rounded-lg mx-auto py-8"
+        style="top: -80px; width: 85%"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-left md:justify-between md:items-center"
+        >
           <div>
-            <h4 class="text-[50px] font-bold">It's Time To Invest In People.</h4>
+            <h4 class="text-4xl font-bold">It's Time To Invest In People.</h4>
             <p>Work with creators today!</p>
           </div>
-          <div>
+          <div class="my-4">
             <button
-              class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg">
+              class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+            >
               Sign up for a Demo
             </button>
           </div>
         </div>
       </div>
 
-      <div class="uppercase text-[18px] font-semibold">We can help you connect with creators</div>
-      <h4 class="text-3xl md:w-2/4  mt-16 font-semibold">Stay updated on all things trending in the influencer space.</h4>
+      <div class="uppercase text-[18px] font-semibold mt-24 md:mt-4">
+        We can help you connect with creators
+      </div>
+      <h4 class="text-3xl md:w-2/4 mt-16 font-semibold">
+        Stay updated on all things trending in the influencer space.
+      </h4>
 
       <div class="my-16">
         <label for="name" class="block mb-2 text-gray-700">Email Address</label>
-        <input type="text" id="name" placeholder="Enter your Email Address"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your Email Address"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+        />
       </div>
       <div class="flex">
         <div v-for="social in [linkedin, facebook, instagram, twitter]">
           <img :src="social" class="mx-1" />
         </div>
       </div>
-      <hr class="border-white my-12">
-      <img src="~/assets/icons/logo-footer.svg">
+      <hr class="border-white my-12" />
+      <img src="~/assets/icons/logo-footer.svg" />
       <p class="py-8">A platform by Social Currant.</p>
     </div>
   </footer>
@@ -418,6 +544,7 @@ import capitolHistorical from "~/assets/images/hero-carousel/capitol-historical.
 import repairTheWorld from "~/assets/images/hero-carousel/repair-the-world.png";
 import leftHook from "~/assets/images/hero-carousel/left-hook.png";
 import jvaCampaigns from "~/assets/images/hero-carousel/jva-campaigns.png";
+import mtrNewYork from "~/assets/images/hero-carousel/mtr-new-york.png";
 
 
 import will from "~/assets/images/team/will.png";
@@ -462,6 +589,7 @@ const heroCarouselImages = [
   repairTheWorld,
   leftHook,
   jvaCampaigns,
+  mtrNewYork
 ];
 
 const teamFirstRow = [
@@ -518,24 +646,38 @@ const headerLinks = [
   {
     text: "How it works",
     link: "/",
+    scrollTo: "howItWorks"
   },
   {
     text: "Brands",
     link: "/",
+    scrollTo: "getInvolved"
   },
   {
     text: "Creators",
     link: "/",
+    scrollTo: "getInvolved"
   },
   {
     text: "About Us",
     link: "/",
+    scrollTo: "aboutUs"
   },
   {
     text: "How can we help",
     link: "/",
+    scrollTo: "help"
   },
 ];
+function scrollToDiv(scrollElement, navName) {
+  const targetElement = document.getElementById(scrollElement);
+  if (targetElement) {
+    if (navName === "Brands" || navName === "Creators") {
+      activeBrandCreatorSelector.value = navName;
+    }
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 </script>
 <style scoped lang="scss">
 .hero-dots {
@@ -556,7 +698,7 @@ const headerLinks = [
 }
 
 .circle-gradient {
-  background: #80A3EB;
+  background: #80a3eb;
   filter: blur(250px);
 }
 
@@ -566,5 +708,31 @@ const headerLinks = [
   left: -70px;
   top: 5015px;
   z-index: -10;
+}
+
+.apply-currant-bg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  display: block;
+  background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
+  height: 16rem;
+  top: 30rem;
+  @media (min-width: 768px) {
+    height: 20rem;
+    top: 26rem;
+  }
+  @media (min-width: 1024px) {
+    height: 12rem;
+    top: 24rem;
+  }
+  @media (min-width: 1280px) {
+    height: 12rem;
+    top: 24rem;
+  }
+  @media (min-width: 1536px) {
+    height: 10rem;
+    top: 24rem;
+  }
 }
 </style>
