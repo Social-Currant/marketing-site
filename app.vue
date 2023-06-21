@@ -12,54 +12,33 @@
       </div>
     </div>
   </div>
-  <header
-    class="mt-[16px] md:mt-[54px] sticky top-0 bg-white"
-  >
+  <header class="mt-[16px] md:mt-[54px] sticky top-0 bg-white">
     <div class="container mx-auto px-8 flex items-center bg-white z-50">
       <h1 class="grow">
         <img src="~/assets/images/currant-logo.svg" />
       </h1>
       <div class="flex nav-links hidden md:block">
-        <a
-          v-for="link in headerLinks"
-          href=""
-          class="hover:underline ml-[24px] text-[20px]"
-          >{{ link.text }}</a
-        >
+        <a v-for="link in headerLinks" href="" class="hover:underline ml-[24px] text-[20px]">{{ link.text }}</a>
       </div>
       <div class="ml-[44px] hidden md:block">
         <button
-          class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-        >
+          class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg">
           Get Started
         </button>
       </div>
-      <div
-        class="block sm:hidden cursor-pointer"
-        @click="headerOverlay = !headerOverlay"
-      >
+      <div class="block sm:hidden cursor-pointer" @click="headerOverlay = !headerOverlay">
         <img src="~/assets/icons/hamburger.svg" />
       </div>
     </div>
-    <HeaderOverlay
-      v-if="headerOverlay"
-      @close="headerOverlay = false"
-    ></HeaderOverlay>
+    <HeaderOverlay v-if="headerOverlay" @close="headerOverlay = false"></HeaderOverlay>
   </header>
   <!-- Section First Impression -->
   <section class="container mx-auto px-8 mt-[71px]">
     <div class="grid md:grid-cols-2">
       <div class="md:order-last">
         <div class="relative">
-          <img
-            src="~/assets/images/hero-placeholder.svg"
-            class="md:float-right mx-auto"
-          />
-          <img
-            src="~/assets/icons/dots-bg-hero.svg"
-            class="hero-dots w-96 h-96"
-            style="position: absolute; top: 40%"
-          />
+          <img src="~/assets/images/hero-placeholder.svg" class="md:float-right mx-auto" />
+          <img src="~/assets/icons/dots-bg-hero.svg" class="hero-dots w-96 h-96" style="position: absolute; top: 40%" />
         </div>
       </div>
       <div class="md:order-first">
@@ -82,40 +61,28 @@
   <!-- / - Section First Impression -->
   <!-- Organization carousel -->
   <section class="container mx-auto px-8 mt-[83px]">
-    <div class="flex flex-row items-center">
+    <div class="flex flex-col md:flex-row items-center">
       <div v-for="image in heroCarouselImages" class="grow">
-        <img :src="image" class="w-200" />
+        <img :src="image" class="w-200 mx-4" />
       </div>
     </div>
   </section>
+
   <!-- /  Organization carousel -->
 
   <!-- How it works -->
   <section class="container mx-auto px-8 mt-[105px]">
-    <h3
-      class="uppercase text-center text-primary text-[50px] font-semibold leading-10"
-    >
+    <h3 class="uppercase text-center text-primary text-[50px] font-semibold leading-10">
       How it works
     </h3>
-    <img
-      src="~/assets/images/how-it-works.svg"
-      class="mx-auto mt-[74px] hidden md:block"
-    />
+    <img src="~/assets/images/how-it-works.svg" class="mx-auto mt-[74px] hidden md:block" />
     <div class="grid md:grid-cols-3 gap-x-16">
       <div>
-        <img
-          src="~/assets/icons/step1.svg"
-          class="block sm:hidden mt-[32px] mx-auto mb-8"
-          style="width: 250px"
-        />
-        <h4
-          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
-        >
+        <img src="~/assets/icons/step1.svg" class="block sm:hidden mt-[32px] mx-auto mb-8" style="width: 250px" />
+        <h4 class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]">
           Step 1
         </h4>
-        <h5
-          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
-        >
+        <h5 class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]">
           Outline Your Goals
         </h5>
         <p class="mt-4">
@@ -125,19 +92,11 @@
         </p>
       </div>
       <div>
-        <img
-          src="~/assets/icons/step2.svg"
-          class="block sm:hidden mt-[32px] mx-auto"
-          style="width: 250px"
-        />
-        <h4
-          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
-        >
+        <img src="~/assets/icons/step2.svg" class="block sm:hidden mt-[32px] mx-auto" style="width: 250px" />
+        <h4 class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]">
           Step 2
         </h4>
-        <h5
-          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
-        >
+        <h5 class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]">
           Review Your Matches
         </h5>
         <p class="mt-4">
@@ -147,19 +106,11 @@
         </p>
       </div>
       <div>
-        <img
-          src="~/assets/icons/step3.svg"
-          class="block sm:hidden mt-[32px] mx-auto"
-          style="width: 250px"
-        />
-        <h4
-          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
-        >
+        <img src="~/assets/icons/step3.svg" class="block sm:hidden mt-[32px] mx-auto" style="width: 250px" />
+        <h4 class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]">
           Step 3
         </h4>
-        <h5
-          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
-        >
+        <h5 class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]">
           Run Your Campaign
         </h5>
 
@@ -175,53 +126,29 @@
   <!-- / - How it works -->
   <!-- Get Involved -->
   <section class="container mx-auto px-8 mt-[105px]">
-    <h3
-      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-10"
-    >
+    <h3 class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-10">
       Get Involved
     </h3>
-    <div
-      class="grid grid-cols-2 mt-[74px] rounded-lg content-center border-[3px] border-purple border-solid"
-    >
-      <div
-        class="text-center text-[28px] cursor-pointer py-4 text-black"
-        :class="
-          activeBrandCreatorSelector === 'Brands'
-            ? `bg-primary rounded-tl-md rounded-bl-md text-white`
-            : ``
-        "
-        @click="activeBrandCreatorSelector = 'Brands'"
-      >
+    <div class="grid grid-cols-2 mt-[74px] rounded-lg content-center border-[3px] border-purple border-solid">
+      <div class="text-center text-[28px] cursor-pointer py-4 text-black" :class="activeBrandCreatorSelector === 'Brands'
+          ? `bg-primary rounded-tl-md rounded-bl-md text-white`
+          : ``
+        " @click="activeBrandCreatorSelector = 'Brands'">
         Brands
       </div>
-      <div
-        class="text-center text-[28px] text-black cursor-pointer py-4"
-        :class="
-          activeBrandCreatorSelector === 'Creators'
-            ? `text-white bg-primary rounded-tr-md rounded-br-md`
-            : ``
-        "
-        @click="activeBrandCreatorSelector = 'Creators'"
-      >
+      <div class="text-center text-[28px] text-black cursor-pointer py-4" :class="activeBrandCreatorSelector === 'Creators'
+          ? `text-white bg-primary rounded-tr-md rounded-br-md`
+          : ``
+        " @click="activeBrandCreatorSelector = 'Creators'">
         Creators
       </div>
     </div>
-    <div
-      class="grid md:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8"
-    >
+    <div class="grid md:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8">
       <div class="mb-12">
         <img :src="activeCarouselImagePath" />
         <div class="flex mt-8 justify-center">
-          <div
-            v-for="n in 3"
-            :key="`brand-carousel-img` + n"
-            @click="activeBrandImageIndex = n"
-          >
-            <img
-              v-if="activeBrandImageIndex === n"
-              :src="circleActive"
-              class="cursor-pointer h-[20px]"
-            />
+          <div v-for="n in 3" :key="`brand-carousel-img` + n" @click="activeBrandImageIndex = n">
+            <img v-if="activeBrandImageIndex === n" :src="circleActive" class="cursor-pointer h-[20px]" />
             <img v-else :src="circle" class="cursor-pointer h-[20px]" />
           </div>
         </div>
@@ -266,43 +193,40 @@
       </div>
     </div>
     <div class="flex">
-      <h4
-        class="uppercase text-primary font-semibold mt-32 text-[38px] leading-10"
-      >
+      <h4 class="uppercase text-primary font-semibold mt-32 text-[38px] leading-10">
         Meet the Team
       </h4>
     </div>
     <!-- First Row - Team Members -->
-    <div class="flex justify-center mb-4 mt-16">
-      <div v-for="team in teamFirstRow" class="w-72">
-        <img class="w-128 h-128 rounded-full mx-auto mb-8" :src="avatar" />
-        <h6 class="text-center text-primary font-bold text-xl font-semibold">
+    <div class="flex flex-col md:flex-row justify-between mb-4 mt-16">
+      <div v-for="team in teamFirstRow">
+        <div class="w-40 h-40 mx-auto">
+          <img class="w-full h-full object-cover rounded-full mx-auto mb-8 mb-sm-5" :src="team.image">
+        </div>
+        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
           {{ team.name }}
         </h6>
         <p class="text-black text-center">{{ team.desc }}</p>
       </div>
     </div>
     <!-- Second Row - Team Members -->
-    <div class="flex justify-center">
-      <div v-for="team in teamSecondRow" class="w-64">
-        <img class="w-128 h-128 rounded-full mx-auto mb-8" :src="avatar" />
-        <h6 class="text-center text-primary font-bold text-xl font-semibold">
+    <div class="flex flex-col md:flex-row justify-between">
+      <div></div>
+      <div v-for="team in teamSecondRow">
+        <div class="w-40 h-40">
+          <img class="w-full h-full object-cover rounded-full mx-auto mb-8" :src="team.image">
+        </div>
+        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
           {{ team.name }}
         </h6>
         <p class="text-black text-center">{{ team.desc }}</p>
       </div>
+      <div></div>
     </div>
   </section>
   <div class="container mx-auto px-8 mt-16 relative">
-    <img
-      src="~/assets/icons/about-us-line-left.svg"
-      style="position: absolute; left: -100px"
-      class="z-0"
-    />
-    <img
-      src="~/assets/icons/about-us-line-right.svg"
-      style="position: absolute; right: -100px"
-    />
+    <img src="~/assets/icons/about-us-line-left.svg" style="position: absolute; left: -100px" class="z-0" />
+    <img src="~/assets/icons/about-us-line-right.svg" style="position: absolute; right: -100px" />
   </div>
   <!-- / About Us -->
   <!-- Ways to Apply Social Currant -->
@@ -311,10 +235,8 @@
       Ways to Apply Social Currant
     </h3>
     <div>
-      <img
-        src="~/assets/images/apply/gradient.svg"
-        style="position: absolute; right: 0; z-index: -1; height: 420px; width: 100%;"
-      />
+      <img src="~/assets/images/apply/gradient.svg"
+        style="position: absolute; right: 0; z-index: -1; height: 420px; width: 100%;" />
     </div>
     <div class="grid grid-cols-3 gap-4 mt-24">
       <div class="col-span-2">
@@ -333,6 +255,21 @@
           Identify creators from the communities you’re trying to reach and have
           them share their lived experiences around your issues to change
           narrative and persuade audiences.
+        </p>
+        <!-- Education -->
+        <div class="flex mt-16">
+          <div class="mr-3">
+            <img src="~/assets/images/apply/education.png" />
+          </div>
+          <div>
+            <h4 class="font-semibold text-[28px]">
+              Education &amp; Awareness
+            </h4>
+          </div>
+        </div>
+        <p class="mr-32 mt-2">
+           Identify creators who go to sources of information and work with them to spread key information in rapid
+          response moments.
         </p>
         <!-- Activation -->
         <div class="flex mt-16">
@@ -380,8 +317,7 @@
           more through our platform.
         </p>
         <button
-          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-        >
+          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg">
           Get Started
         </button>
       </div>
@@ -412,7 +348,7 @@
     </div>
     <div class="relative">
       <div class="absolute" style="left: 0; z-index: -1; top: -90px;">
-        <img src="~/assets/icons/gradient-circle.svg" class="h-48 circle-gradient opacity-30"  style="width: 600px;" />
+        <img src="~/assets/icons/gradient-circle.svg" class="h-48 circle-gradient opacity-30" style="width: 600px;" />
       </div>
     </div>
   </section>
@@ -421,10 +357,8 @@
   <footer class="bg-primary text-white min-h-full relative mt-84">
     <div class="container mx-auto px-8 mt-48 pt-32">
       <!-- Sign Up Links -->
-      <div
-        class="bg-white text-black container mx-auto px-8 absolute w-full drop-shadow-md rounded-lg mx-auto py-8"
-        style="bottom: 90%;"
-      >
+      <div class="bg-white text-black container mx-auto px-8 absolute w-full drop-shadow-md rounded-lg mx-auto py-8"
+        style="bottom: 90%;">
         <div class="flex justify-between items-center">
           <div>
             <h4 class="text-[50px] font-bold">It's Time To Invest In People.</h4>
@@ -432,8 +366,7 @@
           </div>
           <div>
             <button
-              class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-            >
+              class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg">
               Sign up for a Demo
             </button>
           </div>
@@ -445,12 +378,8 @@
 
       <div class="my-16">
         <label for="name" class="block mb-2 text-gray-700">Email Address</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your Email Address"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-        />
+        <input type="text" id="name" placeholder="Enter your Email Address"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
       <div class="flex">
         <div v-for="social in [linkedin, facebook, instagram, twitter]">
@@ -490,6 +419,17 @@ import repairTheWorld from "~/assets/images/hero-carousel/repair-the-world.png";
 import leftHook from "~/assets/images/hero-carousel/left-hook.png";
 import jvaCampaigns from "~/assets/images/hero-carousel/jva-campaigns.png";
 
+
+import will from "~/assets/images/team/will.png";
+import erika from "~/assets/images/team/erika.png";
+import sisir from "~/assets/images/team/sisir.png";
+import ashwath from "~/assets/images/team/ashwath.png";
+import ellie from "~/assets/images/team/ellie.png";
+import jasmine from "~/assets/images/team/jasmine.png";
+import vidyut from "~/assets/images/team/vidyut.png";
+import abby from "~/assets/images/team/abby.png";
+import aashna from "~/assets/images/team/aashna.png";
+
 useHead({
   title: "Currant | Creator Marketing Simplified",
   meta: [{ name: "description", content: "Social Currant." }],
@@ -528,40 +468,49 @@ const teamFirstRow = [
   {
     name: "Ashwath Narayanan",
     desc: "Co-Founder & CEO",
+    image: ashwath
   },
   {
     name: "Vidyut Ghuwalewala",
     desc: "Co-Founder & COO",
+    image: vidyut
   },
   {
     name: "Jasmine McCarton",
     desc: "Chief Design Officer",
+    image: jasmine
   },
   {
     name: "Ellie Artone",
     desc: "Chief Creator Officer",
+    image: ellie
   },
   {
     name: "William Chesier",
     desc: "Chief Technology Officer",
+    image: will
   },
 ];
 const teamSecondRow = [
   {
     name: "Aashna Malhotra",
     desc: "Influencer Strategist",
+    image: aashna
   },
   {
     name: "Abby Vang",
     desc: "Influencer Strategist",
+    image: abby
   },
   {
     name: "Erika",
     desc: "Software Engineer",
+    image: erika
   },
   {
     name: "Sisir Ghimire Chettri",
     desc: "Software Engineer",
+    image: sisir
   },
 ];
 
@@ -605,10 +554,12 @@ const headerLinks = [
   height: 680px;
   width: 800px;
 }
+
 .circle-gradient {
   background: #80A3EB;
   filter: blur(250px);
 }
+
 .gradient-wrapper {
   width: 354px;
   height: 352px;

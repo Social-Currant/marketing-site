@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 left-0 w-full h-full bg-white opacity-99 overflow-x-auto">
+  <div class="fixed top-0 left-0 w-full h-full bg-white opacity-99 overflow-x-auto z-40">
     <div class="flex py-12 px-8 justify-between items-center">
       <img src="~/assets/icons/logo.svg" />
       <div @click="emit('close')">
