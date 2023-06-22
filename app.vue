@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 h-full flex items-center">
       <div class="grow text-center">
         <p class="font-semibold text-white">
-          <a @click="scrollToDiv('footer')" class="underline text-secondary cursor-pointer">Sign up</a> for our
+          <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb" class="underline text-secondary cursor-pointer">Sign up</a> for our
           newsletter for updates + previews of new platform features!
         </p>
       </div>
@@ -518,7 +518,11 @@
       <h4 class="text-3xl lg:w-2/4 mt-16 font-semibold">
         Stay updated on all things trending in the influencer space.
       </h4>
-      <KlaviyoForm />
+      <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb">
+      <button class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-5">
+        Subscribe
+      </button>
+    </a>
       <div class="flex">
         <div v-for="socials in socialMediaAccounts">
           <a :href="socials.url">
@@ -548,7 +552,7 @@ import brandThree from "~/assets/images/brands/3.png";
 
 // components
 import { defineComponent } from 'vue';
-import KlaviyoForm from './components/KlaviyoForm.vue';
+// import KlaviyoForm from './components/KlaviyoForm.vue';
 
 // social icons
 import linkedin from "~/assets/icons/social/li.svg";
