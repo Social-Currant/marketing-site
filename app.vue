@@ -440,7 +440,7 @@
         </a>
       </div>
       <div class="hidden lg:block">
-        <img src="~/assets/images/tiktokimg.png" class="mt-[60px] mx-auto" />
+        <img src="~/assets/images/tiktok.png" class="mt-[60px] mx-auto" />
       </div>
     </div>
   </section>
@@ -653,12 +653,12 @@ const socialMediaAccounts = [
 const teamFirstRow = [
   {
     name: "Ashwath Narayanan",
-    desc: "Co-Founder & CEO",
+    desc: "Chief Executive Officer",
     image: ashwath
   },
   {
     name: "Vidyut Ghuwalewala",
-    desc: "Co-Founder & COO",
+    desc: "Chief Operating Officer",
     image: vidyut
   },
   {
