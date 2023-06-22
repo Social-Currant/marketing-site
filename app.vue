@@ -7,9 +7,9 @@
           newsletter for updates + previews of new platform features!
         </p>
       </div>
-      <div class="flex-none hidden lg:block">
+      <!-- <div class="flex-none hidden lg:block">
         <img src="~/assets/icons/close.svg" />
-      </div>
+      </div> -->
     </div>
   </div>
   <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
