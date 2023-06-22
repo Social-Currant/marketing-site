@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+require('dotenv').config();
 export default defineNuxtConfig({
   app: {
     head: {
