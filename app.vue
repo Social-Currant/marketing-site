@@ -60,12 +60,12 @@
           />
         </div>
       </div>
-      <div class="lg:order-first">
+      <div class="lg:order-first lg:w-10/12 xl:w-full">
         <h2 class="font-bold text-[24px] lg:text-[38px] text-primary">
           Find mission aligned creators for your campaign or cause.
         </h2>
         <p class="font-semibold text-xl mt-[24px]">
-          We help nonprofits, impact organizations & issue focused organizations
+          We help nonprofits, impact & issue focused organizations
           collaborate with creators to reach audiences more effectively.
         </p>
         <div class="flex items-center mt-[32px]">
@@ -126,7 +126,7 @@
         >
           Outline Your Goals
         </h5>
-        <p class="mt-4">
+        <p class="mt-4 text-center lg:text-left">
           We know you have a lot of great ideas but not a lot of time. Our two
           step process allows for you to quickly outline your campaign, goals
           and the communities you’re trying to reach.
@@ -148,8 +148,8 @@
         >
           Review Your Matches
         </h5>
-        <p class="mt-4">
-          Let us work our magic. Then it’s your turn to review your personalized
+        <p class="mt-4 text-center lg:text-left">
+          Let us work our magic! Then it’s your turn to review your personalized
           creator matches with information on their issue area, audience, and
           more.
         </p>
@@ -171,7 +171,7 @@
           Run Your Campaign
         </h5>
 
-        <p class="mt-4">
+        <p class="mt-4 text-center lg:text-left">
           We have your back! Let us make it easy for you to manage your creator
           campaigns with automating contracts, payments, and more all in one
           place. This way, you can focus on what matters most- building strong
@@ -277,7 +277,7 @@
         </p>
         <p>
           We’re a creator led platform and managed service focusing on making a
-          different through the power of social media. Once described by the New
+          difference through the power of social media. Once described by the New
           York Times as “Only recently able to buy alcohol” This Gen Z led
           company is on a mission to empower young people and issues we care
           about.
@@ -358,7 +358,7 @@
     <div class="grid grid-cols-3 gap-4 mt-4 lg:mt-24">
       <div class="col-span-3 lg:col-span-2">
         <!-- Persuasion -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/persuasion.png" />
           </div>
@@ -374,7 +374,7 @@
           narrative and persuade audiences.
         </p>
         <!-- Education -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/education.png" />
           </div>
@@ -387,7 +387,7 @@
           to spread key information in rapid response moments.
         </p>
         <!-- Activation -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/activation.png" />
           </div>
@@ -401,7 +401,7 @@
           and more.
         </p>
         <!-- Ads -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/ads.png" />
           </div>
@@ -416,7 +416,7 @@
           them to produce ads and other forms of creative.
         </p>
         <!-- Build -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/build.png" />
           </div>
@@ -440,12 +440,12 @@
         </a>
       </div>
       <div class="hidden lg:block">
-        <img src="~/assets/images/apply/phone.png" class="mt-[60px] mx-auto" />
+        <img src="~/assets/images/tiktokimg.png" class="mt-[60px] mx-auto" />
       </div>
     </div>
   </section>
   <!-- What people are saying -->
-  <section class="container mx-auto px-8 mt-32">
+  <!-- <section class="container mx-auto px-8 mt-32">
     <h3
       class="uppercase text-center text-primary text-[50px] font-semibold leading-tight"
     >
@@ -460,11 +460,11 @@
         />
       </div>
     </div>
-    <!-- <div class="flex flex-col lg:flex-row mt-16 justify-center">
+    <div class="flex flex-col lg:flex-row mt-16 justify-center">
       <div v-for="n in 4" :key="`review-top-` + n" class="mx-2 mb-6">
         <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
       </div>
-    </div> -->
+    </div>
     <div class="flex flex-col lg:flex-row mt-8 items-center justify-center">
       <div
         v-for="n in 3"
@@ -483,7 +483,7 @@
         />
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- footer -->
   <footer id="footer" class="bg-primary text-white min-h-full relative mt-84">
@@ -617,7 +617,7 @@ const brandPoints = [
 
 const creatorPoints = [
   "Connect and collaborate with organizations and brands that align with your values.",
-  "Get more deals with less effort. We'll notify you when you are requested to work on a campaign .",
+  "Get more deals with less effort. We'll notify you when you are requested to work on a campaign.",
   "Join a network of mission driven content creators working towards impact and change.",
 ]
 
