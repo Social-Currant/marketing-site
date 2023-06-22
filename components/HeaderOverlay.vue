@@ -10,25 +10,28 @@
         </div>
       </div>
     </div>
+    <div class="relative">
+      <div class="absolute">
+        <div class="opacity-40 bg-gradient-blue"></div>
+      </div>
+    </div>
     <div
       v-for="(header, key) in props.headerNavLinks"
       :key="`header-nav-` + key"
-      class="py-8 px-8 border-t border-primary cursor-pointer"
+      class="py-8 px-8 border-b border-primary cursor-pointer"
       @click="emitScroll(header.scrollTo, header.text)"
     >
       <h3 class="text-[28px]">{{ header.text }}</h3>
     </div>
-    <div class="relative">
-      <img
-        src="~/assets/icons/dots-overlay.svg"
-        class="w-96 object-none dots-overlay absolute"
-        style="right: -100px; height: 10rem; width: 35rem"
-      />
-    </div>
-    <div class="flex justify-between py-[32px]">
+    <div class="flex justify-between items-center py-[32px]">
       <div>
-        <div class="mx-4 bg-secondary text-white py-2 px-3 rounded-lg">
+        <div class="mx-8 bg-secondary text-white py-2 px-3 rounded-lg">
           Book a Demo
+        </div>
+      </div>
+      <div>
+        <div style="height: 80px; width: 100%">
+          <img src="~/assets/icons/dots-overlay.svg" />
         </div>
       </div>
     </div>
@@ -46,9 +49,19 @@ const props = defineProps({
 });
 
 function emitScroll(scrollTo, headerText) {
-  emit('close')
-  emit('scrollDiv', scrollTo, headerText)
+  emit("close");
+  emit("scrollDiv", scrollTo, headerText);
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.bg-gradient-blue {
+  background: #80a3eb;
+  filter: blur(250px);
+  width: 300px;
+  height: 400px;
+  z-index: -20;
+  position: absolute;
+  top: -130px;
+}
+</style>

@@ -51,15 +51,10 @@
   <section class="container mx-auto px-8 mt-[71px]">
     <div class="grid md:grid-cols-2">
       <div class="md:order-last">
-        <div class="relative">
+        <div class="">
           <img
             src="~/assets/images/hero-placeholder.svg"
-            class="md:float-right mx-auto mb-8 md:mb-0"
-          />
-          <img
-            src="~/assets/icons/dots-bg-hero.svg"
-            class="hero-dots w-96 h-96"
-            style="position: absolute; top: 40%"
+            class="md:float-right mx-auto mb-8 md:mb-0 md:mr-8"
           />
         </div>
       </div>
@@ -78,6 +73,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="relative">
+      <img
+        src="~/assets/icons/dots-bg-hero.svg"
+        class="hero-dots"
+      />
     </div>
   </section>
   <!-- / - Section First Impression -->
@@ -254,7 +255,7 @@
       <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
     </div>
     <div class="flex flex-col md:flex-row-reverse">
-      <div class="w-[500px]">
+      <div class="w-full md:w-[500px]">
         <h4 class="uppercase text-[50px] text-primary font-semibold leading-tight">
           About Us
         </h4>
@@ -322,10 +323,11 @@
     <img
       src="~/assets/icons/about-us-line-left.svg"
       style="position: absolute; left: -100px"
-      class="z-0"
+      class="z-0 overflow-hidden"
     />
     <img
       src="~/assets/icons/about-us-line-right.svg"
+      class="overflow-hidden"
       style="position: absolute; right: -100px"
     />
   </div>
@@ -679,11 +681,12 @@ function scrollToDiv(scrollElement, navName) {
 <style scoped lang="scss">
 .hero-dots {
   position: absolute;
-  right: -15%;
-  top: 65.5%;
-  transform: rotate(-34.49deg);
+  right: -2rem;
+  top: -5rem;
   z-index: -1;
-  height: 45rem;
+  height: 20rem;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .egg-left {

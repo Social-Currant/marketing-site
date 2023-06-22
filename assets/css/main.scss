@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html, body {
     font-family: 'Poppins', system-ui, sans-serif;
-    overflow-x:hidden;
+    overflow-x: clip;
     color: #343538;
   }
 }
