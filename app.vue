@@ -3,21 +3,21 @@
     <div class="container mx-auto px-4 h-full flex items-center">
       <div class="grow text-center">
         <p class="font-semibold text-white">
-          <a href="" class="underline text-secondary">Sign up</a> for our
+          <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb" class="underline text-secondary cursor-pointer">Sign up</a> for our
           newsletter for updates + previews of new platform features!
         </p>
       </div>
-      <div class="flex-none hidden md:block">
+      <!-- <div class="flex-none hidden lg:block">
         <img src="~/assets/icons/close.svg" />
-      </div>
+      </div> -->
     </div>
   </div>
-  <header class="mt-[16px] md:mt-[54px] sticky top-0 bg-white z-50">
+  <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
     <div class="container mx-auto px-8 flex items-center bg-white z-50">
       <h1 class="grow">
         <img src="~/assets/images/currant-logo.svg" />
       </h1>
-      <div class="flex nav-links hidden md:block">
+      <div class="flex nav-links hidden lg:block">
         <a
           v-for="link in headerLinks"
           class="hover:text-primary hover:font-medium ml-[24px] text-[20px] cursor-pointer"
@@ -25,15 +25,17 @@
           >{{ link.text }}</a
         >
       </div>
-      <div class="ml-[44px] hidden md:block">
-        <button
-          class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-        >
-          Get Started
-        </button>
+      <div class="ml-[44px] hidden lg:block">
+        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+          <button
+            class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+          >
+            Get Started
+          </button>
+        </a>
       </div>
       <div
-        class="block md:hidden cursor-pointer"
+        class="block lg:hidden cursor-pointer"
         @click="headerOverlay = !headerOverlay"
       >
         <img src="~/assets/icons/hamburger.svg" />
@@ -49,28 +51,30 @@
   </header>
   <!-- Section First Impression -->
   <section class="container mx-auto px-8 mt-[71px]">
-    <div class="grid md:grid-cols-2">
-      <div class="md:order-last">
+    <div class="grid lg:grid-cols-2">
+      <div class="lg:order-last">
         <div class="">
           <img
-            src="~/assets/images/hero-placeholder.svg"
-            class="md:float-right mx-auto mb-8 md:mb-0 md:mr-8"
+            src="~/assets/images/currantheroimage.png"
+            class="lg:float-right mx-auto mb-8 lg:mb-0 lg:mr-0 lg:max-w-lg "
           />
         </div>
       </div>
-      <div class="md:order-first">
-        <h2 class="font-bold text-[38px] text-primary">
+      <div class="lg:order-first lg:w-10/12 xl:w-full">
+        <h2 class="font-bold text-[24px] lg:text-[38px] text-primary">
           Find mission aligned creators for your campaign or cause.
         </h2>
         <p class="font-semibold text-xl mt-[24px]">
-          We help nonprofits, impact organizations & issue focused organizations
+          We help nonprofits, impact & issue focused organizations
           collaborate with creators to reach audiences more effectively.
         </p>
         <div class="flex items-center mt-[32px]">
           <img src="~/assets/icons/dots-line.svg" />
-          <div class="mx-4 bg-secondary text-white py-2 px-3 rounded-lg">
-            Book a Demo
-          </div>
+            <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+              <div class="mx-4 bg-secondary text-white py-2 px-3 rounded-lg">
+                Book a Demo
+              </div>
+            </a>
         </div>
       </div>
     </div>
@@ -84,7 +88,7 @@
   <!-- / - Section First Impression -->
   <!-- Organization carousel -->
   <section class="container mx-auto px-8 mt-[83px]">
-    <div class="flex flex-wrap md:flex-nowrap items-center justify-center">
+    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
       <div v-for="image in heroCarouselImages" class="my-4">
         <img :src="image" class="w-200 mx-4" />
       </div>
@@ -103,26 +107,26 @@
     </h3>
     <img
       src="~/assets/images/how-it-works.svg"
-      class="mx-auto mt-[74px] hidden md:block"
+      class="mx-auto mt-[74px] hidden lg:block"
     />
-    <div class="grid md:grid-cols-3 gap-x-16">
+    <div class="grid lg:grid-cols-3 gap-x-16">
       <div>
         <img
           src="~/assets/icons/step1.svg"
-          class="block md:hidden mt-[32px] mx-auto mb-8"
+          class="block lg:hidden mt-[32px] mx-auto mb-8"
           style="width: 250px"
         />
         <h4
-          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+          class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
         >
           Step 1
         </h4>
         <h5
-          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+          class="font-semibold mt-[20px] text-center text-[16px] lg:text-left lg:text-[20px]"
         >
           Outline Your Goals
         </h5>
-        <p class="mt-4">
+        <p class="mt-4 text-center lg:text-left">
           We know you have a lot of great ideas but not a lot of time. Our two
           step process allows for you to quickly outline your campaign, goals
           and the communities you’re trying to reach.
@@ -131,21 +135,21 @@
       <div>
         <img
           src="~/assets/icons/step2.svg"
-          class="block md:hidden mt-[32px] mx-auto"
+          class="block lg:hidden mt-[32px] mx-auto"
           style="width: 250px"
         />
         <h4
-          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+          class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
         >
           Step 2
         </h4>
         <h5
-          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+          class="font-semibold mt-[20px] text-center text-[16px] lg:text-left lg:text-[20px]"
         >
           Review Your Matches
         </h5>
-        <p class="mt-4">
-          Let us work our magic. Then it’s your turn to review your personalized
+        <p class="mt-4 text-center lg:text-left">
+          Let us work our magic! Then it’s your turn to review your personalized
           creator matches with information on their issue area, audience, and
           more.
         </p>
@@ -153,21 +157,21 @@
       <div>
         <img
           src="~/assets/icons/step3.svg"
-          class="block md:hidden mt-[32px] mx-auto"
+          class="block lg:hidden mt-[32px] mx-auto"
           style="width: 250px"
         />
         <h4
-          class="text-3xl text-center font-bold text-primary text-[24px] md:text-left md:text-[28px]"
+          class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
         >
           Step 3
         </h4>
         <h5
-          class="font-semibold mt-[20px] text-center text-[16px] md:text-left md:text-[20px]"
+          class="font-semibold mt-[20px] text-center text-[16px] lg:text-left lg:text-[20px]"
         >
           Run Your Campaign
         </h5>
 
-        <p class="mt-4">
+        <p class="mt-4 text-center lg:text-left">
           We have your back! Let us make it easy for you to manage your creator
           campaigns with automating contracts, payments, and more all in one
           place. This way, you can focus on what matters most- building strong
@@ -192,7 +196,7 @@
         class="text-center text-[28px] cursor-pointer py-4 text-black"
         :class="
           activeBrandCreatorSelector === 'Brands'
-            ? `bg-primary rounded-tl-md rounded-bl-md text-white`
+            ? `bg-primary rounded-tl-lg rounded-bl-lg text-white`
             : ``
         "
         @click="activeBrandCreatorSelector = 'Brands'"
@@ -203,7 +207,7 @@
         class="text-center text-[28px] text-black cursor-pointer py-4"
         :class="
           activeBrandCreatorSelector === 'Creators'
-            ? `text-white bg-primary rounded-tr-md rounded-br-md`
+            ? `text-white bg-primary rounded-tr-lg rounded-br-lg`
             : ``
         "
         @click="activeBrandCreatorSelector = 'Creators'"
@@ -212,7 +216,7 @@
       </div>
     </div>
     <div
-      class="grid md:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8"
+      class="grid lg:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8"
     >
       <div class="mb-12">
         <img :src="activeCarouselImagePath" />
@@ -232,17 +236,26 @@
         </div>
       </div>
       <div>
-        <p class="text-[28px] text-primary font-bold">
+        <p v-if="activeBrandCreatorSelector === 'Brands'" class="text-[28px] text-primary font-bold">
           Join some of the country’s largest nonprofits & impact organizations
           in working with Social Currant
         </p>
-        <div v-for="textPoint in brandPoints" class="flex mt-[24px]">
+        <p v-if="activeBrandCreatorSelector === 'Creators'" class="text-[28px] text-primary font-bold">
+          Collaborate on campaigns with organizations working towards impact and positive change
+        </p>
+        <div v-if="activeBrandCreatorSelector === 'Brands'" v-for="textPoint in brandPoints" class="flex mt-[24px]">
           <img src="~/assets/icons/bullet-point.svg" class="mr-6" />
           <p>{{ textPoint }}</p>
         </div>
-        <button class="bg-secondary text-white py-2 px-3 rounded-lg mx-14 mt-8">
-          Get Started
-        </button>
+        <div v-if="activeBrandCreatorSelector === 'Creators'" v-for="textPoint in creatorPoints" class="flex mt-[24px]">
+          <img src="~/assets/icons/bullet-point.svg" class="mr-6" />
+          <p>{{ textPoint }}</p>
+        </div>
+        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+          <button class="bg-secondary text-white py-2 px-3 rounded-lg mx-14 mt-8">
+            Get Started
+          </button>
+        </a>
       </div>
     </div>
   </section>
@@ -254,8 +267,8 @@
     <div>
       <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
     </div>
-    <div class="flex flex-col md:flex-row-reverse">
-      <div class="w-full md:w-[500px]">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="w-full lg:w-[500px]">
         <h4 class="uppercase text-[50px] text-primary font-semibold leading-tight">
           About Us
         </h4>
@@ -264,7 +277,7 @@
         </p>
         <p>
           We’re a creator led platform and managed service focusing on making a
-          different through the power of social media. Once described by the New
+          difference through the power of social media. Once described by the New
           York Times as “Only recently able to buy alcohol” This Gen Z led
           company is on a mission to empower young people and issues we care
           about.
@@ -280,7 +293,7 @@
     </div>
     <!-- First Row - Team Members -->
     <div
-      class="flex flex-wrap md:flex-nowrap justify-center md:justify-between mb-4 mt-16"
+      class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 mt-16"
     >
       <div v-for="team in teamFirstRow" class="mb-5">
         <div class="w-40 h-40 mx-auto">
@@ -299,7 +312,7 @@
     </div>
     <!-- Second Row - Team Members -->
     <div
-      class="flex flex-wrap md:flex-nowrap justify-center items-center md:justify-between"
+      class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between"
     >
       <div></div>
       <div v-for="team in teamSecondRow" class="mb-5 mx-2">
@@ -334,7 +347,7 @@
   <!-- / About Us -->
 
   <!-- Ways to Apply Social Currant -->
-  <div class="relative hidden md:block">
+  <div class="relative hidden lg:block">
     <div class="apply-currant-bg"></div>
   </div>
   <div id="help"></div>
@@ -342,10 +355,10 @@
     <h3 class="uppercase text-primary text-[50px] font-semibold leading-tight">
       Ways to Apply Social Currant
     </h3>
-    <div class="grid grid-cols-3 gap-4 mt-4 md:mt-24">
-      <div class="col-span-3 md:col-span-2">
+    <div class="grid grid-cols-3 gap-4 mt-4 lg:mt-24">
+      <div class="col-span-3 lg:col-span-2">
         <!-- Persuasion -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/persuasion.png" />
           </div>
@@ -355,13 +368,13 @@
             </h4>
           </div>
         </div>
-        <p class="md:mr-32 mt-2">
+        <p class="lg:mr-32 mt-2">
           Identify creators from the communities you’re trying to reach and have
           them share their lived experiences around your issues to change
           narrative and persuade audiences.
         </p>
         <!-- Education -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/education.png" />
           </div>
@@ -369,12 +382,12 @@
             <h4 class="font-semibold text-[28px]">Education &amp; Awareness</h4>
           </div>
         </div>
-        <p class="md:mr-32 mt-2">
+        <p class="lg:mr-32 mt-2">
            Identify creators who go to sources of information and work with them
           to spread key information in rapid response moments.
         </p>
         <!-- Activation -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/activation.png" />
           </div>
@@ -382,13 +395,13 @@
             <h4 class="font-semibold text-[28px]">Activation</h4>
           </div>
         </div>
-        <p class="md:mr-32 mt-2">
+        <p class="lg:mr-32 mt-2">
           Find creators good at driving their followers to take action and work
           with them to activate petition signatures, calls to representatives
           and more.
         </p>
         <!-- Ads -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/ads.png" />
           </div>
@@ -398,12 +411,12 @@
             </h4>
           </div>
         </div>
-        <p class="md:mr-32 mt-2">
+        <p class="lg:mr-32 mt-2">
           Identify creators who create high converting content and work with
           them to produce ads and other forms of creative.
         </p>
         <!-- Build -->
-        <div class="flex mt-16">
+        <div class="flex mt-16 items-center">
           <div class="mr-3">
             <img src="~/assets/images/apply/build.png" />
           </div>
@@ -413,24 +426,26 @@
             </h4>
           </div>
         </div>
-        <p class="md:mr-32 mt-2">
+        <p class="lg:mr-32 mt-2">
           Build an integrated communications strategy that leverages creators to
           create content, serve as strategic partners, talk to press and a lot
           more through our platform.
         </p>
-        <button
-          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-        >
-          Get Started
-        </button>
+        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+          <button
+            class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+          >
+            Get Started
+          </button>
+        </a>
       </div>
-      <div class="hidden md:block">
-        <img src="~/assets/images/apply/phone.png" class="mt-[60px] mx-auto" />
+      <div class="hidden lg:block">
+        <img src="~/assets/images/tiktok.png" class="mt-[60px] mx-auto" />
       </div>
     </div>
   </section>
   <!-- What people are saying -->
-  <section class="container mx-auto px-8 mt-32">
+  <!-- <section class="container mx-auto px-8 mt-32">
     <h3
       class="uppercase text-center text-primary text-[50px] font-semibold leading-tight"
     >
@@ -445,16 +460,16 @@
         />
       </div>
     </div>
-    <div class="flex flex-col md:flex-row mt-16 justify-center">
+    <div class="flex flex-col lg:flex-row mt-16 justify-center">
       <div v-for="n in 4" :key="`review-top-` + n" class="mx-2 mb-6">
         <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
       </div>
     </div>
-    <div class="flex flex-col md:flex-row mt-8 items-center justify-center">
+    <div class="flex flex-col lg:flex-row mt-8 items-center justify-center">
       <div
         v-for="n in 3"
         :key="`review-bottom-` + n"
-        class="mx-2 hidden md:block"
+        class="mx-2 hidden lg:block"
       >
         <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
       </div>
@@ -468,52 +483,51 @@
         />
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- footer -->
-  <footer class="bg-primary text-white min-h-full relative mt-84">
+  <footer id="footer" class="bg-primary text-white min-h-full relative mt-84">
     <div class="container mx-auto px-8 mt-48 pt-28">
       <!-- Sign Up Links -->
       <div
-        class="bg-white text-black container mx-auto px-8 absolute drop-shadow-md rounded-lg mx-auto py-8"
+        class="bg-white text-black container mx-auto px-8 absolute drop-shadow-lg rounded-lg mx-auto py-8"
         style="top: -80px; width: 85%"
       >
         <div
-          class="flex flex-col md:flex-row justify-left md:justify-between md:items-center"
+          class="flex flex-col lg:flex-row justify-left lg:justify-between lg:items-center"
         >
           <div>
             <h4 class="text-4xl font-bold">It's Time To Invest In People.</h4>
             <p>Work with creators today!</p>
           </div>
           <div class="my-4">
+            <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
             <button
               class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
             >
               Sign up for a Demo
             </button>
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="uppercase text-[18px] font-semibold mt-24 md:mt-4">
+      <div class="uppercase text-[18px] font-semibold mt-24 lg:mt-4">
         We can help you connect with creators
       </div>
-      <h4 class="text-3xl md:w-2/4 mt-16 font-semibold">
+      <h4 class="text-3xl lg:w-2/4 mt-16 font-semibold">
         Stay updated on all things trending in the influencer space.
       </h4>
-
-      <div class="my-16">
-        <label for="name" class="block mb-2 text-gray-700">Email Address</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your Email Address"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-        />
-      </div>
+      <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb">
+      <button class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-5">
+        Subscribe
+      </button>
+    </a>
       <div class="flex">
-        <div v-for="social in [linkedin, facebook, instagram, twitter]">
-          <img :src="social" class="mx-1" />
+        <div v-for="socials in socialMediaAccounts">
+          <a :href="socials.url">
+            <img :src="socials.image" class="mx-1" />
+          </a>
         </div>
       </div>
       <hr class="border-white my-12" />
@@ -535,6 +549,10 @@ import avatar from "~/assets/icons/avatar-placeholder.svg";
 import brandOne from "~/assets/images/brands/1.png";
 import brandTwo from "~/assets/images/brands/2.png";
 import brandThree from "~/assets/images/brands/3.png";
+
+// components
+import { defineComponent } from 'vue';
+import KlaviyoForm from './components/KlaviyoForm.vue';
 
 // social icons
 import linkedin from "~/assets/icons/social/li.svg";
@@ -561,9 +579,20 @@ import vidyut from "~/assets/images/team/vidyut.png";
 import abby from "~/assets/images/team/abby.png";
 import aashna from "~/assets/images/team/aashna.png";
 
-useHead({
-  title: "Currant | Creator Marketing Simplified",
-  meta: [{ name: "description", content: "Social Currant." }],
+defineComponent({
+  // components: {
+  //   KlaviyoForm,
+  // },
+  setup() {
+    useHead({
+      title: "Currant | Creator Marketing Simplified",
+      meta: [{ name: "description", content: "Social Currant." }],
+    });
+
+    // Your component setup logic here
+
+    return {};
+  },
 });
 
 const headerOverlay = ref(false);
@@ -586,6 +615,12 @@ const brandPoints = [
   "Reach a wider audience, leveraging the power of social media and influencers.",
 ];
 
+const creatorPoints = [
+  "Connect and collaborate with organizations and brands that align with your values.",
+  "Get more deals with less effort. We'll notify you when you are requested to work on a campaign.",
+  "Join a network of mission driven content creators working towards impact and change.",
+]
+
 const heroCarouselImages = [
   commChangeAction,
   nextGenAmerica,
@@ -596,15 +631,34 @@ const heroCarouselImages = [
   mtrNewYork
 ];
 
+const socialMediaAccounts = [
+  {
+    image: linkedin,
+    url: "https://www.linkedin.com/company/socialcurrant/"
+  },
+  {
+    image: facebook,
+    url: "https://www.facebook.com/socialcurrant/"
+  },
+  {
+    image: instagram,
+    url: "https://www.instagram.com/socialcurrant/"
+  },
+  {
+    image: twitter,
+    url: "https://twitter.com/socialcurrant?lang=en"
+  }
+]
+
 const teamFirstRow = [
   {
     name: "Ashwath Narayanan",
-    desc: "Co-Founder & CEO",
+    desc: "Chief Executive Officer",
     image: ashwath
   },
   {
     name: "Vidyut Ghuwalewala",
-    desc: "Co-Founder & COO",
+    desc: "Chief Operating Officer",
     image: vidyut
   },
   {
@@ -618,7 +672,7 @@ const teamFirstRow = [
     image: ellie
   },
   {
-    name: "William Chesier",
+    name: "William Cheshier",
     desc: "Chief Technology Officer",
     image: will
   },
@@ -635,8 +689,8 @@ const teamSecondRow = [
     image: abby
   },
   {
-    name: "Erika",
-    desc: "Software Engineer",
+    name: "Erika Alexandra Aquino Enrique",
+    desc: "Frontend Engineer",
     image: erika
   },
   {
@@ -647,10 +701,10 @@ const teamSecondRow = [
 ];
 
 const headerLinks = [
-  {
-    text: "How it works",
-    scrollTo: "howItWorks"
-  },
+  // {
+  //   text: "How it works",
+  //   scrollTo: "howItWorks"
+  // },
   {
     text: "Brands",
     scrollTo: "getInvolved"
@@ -664,7 +718,7 @@ const headerLinks = [
     scrollTo: "aboutUs"
   },
   {
-    text: "How can we help",
+    text: "How we help",
     scrollTo: "help"
   },
 ];

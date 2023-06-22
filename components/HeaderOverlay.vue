@@ -25,9 +25,11 @@
     </div>
     <div class="flex justify-between items-center py-[32px]">
       <div>
-        <div class="mx-8 bg-secondary text-white py-2 px-3 rounded-lg">
+        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+          <div class="mx-8 bg-secondary text-white py-2 px-3 rounded-lg">
           Book a Demo
         </div>
+        </a>
       </div>
       <div>
         <div style="height: 80px; width: 100%">
