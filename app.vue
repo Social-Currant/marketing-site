@@ -552,7 +552,7 @@ import brandThree from "~/assets/images/brands/3.png";
 
 // components
 import { defineComponent } from 'vue';
-// import KlaviyoForm from './components/KlaviyoForm.vue';
+import KlaviyoForm from './components/KlaviyoForm.vue';
 
 // social icons
 import linkedin from "~/assets/icons/social/li.svg";
@@ -580,9 +580,9 @@ import abby from "~/assets/images/team/abby.png";
 import aashna from "~/assets/images/team/aashna.png";
 
 defineComponent({
-  components: {
-    KlaviyoForm,
-  },
+  // components: {
+  //   KlaviyoForm,
+  // },
   setup() {
     useHead({
       title: "Currant | Creator Marketing Simplified",
