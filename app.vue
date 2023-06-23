@@ -550,6 +550,11 @@ import brandOne from "~/assets/images/brands/1.png";
 import brandTwo from "~/assets/images/brands/2.png";
 import brandThree from "~/assets/images/brands/3.png";
 
+// creator carousel images
+import creatorOne from "~/assets/images/creators/1.png";
+import creatorTwo from "~/assets/images/creators/2.png";
+import creatorThree from "~/assets/images/creators/3.png";
+
 // components
 import { defineComponent } from 'vue';
 import KlaviyoForm from './components/KlaviyoForm.vue';
@@ -602,9 +607,9 @@ const activeBrandCreatorSelector = ref("Brands");
 
 const activeCarouselImagePath = computed(() => {
   const imageMap = {
-    1: brandOne,
-    2: brandTwo,
-    3: brandThree,
+    1: activeBrandCreatorSelector.value === 'Brands' ? brandOne: creatorOne,
+    2: activeBrandCreatorSelector.value === 'Brands' ? brandTwo: creatorTwo,
+    3: activeBrandCreatorSelector.value === 'Brands' ? brandThree: creatorThree,
   };
   return imageMap[activeBrandImageIndex.value];
 });
