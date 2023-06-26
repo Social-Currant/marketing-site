@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: "utf-8",
-      viewport: "width=device-width, initial-scale=1.0",
+      viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0",
       title: "Social Currant",
       meta: [
         { name: "description", content: "Social Currant" }

@@ -13,14 +13,14 @@
     </div>
   </div>
   <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
-    <div class="container mx-auto px-8 flex items-center bg-white z-50">
+    <div class="container mx-auto px-6 md:px-8 flex items-center bg-white z-50">
       <h1 class="grow">
         <img src="~/assets/images/currant-logo.svg" />
       </h1>
       <div class="flex nav-links hidden lg:block">
         <a
           v-for="link in headerLinks"
-          class="hover:text-primary hover:font-medium ml-[24px] text-[20px] cursor-pointer"
+          class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
           @click="scrollToDiv(link.scrollTo, link.text)"
           >{{ link.text }}</a
         >
@@ -50,7 +50,7 @@
     ></HeaderOverlay>
   </header>
   <!-- Section First Impression -->
-  <section class="container mx-auto px-8 mt-[71px]">
+  <section class="container mx-auto px-6 md:px-8 mt-[71px]">
     <div class="grid lg:grid-cols-2">
       <div class="lg:order-last">
         <div class="">
@@ -87,7 +87,7 @@
   </section>
   <!-- / - Section First Impression -->
   <!-- Organization carousel -->
-  <section class="container mx-auto px-8 mt-[83px]">
+  <section class="container mx-auto px-6 md:px-8 mt-[83px]">
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
       <div v-for="image in heroCarouselImages" class="my-4">
         <img :src="image" class="w-200 mx-4" />
@@ -99,9 +99,9 @@
 
   <!-- How it works -->
   <div id="howItWorks"></div>
-  <section class="container mx-auto px-8 mt-[105px]">
+  <section class="container mx-auto px-6 md:px-8 mt-[105px]">
     <h3
-      class="uppercase text-center text-primary text-[32px] font-semibold leading-tight"
+      class="uppercase text-center text-primary text-5xl font-semibold leading-tight"
     >
       How it works
     </h3>
@@ -113,8 +113,7 @@
       <div>
         <img
           src="~/assets/icons/step1.svg"
-          class="block lg:hidden mt-[32px] mx-auto mb-8"
-          style="width: 250px"
+          class="block lg:hidden mt-[32px] mx-auto mb-8 w-[250px]"
         />
         <h4
           class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
@@ -135,8 +134,7 @@
       <div>
         <img
           src="~/assets/icons/step2.svg"
-          class="block lg:hidden mt-[32px] mx-auto"
-          style="width: 250px"
+          class="block lg:hidden mt-[32px] mx-auto w-[250px]"
         />
         <h4
           class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
@@ -157,8 +155,7 @@
       <div>
         <img
           src="~/assets/icons/step3.svg"
-          class="block lg:hidden mt-[32px] mx-auto"
-          style="width: 250px"
+          class="block lg:hidden mt-[32px] mx-auto w-[250px]"
         />
         <h4
           class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
@@ -183,20 +180,20 @@
   <!-- / - How it works -->
   <!-- Get Involved -->
   <div id="getInvolved"></div>
-  <section class="container mx-auto px-8 mt-[105px]">
+  <section class="container mx-auto px-6 md:px-8 mt-[105px]">
     <h3
-      class="uppercase text-4xl text-center text-primary text-[50px] font-semibold leading-tight"
+      class="uppercase text-center text-primary text-[32px] md:text-5xl font-semibold leading-tight"
     >
       Get Involved
     </h3>
     <div
-      class="grid grid-cols-2 mt-[74px] rounded-lg content-center border-[3px] border-purple border-solid"
+      class="grid grid-cols-2 mt-[74px] content-center border-[3px] border-purple border-solid place-items-center"
     >
       <div
-        class="text-center text-[28px] cursor-pointer py-4 text-black"
+        class="text-center text-[28px] cursor-pointer text-black h-full w-full p-4"
         :class="
           activeBrandCreatorSelector === 'Brands'
-            ? `bg-primary rounded-tl-lg rounded-bl-lg text-white`
+            ? `bg-primary text-white`
             : ``
         "
         @click="activeBrandCreatorSelector = 'Brands'"
@@ -204,10 +201,10 @@
         Brands
       </div>
       <div
-        class="text-center text-[28px] text-black cursor-pointer py-4"
+        class="text-center text-[28px] text-black cursor-pointer h-full w-full p-4"
         :class="
           activeBrandCreatorSelector === 'Creators'
-            ? `text-white bg-primary rounded-tr-lg rounded-br-lg`
+            ? `text-white bg-primary`
             : ``
         "
         @click="activeBrandCreatorSelector = 'Creators'"
@@ -224,10 +221,10 @@
           <div
             v-for="n in 3"
             :key="`brand-carousel-img` + n"
-            @click="activeBrandImageIndex = n"
+            @click="activeCarouselImageIndex = n"
           >
             <img
-              v-if="activeBrandImageIndex === n"
+              v-if="activeCarouselImageIndex === n"
               :src="circleActive"
               class="cursor-pointer h-[20px]"
             />
@@ -263,13 +260,13 @@
 
   <!-- About Us -->
   <div id="aboutUs"></div>
-  <section class="container mx-auto px-8 mt-32">
+  <section class="container mx-auto px-6 md:px-8 mt-32">
     <div>
       <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
     </div>
     <div class="flex flex-col lg:flex-row-reverse">
       <div class="w-full lg:w-[500px]">
-        <h4 class="uppercase text-[50px] text-primary font-semibold leading-tight">
+        <h4 class="uppercase text-[32px] md:text-5xl text-primary font-semibold leading-tight">
           About Us
         </h4>
         <p class="mb-4 mt-4 uppercase text-[20px] font-semibold text-primary">
@@ -284,7 +281,30 @@
         </p>
       </div>
     </div>
-    <div class="flex">
+    <!-- mobile version of meet the team with carousel -->
+    <div class="block lg:hidden">
+      <div class="flex uppercase justify-center cursor-pointer my-8" @click="showMeetTeam = !showMeetTeam">
+        <h4 class="mr-2 font-semibold text-xl">Meet the Team</h4>
+        <img v-if="showMeetTeam" src="~/assets/icons/drop-arrow-up.svg">
+        <img v-else src="~/assets/icons/drop-arrow-down.svg">
+      </div>
+      <div v-show="showMeetTeam" class="flex flex-nowrap mobile-meet-the-team" style="min-height: 300px;">
+        <div v-for="team in teamRow" class="mx-4" style="min-width: 180px; height: 180px;">
+          <img
+            class="h-full w-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
+            :src="team.image"
+          />
+          <h6
+            class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold"
+          >
+            {{ team.name }}
+          </h6>
+          <p class="text-black text-center">{{ team.desc }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- / - mobile version -->
+    <div class="flex hidden lg:block">
       <h4
         class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-tight"
       >
@@ -293,7 +313,7 @@
     </div>
     <!-- First Row - Team Members -->
     <div
-      class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 mt-16"
+      class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 mt-16 hidden lg:flex"
     >
       <div v-for="team in teamFirstRow" class="mb-5">
         <div class="w-40 h-40 mx-auto">
@@ -312,7 +332,7 @@
     </div>
     <!-- Second Row - Team Members -->
     <div
-      class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between"
+      class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex"
     >
       <div></div>
       <div v-for="team in teamSecondRow" class="mb-5 mx-2">
@@ -332,7 +352,7 @@
       <div></div>
     </div>
   </section>
-  <div class="container mx-auto px-8 mt-16 relative">
+  <div class="container mx-auto px-6 md:px-8 mt-16 relative">
     <img
       src="~/assets/icons/about-us-line-left.svg"
       style="position: absolute; left: -100px"
@@ -351,35 +371,37 @@
     <div class="apply-currant-bg"></div>
   </div>
   <div id="help"></div>
-  <section class="container mx-auto px-8 mt-64">
-    <h3 class="uppercase text-primary text-[50px] font-semibold leading-tight">
+  <section class="container mx-auto px-6 md:px-8 mt-36 md:mt-64">
+    <h3 class="uppercase text-primary text-[32px] md:text-5xl text-center md:text-left font-semibold leading-tight">
       Ways to Apply Social Currant
     </h3>
     <div class="grid grid-cols-3 gap-4 mt-4 lg:mt-24">
       <div class="col-span-3 lg:col-span-2">
         <!-- Persuasion -->
-        <div class="flex mt-16 items-center">
-          <div class="mr-3">
-            <img src="~/assets/images/apply/persuasion.png" />
+        <div class="cursor-pointer">
+          <div class="flex mt-16 items-center">
+            <div class="mr-3">
+              <img src="~/assets/images/apply/persuasion.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg md:text-[28px]">
+                Persuasion & Narrative Change
+              </h4>
+            </div>
           </div>
-          <div>
-            <h4 class="font-semibold text-[28px]">
-              Persuasion & Narrative Change
-            </h4>
-          </div>
+          <p class="lg:mr-32 mt-2">
+            Identify creators from the communities you’re trying to reach and have
+            them share their lived experiences around your issues to change
+            narrative and persuade audiences.
+          </p>
         </div>
-        <p class="lg:mr-32 mt-2">
-          Identify creators from the communities you’re trying to reach and have
-          them share their lived experiences around your issues to change
-          narrative and persuade audiences.
-        </p>
         <!-- Education -->
         <div class="flex mt-16 items-center">
           <div class="mr-3">
-            <img src="~/assets/images/apply/education.png" />
+            <img src="~/assets/images/apply/education.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
           </div>
           <div>
-            <h4 class="font-semibold text-[28px]">Education &amp; Awareness</h4>
+            <h4 class="font-semibold text-lg md:text-[28px]">Education &amp; Awareness</h4>
           </div>
         </div>
         <p class="lg:mr-32 mt-2">
@@ -389,10 +411,10 @@
         <!-- Activation -->
         <div class="flex mt-16 items-center">
           <div class="mr-3">
-            <img src="~/assets/images/apply/activation.png" />
+            <img src="~/assets/images/apply/activation.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
           </div>
           <div>
-            <h4 class="font-semibold text-[28px]">Activation</h4>
+            <h4 class="font-semibold text-lg md:text-[28px]">Activation</h4>
           </div>
         </div>
         <p class="lg:mr-32 mt-2">
@@ -403,10 +425,10 @@
         <!-- Ads -->
         <div class="flex mt-16 items-center">
           <div class="mr-3">
-            <img src="~/assets/images/apply/ads.png" />
+            <img src="~/assets/images/apply/ads.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
           </div>
           <div>
-            <h4 class="font-semibold text-[28px]">
+            <h4 class="font-semibold text-lg md:text-[28px]">
               Ads & Other Comms Strategies
             </h4>
           </div>
@@ -418,10 +440,10 @@
         <!-- Build -->
         <div class="flex mt-16 items-center">
           <div class="mr-3">
-            <img src="~/assets/images/apply/build.png" />
+            <img src="~/assets/images/apply/build.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
           </div>
           <div>
-            <h4 class="font-semibold text-[28px]">
+            <h4 class="font-semibold text-lg md:text-[28px]">
               Build an integrated strategy
             </h4>
           </div>
@@ -444,60 +466,21 @@
       </div>
     </div>
   </section>
-  <!-- What people are saying -->
-  <!-- <section class="container mx-auto px-8 mt-32">
-    <h3
-      class="uppercase text-center text-primary text-[50px] font-semibold leading-tight"
-    >
-      What people are saying
-    </h3>
-    <div class="relative">
-      <div class="absolute" style="right: 0; z-index: -1; top: -90px">
-        <img
-          src="~/assets/icons/gradient-circle.svg"
-          class="h-48 circle-gradient opacity-30"
-          style="width: 600px"
-        />
-      </div>
-    </div>
-    <div class="flex flex-col lg:flex-row mt-16 justify-center">
-      <div v-for="n in 4" :key="`review-top-` + n" class="mx-2 mb-6">
-        <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
-      </div>
-    </div>
-    <div class="flex flex-col lg:flex-row mt-8 items-center justify-center">
-      <div
-        v-for="n in 3"
-        :key="`review-bottom-` + n"
-        class="mx-2 hidden lg:block"
-      >
-        <img src="~/assets/icons/review.svg" class="z-20 mx-auto" />
-      </div>
-    </div>
-    <div class="relative">
-      <div class="absolute" style="left: 0; z-index: -1; top: -90px">
-        <img
-          src="~/assets/icons/gradient-circle.svg"
-          class="h-48 circle-gradient opacity-30"
-          style="width: 600px"
-        />
-      </div>
-    </div>
-  </section> -->
+  <Testimonials></Testimonials>
 
   <!-- footer -->
   <footer id="footer" class="bg-primary text-white min-h-full relative mt-84">
-    <div class="container mx-auto px-8 mt-48 pt-28">
+    <div class="container mx-auto px-6 md:px-8 mt-48 pt-28 text-center md:text-left ">
       <!-- Sign Up Links -->
       <div
-        class="bg-white text-black container mx-auto px-8 absolute drop-shadow-lg rounded-lg mx-auto py-8"
+        class="bg-white text-black container mx-auto px-6 md:px-8 absolute drop-shadow-lg rounded-lg mx-auto py-8"
         style="top: -80px; width: 85%"
       >
         <div
           class="flex flex-col lg:flex-row justify-left lg:justify-between lg:items-center"
         >
           <div>
-            <h4 class="text-4xl font-bold">It's Time To Invest In People.</h4>
+            <h4 class="text-3xl md:text-4xl font-bold">It's Time To Invest In People.</h4>
             <p>Work with creators today!</p>
           </div>
           <div class="my-4">
@@ -512,14 +495,14 @@
         </div>
       </div>
 
-      <div class="uppercase text-[18px] font-semibold mt-24 lg:mt-4">
+      <div class="uppercase text-lg font-semibold mt-24 lg:mt-4 text-left">
         We can help you connect with creators
       </div>
-      <h4 class="text-3xl lg:w-2/4 mt-16 font-semibold">
+      <h4 class="text-[32px] md:text-3xl lg:w-2/4 mt-16 font-semibold text-left">
         Stay updated on all things trending in the influencer space.
       </h4>
       <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb">
-      <button class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-5">
+      <button class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-12 text-left block">
         Subscribe
       </button>
     </a>
@@ -573,7 +556,7 @@ import leftHook from "~/assets/images/hero-carousel/left-hook.png";
 import jvaCampaigns from "~/assets/images/hero-carousel/jva-campaigns.png";
 import mtrNewYork from "~/assets/images/hero-carousel/mtr-new-york.png";
 
-
+// team
 import will from "~/assets/images/team/will.png";
 import erika from "~/assets/images/team/erika.png";
 import sisir from "~/assets/images/team/sisir.png";
@@ -601,8 +584,9 @@ defineComponent({
 });
 
 const headerOverlay = ref(false);
+const showMeetTeam = ref(false);
 
-const activeBrandImageIndex = ref(1);
+const activeCarouselImageIndex = ref(1);
 const activeBrandCreatorSelector = ref("Brands");
 
 const activeCarouselImagePath = computed(() => {
@@ -611,7 +595,23 @@ const activeCarouselImagePath = computed(() => {
     2: activeBrandCreatorSelector.value === 'Brands' ? brandTwo: creatorTwo,
     3: activeBrandCreatorSelector.value === 'Brands' ? brandThree: creatorThree,
   };
-  return imageMap[activeBrandImageIndex.value];
+  return imageMap[activeCarouselImageIndex.value];
+});
+
+onMounted(() => {
+  setInterval(() => {
+    if (activeCarouselImageIndex.value === 0 || activeCarouselImageIndex.value  === 3) {
+      activeCarouselImageIndex.value = 1;
+    } else {
+      activeCarouselImageIndex.value += 1;
+    }
+  }, 7000);
+});
+
+
+watch(activeBrandCreatorSelector, () => {
+  // reset the image index to 1
+  activeCarouselImageIndex.value = 1;
 });
 
 const brandPoints = [
@@ -658,12 +658,12 @@ const socialMediaAccounts = [
 const teamFirstRow = [
   {
     name: "Ashwath Narayanan",
-    desc: "Chief Executive Officer",
+    desc: "Co-Founder & CEO",
     image: ashwath
   },
   {
     name: "Vidyut Ghuwalewala",
-    desc: "Chief Operating Officer",
+    desc: "Co-Founder & COO",
     image: vidyut
   },
   {
@@ -704,6 +704,10 @@ const teamSecondRow = [
     image: sisir
   },
 ];
+
+const teamRow = computed(() => {
+  return teamFirstRow.concat(teamSecondRow);
+})
 
 const headerLinks = [
   // {
@@ -794,4 +798,14 @@ function scrollToDiv(scrollElement, navName) {
     top: 24rem;
   }
 }
+.mobile-meet-the-team {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.mobile-meet-the-team::-webkit-scrollbar {
+  display: none;
+}
+
 </style>
