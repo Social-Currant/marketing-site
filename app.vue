@@ -367,19 +367,21 @@
   <!-- / About Us -->
 
   <!-- Ways to Apply Social Currant -->
-  <div class="relative hidden lg:block">
-    <div class="apply-currant-bg"></div>
+  <div class="relative">
+    <div
+      :class="`apply-currant-bg-` + activeApplyCurrant">
+    </div>
   </div>
   <div id="help"></div>
   <section class="container mx-auto px-6 md:px-8 mt-36 md:mt-64">
-    <h3 class="uppercase text-primary text-[32px] md:text-5xl text-center md:text-left font-semibold leading-tight">
+    <h3 class="uppercase text-primary text-[32px] md:text-5xl text-center md:text-left font-semibold leading-tight mb-16">
       Ways to Apply Social Currant
     </h3>
-    <div class="grid grid-cols-3 gap-4 mt-4 lg:mt-24">
+    <div class="grid grid-cols-3 gap-0 mt-4 lg:mt-24">
       <div class="col-span-3 lg:col-span-2">
         <!-- Persuasion -->
-        <div class="cursor-pointer">
-          <div class="flex mt-16 items-center">
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'persuasion'">
+          <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/persuasion.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
             </div>
@@ -396,63 +398,71 @@
           </p>
         </div>
         <!-- Education -->
-        <div class="flex mt-16 items-center">
-          <div class="mr-3">
-            <img src="~/assets/images/apply/education.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'education'">
+          <div class="flex items-center">
+            <div class="mr-3">
+              <img src="~/assets/images/apply/education.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg md:text-[28px]">Education &amp; Awareness</h4>
+            </div>
           </div>
-          <div>
-            <h4 class="font-semibold text-lg md:text-[28px]">Education &amp; Awareness</h4>
-          </div>
+          <p class="lg:mr-32 mt-2">
+             Identify creators who go to sources of information and work with them
+            to spread key information in rapid response moments.
+          </p>
         </div>
-        <p class="lg:mr-32 mt-2">
-           Identify creators who go to sources of information and work with them
-          to spread key information in rapid response moments.
-        </p>
         <!-- Activation -->
-        <div class="flex mt-16 items-center">
-          <div class="mr-3">
-            <img src="~/assets/images/apply/activation.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'activation'">
+          <div class="flex items-center">
+            <div class="mr-3">
+              <img src="~/assets/images/apply/activation.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg md:text-[28px]">Activation</h4>
+            </div>
           </div>
-          <div>
-            <h4 class="font-semibold text-lg md:text-[28px]">Activation</h4>
-          </div>
+          <p class="lg:mr-32 mt-2">
+            Find creators good at driving their followers to take action and work
+            with them to activate petition signatures, calls to representatives
+            and more.
+          </p>
         </div>
-        <p class="lg:mr-32 mt-2">
-          Find creators good at driving their followers to take action and work
-          with them to activate petition signatures, calls to representatives
-          and more.
-        </p>
         <!-- Ads -->
-        <div class="flex mt-16 items-center">
-          <div class="mr-3">
-            <img src="~/assets/images/apply/ads.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'ads'">
+          <div class="flex items-center">
+            <div class="mr-3">
+              <img src="~/assets/images/apply/ads.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg md:text-[28px]">
+                Ads & Other Comms Strategies
+              </h4>
+            </div>
           </div>
-          <div>
-            <h4 class="font-semibold text-lg md:text-[28px]">
-              Ads & Other Comms Strategies
-            </h4>
-          </div>
+          <p class="lg:mr-32 mt-2">
+            Identify creators who create high converting content and work with
+            them to produce ads and other forms of creative.
+          </p>
         </div>
-        <p class="lg:mr-32 mt-2">
-          Identify creators who create high converting content and work with
-          them to produce ads and other forms of creative.
-        </p>
         <!-- Build -->
-        <div class="flex mt-16 items-center">
-          <div class="mr-3">
-            <img src="~/assets/images/apply/build.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'build'">
+          <div class="flex items-center">
+            <div class="mr-3">
+              <img src="~/assets/images/apply/build.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg md:text-[28px]">
+                Build an integrated strategy
+              </h4>
+            </div>
           </div>
-          <div>
-            <h4 class="font-semibold text-lg md:text-[28px]">
-              Build an integrated strategy
-            </h4>
-          </div>
+          <p class="lg:mr-32 mt-2">
+            Build an integrated communications strategy that leverages creators to
+            create content, serve as strategic partners, talk to press and a lot
+            more through our platform.
+          </p>
         </div>
-        <p class="lg:mr-32 mt-2">
-          Build an integrated communications strategy that leverages creators to
-          create content, serve as strategic partners, talk to press and a lot
-          more through our platform.
-        </p>
         <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
           <button
             class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
@@ -582,6 +592,8 @@ defineComponent({
     return {};
   },
 });
+
+const activeApplyCurrant = ref('persuasion'); // persuasion, education, activation, ads, build
 
 const headerOverlay = ref(false);
 const showMeetTeam = ref(false);
@@ -773,31 +785,54 @@ function scrollToDiv(scrollElement, navName) {
   z-index: -10;
 }
 
-.apply-currant-bg {
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  display: block;
-  background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
-  height: 16rem;
-  top: 30rem;
-  @media (min-width: 768px) {
-    height: 20rem;
-    top: 26rem;
-  }
-  @media (min-width: 1024px) {
-    height: 12rem;
-    top: 24rem;
-  }
-  @media (min-width: 1280px) {
-    height: 12rem;
-    top: 24rem;
-  }
-  @media (min-width: 1536px) {
-    height: 10rem;
-    top: 24rem;
+// persuasion, education, activation, ads, build
+$applyStatus: (
+  persuasion: (19, 10),
+  education: (30, 10),
+  activation: (41, 10),
+  ads: (52, 10),
+  build: (63, 10),
+);
+
+@each $key, $value in $applyStatus {
+  .apply-currant-bg-#{$key} {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    display: block;
+    background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
+
+    // default values for small screen
+    top: (nth($value, 1) - 6) + rem;
+    height: 11rem;
+
+    @media (min-width: 404px) { // xs
+      top: (nth($value, 1) - 6) + rem;
+      height: 11rem;
+    }
+    @media (min-width: 582px) { // sm
+      top: (nth($value, 1) - 9) + rem;
+      height: 9rem;
+    }
+    @media (min-width: 768px) { // md
+      top: (nth($value, 1) + 2) + rem;
+      height: 9rem;
+    }
+    @media (min-width: 1024px) { // lg
+      top: nth($value, 1) + rem;
+      height: 11rem;
+    }
+    @media (min-width: 1280px) { // xl
+      top: nth($value, 1) + rem; // increased this by 10
+      height: 10rem;
+    }
+    @media (min-width: 1536px) { // xxl
+      top: nth($value, 1) + rem; // increased this by 10
+      height: 10rem;
+    }
   }
 }
+
 .mobile-meet-the-team {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
