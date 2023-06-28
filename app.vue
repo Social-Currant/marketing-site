@@ -837,7 +837,10 @@ $build: build;
   }
 }
 .build-height {
-	height: 25%;
+  height: 25%;
+  @media (min-width: 375px) { // xxs
+	  height: 11rem;
+  }
 }
 .apply-currant-mobile-container {
   @media (max-width: 374px) { // xxs
