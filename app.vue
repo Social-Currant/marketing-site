@@ -380,7 +380,10 @@
     <div class="grid grid-cols-3 gap-0 mt-4 lg:mt-24">
       <div class="col-span-3 lg:col-span-2">
         <!-- Persuasion -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'persuasion'; activeApplyCurrantPhone=iphoneImage[0]">
+        <div
+          class="cursor-pointer persusaion-height apply-currant-mobile-container"
+          :class="activeApplyCurrant === 'persuasion' ? `apply-currant-mobile-bg-active`: ``"
+          @click="activeApplyCurrant = 'persuasion'; activeApplyCurrantPhone=iphoneImage[0]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/persuasion.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -398,7 +401,10 @@
           </p>
         </div>
         <!-- Education -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'education' ; activeApplyCurrantPhone=iphoneImage[1]">
+        <div
+          class="cursor-pointer h-44 apply-currant-mobile-container"
+          :class="activeApplyCurrant === 'education' ? `apply-currant-mobile-bg-active`: ``"
+          @click="activeApplyCurrant = 'education' ; activeApplyCurrantPhone=iphoneImage[1]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/education.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -413,7 +419,10 @@
           </p>
         </div>
         <!-- Activation -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'activation' ; activeApplyCurrantPhone=iphoneImage[2]">
+        <div
+          class="cursor-pointer h-44 apply-currant-mobile-container"
+          :class="activeApplyCurrant === 'activation' ? `apply-currant-mobile-bg-active`: ``"
+          @click="activeApplyCurrant = 'activation' ; activeApplyCurrantPhone=iphoneImage[2]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/activation.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -429,7 +438,10 @@
           </p>
         </div>
         <!-- Ads -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'ads' ; activeApplyCurrantPhone=iphoneImage[3]">
+        <div
+          class="cursor-pointer h-44 apply-currant-mobile-container"
+          :class="activeApplyCurrant === 'ads' ? `apply-currant-mobile-bg-active`: ``"
+          @click="activeApplyCurrant = 'ads' ; activeApplyCurrantPhone=iphoneImage[3]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/ads.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -446,7 +458,9 @@
           </p>
         </div>
         <!-- Build -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'build'; activeApplyCurrantPhone=iphoneImage[4]">
+        <div class="cursor-pointer build-height apply-currant-mobile-container"
+          :class="activeApplyCurrant === 'build' ? `apply-currant-mobile-bg-active`: ``"
+          @click="activeApplyCurrant = 'build'; activeApplyCurrantPhone=iphoneImage[4]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/build.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -627,12 +641,12 @@ onMounted(() => {
     } else {
       activeCarouselImageIndex.value += 1;
     }
-    
-    const activeApplyCurrantIndex = applyCurrantOptions.indexOf(activeApplyCurrant.value)
-    const nextApplyCurrantIndex = (activeApplyCurrantIndex + 1) % applyCurrantOptions.length
-    activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex]
 
-    activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex]
+    // const activeApplyCurrantIndex = applyCurrantOptions.indexOf(activeApplyCurrant.value)
+    // const nextApplyCurrantIndex = (activeApplyCurrantIndex + 1) % applyCurrantOptions.length
+    // activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex]
+
+    // activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex]
 
 
   }, 7000);
@@ -814,21 +828,58 @@ $applyStatus: (
   build: (63, 10),
 );
 
+$persuasion: persuasion;
+$build: build;
+.persusaion-height, .build-height {
+  height: 22%;
+  @media (min-width: 375px) { // xxs
+	  height: 11rem;
+  }
+}
+.build-height {
+	height: 25%;
+}
+.apply-currant-mobile-container {
+  @media (max-width: 374px) { // xxs
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.apply-currant-mobile-bg-active {
+  @media (max-width: 374px) { // xxs
+    margin: 0px -1.5rem;
+    background: #c8d8ff;
+    padding: 0 1.5rem;
+  }
+}
+
 @each $key, $value in $applyStatus {
+
   .apply-currant-bg-#{$key} {
     position: absolute;
     width: 100%;
     z-index: -1;
     display: block;
-    background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
-
     // default values for small screen
-    top: (nth($value, 1) - 6) + rem;
-    height: 11rem;
+    background: #c8d8ff;
+
+    @media (min-width: 375px) { // xxs
+      top: (nth($value, 1) - 6) + rem;
+      height: 11rem;
+      @if $key == build {
+        top: (nth($value, 1) - 7) + rem;
+        height: 12rem;
+      }
+    }
 
     @media (min-width: 404px) { // xs
       top: (nth($value, 1) - 6) + rem;
       height: 11rem;
+      @if $key == build {
+        top: (nth($value, 1) - 7.5) + rem;
+        height: 12rem;
+      }
     }
     @media (min-width: 582px) { // sm
       top: (nth($value, 1) - 9) + rem;
@@ -841,14 +892,17 @@ $applyStatus: (
     @media (min-width: 1024px) { // lg
       top: nth($value, 1) + rem;
       height: 11rem;
+      background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
     }
     @media (min-width: 1280px) { // xl
       top: nth($value, 1) + rem; // increased this by 10
       height: 10rem;
+      background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
     }
     @media (min-width: 1536px) { // xxl
       top: nth($value, 1) + rem; // increased this by 10
       height: 10rem;
+      background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
     }
   }
 }
