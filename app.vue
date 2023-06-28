@@ -642,11 +642,11 @@ onMounted(() => {
       activeCarouselImageIndex.value += 1;
     }
 
-    // const activeApplyCurrantIndex = applyCurrantOptions.indexOf(activeApplyCurrant.value)
-    // const nextApplyCurrantIndex = (activeApplyCurrantIndex + 1) % applyCurrantOptions.length
-    // activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex]
+    const activeApplyCurrantIndex = applyCurrantOptions.indexOf(activeApplyCurrant.value)
+    const nextApplyCurrantIndex = (activeApplyCurrantIndex + 1) % applyCurrantOptions.length
+    activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex]
 
-    // activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex]
+    activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex]
 
 
   }, 7000);
