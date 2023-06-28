@@ -380,7 +380,7 @@
     <div class="grid grid-cols-3 gap-0 mt-4 lg:mt-24">
       <div class="col-span-3 lg:col-span-2">
         <!-- Persuasion -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'persuasion'">
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'persuasion'; activeApplyCurrantPhone=iphoneImage[0]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/persuasion.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -398,7 +398,7 @@
           </p>
         </div>
         <!-- Education -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'education'">
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'education' ; activeApplyCurrantPhone=iphoneImage[1]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/education.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -413,7 +413,7 @@
           </p>
         </div>
         <!-- Activation -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'activation'">
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'activation' ; activeApplyCurrantPhone=iphoneImage[2]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/activation.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -429,7 +429,7 @@
           </p>
         </div>
         <!-- Ads -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'ads'">
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'ads' ; activeApplyCurrantPhone=iphoneImage[3]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/ads.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -446,7 +446,7 @@
           </p>
         </div>
         <!-- Build -->
-        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'build'">
+        <div class="cursor-pointer h-44" @click="activeApplyCurrant = 'build'; activeApplyCurrantPhone=iphoneImage[4]">
           <div class="flex items-center">
             <div class="mr-3">
               <img src="~/assets/images/apply/build.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
@@ -472,7 +472,7 @@
         </a>
       </div>
       <div class="hidden lg:block">
-        <img src="~/assets/images/tiktok.png" class="mt-[60px] mx-auto" />
+        <img  :src="activeApplyCurrantPhone" class="mt-[60px] mx-auto" />
       </div>
     </div>
   </section>
@@ -543,6 +543,13 @@ import brandOne from "~/assets/images/brands/1.png";
 import brandTwo from "~/assets/images/brands/2.png";
 import brandThree from "~/assets/images/brands/3.png";
 
+// brand carousel images
+import phonePersuasion from "~/assets/images/apply/phone-persuasion.png";
+import phoneEducation from "~/assets/images/apply/phone-education.png";
+import phoneActivation from "~/assets/images/apply/phone-activation.png";
+import phoneAds from "~/assets/images/apply/phone-ads.png";
+import phoneBuild from "~/assets/images/apply/phone-build.png";
+
 // creator carousel images
 import creatorOne from "~/assets/images/creators/1.png";
 import creatorTwo from "~/assets/images/creators/2.png";
@@ -593,6 +600,7 @@ defineComponent({
   },
 });
 
+const applyCurrantOptions = ["persuasion", "education", "activation", "ads", "build"]
 const activeApplyCurrant = ref('persuasion'); // persuasion, education, activation, ads, build
 
 const headerOverlay = ref(false);
@@ -600,6 +608,8 @@ const showMeetTeam = ref(false);
 
 const activeCarouselImageIndex = ref(1);
 const activeBrandCreatorSelector = ref("Brands");
+const iphoneImage=[phonePersuasion,phoneEducation,phoneActivation,phoneAds, phoneBuild ]
+const activeApplyCurrantPhone=ref(iphoneImage[0])
 
 const activeCarouselImagePath = computed(() => {
   const imageMap = {
@@ -617,7 +627,17 @@ onMounted(() => {
     } else {
       activeCarouselImageIndex.value += 1;
     }
+    
+    const activeApplyCurrantIndex = applyCurrantOptions.indexOf(activeApplyCurrant.value)
+    const nextApplyCurrantIndex = (activeApplyCurrantIndex + 1) % applyCurrantOptions.length
+    activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex]
+
+    activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex]
+
+
   }, 7000);
+
+
 });
 
 
