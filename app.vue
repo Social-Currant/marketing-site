@@ -588,7 +588,7 @@ import jvaCampaigns from "~/assets/images/hero-carousel/jva-campaigns.png";
 import mtrNewYork from "~/assets/images/hero-carousel/mtr-new-york.png";
 
 // team
-import will from "~/assets/images/team/will.png";
+import will from "~/assets/images/team/will.jpeg";
 import erika from "~/assets/images/team/erika.png";
 import sisir from "~/assets/images/team/sisir.png";
 import ashwath from "~/assets/images/team/ashwath.png";
@@ -704,12 +704,12 @@ const socialMediaAccounts = [
 const teamFirstRow = [
   {
     name: "Ashwath Narayanan",
-    desc: "Co-Founder & CEO",
+    desc: "Chief Executive Officer",
     image: ashwath
   },
   {
     name: "Vidyut Ghuwalewala",
-    desc: "Co-Founder & COO",
+    desc: "Chief Operating Officer",
     image: vidyut
   },
   {
