@@ -2,9 +2,13 @@
   <div class="bg-primary h-[61px]">
     <div class="container mx-auto px-4 h-full flex items-center">
       <div class="grow text-center">
-        <p class="font-semibold text-white">
-          <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb" class="underline text-secondary cursor-pointer">Sign up</a> for our
-          newsletter for updates + previews of new platform features!
+        <p class="font-semibold text-white text-base sm:text-xl">
+          <a
+            href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb"
+            class="underline text-secondary cursor-pointer"
+            >Sign up</a
+          >
+          for our newsletter for updates + previews of new platform features!
         </p>
       </div>
       <!-- <div class="flex-none hidden lg:block">
@@ -17,7 +21,7 @@
       <h1 class="grow">
         <img src="~/assets/images/currant-logo.svg" />
       </h1>
-      <div class="flex nav-links hidden lg:block">
+      <div class="flex nav-links hidden lg:block headerLink font-semibold">
         <a
           v-for="link in headerLinks"
           class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
@@ -28,7 +32,7 @@
       <div class="ml-[44px] hidden lg:block">
         <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
           <button
-            class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+            class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
           >
             Get Started
           </button>
@@ -51,12 +55,12 @@
   </header>
   <!-- Section First Impression -->
   <section class="container mx-auto px-6 md:px-8 mt-[71px]">
-    <div class="grid lg:grid-cols-2">
+    <div class="grid lg:grid-cols-2 max-w-screen-xl m-auto">
       <div class="lg:order-last">
-        <div class="">
+        <div>
           <img
             src="~/assets/images/currantheroimage.png"
-            class="lg:float-right mx-auto mb-8 lg:mb-0 lg:mr-0 lg:max-w-lg "
+            class="lg:float-right mx-auto mb-8 lg:mb-0 lg:mr-0 lg:max-w-lg"
           />
         </div>
       </div>
@@ -65,27 +69,30 @@
           Find mission aligned creators for your campaign or cause.
         </h2>
         <p class="font-semibold text-xl mt-[24px]">
-          We help nonprofits, impact & issue focused organizations
-          collaborate with creators to reach audiences more effectively.
+          We help nonprofits, impact & issue focused organizations collaborate
+          with creators to reach audiences more effectively.
         </p>
         <div class="flex items-center mt-[32px]">
           <img src="~/assets/icons/dots-line.svg" />
-            <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
-              <div class="mx-4 bg-secondary text-white py-2 px-3 rounded-lg">
-                Book a Demo
-              </div>
-            </a>
+          <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+            <div
+              class="mx-4 bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+            >
+              Book a Demo
+            </div>
+          </a>
         </div>
       </div>
     </div>
     <div class="relative">
-      <img
-        src="~/assets/icons/dots-bg-hero.svg"
-        class="hero-dots"
-      />
+      <img src="~/assets/icons/dots-bg-hero.svg" class="hero-dots" />
     </div>
   </section>
   <!-- / - Section First Impression -->
+  <img
+    class="background-gradient"
+    src="~/assets/images/backgroundgradientcircle.svg"
+  />
   <!-- Organization carousel -->
   <section class="container mx-auto px-6 md:px-8 mt-[83px]">
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
@@ -99,21 +106,21 @@
 
   <!-- How it works -->
   <div id="howItWorks"></div>
-  <section class="container mx-auto px-6 md:px-8 mt-[105px]">
+  <section class="container mx-auto px-6 md:px-8 mt-[57px]">
     <h3
-      class="uppercase text-center text-primary text-5xl font-semibold leading-tight"
+      class="uppercase text-center text-primary font-semibold leading-tight sm:text-3xl md:text-5xl"
     >
       How it works
     </h3>
     <img
-      src="~/assets/images/how-it-works.svg"
+      src="~/assets/images/how-it-works.png"
       class="mx-auto mt-[74px] hidden lg:block"
     />
     <div class="grid lg:grid-cols-3 gap-x-16">
       <div>
         <img
           src="~/assets/icons/step1.svg"
-          class="block lg:hidden mt-[32px] mx-auto mb-8 w-[250px]"
+          class="block lg:hidden mt-[32px] mx-auto mb-6 w-[162px]"
         />
         <h4
           class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
@@ -133,8 +140,8 @@
       </div>
       <div>
         <img
-          src="~/assets/icons/step2.svg"
-          class="block lg:hidden mt-[32px] mx-auto w-[250px]"
+          src="~/assets/icons/step2.png"
+          class="block lg:hidden mt-[32px] mx-auto w-[130px] mb-6"
         />
         <h4
           class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
@@ -154,8 +161,8 @@
       </div>
       <div>
         <img
-          src="~/assets/icons/step3.svg"
-          class="block lg:hidden mt-[32px] mx-auto w-[250px]"
+          src="~/assets/icons/step3.png"
+          class="block lg:hidden mt-[32px] mx-auto w-[145px] mb-6"
         />
         <h4
           class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]"
@@ -187,13 +194,13 @@
       Get Involved
     </h3>
     <div
-      class="grid grid-cols-2 mt-[74px] content-center border-[3px] border-purple border-solid place-items-center"
+      class="grid grid-cols-2 rounded-lg mt-[74px] content-center border-[3px] border-purple border-solid place-items-center"
     >
       <div
-        class="text-center text-[28px] cursor-pointer text-black h-full w-full p-4"
+        class="text-center text-[28px] cursor-pointer font-bold text-black h-full w-full p-4"
         :class="
           activeBrandCreatorSelector === 'Brands'
-            ? `bg-primary text-white`
+            ? `bg-primary text-white brand-text`
             : ``
         "
         @click="activeBrandCreatorSelector = 'Brands'"
@@ -201,10 +208,10 @@
         Brands
       </div>
       <div
-        class="text-center text-[28px] text-black cursor-pointer h-full w-full p-4"
+        class="text-center text-[28px] creator-text font-bold cursor-pointer h-full w-full p-4"
         :class="
           activeBrandCreatorSelector === 'Creators'
-            ? `text-white bg-primary`
+            ? `text-white bg-primary creator-text `
             : ``
         "
         @click="activeBrandCreatorSelector = 'Creators'"
@@ -233,23 +240,48 @@
         </div>
       </div>
       <div>
-        <p v-if="activeBrandCreatorSelector === 'Brands'" class="text-[28px] text-primary font-bold">
+        <p
+          v-if="activeBrandCreatorSelector === 'Brands'"
+          class="text-[28px] text-primary font-bold"
+        >
           Join some of the country’s largest nonprofits & impact organizations
           in working with Social Currant
         </p>
-        <p v-if="activeBrandCreatorSelector === 'Creators'" class="text-[28px] text-primary font-bold">
-          Collaborate on campaigns with organizations working towards impact and positive change
+        <p
+          v-if="activeBrandCreatorSelector === 'Creators'"
+          class="text-[28px] text-primary font-bold"
+        >
+          Collaborate on campaigns with organizations working towards impact and
+          positive change
         </p>
-        <div v-if="activeBrandCreatorSelector === 'Brands'" v-for="textPoint in brandPoints" class="flex mt-[24px]">
+        <div
+          v-if="activeBrandCreatorSelector === 'Brands'"
+          v-for="(textPoint, index) in brandPoints"
+          class="flex mt-[24px]"
+        >
           <img src="~/assets/icons/bullet-point.svg" class="mr-6" />
-          <p>{{ textPoint }}</p>
+          <p
+            :class="{ 'font-semibold': activeCarouselImageIndex === index + 1 }"
+          >
+            {{ textPoint }}
+          </p>
         </div>
-        <div v-if="activeBrandCreatorSelector === 'Creators'" v-for="textPoint in creatorPoints" class="flex mt-[24px]">
+        <div
+          v-if="activeBrandCreatorSelector === 'Creators'"
+          v-for="(textPoint, index) in creatorPoints"
+          class="flex mt-[24px]"
+        >
           <img src="~/assets/icons/bullet-point.svg" class="mr-6" />
-          <p>{{ textPoint }}</p>
+          <p
+            :class="{ 'font-semibold': activeCarouselImageIndex === index + 1 }"
+          >
+            {{ textPoint }}
+          </p>
         </div>
         <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
-          <button class="bg-secondary text-white py-2 px-3 rounded-lg mx-14 mt-8">
+          <button
+            class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5"
+          >
             Get Started
           </button>
         </a>
@@ -260,22 +292,27 @@
 
   <!-- About Us -->
   <div id="aboutUs"></div>
-  <section class="container mx-auto px-6 md:px-8 mt-32">
+  <section class="container mx-auto px-6 md:px-8 mt-12">
     <div>
       <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
     </div>
+    <div class="relative">
+      <img class="purple-shape" src="~/assets/images/purpleshape.svg" />
+    </div>
     <div class="flex flex-col lg:flex-row-reverse">
-      <div class="w-full lg:w-[500px]">
-        <h4 class="uppercase text-[32px] md:text-5xl text-primary font-semibold leading-tight">
+      <div class="w-full lg:w-[500px] text-center md:text-left">
+        <h4
+          class="uppercase text-[32px] md:text-5xl text-primary font-semibold leading-tight"
+        >
           About Us
         </h4>
-        <p class="mb-4 mt-4 uppercase text-[20px] font-semibold text-primary">
+        <p class="mb-4 mt-4 text-[20px] font-semibold text-primary">
           From D.C. to across the world!
         </p>
         <p>
           We’re a creator led platform and managed service focusing on making a
-          difference through the power of social media. Once described by the New
-          York Times as “Only recently able to buy alcohol” This Gen Z led
+          difference through the power of social media. Once described by the
+          New York Times as “Only recently able to buy alcohol” This Gen Z led
           company is on a mission to empower young people and issues we care
           about.
         </p>
@@ -283,13 +320,24 @@
     </div>
     <!-- mobile version of meet the team with carousel -->
     <div class="block lg:hidden">
-      <div class="flex uppercase justify-center cursor-pointer my-8" @click="showMeetTeam = !showMeetTeam">
-        <h4 class="mr-2 font-semibold text-xl">Meet the Team</h4>
-        <img v-if="showMeetTeam" src="~/assets/icons/drop-arrow-up.svg">
-        <img v-else src="~/assets/icons/drop-arrow-down.svg">
+      <div
+        class="flex uppercase justify-center cursor-pointer my-8"
+        @click="showMeetTeam = !showMeetTeam"
+      >
+        <h4 class="mr-2 font-semibold text-xl text-primary">Meet the Team</h4>
+        <img v-if="showMeetTeam" src="~/assets/icons/drop-arrow-up.svg" />
+        <img v-else src="~/assets/icons/drop-arrow-down.svg" />
       </div>
-      <div v-show="showMeetTeam" class="flex flex-nowrap mobile-meet-the-team" style="min-height: 300px;">
-        <div v-for="team in teamRow" class="mx-4" style="min-width: 180px; height: 180px;">
+      <div
+        v-show="showMeetTeam"
+        class="flex flex-nowrap mobile-meet-the-team"
+        style="min-height: 300px"
+      >
+        <div
+          v-for="team in teamRow"
+          class="mx-4"
+          style="min-width: 180px; height: 180px"
+        >
           <img
             class="h-full w-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
             :src="team.image"
@@ -368,13 +416,13 @@
 
   <!-- Ways to Apply Social Currant -->
   <div class="relative">
-    <div
-      :class="`apply-currant-bg-` + activeApplyCurrant">
-    </div>
+    <div :class="`apply-currant-bg-` + activeApplyCurrant"></div>
   </div>
   <div id="help"></div>
   <section class="container mx-auto px-6 md:px-8 mt-36 md:mt-64">
-    <h3 class="uppercase text-primary text-[32px] md:text-5xl text-center md:text-left font-semibold leading-tight mb-16">
+    <h3
+      class="uppercase text-primary text-[32px] md:text-5xl text-center md:text-left font-semibold leading-tight mb-16"
+    >
       Ways to Apply Social Currant
     </h3>
     <div class="grid grid-cols-3 gap-0 mt-4 lg:mt-24">
@@ -382,11 +430,22 @@
         <!-- Persuasion -->
         <div
           class="cursor-pointer persusaion-height apply-currant-mobile-container"
-          :class="activeApplyCurrant === 'persuasion' ? `apply-currant-mobile-bg-active`: ``"
-          @click="activeApplyCurrant = 'persuasion'; activeApplyCurrantPhone=iphoneImage[0]">
+          :class="
+            activeApplyCurrant === 'persuasion'
+              ? `apply-currant-mobile-bg-active`
+              : ``
+          "
+          @click="
+            activeApplyCurrant = 'persuasion';
+            activeApplyCurrantPhone = iphoneImage[0];
+          "
+        >
           <div class="flex items-center">
             <div class="mr-3">
-              <img src="~/assets/images/apply/persuasion.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+              <img
+                src="~/assets/images/apply/persuasion.png"
+                class="h-[27px] w-[27px] md:h-full md:w-full"
+              />
             </div>
             <div>
               <h4 class="font-semibold text-lg md:text-[28px]">
@@ -395,56 +454,89 @@
             </div>
           </div>
           <p class="lg:mr-32 mt-2">
-            Identify creators from the communities you’re trying to reach and have
-            them share their lived experiences around your issues to change
+            Identify creators from the communities you’re trying to reach and
+            have them share their lived experiences around your issues to change
             narrative and persuade audiences.
           </p>
         </div>
         <!-- Education -->
         <div
           class="cursor-pointer h-44 apply-currant-mobile-container"
-          :class="activeApplyCurrant === 'education' ? `apply-currant-mobile-bg-active`: ``"
-          @click="activeApplyCurrant = 'education' ; activeApplyCurrantPhone=iphoneImage[1]">
+          :class="
+            activeApplyCurrant === 'education'
+              ? `apply-currant-mobile-bg-active`
+              : ``
+          "
+          @click="
+            activeApplyCurrant = 'education';
+            activeApplyCurrantPhone = iphoneImage[1];
+          "
+        >
           <div class="flex items-center">
             <div class="mr-3">
-              <img src="~/assets/images/apply/education.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+              <img
+                src="~/assets/images/apply/education.png"
+                class="h-[27px] w-[27px] md:h-full md:w-full"
+              />
             </div>
             <div>
-              <h4 class="font-semibold text-lg md:text-[28px]">Education &amp; Awareness</h4>
+              <h4 class="font-semibold text-lg md:text-[28px]">
+                Education &amp; Awareness
+              </h4>
             </div>
           </div>
           <p class="lg:mr-32 mt-2">
-             Identify creators who go to sources of information and work with them
-            to spread key information in rapid response moments.
+             Identify creators who go to sources of information and work with
+            them to spread key information in rapid response moments.
           </p>
         </div>
         <!-- Activation -->
         <div
           class="cursor-pointer h-44 apply-currant-mobile-container"
-          :class="activeApplyCurrant === 'activation' ? `apply-currant-mobile-bg-active`: ``"
-          @click="activeApplyCurrant = 'activation' ; activeApplyCurrantPhone=iphoneImage[2]">
+          :class="
+            activeApplyCurrant === 'activation'
+              ? `apply-currant-mobile-bg-active`
+              : ``
+          "
+          @click="
+            activeApplyCurrant = 'activation';
+            activeApplyCurrantPhone = iphoneImage[2];
+          "
+        >
           <div class="flex items-center">
             <div class="mr-3">
-              <img src="~/assets/images/apply/activation.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+              <img
+                src="~/assets/images/apply/activation.png"
+                class="h-[27px] w-[27px] md:h-full md:w-full"
+              />
             </div>
             <div>
               <h4 class="font-semibold text-lg md:text-[28px]">Activation</h4>
             </div>
           </div>
           <p class="lg:mr-32 mt-2">
-            Find creators good at driving their followers to take action and work
-            with them to activate petition signatures, calls to representatives
-            and more.
+            Find creators good at driving their followers to take action and
+            work with them to activate petition signatures, calls to
+            representatives and more.
           </p>
         </div>
         <!-- Ads -->
         <div
           class="cursor-pointer h-44 apply-currant-mobile-container"
-          :class="activeApplyCurrant === 'ads' ? `apply-currant-mobile-bg-active`: ``"
-          @click="activeApplyCurrant = 'ads' ; activeApplyCurrantPhone=iphoneImage[3]">
+          :class="
+            activeApplyCurrant === 'ads' ? `apply-currant-mobile-bg-active` : ``
+          "
+          @click="
+            activeApplyCurrant = 'ads';
+            activeApplyCurrantPhone = iphoneImage[3];
+          "
+        >
           <div class="flex items-center">
             <div class="mr-3">
-              <img src="~/assets/images/apply/ads.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+              <img
+                src="~/assets/images/apply/ads.png"
+                class="h-[27px] w-[27px] md:h-full md:w-full"
+              />
             </div>
             <div>
               <h4 class="font-semibold text-lg md:text-[28px]">
@@ -458,12 +550,24 @@
           </p>
         </div>
         <!-- Build -->
-        <div class="cursor-pointer build-height apply-currant-mobile-container"
-          :class="activeApplyCurrant === 'build' ? `apply-currant-mobile-bg-active`: ``"
-          @click="activeApplyCurrant = 'build'; activeApplyCurrantPhone=iphoneImage[4]">
+        <div
+          class="cursor-pointer build-height apply-currant-mobile-container"
+          :class="
+            activeApplyCurrant === 'build'
+              ? `apply-currant-mobile-bg-active`
+              : ``
+          "
+          @click="
+            activeApplyCurrant = 'build';
+            activeApplyCurrantPhone = iphoneImage[4];
+          "
+        >
           <div class="flex items-center">
             <div class="mr-3">
-              <img src="~/assets/images/apply/build.png" class="h-[27px] w-[27px] md:h-full md:w-full"/>
+              <img
+                src="~/assets/images/apply/build.png"
+                class="h-[27px] w-[27px] md:h-full md:w-full"
+              />
             </div>
             <div>
               <h4 class="font-semibold text-lg md:text-[28px]">
@@ -472,21 +576,21 @@
             </div>
           </div>
           <p class="lg:mr-32 mt-2">
-            Build an integrated communications strategy that leverages creators to
-            create content, serve as strategic partners, talk to press and a lot
-            more through our platform.
+            Build an integrated communications strategy that leverages creators
+            to create content, serve as strategic partners, talk to press and a
+            lot more through our platform.
           </p>
         </div>
         <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
           <button
-            class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+            class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary text-xl px-3 py-1.5 rounded-lg"
           >
             Get Started
           </button>
         </a>
       </div>
       <div class="hidden lg:block">
-        <img  :src="activeApplyCurrantPhone" class="mt-[60px] mx-auto" />
+        <img :src="activeApplyCurrantPhone" class="mt-[60px] mx-auto" />
       </div>
     </div>
   </section>
@@ -494,42 +598,52 @@
 
   <!-- footer -->
   <footer id="footer" class="bg-primary text-white min-h-full relative mt-84">
-    <div class="container mx-auto px-6 md:px-8 mt-48 pt-28 text-center md:text-left ">
+    <div
+      class="container mx-auto px-6 md:px-8 mt-48 pt-28 text-center md:text-left"
+    >
       <!-- Sign Up Links -->
       <div
-        class="bg-white text-black container mx-auto px-6 md:px-8 absolute drop-shadow-lg rounded-lg mx-auto py-8"
+        class="bg-white text-black container mx-auto px-6 md:px-8 absolute drop-shadow-lg rounded-lg mx-auto py-16"
         style="top: -80px; width: 85%"
       >
         <div
           class="flex flex-col lg:flex-row justify-left lg:justify-between lg:items-center"
         >
           <div>
-            <h4 class="text-3xl md:text-4xl font-bold">It's Time To Invest In People.</h4>
+            <h4 class="text-3xl md:text-4xl font-bold">
+              It's Time To Invest In People.
+            </h4>
             <p>Work with creators today!</p>
           </div>
           <div class="my-4">
             <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
-            <button
-              class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-            >
-              Sign up for a Demo
-            </button>
+              <button
+                class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
+              >
+                Sign up for a Demo
+              </button>
             </a>
           </div>
         </div>
       </div>
 
-      <div class="uppercase text-lg font-semibold mt-24 lg:mt-4 text-left">
+      <div class="uppercase text-lg font-semibold mt-32 lg:mt-4 text-left">
         We can help you connect with creators
       </div>
-      <h4 class="text-[32px] md:text-3xl lg:w-2/4 mt-16 font-semibold text-left">
+      <h4
+        class="text-[32px] md:text-3xl lg:w-2/4 mt-16 font-semibold text-left"
+      >
         Stay updated on all things trending in the influencer space.
       </h4>
-      <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb">
-      <button class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-12 text-left block">
-        Subscribe
-      </button>
-    </a>
+      <a
+        href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb"
+      >
+        <button
+          class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-12 text-left block"
+        >
+          Subscribe
+        </button>
+      </a>
       <div class="flex">
         <div v-for="socials in socialMediaAccounts">
           <a :href="socials.url">
@@ -539,7 +653,7 @@
       </div>
       <hr class="border-white my-12" />
       <img src="~/assets/icons/logo-footer.svg" />
-      <p class="py-8">A platform by Social Currant.</p>
+      <p class="py-6 text-left text-lg">A platform by Social Currant.</p>
     </div>
   </footer>
 </template>
@@ -570,8 +684,8 @@ import creatorTwo from "~/assets/images/creators/2.png";
 import creatorThree from "~/assets/images/creators/3.png";
 
 // components
-import { defineComponent } from 'vue';
-import KlaviyoForm from './components/KlaviyoForm.vue';
+import { defineComponent } from "vue";
+import KlaviyoForm from "./components/KlaviyoForm.vue";
 
 // social icons
 import linkedin from "~/assets/icons/social/li.svg";
@@ -614,46 +728,60 @@ defineComponent({
   },
 });
 
-const applyCurrantOptions = ["persuasion", "education", "activation", "ads", "build"]
-const activeApplyCurrant = ref('persuasion'); // persuasion, education, activation, ads, build
+const applyCurrantOptions = [
+  "persuasion",
+  "education",
+  "activation",
+  "ads",
+  "build",
+];
+const activeApplyCurrant = ref("persuasion"); // persuasion, education, activation, ads, build
 
 const headerOverlay = ref(false);
 const showMeetTeam = ref(false);
 
 const activeCarouselImageIndex = ref(1);
 const activeBrandCreatorSelector = ref("Brands");
-const iphoneImage=[phonePersuasion,phoneEducation,phoneActivation,phoneAds, phoneBuild ]
-const activeApplyCurrantPhone=ref(iphoneImage[0])
+const iphoneImage = [
+  phonePersuasion,
+  phoneEducation,
+  phoneActivation,
+  phoneAds,
+  phoneBuild,
+];
+const activeApplyCurrantPhone = ref(iphoneImage[0]);
 
 const activeCarouselImagePath = computed(() => {
   const imageMap = {
-    1: activeBrandCreatorSelector.value === 'Brands' ? brandOne: creatorOne,
-    2: activeBrandCreatorSelector.value === 'Brands' ? brandTwo: creatorTwo,
-    3: activeBrandCreatorSelector.value === 'Brands' ? brandThree: creatorThree,
+    1: activeBrandCreatorSelector.value === "Brands" ? brandOne : creatorOne,
+    2: activeBrandCreatorSelector.value === "Brands" ? brandTwo : creatorTwo,
+    3:
+      activeBrandCreatorSelector.value === "Brands" ? brandThree : creatorThree,
   };
   return imageMap[activeCarouselImageIndex.value];
 });
 
 onMounted(() => {
   setInterval(() => {
-    if (activeCarouselImageIndex.value === 0 || activeCarouselImageIndex.value  === 3) {
+    if (
+      activeCarouselImageIndex.value === 0 ||
+      activeCarouselImageIndex.value === 3
+    ) {
       activeCarouselImageIndex.value = 1;
     } else {
       activeCarouselImageIndex.value += 1;
     }
 
-    const activeApplyCurrantIndex = applyCurrantOptions.indexOf(activeApplyCurrant.value)
-    const nextApplyCurrantIndex = (activeApplyCurrantIndex + 1) % applyCurrantOptions.length
-    activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex]
+    const activeApplyCurrantIndex = applyCurrantOptions.indexOf(
+      activeApplyCurrant.value
+    );
+    const nextApplyCurrantIndex =
+      (activeApplyCurrantIndex + 1) % applyCurrantOptions.length;
+    activeApplyCurrant.value = applyCurrantOptions[nextApplyCurrantIndex];
 
-    activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex]
-
-
+    activeApplyCurrantPhone.value = iphoneImage[nextApplyCurrantIndex];
   }, 7000);
-
-
 });
-
 
 watch(activeBrandCreatorSelector, () => {
   // reset the image index to 1
@@ -670,7 +798,7 @@ const creatorPoints = [
   "Connect and collaborate with organizations and brands that align with your values.",
   "Get more deals with less effort. We'll notify you when you are requested to work on a campaign.",
   "Join a network of mission driven content creators working towards impact and change.",
-]
+];
 
 const heroCarouselImages = [
   commChangeAction,
@@ -679,81 +807,81 @@ const heroCarouselImages = [
   repairTheWorld,
   leftHook,
   jvaCampaigns,
-  mtrNewYork
+  mtrNewYork,
 ];
 
 const socialMediaAccounts = [
   {
     image: linkedin,
-    url: "https://www.linkedin.com/company/socialcurrant/"
+    url: "https://www.linkedin.com/company/socialcurrant/",
   },
   {
     image: facebook,
-    url: "https://www.facebook.com/socialcurrant/"
+    url: "https://www.facebook.com/socialcurrant/",
   },
   {
     image: instagram,
-    url: "https://www.instagram.com/socialcurrant/"
+    url: "https://www.instagram.com/socialcurrant/",
   },
   {
     image: twitter,
-    url: "https://twitter.com/socialcurrant?lang=en"
-  }
-]
+    url: "https://twitter.com/socialcurrant?lang=en",
+  },
+];
 
 const teamFirstRow = [
   {
     name: "Ashwath Narayanan",
     desc: "Chief Executive Officer",
-    image: ashwath
+    image: ashwath,
   },
   {
     name: "Vidyut Ghuwalewala",
     desc: "Chief Operating Officer",
-    image: vidyut
+    image: vidyut,
   },
   {
     name: "Jasmine McCarton",
     desc: "Chief Design Officer",
-    image: jasmine
+    image: jasmine,
   },
   {
     name: "Ellie Artone",
     desc: "Chief Creator Officer",
-    image: ellie
+    image: ellie,
   },
   {
     name: "William Cheshier",
     desc: "Chief Technology Officer",
-    image: will
+    image: will,
   },
 ];
 const teamSecondRow = [
   {
     name: "Aashna Malhotra",
     desc: "Influencer Strategist",
-    image: aashna
+    image: aashna,
   },
   {
     name: "Abby Vang",
     desc: "Influencer Strategist",
-    image: abby
+    image: abby,
   },
   {
     name: "Erika Alexandra Aquino Enrique",
     desc: "Frontend Engineer",
-    image: erika
+    image: erika,
   },
   {
     name: "Sisir Ghimire Chettri",
     desc: "Software Engineer",
-    image: sisir
+    image: sisir,
   },
 ];
 
 const teamRow = computed(() => {
   return teamFirstRow.concat(teamSecondRow);
-})
+});
 
 const headerLinks = [
   // {
@@ -762,19 +890,19 @@ const headerLinks = [
   // },
   {
     text: "Brands",
-    scrollTo: "getInvolved"
+    scrollTo: "getInvolved",
   },
   {
     text: "Creators",
-    scrollTo: "getInvolved"
+    scrollTo: "getInvolved",
   },
   {
     text: "About Us",
-    scrollTo: "aboutUs"
+    scrollTo: "aboutUs",
   },
   {
     text: "How we help",
-    scrollTo: "help"
+    scrollTo: "help",
   },
 ];
 function scrollToDiv(scrollElement, navName) {
@@ -783,7 +911,7 @@ function scrollToDiv(scrollElement, navName) {
     if (navName === "Brands" || navName === "Creators") {
       activeBrandCreatorSelector.value = navName;
     }
-    targetElement.scrollIntoView({ behavior: 'smooth' });
+    targetElement.scrollIntoView({ behavior: "smooth" });
   }
 }
 </script>
@@ -821,36 +949,56 @@ function scrollToDiv(scrollElement, navName) {
 
 // persuasion, education, activation, ads, build
 $applyStatus: (
-  persuasion: (19, 10),
-  education: (30, 10),
-  activation: (41, 10),
-  ads: (52, 10),
-  build: (63, 10),
+  persuasion: (
+    19,
+    10,
+  ),
+  education: (
+    30,
+    10,
+  ),
+  activation: (
+    41,
+    10,
+  ),
+  ads: (
+    52,
+    10,
+  ),
+  build: (
+    63,
+    10,
+  ),
 );
 
 $persuasion: persuasion;
 $build: build;
-.persusaion-height, .build-height {
+.persusaion-height,
+.build-height {
   height: 22%;
-  @media (min-width: 375px) { // xxs
-	  height: 11rem;
+  @media (min-width: 375px) {
+    // xxs
+    height: 11rem;
   }
 }
 .build-height {
   height: 25%;
-  @media (min-width: 375px) { // xxs
-	  height: 11rem;
+  @media (min-width: 375px) {
+    // xxs
+    height: 11rem;
   }
 }
 .apply-currant-mobile-container {
-  @media (max-width: 374px) { // xxs
+  @media (max-width: 374px) {
+    // xxs
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
 .apply-currant-mobile-bg-active {
-  @media (max-width: 374px) { // xxs
+  @media (max-width: 374px) {
+    // xxs
     margin: 0px -1.5rem;
     background: #c8d8ff;
     padding: 0 1.5rem;
@@ -858,7 +1006,6 @@ $build: build;
 }
 
 @each $key, $value in $applyStatus {
-
   .apply-currant-bg-#{$key} {
     position: absolute;
     width: 100%;
@@ -867,7 +1014,8 @@ $build: build;
     // default values for small screen
     background: #c8d8ff;
 
-    @media (min-width: 375px) { // xxs
+    @media (min-width: 375px) {
+      // xxs
       top: (nth($value, 1) - 6) + rem;
       height: 11rem;
       @if $key == build {
@@ -876,7 +1024,8 @@ $build: build;
       }
     }
 
-    @media (min-width: 404px) { // xs
+    @media (min-width: 404px) {
+      // xs
       top: (nth($value, 1) - 6) + rem;
       height: 11rem;
       @if $key == build {
@@ -884,25 +1033,30 @@ $build: build;
         height: 12rem;
       }
     }
-    @media (min-width: 582px) { // sm
+    @media (min-width: 582px) {
+      // sm
       top: (nth($value, 1) - 9) + rem;
       height: 9rem;
     }
-    @media (min-width: 768px) { // md
+    @media (min-width: 768px) {
+      // md
       top: (nth($value, 1) + 2) + rem;
       height: 9rem;
     }
-    @media (min-width: 1024px) { // lg
+    @media (min-width: 1024px) {
+      // lg
       top: nth($value, 1) + rem;
       height: 11rem;
       background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
     }
-    @media (min-width: 1280px) { // xl
+    @media (min-width: 1280px) {
+      // xl
       top: nth($value, 1) + rem; // increased this by 10
       height: 10rem;
       background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
     }
-    @media (min-width: 1536px) { // xxl
+    @media (min-width: 1536px) {
+      // xxl
       top: nth($value, 1) + rem; // increased this by 10
       height: 10rem;
       background: linear-gradient(91.35deg, #c8d8ff 46.61%, #2565f4 98.37%);
@@ -913,11 +1067,36 @@ $build: build;
 .mobile-meet-the-team {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .mobile-meet-the-team::-webkit-scrollbar {
   display: none;
+}
+
+.hover-button-blue:hover {
+  background: #4780ff;
+}
+
+.background-gradient {
+  position: absolute;
+  top: 108px;
+}
+.brand-text:hover {
+  background: #4f3467;
+}
+.creator-text {
+  color: #7f6b90;
+  &:hover {
+    background: #30104c;
+    color: #fff;
+  }
+}
+
+.purple-shape{
+position: absolute;
+z-index: -1;
+right: 0;
 }
 
 </style>
