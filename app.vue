@@ -297,7 +297,7 @@
     <div>
       <img src="~/assets/icons/about-us-egg-left.svg" class="egg-left" />
     </div>
-    <div class="relative">
+    <div>
       <img class="purple-shape" src="~/assets/images/purpleshape.svg" />
     </div>
     <div class="flex flex-col lg:flex-row-reverse">
@@ -1097,7 +1097,7 @@ $build: build;
 .purple-shape{
 position: absolute;
 z-index: -1;
-right: 0;
+right: max(calc(50% - 800px), 0px);
 }
 
 </style>
