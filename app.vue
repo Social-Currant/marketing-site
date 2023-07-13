@@ -108,7 +108,7 @@
   <div id="howItWorks"></div>
   <section class="container mx-auto px-6 md:px-8 mt-[57px]">
     <h3
-      class="uppercase text-center text-primary font-semibold leading-tight sm:text-3xl md:text-5xl"
+      class="uppercase text-center text-primary font-semibold leading-tight text-3xl sm:text-5xl"
     >
       How it works
     </h3>
@@ -200,19 +200,20 @@
         class="text-center text-[28px] cursor-pointer font-bold text-black h-full w-full p-4"
         :class="
           activeBrandCreatorSelector === 'Brands'
-            ? `bg-primary text-white brand-text`
-            : ``
+            ? `bg-primary text-white hover-primary`
+            : `secondary-text`
         "
         @click="activeBrandCreatorSelector = 'Brands'"
       >
         Brands
       </div>
       <div
-        class="text-center text-[28px] creator-text font-bold cursor-pointer h-full w-full p-4"
+        class="text-center text-[28px] font-bold cursor-pointer h-full w-full p-4"
         :class="
           activeBrandCreatorSelector === 'Creators'
-            ? `text-white bg-primary creator-text `
-            : ``
+            ? `text-white bg-primary hover-primary `
+            : `secondary-text
+          `
         "
         @click="activeBrandCreatorSelector = 'Creators'"
       >
@@ -1081,15 +1082,15 @@ $build: build;
 .background-gradient {
   position: absolute;
   top: 108px;
+  z-index: -1;
 }
-.brand-text:hover {
+.hover-primary:hover {
   background: #4f3467;
 }
-.creator-text {
+.secondary-text {
   color: #7f6b90;
   &:hover {
-    background: #30104c;
-    color: #fff;
+    color: #30104c;
   }
 }
 
