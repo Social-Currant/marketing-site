@@ -22,6 +22,7 @@
         method="POST"
         netlify
       >
+      <input type="hidden" name="form-name" value="contact" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div>
             <label>Full Name*</label>
