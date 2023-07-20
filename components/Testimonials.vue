@@ -1,49 +1,85 @@
 <template>
   <!-- What people are saying -->
   <section class="mt-32 relative testimonials-height">
-    <h3
-      class="uppercase text-center text-primary text-[32px] md:text-5xl font-semibold leading-tight mx-4"
-    >
+    <h3 class="uppercase text-center text-primary text-[32px] md:text-5xl font-semibold leading-tight mx-4">
       What people are saying
     </h3>
-    <div class="absolute" style="right: 0; z-index: -1; top: 0%">
+    <div
+      class="absolute"
+      style="right: 0; z-index: -1; top: 0%"
+    >
       <img
         src="~/assets/icons/gradient-circle.svg"
         class="h-48 circle-gradient opacity-30"
         style="width: 600px"
-      />
+      >
     </div>
 
     <!-- Left arrow -->
     <div class="absolute z-30 cursor-pointer arrow-container left">
-      <img src="~/assets/icons/left-arrow.svg" class="mx-auto hidden lg:block" @click="navigateCarousel()" />
       <img
-        src="~/assets/icons/left-arrow-small.svg" class="mx-auto block lg:hidden"
-        @click="navigateMobileTestimonialCarousel({ next: false, previous: true })" />
+        src="~/assets/icons/left-arrow.svg"
+        class="mx-auto hidden lg:block"
+        @click="navigateCarousel()"
+      >
+      <img
+        src="~/assets/icons/left-arrow-small.svg"
+        class="mx-auto block lg:hidden"
+        @click="navigateMobileTestimonialCarousel({ next: false, previous: true })"
+      >
     </div>
 
     <!-- review contents -->
-    <div class="flex flex-col lg:flex-row justify-center absolute" style="width: 115%; left: -100px; position: absolute; top: 18%;">
-      <div v-for="(image, n) in reviewTopRow" :key="`review-top-` + n" class="mx-4 mb-6 hidden lg:block">
-        <Transition name="slide-fade" mode="out-in">
-          <img :src="image" :key="`active-review-` + activeReview" class="z-20 mx-auto" style="height: 250px; width: 400px;" />
+    <div
+      class="flex flex-col lg:flex-row justify-center absolute"
+      style="width: 115%; left: -100px; position: absolute; top: 18%;"
+    >
+      <div
+        v-for="(image, n) in reviewTopRow"
+        :key="`review-top-` + n"
+        class="mx-4 mb-6 hidden lg:block"
+      >
+        <Transition
+          name="slide-fade"
+          mode="out-in"
+        >
+          <img
+            :key="`active-review-` + activeReview"
+            :src="image"
+            class="z-20 mx-auto"
+            style="height: 250px; width: 400px;"
+          >
         </Transition>
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center justify-center absolute" style="width: 100%; position: absolute; top: 56%">
+    <div
+      class="flex flex-col md:flex-row items-center justify-center absolute"
+      style="width: 100%; position: absolute; top: 56%"
+    >
       <div
         v-for="(image, n) in reviewBottomRow"
         :key="`review-bottom-` + n"
         class="mx-5 hidden lg:block"
       >
-        <Transition name="slide-fade" mode="out-in">
-          <img :src="image" :key="`active-review-` + activeReview" class="z-20 mx-auto" style="height: 250px; width: 400px;"/>
+        <Transition
+          name="slide-fade"
+          mode="out-in"
+        >
+          <img
+            :key="`active-review-` + activeReview"
+            :src="image"
+            class="z-20 mx-auto"
+            style="height: 250px; width: 400px;"
+          >
         </Transition>
       </div>
     </div>
 
-    <div class="hidden lg:block" style="position: absolute; bottom: 0%; width: 100%;">
+    <div
+      class="hidden lg:block"
+      style="position: absolute; bottom: 0%; width: 100%;"
+    >
       <div class="flex flex-row mt-8 justify-center items-center">
         <div
           v-for="n in 2"
@@ -54,8 +90,12 @@
             v-if="activeReview === n"
             :src="circleActive"
             class="cursor-pointer h-[20px]"
-          />
-          <img v-else :src="circle" class="cursor-pointer h-[20px]" />
+          >
+          <img
+            v-else
+            :src="circle"
+            class="cursor-pointer h-[20px]"
+          >
         </div>
       </div>
     </div>
@@ -63,41 +103,63 @@
     <!-- / - review contents -->
 
     <!-- mobile view single row reviews -->
-      <div class="grid grid-cols-1 items-center justify-center block lg:hidden mx-auto mt-8">
-        <Transition name="slide-fade" mode="out-in">
-          <img :key="`mobile-review-carousel` + activeReviewMobile" :src="reviews[activeReviewMobile]" class="z-20 mx-auto my-auto" />
-        </Transition>
-        <div class="flex mt-8 justify-center">
-          <div
-            v-for="(image, key) in reviews"
-            :key="`mobile-reviews-carousel` + key"
-            @click="activeReviewMobile = key"
+    <div class="grid grid-cols-1 items-center justify-center block lg:hidden mx-auto mt-8">
+      <Transition
+        name="slide-fade"
+        mode="out-in"
+      >
+        <img
+          :key="`mobile-review-carousel` + activeReviewMobile"
+          :src="reviews[activeReviewMobile]"
+          class="z-20 mx-auto my-auto"
+        >
+      </Transition>
+      <div class="flex mt-8 justify-center">
+        <div
+          v-for="(image, key) in reviews"
+          :key="`mobile-reviews-carousel` + key"
+          @click="activeReviewMobile = key"
+        >
+          <img
+            v-if="activeReviewMobile === key"
+            :src="circleActive"
+            class="cursor-pointer h-[20px]"
           >
-            <img
-              v-if="activeReviewMobile === key"
-              :src="circleActive"
-              class="cursor-pointer h-[20px]"
-            />
-            <img v-else :src="circle" class="cursor-pointer h-[20px]" />
-          </div>
+          <img
+            v-else
+            :src="circle"
+            class="cursor-pointer h-[20px]"
+          >
         </div>
       </div>
+    </div>
     <!-- / - mobile view single row reviews -->
 
 
     <!-- Right arrow -->
     <div class="absolute z-30 cursor-pointer arrow-container right">
-      <img src="~/assets/icons/right-arrow.svg" class="mx-auto hidden lg:block" @click="navigateCarousel()"/>
-      <img src="~/assets/icons/right-arrow-small.svg" class="mx-auto block lg:hidden" @click="navigateMobileTestimonialCarousel({ next: true, previous: false })" />
+      <img
+        src="~/assets/icons/right-arrow.svg"
+        class="mx-auto hidden lg:block"
+        @click="navigateCarousel()"
+      >
+      <img
+        src="~/assets/icons/right-arrow-small.svg"
+        class="mx-auto block lg:hidden"
+        @click="navigateMobileTestimonialCarousel({ next: true, previous: false })"
+      >
     </div>
 
     <!-- Gradient -->
-    <div class="absolute" style="left: 0; z-index: -1; bottom: -90px">
+    <div
+      class="absolute"
+      style="left: 0; z-index: -1; bottom: -90px"
+    >
       <img
         src="~/assets/icons/gradient-circle.svg"
         class="h-48 circle-gradient opacity-30"
         style="width: 600px"
-      />
+      >
     </div>
     <!-- / - Gradient -->
   </section>
@@ -157,7 +219,7 @@ function navigateCarousel() {
   activeReview.value = activeReview.value === 2 ? 1 : 2;
 }
 
-function navigateMobileTestimonialCarousel({ next=false, previous=false }) {
+function navigateMobileTestimonialCarousel({ next = false, previous = false }) {
   if (next) {
     if (activeReviewMobile.value === reviews.value.length - 1) {
       activeReviewMobile.value = 0;
@@ -176,7 +238,7 @@ function navigateMobileTestimonialCarousel({ next=false, previous=false }) {
 onMounted(() => {
   setInterval(() => {
     // for mobile
-    if (activeReviewMobile.value  === reviews.value.length - 1) {
+    if (activeReviewMobile.value === reviews.value.length - 1) {
       activeReviewMobile.value = 0;
     } else {
       activeReviewMobile.value += 1;
@@ -190,20 +252,24 @@ onMounted(() => {
 <style lang="scss" scoped>
 .testimonials-height {
   height: 20rem;
-   @media (min-width: 1024px) {
+
+  @media (min-width: 1024px) {
     min-height: 38rem;
   }
 }
 
 .arrow-container {
   top: 60%;
+
   @media (min-width: 443px) {
     top: 50%;
   }
 }
+
 .arrow-container.left {
   left: 8%;
 }
+
 .arrow-container.right {
   right: 8%;
 }

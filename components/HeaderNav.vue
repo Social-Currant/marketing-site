@@ -1,0 +1,120 @@
+<template>
+  <div
+    v-if="displayBanner"
+    class="bg-primary h-[61px]"
+    :class="headerOverlay ? `blur-sm` : ``"
+  >
+    <div class="container mx-auto px-4 h-full flex items-center">
+      <div class="grow text-center">
+        <p class="font-semibold text-white text-base sm:text-xl">
+          <a
+            href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb"
+            class="underline text-secondary cursor-pointer"
+          >Sign up</a>
+          for our newsletter for updates + previews of new platform features!
+        </p>
+      </div>
+      <!-- <div class="flex-none hidden lg:block">
+        <img src="~/assets/icons/close.svg" />
+      </div> -->
+    </div>
+  </div>
+  <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
+    <div class="container mx-auto px-6 md:px-8 flex items-center bg-white z-50">
+      <h1
+        class="grow"
+        :class="headerOverlay ? `blur-sm` : ``"
+      >
+        <img
+          src="~/assets/images/currant-logo.svg"
+          class="cursor-pointer"
+          @click="navigateTo('/')"
+        >
+      </h1>
+      <div class="flex nav-links hidden lg:block headerLink font-semibold">
+        <a
+          v-for="link in headerLinks"
+          :key="link.scrollTo + `-link`"
+          class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
+          @click="scrollToDiv(link.scrollTo, link.text)"
+        >{{ link.text }}</a>
+      </div>
+      <div class="ml-[44px] hidden lg:block">
+        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+          <button
+            class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
+          >
+            Get Started
+          </button>
+        </a>
+      </div>
+      <div
+        class="block lg:hidden cursor-pointer"
+        @click="headerOverlay = !headerOverlay"
+      >
+        <img src="~/assets/icons/hamburger.svg">
+      </div>
+    </div>
+    <HeaderOverlay
+      v-show="headerOverlay"
+      :header-nav-links="headerLinks"
+      class="z-50 header-overlay-width"
+      @close="headerOverlay = false"
+      @scroll-div="scrollToDiv"
+    />
+  </header>
+</template>
+<script setup>
+defineProps({
+  displayBanner: {
+    type: Boolean,
+    required: false,
+    default: true
+  }
+})
+
+const headerOverlay = useState('headerOverlay')
+
+// const headerOverlay = ref(false);
+const emits = defineEmits(['activateSelector']);
+
+const headerLinks = [
+  // {
+  //   text: "How it works",
+  //   scrollTo: "howItWorks"
+  // },
+  {
+    text: "Brands",
+    scrollTo: "getInvolved",
+  },
+  {
+    text: "Creators",
+    scrollTo: "getInvolved",
+  },
+  {
+    text: "About Us",
+    scrollTo: "aboutUs",
+  },
+  {
+    text: "How we help",
+    scrollTo: "help",
+  },
+];
+function scrollToDiv(scrollElement, navName) {
+  const targetElement = document.getElementById(scrollElement);
+  if (targetElement) {
+    if (navName === "Brands" || navName === "Creators") {
+      emits('activateSelector', navName);
+    }
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>
+<style lang="scss">
+.header-overlay-width {
+  width: 50%;
+  @media screen and (max-width: 540px) {
+    width: 100%;
+  }
+}
+</style>
