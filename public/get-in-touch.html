@@ -1,0 +1,87 @@
+<form
+name="contact"
+method="POST"
+data-netlify="true"
+data-netlify-honeypot="bot-field"
+hidden
+>
+<input type="hidden" name="form-name" value="contact" />
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div>
+    <label>Full Name*</label>
+    <input
+      name="fullname"
+      type="text"
+      placeholder=""
+      required
+    >
+  </div>
+  <div>
+    <label>Brand / Organization (if applicable)</label>
+    <input
+      name="organization"
+      type="text"
+      placeholder=""
+    >
+  </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div>
+    <label>Email Address*</label>
+    <input
+      name="email"
+      type="email"
+      placeholder=""
+      required
+    >
+  </div>
+  <div>
+    <label>Phone Number</label>
+    <input
+      name="phone"
+      type="text"
+      placeholder=""
+    >
+  </div>
+</div>
+<div class="grid grid-cols-1 mb-8">
+  <div>
+    <label>How did you hear about Social Currant?</label>
+    <input
+      name="source"
+      type="text"
+      placeholder=""
+      class="source"
+    >
+  </div>
+</div>
+<div class="grid grid-cols-1 mb-8">
+  <div>
+    <label>Message*</label>
+    <textarea
+      name="message"
+      placeholder="Enter your message here"
+      required
+    />
+  </div>
+</div>
+<div class="flex">
+  <input
+    name="newsletter"
+    type="checkbox"
+    class="checked:bg-secondary mr-2"
+    checked
+  >
+  <div>
+    Sign up for our Newsletter to stay up to date with new platform features and trends in the influencer space
+  </div>
+</div>
+<div class="inline-block my-6">
+  <button
+    type="submit"
+    class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl"
+  >
+    Send Message
+  </button>
+</div>
+</form>
