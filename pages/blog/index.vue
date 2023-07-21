@@ -91,13 +91,14 @@
   </div>
 </template>
 <script setup>
-const client = useContentful();
+// const client = useContentful();
+const { $contentfulClient } = useNuxtApp()
 const searchQuery = ref('');
 
 const posts = shallowRef([]);
 
 function fetchBlogEntries() {
-  client.getEntries({
+  $contentfulClient.getEntries({
     order: '-sys.createdAt',
     content_type: 'blogPosts',
     'fields.title[match]': searchQuery.value,
