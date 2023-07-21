@@ -14,14 +14,16 @@
         Get in touch
       </h3>
       <p class="mb-4">
-        Have any questions or comments? We’d love to hear from you. Please fill out the form below and someone on our team
+        Have any questions or comments? We’d love to hear from you! Please fill out the form below and someone on our team
         will get back to you soon.
       </p>
       <form
         name="contact"
         method="POST"
-        netlify
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
+      <input type="hidden" name="form-name" value="contact" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div>
             <label>Full Name*</label>
@@ -62,13 +64,12 @@
         </div>
         <div class="grid grid-cols-1 mb-8">
           <div>
-            <label>How did you hear about Social Currant?*</label>
+            <label>How did you hear about Social Currant?</label>
             <input
               name="source"
               type="text"
               placeholder=""
               class="source"
-              required
             >
           </div>
         </div>
