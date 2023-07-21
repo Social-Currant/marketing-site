@@ -5,8 +5,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="order-2 md:order-1">
           <h3 class="text-hero mb-12">
-            Stay up to date with the latest trends, strategies, and success stories that showcase the potential of
-            creator collaborations
+            {{ pageData.fields.title }}
           </h3>
           <div>
             <label class="mb-2">Email Address</label>
@@ -18,23 +17,17 @@
             >
             <div class="inline-block my-6">
               <button class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl">
-                Subscribe
+                {{ pageData.fields.HeaderBtnText }}
               </button>
             </div>
           </div>
         </div>
-        <div class="relative h-80 order-1 md:order-2">
+        <div class="h-80 order-1 md:order-2">
           <img
-            src="~/assets/blog/frame1.png"
-            class="absolute right-frame-1 md:right-0"
-            height="200"
-            width="200"
-          >
-          <img
-            src="~/assets/blog/frame2.png"
-            class="absolute top-24 right-frame-2 md:right-24"
-            height="200"
-            width="200"
+            :src="pageData.fields.heroImage.fields.file.url"
+            class="mx-auto"
+            height="300"
+            width="300"
           >
         </div>
       </div>
@@ -96,6 +89,7 @@ const { $contentfulClient } = useNuxtApp()
 const searchQuery = ref('');
 
 const posts = shallowRef([]);
+const pageData = shallowRef([]);
 
 function fetchBlogEntries() {
   $contentfulClient.getEntries({
@@ -106,6 +100,18 @@ function fetchBlogEntries() {
     posts.value = postsData
   }).catch(console.error);
 }
+
+function fetchBlogPageContents() {
+  $contentfulClient.getEntries({
+    order: '-sys.createdAt',
+    content_type: 'blogPage',
+  }).then((postsData) => {
+    pageData.value = postsData.items[0]
+  }).catch(console.error);
+}
+
+
+fetchBlogPageContents();
 fetchBlogEntries();
 
 </script>
