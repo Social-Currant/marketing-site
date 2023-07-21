@@ -1,4 +1,4 @@
-import * as contentful from 'contentful'; // Import the entire module as 'contentful'
+import { createClient } from 'contentful';
 
 export default function useContentful() {
   /* eslint-disable */
@@ -7,5 +7,5 @@ export default function useContentful() {
     space: config.public.ctfSpace,
     accessToken: config.public.ctfAccessToken
   }
-  return contentful.createClient(contentfulConfig); // Access the 'createClient' method from 'contentful'
+  return createClient(contentfulConfig);
 }
