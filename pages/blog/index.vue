@@ -32,9 +32,15 @@
         </div>
       </div>
       <div class="flex justify-between mt-32">
-        <h2 class="text-style-all">
-          All
-        </h2>
+        <div class="flex mb-3">
+          <h2
+            v-for="(blogCategory, index) in pageData.fields.blogCategories"
+            :key="`bcategory` + index"
+            class="text-style-all mr-6"
+          >
+            {{ blogCategory }}
+          </h2>
+        </div>
         <div>
           <input
             v-model="searchQuery"
@@ -57,7 +63,7 @@
           >
           <div class="flex flex-row-reverse">
             <div class="blog-date">
-              June 23, 2023
+              {{ new Date(post.fields.date).toLocaleDateString() }}
             </div>
           </div>
           <h4 class="blog-head">
@@ -87,32 +93,31 @@
 // const client = useContentful();
 const { $contentfulClient } = useNuxtApp()
 const searchQuery = ref('');
+const pendingBlog = ref(true);
+const pendingPage = ref(true);
+
+const pageData = await $contentfulClient.getEntries({
+  order: '-sys.createdAt',
+  content_type: 'blogPage',
+}).then((pageData) => {
+  pendingPage.value = false
+  return pageData.items[0];
+}).catch(console.error);
 
 const posts = shallowRef([]);
-const pageData = shallowRef([]);
 
-function fetchBlogEntries() {
-  $contentfulClient.getEntries({
+async function fetchBlogEntries() {
+  posts.value = await $contentfulClient.getEntries({
     order: '-sys.createdAt',
     content_type: 'blogPosts',
     'fields.title[match]': searchQuery.value,
   }).then((postsData) => {
-    posts.value = postsData
+    pendingBlog.value = false
+    return postsData;
   }).catch(console.error);
 }
-
-function fetchBlogPageContents() {
-  $contentfulClient.getEntries({
-    order: '-sys.createdAt',
-    content_type: 'blogPage',
-  }).then((postsData) => {
-    pageData.value = postsData.items[0]
-  }).catch(console.error);
-}
-
-
-fetchBlogPageContents();
 fetchBlogEntries();
+
 
 </script>
 <style lang="scss" scoped>
