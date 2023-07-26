@@ -76,6 +76,8 @@ const props= defineProps({
     default: "",
   }
 })
+const route = useRoute()
+console.log("route.path", route)
 const isTooltipVisible = ref(false);
 
 function copyToClipboard() {

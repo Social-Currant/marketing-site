@@ -89,9 +89,7 @@ async function fetchBlogEntry(id) {
   blogEntry.value = result
 }
 
-onMounted(() => {
-  fetchBlogEntry(id)
-})
+await fetchBlogEntry(id)
 const posts = shallowRef([]);
 
 
@@ -112,6 +110,16 @@ function formatDate(dateString) {
   const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
   return formattedDate;
 }
+
+
+useSeoMeta({
+  title: blogEntry.value.fields?.title,
+  ogTitle: blogEntry.value.fields?.title,
+  ogDescription: blogEntry.value.fields.excerpt,
+  ogImage: blogEntry.value.fields.image.fields.file.url,
+  twitterDescription: blogEntry.value.fields.excerpt,
+  lang: "en",
+})
 </script>
 
 <style lang="scss">
