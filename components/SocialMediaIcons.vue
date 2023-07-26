@@ -72,6 +72,7 @@ const props= defineProps({
   title: {
     type: String,
     required: false,
+    default: "",
   }
 })
 const isTooltipVisible = ref(false);

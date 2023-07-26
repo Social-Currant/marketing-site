@@ -1,77 +1,79 @@
 <template>
-  <HeaderNav :display-banner="false" />
-  <section class="view-container mx-auto">
-    <div
-      class=" mb-3 md:mb-8 md:mt-6 cursor-pointer flex back"
-      @click="router.go(-1)"
-    >
-      <img src="~/assets/images/icon-arrow-left.svg">
-      <p>
-        Back
-      </p>
-    </div>
-    <div class="mb-3 md:mb-8">
+  <div>
+    <HeaderNav :display-banner="false" />
+    <section class="view-container mx-auto">
       <div
-        v-for="(tag, index) in blogEntry?.fields.tags"
-        :key="index"
-        class="blog-tag inline-block"
+        class=" mb-3 md:mb-8 md:mt-6 cursor-pointer flex back"
+        @click="router.go(-1)"
       >
-        {{ tag }}
+        <img src="~/assets/images/icon-arrow-left.svg">
+        <p>
+          Back
+        </p>
       </div>
-    </div>
-
-    <h1 class="blog-title text-2xl mb-3 md:mb-9 md:text-4xl">
-      {{ blogEntry?.fields.title }}
-    </h1>
-    <!-- date -->
-    <div class="blog-date mb-3">
-      {{ formatDate(blogEntry?.fields.date) }}
-    </div>
-
-    <!-- author and social media  -->
-    <div class="flex flex-col md:flex-row md:items-center my-3 md:my-8  md:space-y-0 md:space-x-8 items-start justify-between">
-      <div class="flex items-center mb-7 md:mb-0">
-        <img
-          :src="blogEntry?.fields.authorImage.fields.file.url"
-          height="100"
-          class="author-image"
+      <div class="mb-3 md:mb-8">
+        <div
+          v-for="(tag, index) in blogEntry?.fields.tags"
+          :key="index"
+          class="blog-tag inline-block"
         >
-        <div class="author ml-4 "> 
-          <p>{{ blogEntry?.fields.author[0] }}</p>
-          <p
-            v-if="blogEntry?.fields.jobTitle"
-            class="position"
-          >
-            {{ blogEntry?.fields.jobTitle }}
-          </p>
+          {{ tag }}
         </div>
       </div>
-      <SocialMediaIcons 
-        class="mb-4 md:mb-0"
-        :title="blogEntry?.fields.title"
-      />
-    </div>
+
+      <h1 class="blog-title text-2xl mb-3 md:mb-9 md:text-4xl">
+        {{ blogEntry?.fields.title }}
+      </h1>
+      <!-- date -->
+      <div class="blog-date mb-3">
+        {{ formatDate(blogEntry?.fields.date) }}
+      </div>
+
+      <!-- author and social media  -->
+      <div class="flex flex-col md:flex-row md:items-center my-3 md:my-8  md:space-y-0 md:space-x-8 items-start justify-between">
+        <div class="flex items-center mb-7 md:mb-0">
+          <img
+            :src="blogEntry?.fields.authorImage.fields.file.url"
+            height="100"
+            class="author-image"
+          >
+          <div class="author ml-4 "> 
+            <p>{{ blogEntry?.fields.author[0] }}</p>
+            <p
+              v-if="blogEntry?.fields.jobTitle"
+              class="position"
+            >
+              {{ blogEntry?.fields.jobTitle }}
+            </p>
+          </div>
+        </div>
+        <SocialMediaIcons 
+          class="mb-4 md:mb-0"
+          :title="blogEntry?.fields.title"
+        />
+      </div>
     
-    <!-- image -->
-    <img
-      :src="blogEntry?.fields.image.fields.file.url"
-      height="100"
-      class="blog-image-cover"
-    >
-    <!-- body -->
-    <RichText :content="blogEntry?.fields.content" />
+      <!-- image -->
+      <img
+        :src="blogEntry?.fields.image.fields.file.url"
+        height="100"
+        class="blog-image-cover"
+      >
+      <!-- body -->
+      <RichText :content="blogEntry?.fields.content" />
 
 
-    <!-- related blogEntries -->
-    <h1 class="related-text my-14 ml-6">
-      Related Articles
-    </h1>
-    <BlogCardList 
-      class="md:ml-6"
-      :posts="posts.items"
-    />
-  </section>
-  <Footer />
+      <!-- related blogEntries -->
+      <h1 class="related-text my-14 ml-6">
+        Related Articles
+      </h1>
+      <BlogCardList 
+        class="md:ml-6"
+        :posts="posts.items"
+      />
+    </section>
+    <Footer />
+  </div>
 </template>
 
 <script setup>

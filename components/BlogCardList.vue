@@ -38,9 +38,7 @@
 </template>
 
 <script setup>
-const route = useRoute();
-console.log("rooute", route)
-const props = defineProps({
+defineProps({
   posts: {
     type: Object,
     required: false,
@@ -54,9 +52,6 @@ function formatDate(dateString) {
   return formattedDate;
 }
 
-function postUrl(post){
-    const id=post.sys.id
-}
 </script>
 <style>
 .at-hover:hover{
