@@ -1,70 +1,71 @@
 <template>
-  <div class="flex gap-4">
-    <div class="relative">
-      <img
-        class="social-media ml-0"
-        src="~/assets/images/socialMedia/copyLink.svg"
-        alt="Copy Link"
-        @click="copyToClipboard"
-      >
-      <div
-        class="tooltip"
-        :class="{ active: isTooltipVisible }"
-      >
-        Link copied!
-        <div class="tooltip-arrow" />
+  <ClientOnly>
+    <div class="flex gap-4">
+      <div class="relative">
+        <img
+          class="social-media ml-0"
+          src="~/assets/images/socialMedia/copyLink.svg"
+          alt="Copy Link"
+          @click="copyToClipboard"
+        >
+        <div
+          class="tooltip"
+          :class="{ active: isTooltipVisible }"
+        >
+          Link copied!
+          <div class="tooltip-arrow" />
+        </div>
       </div>
+
+      <a
+        :href="getEmailShareLink"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="social-media"
+          src="~/assets/images/socialMedia/email.svg"
+          alt="Share via Email"
+        >
+      </a>
+
+      <a
+        :href="getLinkedInShareLink"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="social-media"
+          src="~/assets/images/socialMedia/LI.svg"
+          alt="Share on LinkedIn"
+        >
+      </a>
+
+      <a
+        :href="getTwitterShareLink"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="social-media"
+          src="~/assets/images/socialMedia/TW.svg"
+          alt="Share on Twitter"
+        >
+      </a>
+
+      <a
+        :href="getFacebookShareLink"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="social-media"
+          src="~/assets/images/socialMedia/FB.svg"
+          alt="Share on Facebook"
+        >
+      </a>
     </div>
-
-
-    <a
-      :href="getEmailShareLink"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        class="social-media"
-        src="~/assets/images/socialMedia/email.svg"
-        alt="Share via Email"
-      >
-    </a>
-
-    <a
-      :href="getLinkedInShareLink"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        class="social-media"
-        src="~/assets/images/socialMedia/LI.svg"
-        alt="Share on LinkedIn"
-      >
-    </a>
-
-    <a
-      :href="getTwitterShareLink"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        class="social-media"
-        src="~/assets/images/socialMedia/TW.svg"
-        alt="Share on Twitter"
-      >
-    </a>
-
-    <a
-      :href="getFacebookShareLink"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        class="social-media"
-        src="~/assets/images/socialMedia/FB.svg"
-        alt="Share on Facebook"
-      >
-    </a>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup>
