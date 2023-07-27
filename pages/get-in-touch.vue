@@ -18,12 +18,18 @@
         will get back to you soon.
       </p>
       <form
+        ref="myForm"
         name="contact"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        @submit="handleSubmit"
       >
-      <input type="hidden" name="form-name" value="contact" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="contact"
+        >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div>
             <label>Full Name*</label>
@@ -65,12 +71,26 @@
         <div class="grid grid-cols-1 mb-8">
           <div>
             <label>How did you hear about Social Currant?</label>
-            <input
-              name="source"
-              type="text"
-              placeholder=""
-              class="source"
-            >
+            <select name="source">
+              <option value="Social Media">
+                Social Media
+              </option>
+              <option value="Referral">
+                Referral
+              </option>
+              <option value="Search Engine">
+                Search Engine
+              </option>
+              <option value="Advertisement">
+                Advertisement
+              </option>
+              <option value="Event or Conference">
+                Event or Conference
+              </option>
+              <option value="Other">
+                Other
+              </option>
+            </select>
           </div>
         </div>
         <div class="grid grid-cols-1 mb-8">
@@ -85,6 +105,7 @@
         </div>
         <div class="flex">
           <input
+            v-model="newsletter"
             name="newsletter"
             type="checkbox"
             class="checked:bg-secondary mr-2"
@@ -94,13 +115,22 @@
             Sign up for our Newsletter to stay up to date with new platform features and trends in the influencer space
           </div>
         </div>
-        <div class="inline-block my-6">
-          <button
-            type="submit"
-            class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl"
+        <div class="flex my-6">
+          <div>
+            <button
+              type="submit"
+              class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl"
+            >
+              Send Message
+            </button>
+          </div>
+          <div
+            v-if="errorMessage"
+            class="text-red-500 inline-block error-message mx-8"
           >
-            Send Message
-          </button>
+            Oops! Something went wrong and the form was not submitted.
+            Please stay on this page and try again in a few minutes.
+          </div>
         </div>
       </form>
     </section>
@@ -109,6 +139,31 @@
 </template>
 <script setup>
 const headerOverlay = useState('headerOverlay');
+const newsletter = useState('newsletter', () => false)
+
+const myForm = ref(null)
+const errorMessage = ref(false);
+
+
+function handleSubmit(e) {
+  e.preventDefault();
+
+  const formElement = myForm.value;
+  const formData = new FormData(formElement);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      navigateTo({
+        path: '/success/',
+        query: {
+          newsletter: newsletter.value,
+        }
+      })
+    }).catch(() => errorMessage.value = true);
+}
 </script>
 <style scoped lang="scss">
 label {
@@ -147,5 +202,21 @@ textarea {
   border-radius: 5px;
   border: 1px solid #ACACAC;
   background: #FFF;
+}
+
+select,
+option {
+  display: block;
+  width: 95%;
+  height: 40px;
+  border: 1px solid #ACACAC;
+  border-radius: 5px;
+  background: #FFF;
+  padding: 8px 16px;
+}
+
+.error-message {
+  width: 550px;
+  color: #C24664;
 }
 </style>
