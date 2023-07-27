@@ -50,47 +50,15 @@
           >
         </div>
       </div>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-24">
-        <div
-          v-for="post in posts.items"
-          :key="post.sys.id"
-          class="mb-8"
-        >
-          <img
-            :src="post.fields.image.fields.file.url"
-            height="100"
-            class="blog-image"
-          >
-          <div class="flex flex-row-reverse">
-            <div class="blog-date">
-              {{ new Date(post.fields.date).toLocaleDateString() }}
-            </div>
-          </div>
-          <h4 class="blog-head">
-            {{ post.fields.title }}
-          </h4>
-          <p class="blog-body">
-            {{ post.fields.excerpt }}
-            <a
-              class="text-secondary cursor-pointer"
-              @click="navigateTo('/')"
-            >read more</a>
-          </p>
-          <div
-            v-for="(tag, index) in post.fields.tags"
-            :key="index"
-            class="blog-tag inline-block"
-          >
-            {{ tag }}
-          </div>
-        </div>
-      </div>
+      <BlogCardList 
+        class="md:ml-6"
+        :posts="posts.items"
+      />
     </section>
     <Footer />
   </div>
 </template>
 <script setup>
-// const client = useContentful();
 const { $contentfulClient } = useNuxtApp()
 const searchQuery = ref('');
 const pendingBlog = ref(true);
