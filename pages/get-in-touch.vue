@@ -105,7 +105,6 @@
         </div>
         <div class="flex">
           <input
-            v-model="newsletter"
             name="newsletter"
             type="checkbox"
             class="checked:bg-secondary mr-2"
@@ -139,7 +138,7 @@
 </template>
 <script setup>
 const headerOverlay = useState('headerOverlay');
-const newsletter = useState('newsletter', () => false)
+// const newsletter = useState('newsletter', () => false)
 
 const myForm = ref(null)
 const errorMessage = ref(false);
@@ -157,10 +156,7 @@ function handleSubmit(e) {
   })
     .then(() => {
       navigateTo({
-        path: '/success/',
-        query: {
-          newsletter: newsletter.value,
-        }
+        path: '/success/'
       })
     }).catch(() => errorMessage.value = true);
 }
