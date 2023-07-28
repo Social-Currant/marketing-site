@@ -3,7 +3,7 @@
     <div
       v-for="post in posts"
       :key="post.sys.id"
-      class="mb-8 cursor-pointer at-hover p-2.5 w-full sm:w-96 md:w-80 lg:w-full "
+      class="mb-8 cursor-pointer at-hover p-2.5 w-full md:w-80 lg:w-full "
       @click="navigateTo({name: 'blog-id', params: {id: post.sys.id},})"
     >
       <img

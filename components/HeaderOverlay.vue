@@ -19,10 +19,10 @@
       </div>
     </div>
     <div
-      v-for="(header, key) in props.headerNavLinks"
+      v-for="(header, key) in headerNavLinks"
       :key="`header-nav-` + key"
       class="py-8 px-8 border-b border-primary cursor-pointer"
-      @click="emitScroll(header.scrollTo, header.text)"
+      @click="navigateToLink(header.navigateTo)"
     >
       <h3 class="text-[28px] font-semibold">
         {{ header.text }}
@@ -46,7 +46,7 @@
 </template>
 
 <script setup>
-const emit = defineEmits(["close", "scrollDiv"]);
+const emit = defineEmits(["close"]);
 
 const props = defineProps({
   headerNavLinks: {
@@ -55,9 +55,9 @@ const props = defineProps({
   },
 });
 
-function emitScroll(scrollTo, headerText) {
+function navigateToLink(navigateTolink) {
   emit("close");
-  emit("scrollDiv", scrollTo, headerText);
+  navigateTo(navigateTolink)
 }
 </script>
 
