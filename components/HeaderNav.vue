@@ -36,7 +36,7 @@
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"
           class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
-          @click="scrollToDiv(link.scrollTo, link.text)"
+          @click="navigateTo(link.navigateTo)"
         >{{ link.text }}</a>
       </div>
       <div class="ml-[44px] hidden lg:block">
@@ -60,7 +60,6 @@
       :header-nav-links="headerLinks"
       class="z-50 header-overlay-width"
       @close="headerOverlay = false"
-      @scroll-div="scrollToDiv"
     />
   </header>
 </template>
@@ -79,36 +78,22 @@ const headerOverlay = useState('headerOverlay')
 const emits = defineEmits(['activateSelector']);
 
 const headerLinks = [
-  // {
-  //   text: "How it works",
-  //   scrollTo: "howItWorks"
-  // },
+  
   {
-    text: "Brands",
-    scrollTo: "getInvolved",
+    text: "Home",
+    navigateTo: '/',
   },
   {
-    text: "Creators",
-    scrollTo: "getInvolved",
+    text: "Blog",
+    navigateTo: '/blog',
   },
   {
-    text: "About Us",
-    scrollTo: "aboutUs",
+    text: "Contact Us",
+    navigateTo: '/get-in-touch',
   },
-  {
-    text: "How we help",
-    scrollTo: "help",
-  },
+ 
 ];
-function scrollToDiv(scrollElement, navName) {
-  const targetElement = document.getElementById(scrollElement);
-  if (targetElement) {
-    if (navName === "Brands" || navName === "Creators") {
-      emits('activateSelector', navName);
-    }
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  }
-}
+
 </script>
 <style lang="scss">
 .header-overlay-width {

@@ -30,7 +30,7 @@
       </div>
 
       <!-- author and social media  -->
-      <div class="flex flex-col md:flex-row md:items-center my-3 md:my-8  md:space-y-0 md:space-x-8 items-start justify-between">
+      <div class="flex flex-col md:flex-row md:items-center   md:space-y-0 md:space-x-8 items-start justify-between">
         <div class="flex items-center mb-7 md:mb-0">
           <img
             :src="blogEntry?.fields.authorImage.fields.file.url"
