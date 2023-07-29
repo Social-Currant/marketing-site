@@ -103,8 +103,9 @@
             />
           </div>
         </div>
-        <div class="flex">
+        <!-- <div class="flex">
           <input
+            v-model="newsletter"
             name="newsletter"
             type="checkbox"
             class="checked:bg-secondary mr-2"
@@ -113,7 +114,7 @@
           <div>
             Sign up for our Newsletter to stay up to date with new platform features and trends in the influencer space
           </div>
-        </div>
+        </div> -->
         <div class="flex my-6">
           <div>
             <button
@@ -138,7 +139,7 @@
 </template>
 <script setup>
 const headerOverlay = useState('headerOverlay');
-// const newsletter = useState('newsletter', () => false)
+const newsletter = useState('newsletter', () => false)
 
 const myForm = ref(null)
 const errorMessage = ref(false);
@@ -156,7 +157,10 @@ function handleSubmit(e) {
   })
     .then(() => {
       navigateTo({
-        path: '/success/'
+        path: '/success/',
+        query: {
+          newsletter: newsletter.value,
+        }
       })
     }).catch(() => errorMessage.value = true);
 }

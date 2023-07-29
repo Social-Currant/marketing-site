@@ -20,7 +20,7 @@
             Your form was sent!
           </h3>
           <p class="text-message-info">
-            Someone on our team will get back to you soon
+            Someone on our team will get back to you as soon as possible.
           </p>
         </div>
       </div>
