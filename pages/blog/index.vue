@@ -98,7 +98,7 @@ const brandEntries = computed(() =>
 );
 const creatorEntries = computed(() =>
   posts.value.items?.filter(entry =>
-    includesKeywords(entry.fields.tags, ['influencer', 'creator','creator'])
+    includesKeywords(entry.fields.tags, ['influencer', 'creators','creator'])
   )
 );
 
