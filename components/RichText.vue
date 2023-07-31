@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { BLOCKS } from '@contentful/rich-text-types';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 export default {
   props: {
     content: {
@@ -17,46 +19,13 @@ export default {
   },
   methods: {
     renderContent() {
-      return this.traverseNodes(this.content);
-    },
-    traverseNodes(node) {
-      if (node.nodeType === 'document') {
-        return node.content.map(this.traverseNodes).join('');
-      }
-
-      if (node.nodeType === 'paragraph') {
-        return `<p>${node.content.map(this.traverseNodes).join('')}</p>`;
-      }
-
-      if (node.nodeType === 'heading-1') {
-        return `<h1>${node.content.map(this.traverseNodes).join('')}</h1>`;
-      }
-
-      if (node.nodeType === 'heading-2') {
-        return `<h2>${node.content.map(this.traverseNodes).join('')}</h2>`;
-      }
-
-      if (node.nodeType === 'heading-3') {
-        return `<h3>${node.content.map(this.traverseNodes).join('')}</h3>`;
-      }
-
-      if (node.nodeType === 'heading-4') {
-        return `<h4>${node.content.map(this.traverseNodes).join('')}</h4>`;
-      }
-
-      if (node.nodeType === 'heading-5') {
-        return `<h5>${node.content.map(this.traverseNodes).join('')}</h5>`;
-      }
-
-      if (node.nodeType === 'heading-6') {
-        return `<h6>${node.content.map(this.traverseNodes).join('')}</h6>`;
-      }
-
-      if (node.nodeType === 'text') {
-        return node.value;
-      }
-
-      return '';
+      const options = {
+          renderNode: {
+              [BLOCKS.EMBEDDED_ASSET]: ({ data: { target: { fields }}}) =>
+                  `<img src="${fields.file.url}" height="${fields.file.details.image.height}" width="${fields.file.details.image.width}" alt="${fields.description}"/>`,
+          },
+      };
+      return documentToHtmlString(this.content, options)
     },
   },
 };
@@ -91,9 +60,9 @@ export default {
     h3, h4, h5{
       color: #000;
       font-family: Inter;
-      font-size: 16px;
+      font-size: 20px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 150%; /* 24px */
       margin-bottom: 12px;
     }
@@ -115,5 +84,15 @@ export default {
     }
     max-width: 794px;
     
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+    }
+
+    a{
+      color: #2565F4;
+      cursor:pointer;
+    }
 }
 </style>

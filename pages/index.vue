@@ -776,7 +776,6 @@ const teamRow = computed(() => {
 });
 
 function activateSelector(headerNav) {
-  console.log(headerNav)
   activeBrandCreatorSelector.value = headerNav;
 }
 

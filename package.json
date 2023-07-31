@@ -19,6 +19,8 @@
     "sass": "^1.63.4"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.1.0",
+    "@contentful/rich-text-types": "^16.2.0",
     "contentful": "^10.3.6",
     "klaviyo-api": "^4.0.1"
   }
