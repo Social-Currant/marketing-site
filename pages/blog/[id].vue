@@ -90,6 +90,8 @@ async function fetchBlogEntry(id) {
 
 await fetchBlogEntry(id)
 const posts = shallowRef([]);
+const postTitle = blogEntry.value.fields?.title
+
 
 
 async function fetchBlogEntries() {

@@ -22,7 +22,7 @@ export default {
       const options = {
           renderNode: {
               [BLOCKS.EMBEDDED_ASSET]: ({ data: { target: { fields }}}) =>
-                  `<img src="${fields.file.url}" height="${fields.file.details.image.height}" width="${fields.file.details.image.width}" alt="${fields.description}"/>`,
+                  `<img class="img" src="${fields.file.url}" alt="${fields.description}"/>`,
           },
       };
       return documentToHtmlString(this.content, options)
@@ -93,6 +93,10 @@ export default {
     a{
       color: #2565F4;
       cursor:pointer;
+    }
+    img{
+      margin: 0 auto;
+      width: 75%;
     }
 }
 </style>

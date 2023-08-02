@@ -80,7 +80,7 @@ const allEntries = ref([]);
 
 async function fetchBlogEntries() {
   posts.value = await $contentfulClient.getEntries({
-    order: '-sys.createdAt',
+    order: '-fields.date',
     content_type: 'blogPosts',
     'fields.title[match]': searchQuery.value,
   }).then((postsData) => {
@@ -90,7 +90,6 @@ async function fetchBlogEntries() {
   allEntries.value = posts.value.items?.slice()
 }
 fetchBlogEntries();
-
 const brandEntries = computed(() =>
   posts.value.items?.filter(entry =>
     includesKeywords(entry.fields.tags, ['brand', 'company','brands'])
