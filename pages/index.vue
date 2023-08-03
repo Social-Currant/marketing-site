@@ -1,250 +1,17 @@
 <template class="z-0">
   <div>
     <HeaderNav @activate-selector="activateSelector" />
-    <!-- Section First Impression -->
-    <section
-      :class="headerOverlay ? `blur-sm` : ``"
-      class="container mx-auto px-6 md:px-8 mt-[71px]"
-    >
-      <div class="grid lg:grid-cols-2 max-w-screen-xl m-auto">
-        <div class="lg:order-last">
-          <div>
-            <img
-              src="~/assets/images/currantheroimage.png"
-              class="lg:float-right mx-auto mb-8 lg:mb-0 lg:mr-0 lg:max-w-lg"
-            >
-          </div>
-        </div>
-        <div class="lg:order-first lg:w-10/12 xl:w-full">
-          <h2 class="font-bold text-[24px] lg:text-[38px] text-primary">
-            Find mission aligned creators for your campaign or cause
-          </h2>
-          <p class="font-semibold text-xl mt-[24px]">
-            We help nonprofits, impact & issue focused organizations collaborate
-            with creators to reach audiences more effectively.
-          </p>
-          <div class="flex items-center mt-[32px]">
-            <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
-              <div class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue">
-                Book a Demo
-              </div>
-            </a>
-            <a @click="navigateTo('/get-in-touch')">
-              <div
-                class="mx-2 border-2 border-primary text-primary py-1.5 px-3 rounded-lg text-xl hover:bg-primary hover:text-white cursor-pointer"
-              >
-                Contact Us
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="relative">
-        <img
-          src="~/assets/icons/dots-bg-hero.svg"
-          class="hero-dots"
-        >
-      </div>
-    </section>
+    <HeroSection />
     <!-- / - Section First Impression -->
     <img
       class="background-gradient"
       src="~/assets/images/backgroundgradientcircle.svg"
     >
-    <!-- Organization carousel -->
-    <section class="container mx-auto px-6 md:px-8 mt-[83px]">
-      <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
-        <div
-          v-for="(image, index) in heroCarouselImages"
-          :key="`carouselimage-` + index"
-          class="my-4"
-        >
-          <img
-            :src="image"
-            class="w-200 mx-4"
-          >
-        </div>
-      </div>
-    </section>
+    <OrganizationCarousel />
+    <HowItWorks />
+    
+    <GetInvolved />
 
-    <!-- /  Organization carousel -->
-
-    <!-- How it works -->
-    <div id="howItWorks" />
-    <section class="container mx-auto px-6 md:px-8 mt-[57px]">
-      <h3 class="uppercase text-center text-primary font-semibold leading-tight text-3xl sm:text-5xl">
-        How it works
-      </h3>
-      <img
-        src="~/assets/images/how-it-works.png"
-        class="mx-auto mt-[74px] hidden lg:block"
-      >
-      <div class="grid lg:grid-cols-3 gap-x-16">
-        <div>
-          <img
-            src="~/assets/icons/step1.svg"
-            class="block lg:hidden mt-[32px] mx-auto mb-6 w-[162px]"
-          >
-          <h4 class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]">
-            Step 1
-          </h4>
-          <h5 class="font-semibold mt-[20px] text-center text-[16px] lg:text-left lg:text-[20px]">
-            Outline Your Goals
-          </h5>
-          <p class="mt-4 text-center lg:text-left">
-            We know you have a lot of great ideas but not a lot of time. Our two
-            step process allows for you to quickly outline your campaign, goals
-            and the communities you’re trying to reach.
-          </p>
-        </div>
-        <div>
-          <img
-            src="~/assets/icons/step2.png"
-            class="block lg:hidden mt-[32px] mx-auto w-[130px] mb-6"
-          >
-          <h4 class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]">
-            Step 2
-          </h4>
-          <h5 class="font-semibold mt-[20px] text-center text-[16px] lg:text-left lg:text-[20px]">
-            Review Your Matches
-          </h5>
-          <p class="mt-4 text-center lg:text-left">
-            Let us work our magic! Then it’s your turn to review your personalized
-            creator matches with information on their issue area, audience, and
-            more.
-          </p>
-        </div>
-        <div>
-          <img
-            src="~/assets/icons/step3.png"
-            class="block lg:hidden mt-[32px] mx-auto w-[145px] mb-6"
-          >
-          <h4 class="text-3xl text-center font-bold text-primary text-[24px] lg:text-left lg:text-[28px]">
-            Step 3
-          </h4>
-          <h5 class="font-semibold mt-[20px] text-center text-[16px] lg:text-left lg:text-[20px]">
-            Run Your Campaign
-          </h5>
-
-          <p class="mt-4 text-center lg:text-left">
-            We have your back! Let us make it easy for you to manage your creator
-            campaigns with automating contracts, payments, and more all in one
-            place. This way, you can focus on what matters most- building strong
-            relationships with your creators.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- / - How it works -->
-    <!-- Get Involved -->
-    <div id="getInvolved" />
-    <section class="container mx-auto px-6 md:px-8 mt-[105px]">
-      <h3 class="uppercase text-center text-primary text-[32px] md:text-5xl font-semibold leading-tight">
-        Get Involved
-      </h3>
-      <div
-        class="grid grid-cols-2 rounded-lg mt-[74px] content-center border-[3px] border-purple border-solid place-items-center"
-      >
-        <div
-          class="text-center text-[28px] cursor-pointer font-bold text-black h-full w-full p-4"
-          :class="activeBrandCreatorSelector === 'Brands'
-            ? `bg-primary text-white hover-primary`
-            : `secondary-text`
-          "
-          @click="activeBrandCreatorSelector = 'Brands'"
-        >
-          Brands
-        </div>
-        <div
-          class="text-center text-[28px] font-bold cursor-pointer h-full w-full p-4"
-          :class="activeBrandCreatorSelector === 'Creators'
-            ? `text-white bg-primary hover-primary `
-            : `secondary-text
-          `
-          "
-          @click="activeBrandCreatorSelector = 'Creators'"
-        >
-          Creators
-        </div>
-      </div>
-      <div class="grid lg:grid-cols-2 mt-[70px] rounded-lg content-center gap-x-8">
-        <div class="mb-12">
-          <img :src="activeCarouselImagePath">
-          <div class="flex mt-8 justify-center">
-            <div
-              v-for="n in 3"
-              :key="`brand-carousel-img` + n"
-              @click="activeCarouselImageIndex = n"
-            >
-              <img
-                v-if="activeCarouselImageIndex === n"
-                :src="circleActive"
-                class="cursor-pointer h-[20px]"
-              >
-              <img
-                v-else
-                :src="circle"
-                class="cursor-pointer h-[20px]"
-              >
-            </div>
-          </div>
-        </div>
-        <div>
-          <p
-            v-if="activeBrandCreatorSelector === 'Brands'"
-            class="text-[28px] text-primary font-bold"
-          >
-            Join some of the country’s largest nonprofits & impact organizations
-            in working with Social Currant
-          </p>
-          <p
-            v-if="activeBrandCreatorSelector === 'Creators'"
-            class="text-[28px] text-primary font-bold"
-          >
-            Collaborate on campaigns with organizations working towards impact and
-            positive change
-          </p>
-          <div v-if="activeBrandCreatorSelector === 'Brands'">
-            <div
-              v-for="(textPoint, index) in brandPoints"
-              :key="index + `-textpoints`"
-              class="flex mt-[24px]"
-            >
-              <img
-                src="~/assets/icons/bullet-point.svg"
-                class="mr-6"
-              >
-              <p :class="{ 'font-semibold': activeCarouselImageIndex === index + 1 }">
-                {{ textPoint }}
-              </p>
-            </div>
-          </div>
-
-          <div v-if="activeBrandCreatorSelector === 'Creators'">
-            <div
-              v-for="(textPoint, index) in creatorPoints"
-              :key="index + `-creatorpoints`"
-              class="flex mt-[24px]"
-            >
-              <img
-                src="~/assets/icons/bullet-point.svg"
-                class="mr-6"
-              >
-              <p :class="{ 'font-semibold': activeCarouselImageIndex === index + 1 }">
-                {{ textPoint }}
-              </p>
-            </div>
-          </div>
-
-          <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
-            <button class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5">
-              Get Started
-            </button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- / - Get Involved -->
 
     <!-- About Us -->
     <div id="aboutUs" />
@@ -573,17 +340,11 @@
 </template>
 
 <script setup>
-// carousel icon
-import circle from "~/assets/icons/circle.svg";
-import circleActive from "~/assets/icons/circle-active.svg";
 
 // avatar placeholder
 // import avatar from "~/assets/icons/avatar-placeholder.svg";
 
-// brand carousel images
-import brandOne from "~/assets/images/brands/1.png";
-import brandTwo from "~/assets/images/brands/2.png";
-import brandThree from "~/assets/images/brands/3.png";
+
 
 // brand carousel images
 import phonePersuasion from "~/assets/images/apply/phone-persuasion.png";
@@ -592,22 +353,12 @@ import phoneActivation from "~/assets/images/apply/phone-activation.png";
 import phoneAds from "~/assets/images/apply/phone-ads.png";
 import phoneBuild from "~/assets/images/apply/phone-build.png";
 
-// creator carousel images
-import creatorOne from "~/assets/images/creators/1.png";
-import creatorTwo from "~/assets/images/creators/2.png";
-import creatorThree from "~/assets/images/creators/3.png";
 
 // components
 import { defineComponent } from "vue";
 // import KlaviyoForm from "./components/KlaviyoForm.vue";
 
-import commChangeAction from "~/assets/images/hero-carousel/comm-change-action.png";
-import nextGenAmerica from "~/assets/images/hero-carousel/nextgen-america.png";
-import capitolHistorical from "~/assets/images/hero-carousel/capitol-historical.png";
-import repairTheWorld from "~/assets/images/hero-carousel/repair-the-world.png";
-import leftHook from "~/assets/images/hero-carousel/left-hook.png";
-import jvaCampaigns from "~/assets/images/hero-carousel/jva-campaigns.png";
-import mtrNewYork from "~/assets/images/hero-carousel/mtr-new-york.png";
+
 
 // team
 import will from "~/assets/images/team/will.jpeg";
@@ -650,8 +401,6 @@ const activeApplyCurrant = ref("persuasion"); // persuasion, education, activati
 
 const showMeetTeam = ref(false);
 
-const activeCarouselImageIndex = ref(1);
-const activeBrandCreatorSelector = ref("Brands");
 const iphoneImage = [
   phonePersuasion,
   phoneEducation,
@@ -661,26 +410,10 @@ const iphoneImage = [
 ];
 const activeApplyCurrantPhone = ref(iphoneImage[0]);
 
-const activeCarouselImagePath = computed(() => {
-  const imageMap = {
-    1: activeBrandCreatorSelector.value === "Brands" ? brandOne : creatorOne,
-    2: activeBrandCreatorSelector.value === "Brands" ? brandTwo : creatorTwo,
-    3:
-      activeBrandCreatorSelector.value === "Brands" ? brandThree : creatorThree,
-  };
-  return imageMap[activeCarouselImageIndex.value];
-});
+
 
 onMounted(() => {
   setInterval(() => {
-    if (
-      activeCarouselImageIndex.value === 0 ||
-      activeCarouselImageIndex.value === 3
-    ) {
-      activeCarouselImageIndex.value = 1;
-    } else {
-      activeCarouselImageIndex.value += 1;
-    }
 
     const activeApplyCurrantIndex = applyCurrantOptions.indexOf(
       activeApplyCurrant.value
@@ -693,32 +426,8 @@ onMounted(() => {
   }, 7000);
 });
 
-watch(activeBrandCreatorSelector, () => {
-  // reset the image index to 1
-  activeCarouselImageIndex.value = 1;
-});
 
-const brandPoints = [
-  "Leverage years of expertise and an impact focused creator network.",
-  "Spend less time worrying about finding creators and more time focused on working with them.",
-  "Reach a wider audience, leveraging the power of social media and influencers.",
-];
 
-const creatorPoints = [
-  "Connect and collaborate with organizations and brands that align with your values.",
-  "Get more deals with less effort. We'll notify you when you are requested to work on a campaign.",
-  "Join a network of mission driven content creators working towards impact and change.",
-];
-
-const heroCarouselImages = [
-  commChangeAction,
-  nextGenAmerica,
-  capitolHistorical,
-  repairTheWorld,
-  leftHook,
-  jvaCampaigns,
-  mtrNewYork,
-];
 
 
 const teamFirstRow = [
@@ -781,15 +490,6 @@ function activateSelector(headerNav) {
 
 </script>
 <style scoped lang="scss">
-.hero-dots {
-  position: absolute;
-  right: -2rem;
-  top: -5rem;
-  z-index: -1;
-  height: 20rem;
-  overflow: hidden;
-  display: inline-block;
-}
 
 .egg-left {
   position: absolute;
