@@ -9,148 +9,8 @@
     >
     <OrganizationCarousel />
     <HowItWorks />
-    
     <GetInvolved />
-
-
-    <!-- About Us -->
-    <div id="aboutUs" />
-    <section class="container mx-auto px-6 md:px-8 mt-12">
-      <div>
-        <img
-          src="~/assets/icons/about-us-egg-left.svg"
-          class="egg-left"
-        >
-      </div>
-      <div>
-        <img
-          class="purple-shape"
-          src="~/assets/images/purpleshape.svg"
-        >
-      </div>
-      <div class="flex flex-col lg:flex-row-reverse">
-        <div class="w-full lg:w-[500px] text-center md:text-left">
-          <h4 class="uppercase text-[32px] md:text-5xl text-primary font-semibold leading-tight">
-            About Us
-          </h4>
-          <p class="mb-4 mt-4 text-[20px] font-semibold text-primary">
-            From D.C. to across the world!
-          </p>
-          <p>
-            We’re a creator led platform and managed service focusing on making a
-            difference through the power of social media. Once described by the
-            New York Times as “Only recently able to buy alcohol” This Gen Z led
-            company is on a mission to empower young people and issues we care
-            about.
-          </p>
-        </div>
-      </div>
-      <!-- mobile version of meet the team with carousel -->
-      <div class="block lg:hidden">
-        <div
-          class="flex uppercase justify-center cursor-pointer my-8"
-          @click="showMeetTeam = !showMeetTeam"
-        >
-          <h4 class="mr-2 font-semibold text-xl text-primary">
-            Meet the Team
-          </h4>
-          <img
-            v-if="showMeetTeam"
-            src="~/assets/icons/drop-arrow-up.svg"
-          >
-          <img
-            v-else
-            src="~/assets/icons/drop-arrow-down.svg"
-          >
-        </div>
-        <div
-          v-show="showMeetTeam"
-          class="flex flex-nowrap mobile-meet-the-team"
-          style="min-height: 300px"
-        >
-          <div
-            v-for="(team, index) in teamRow"
-            :key="`teamrow-` + index"
-            class="mx-4"
-            style="min-width: 180px; height: 180px"
-          >
-            <img
-              class="h-full w-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
-              :src="team.image"
-            >
-            <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
-              {{ team.name }}
-            </h6>
-            <p class="text-black text-center">
-              {{ team.desc }}
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- / - mobile version -->
-      <div class="flex hidden lg:block">
-        <h4 class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-tight">
-          Meet the Team
-        </h4>
-      </div>
-      <!-- First Row - Team Members -->
-      <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 mt-16 hidden lg:flex">
-        <div
-          v-for="team in teamFirstRow"
-          :key="`team-` + team.name"
-          class="mb-5"
-        >
-          <div class="w-40 h-40 mx-auto">
-            <img
-              class="w-full h-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
-              :src="team.image"
-            >
-          </div>
-          <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
-            {{ team.name }}
-          </h6>
-          <p class="text-black text-center">
-            {{ team.desc }}
-          </p>
-        </div>
-      </div>
-      <!-- Second Row - Team Members -->
-      <div class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex">
-        <div />
-        <div
-          v-for="team in teamSecondRow"
-          :key="`team-` + team.name"
-          class="mb-5 mx-2"
-        >
-          <div class="w-40 h-40 mx-auto">
-            <img
-              class="w-full h-full object-cover rounded-full mx-auto"
-              :src="team.image"
-            >
-          </div>
-          <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
-            {{ team.name }}
-          </h6>
-          <p class="text-black text-center">
-            {{ team.desc }}
-          </p>
-        </div>
-        <div />
-      </div>
-    </section>
-    <div class="container mx-auto px-6 md:px-8 mt-16 relative">
-      <img
-        src="~/assets/icons/about-us-line-left.svg"
-        style="position: absolute; left: -100px"
-        class="z-0 overflow-hidden"
-      >
-      <img
-        src="~/assets/icons/about-us-line-right.svg"
-        class="overflow-hidden"
-        style="position: absolute; right: -100px"
-      >
-    </div>
-    <!-- / About Us -->
+    <AboutUs />
 
     <!-- Ways to Apply Social Currant -->
     <div class="relative">
@@ -360,16 +220,7 @@ import { defineComponent } from "vue";
 
 
 
-// team
-import will from "~/assets/images/team/will.jpeg";
-import erika from "~/assets/images/team/erika.png";
-import sisir from "~/assets/images/team/sisir.png";
-import ashwath from "~/assets/images/team/ashwath.png";
-import ellie from "~/assets/images/team/ellie.png";
-import jasmine from "~/assets/images/team/jasmine.png";
-import vidyut from "~/assets/images/team/vidyut.png";
-import abby from "~/assets/images/team/abby.png";
-import aashna from "~/assets/images/team/aashna.png";
+
 
 defineComponent({
   // components: {
@@ -399,7 +250,6 @@ const applyCurrantOptions = [
 ];
 const activeApplyCurrant = ref("persuasion"); // persuasion, education, activation, ads, build
 
-const showMeetTeam = ref(false);
 
 const iphoneImage = [
   phonePersuasion,
@@ -428,62 +278,6 @@ onMounted(() => {
 
 
 
-
-
-const teamFirstRow = [
-  {
-    name: "Ashwath Narayanan",
-    desc: "Chief Executive Officer",
-    image: ashwath,
-  },
-  {
-    name: "Vidyut Ghuwalewala",
-    desc: "Chief Operating Officer",
-    image: vidyut,
-  },
-  {
-    name: "Jasmine McCarton",
-    desc: "Chief Design Officer",
-    image: jasmine,
-  },
-  {
-    name: "Ellie Artone",
-    desc: "Chief Creator Officer",
-    image: ellie,
-  },
-  {
-    name: "William Cheshier",
-    desc: "Chief Technology Officer",
-    image: will,
-  },
-];
-const teamSecondRow = [
-  {
-    name: "Aashna Malhotra",
-    desc: "Influencer Strategist",
-    image: aashna,
-  },
-  {
-    name: "Abby Vang",
-    desc: "Influencer Strategist",
-    image: abby,
-  },
-  {
-    name: "Erika Alexandra Aquino Enrique",
-    desc: "Frontend Engineer",
-    image: erika,
-  },
-  {
-    name: "Sisir Ghimire Chettri",
-    desc: "Software Engineer",
-    image: sisir,
-  },
-];
-
-const teamRow = computed(() => {
-  return teamFirstRow.concat(teamSecondRow);
-});
-
 function activateSelector(headerNav) {
   activeBrandCreatorSelector.value = headerNav;
 }
@@ -491,13 +285,6 @@ function activateSelector(headerNav) {
 </script>
 <style scoped lang="scss">
 
-.egg-left {
-  position: absolute;
-  right: 50%;
-  z-index: -1;
-  height: 680px;
-  width: 800px;
-}
 
 .circle-gradient {
   background: #80a3eb;
@@ -673,9 +460,5 @@ $value in $applyStatus {
   }
 }
 
-.purple-shape {
-  position: absolute;
-  z-index: -1;
-  right: max(calc(50% - 800px), 0px);
-}
+
 </style>

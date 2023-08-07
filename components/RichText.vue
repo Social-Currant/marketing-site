@@ -59,7 +59,7 @@ export default {
     }
     h3, h4, h5{
       color: #000;
-      font-family: Inter;
+      font-family: 'Inter', 'Poppins';
       font-size: 20px;
       font-style: normal;
       font-weight: 500;
@@ -75,7 +75,7 @@ export default {
 
     p {
         color: #000;
-        font-family: Inter;
+        font-family: 'Inter', 'Poppins';
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
