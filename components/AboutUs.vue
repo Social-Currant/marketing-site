@@ -73,7 +73,7 @@
     <!-- / - mobile version -->
     <div class="flex hidden lg:block">
       <h4 class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-tight">
-        Meet the Team
+        {{ pageData.fields.team }}
       </h4>
     </div>
     <!-- First Row - Team Members -->
@@ -133,7 +133,6 @@
       style="position: absolute; right: -100px"
     >
   </div>
-  <!-- / About Us -->
 </template>
 
 <script setup>
@@ -172,6 +171,8 @@ const teamRow = computed(() => {
   return teamFirstRow.concat(teamSecondRow);
 });
 
+const showMeetTeam=ref(false)
+
 </script>
 
 <style lang="scss" scoped>
@@ -186,5 +187,17 @@ const teamRow = computed(() => {
   position: absolute;
   z-index: -1;
   right: max(calc(50% - 800px), 0px);
+}
+.mobile-meet-the-team {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.mobile-meet-the-team::-webkit-scrollbar {
+  display: none;
 }
 </style>

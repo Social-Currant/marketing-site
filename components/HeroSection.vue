@@ -68,4 +68,11 @@ const pageData = await $contentfulClient.getEntries({
   overflow: hidden;
   display: inline-block;
 }
+
+.hover-button-blue:hover {
+  background: #4780ff;
+}
+.hover-primary:hover {
+  background: #4f3467;
+}
 </style>
