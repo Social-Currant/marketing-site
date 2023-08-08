@@ -1,0 +1,16 @@
+name: Linter
+on: [push]
+jobs:
+  ESLint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        env:
+          NPM_CONFIG_PRODUCTION: false
+        working-directory: ./
+        run: |
+          npm install
+      - name: Run ESLint
+        working-directory: ./
+        run: npx eslint .

@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 require('dotenv').config();
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -19,4 +20,10 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true,
   },
+  runtimeConfig: {
+    public: {
+      ctfSpace: process.env.CONTENTFUL_SPACE_ID,
+      ctfAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    }
+  }
 });
