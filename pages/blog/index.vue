@@ -43,11 +43,20 @@
             {{ blogCategory }}
           </h2>
         </div>
-        <div>
+
+
+        <div class="search-input-container">
+          <span class="search-icon ">
+            <img
+              src="~/assets/icons/iconSearch.svg"
+              alt="Search Icon"
+            >
+          </span>
           <input
             v-model="searchQuery"
             type="text"
             placeholder="Search"
+            class="search-input"
             @keyup.enter="fetchBlogEntries()"
           >
         </div>
@@ -229,5 +238,20 @@ label {
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 2px;
+}
+.search-input-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+}
+
+.search-input {
+  padding-left: 38px;
 }
 </style>
