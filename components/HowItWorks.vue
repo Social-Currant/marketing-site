@@ -6,7 +6,7 @@
     </h3>
     <img
       :src="pageData.fields.images[0].fields.file.url"
-      class="mx-auto mt-[74px] hidden lg:block"
+      class="mx-auto mt-[74px] hidden lg:block w-full"
     >
     <div class="grid lg:grid-cols-3 gap-x-16">
       <div>
