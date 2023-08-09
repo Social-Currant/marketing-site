@@ -50,6 +50,7 @@
             <img
               src="~/assets/icons/iconSearch.svg"
               alt="Search Icon"
+              @click="fetchBlogEntries()"
             >
           </span>
           <input
@@ -98,6 +99,13 @@ async function fetchBlogEntries() {
   }).catch(console.error);
   allEntries.value = posts.value.items?.slice()
 }
+
+watch(searchQuery, (newValue) => {
+  if (newValue === "") {
+    fetchBlogEntries()
+  }
+})
+
 fetchBlogEntries();
 const brandEntries = computed(() =>
   posts.value.items?.filter(entry =>
@@ -248,6 +256,7 @@ label {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
+  cursor:pointer;
 
 }
 
