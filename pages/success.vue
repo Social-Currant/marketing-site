@@ -15,7 +15,10 @@
           Thank you for submitting your form and subscribing to our
           newsletter!
         </h3>
-        <div class="center-message text-center text-message" v-else>
+        <div
+          v-else
+          class="center-message text-center text-message"
+        >
           <h3>
             Your form was sent!
           </h3>

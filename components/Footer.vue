@@ -9,23 +9,7 @@
         class="bg-white text-black container mx-auto px-6 md:px-8 absolute drop-shadow-lg rounded-lg mx-auto py-16"
         style="top: -80px; width: 85%"
       >
-        <div class="flex flex-col lg:flex-row justify-left lg:justify-between lg:items-center">
-          <div>
-            <h4 class="text-3xl md:text-4xl font-bold">
-              It's Time To Invest In People.
-            </h4>
-            <p>Work with creators today!</p>
-          </div>
-          <div class="my-4">
-            <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
-              <button
-                class="border-secondary border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg"
-              >
-                Sign up for a Demo
-              </button>
-            </a>
-          </div>
-        </div>
+        <CallToAction />
       </div>
 
       <div class="uppercase text-lg font-semibold mt-32 lg:mt-4 text-left">
