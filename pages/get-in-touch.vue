@@ -138,6 +138,11 @@
   </div>
 </template>
 <script setup>
+
+useSeoMeta({
+  title: 'Get in Touch'
+})
+
 const headerOverlay = useState('headerOverlay');
 const newsletter = useState('newsletter', () => false)
 
