@@ -23,7 +23,7 @@ export default cachedEventHandler(
 
     return posts.items.map((p: any) => {
       return {
-        loc: `/blog/${p.sys.id}`,
+        loc: `/blog/${p.fields.slug}`,
         lastmod: `${p.sys.updatedAt}`,
       };
     });

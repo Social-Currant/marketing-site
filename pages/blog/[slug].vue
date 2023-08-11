@@ -81,16 +81,22 @@ const { $contentfulClient } = useNuxtApp()
 const blogEntry = ref();
 const route = useRoute();
 const router = useRouter();
-const {id} = route.params;
+const { slug } = route.params;
 
-async function fetchBlogEntry(id) {
-  const result = await $contentfulClient.getEntry(id)
-  blogEntry.value = result
+async function fetchBlogEntry(slug) {
+  blogEntry.value = await $contentfulClient.getEntries({
+    order: '-sys.createdAt',
+    content_type: 'blogPosts',
+    'fields.slug[in]': slug,
+  }).then((postsData) => {
+    return postsData.items[0];
+  }).catch(console.error);
 }
 
-await fetchBlogEntry(id)
+await fetchBlogEntry(slug)
+
 const posts = shallowRef([]);
-const postTitle = blogEntry.value.fields?.title
+// const postTitle = blogEntry.value.fields?.title
 
 
 
@@ -98,7 +104,7 @@ async function fetchBlogEntries() {
   posts.value = await $contentfulClient.getEntries({
     order: '-sys.createdAt',
     content_type: 'blogPosts',
-    'sys.id[nin]': id,
+    'fields.slug[nin]': slug, // not in filter
     limit: 3,
   }).then((postsData) => {
     return postsData;

@@ -11,9 +11,6 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true,
   },
-  sitemap: {
-    xsl: false,
-  },
   site: {
     url: "https://socialcurrant.co",
   },
