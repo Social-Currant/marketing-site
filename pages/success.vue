@@ -32,6 +32,11 @@
   </div>
 </template>
 <script setup>
+
+useHead({
+  title: 'Success - Social Currant'
+})
+
 const route = useRoute();
 const newsletterSubscribed = computed(() => {
   return route.query.newsletter === "true";

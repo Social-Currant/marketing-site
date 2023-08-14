@@ -2,9 +2,9 @@
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-24 justify-items-center">
     <div
       v-for="post in posts"
-      :key="post.sys.id"
+      :key="post.fields.slug"
       class="mb-8 cursor-pointer at-hover p-2.5 w-full md:w-80 lg:w-full "
-      @click="navigateTo({name: 'blog-id', params: {id: post.sys.id},})"
+      @click="navigateTo({name: 'blog-slug', params: {slug: post.fields.slug},})"
     >
       <img
         :src="post.fields.image.fields.file.url"
@@ -23,7 +23,7 @@
         {{ post.fields.excerpt }}
         <a
           class="text-secondary cursor-pointer"
-          @click="navigateTo({name: 'blog-id', params: {id: post.sys.id},})"
+          @click="navigateTo({name: 'blog-slug', params: {slug: post.fields.slug},})"
         >read more</a>
       </p>
       <div
