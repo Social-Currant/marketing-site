@@ -62,7 +62,7 @@
           >
         </div>
       </div>
-      <BlogCardList 
+      <BlogCardList
         class="md:ml-6"
         :posts="activeArray"
       />
@@ -71,6 +71,35 @@
   </div>
 </template>
 <script setup>
+const seoValues = {
+  title: 'Blog',
+  description: 'Stay up to date with the latest trends, strategies, and success stories that showcase the potential of creator collaborations',
+  image: 'http://images.ctfassets.net/3pfwjoohrkvu/4StE3n2my3oph2hQPeVo9G/15ec670ee198b9127b859ca9a49554eb/yearinreview.jpeg',
+  url: 'https://socialcurrant.co/blog'
+}
+
+useSeoMeta({
+  title: seoValues.title,
+  description: seoValues.description,
+  image: seoValues.image,
+
+  // open graph / facebook
+  ogTitle: seoValues.title,
+  ogDescription: seoValues.description,
+  ogType: 'website',
+  ogUrl: seoValues.url,
+  ogImage: seoValues.image,
+
+  // twitter
+  twitterCard: 'summary_large_image',
+  twitterTitle: seoValues.title,
+  twitterDescription: seoValues.description,
+  twitterImage: seoValues.image,
+  twitterImageType: 'png',
+
+  themeColor: "#30104C"
+})
+
 const { $contentfulClient } = useNuxtApp()
 const searchQuery = ref('');
 const pendingBlog = ref(true);
@@ -86,7 +115,7 @@ const pageData = await $contentfulClient.getEntries({
 }).catch(console.error);
 
 const posts = shallowRef([]);
-const allEntries = ref([]); 
+const allEntries = ref([]);
 
 async function fetchBlogEntries() {
   posts.value = await $contentfulClient.getEntries({
@@ -131,7 +160,7 @@ const activeArray = computed(() => {
         case 'Creators':
           return creatorEntries.value;
         default:
-          return allEntries.value; 
+          return allEntries.value;
       }
     });
 

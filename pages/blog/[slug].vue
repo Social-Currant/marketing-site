@@ -37,7 +37,7 @@
             height="100"
             class="author-image"
           >
-          <div class="author ml-4 "> 
+          <div class="author ml-4 ">
             <p>{{ blogEntry?.fields.author[0] }}</p>
             <p
               v-if="blogEntry?.fields.jobTitle"
@@ -47,12 +47,12 @@
             </p>
           </div>
         </div>
-        <SocialMediaIcons 
+        <SocialMediaIcons
           class="mb-4 md:mb-0"
           :title="blogEntry?.fields.title"
         />
       </div>
-    
+
       <!-- image -->
       <img
         :src="blogEntry?.fields.image.fields.file.url"
@@ -67,7 +67,7 @@
       <h1 class="related-text my-14 ml-6">
         Related Articles
       </h1>
-      <BlogCardList 
+      <BlogCardList
         class="md:ml-6"
         :posts="posts.items"
       />
@@ -81,16 +81,22 @@ const { $contentfulClient } = useNuxtApp()
 const blogEntry = ref();
 const route = useRoute();
 const router = useRouter();
-const {id} = route.params;
+const { slug } = route.params;
 
-async function fetchBlogEntry(id) {
-  const result = await $contentfulClient.getEntry(id)
-  blogEntry.value = result
+async function fetchBlogEntry(slug) {
+  blogEntry.value = await $contentfulClient.getEntries({
+    order: '-sys.createdAt',
+    content_type: 'blogPosts',
+    'fields.slug[in]': slug,
+  }).then((postsData) => {
+    return postsData.items[0];
+  }).catch(console.error);
 }
 
-await fetchBlogEntry(id)
+await fetchBlogEntry(slug)
+
 const posts = shallowRef([]);
-const postTitle = blogEntry.value.fields?.title
+// const postTitle = blogEntry.value.fields?.title
 
 
 
@@ -98,8 +104,8 @@ async function fetchBlogEntries() {
   posts.value = await $contentfulClient.getEntries({
     order: '-sys.createdAt',
     content_type: 'blogPosts',
-    'sys.id[nin]': id,
-    limit: 3, 
+    'fields.slug[nin]': slug, // not in filter
+    limit: 3,
   }).then((postsData) => {
     return postsData;
   }).catch(console.error);
@@ -112,15 +118,26 @@ function formatDate(dateString) {
   return formattedDate;
 }
 
-
 useSeoMeta({
   title: blogEntry.value.fields?.title,
+  description: blogEntry.value.fields?.excerpt,
+  image: `https:` + blogEntry.value.fields.image.fields.file.url,
+
+  // open graph / facebook
   ogTitle: blogEntry.value.fields?.title,
-  ogDescription: blogEntry.value.fields.excerpt,
-  ogImage: blogEntry.value.fields.image.fields.file.url,
-  twitterDescription: blogEntry.value.fields.excerpt,
-  lang: "en",
+  ogDescription: blogEntry.value.fields?.excerpt,
+  ogType: 'website',
+  ogUrl: `https://socialcurrant.co${route.path}`,
+  ogImage: `https:` + blogEntry.value.fields.image.fields.file.url,
+  ogType: 'article',
+
+  // twitter
+  twitterCard: 'summary_large_image',
+  twitterTitle: blogEntry.value.fields?.title,
+  twitterDescription: blogEntry.value.fields?.excerpt,
+  twitterImage: `https:` + blogEntry.value.fields?.image.fields.file.url,
 })
+
 </script>
 
 <style lang="scss">
@@ -196,7 +213,7 @@ padding: 24px;
 }
 .related-text{
   color: #30104C;
-font-family: Poppins; 
+font-family: Poppins;
 font-size: 32px;
 font-style: normal;
 font-weight: 500;
