@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     public: {
       ctfSpace: process.env.CONTENTFUL_SPACE_ID,
       ctfAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      ctfPreviewToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
     },
   },
 });

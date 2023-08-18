@@ -77,14 +77,15 @@
 </template>
 
 <script setup>
-const { $contentfulClient } = useNuxtApp()
+const { $contentfulClient, $previewClient } = useNuxtApp()
 const blogEntry = ref();
 const route = useRoute();
 const router = useRouter();
 const { slug } = route.params;
 
 async function fetchBlogEntry(slug) {
-  blogEntry.value = await $contentfulClient.getEntries({
+  const client = route.query.hasOwnProperty('preview') ? $previewClient : $contentfulClient;
+  blogEntry.value = await client.getEntries({
     order: '-sys.createdAt',
     content_type: 'blogPosts',
     'fields.slug[in]': slug,
