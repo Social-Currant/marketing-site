@@ -141,6 +141,7 @@ const pendingPage = ref(true)
 
 const [pageData, assets] = await $contentfulClient.getEntries({
   content_type: 'aboutUs',
+  'metadata.tags.sys.id[in]': 'homePage'
 }).then((pageData) => {
   pendingPage.value = false
   return [pageData.items[0], pageData.includes.Asset];
