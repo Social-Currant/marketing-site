@@ -22,6 +22,7 @@ const pendingPage = ref(true)
 const pageData = await $contentfulClient.getEntries({
   order: '-sys.createdAt',
   content_type: 'imageCarousel',
+  'metadata.tags.sys.id[in]': 'homePage'
 }).then((pageData) => {
   pendingPage.value = false
   return pageData.items[0];
