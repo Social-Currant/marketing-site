@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "nuxt-simple-sitemap",
   ],
+  components: [
+    "~/components",
+    "~/components/coaching",
+  ],
   tailwindcss: {
     exposeConfig: true,
   },

@@ -91,6 +91,10 @@ const headerLinks = [
     text: "Contact Us",
     navigateTo: '/get-in-touch',
   },
+  {
+    text: "Coaching",
+    navigateTo: '/social-currant-brand-coaching-program',
+  },
  
 ];
 
