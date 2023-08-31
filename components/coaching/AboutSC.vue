@@ -3,16 +3,24 @@
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
       <img
         class="sc-image mb-6"
-        src="~/assets/SCapp.png"
+        :src="pageData.fields.image.fields.file.url"
       >
       <div class="SC-text">
-        Social Currant is condensing our expertise from developing over 1,000 creator campaigns into a coaching program designed for purpose-driven organizations interested in collaborating with online creators. 
+        {{ pageData.fields.paragraph }}
       </div>
     </div>
   </section>
 </template>
 
-<script>
+<script setup>
+const { $contentfulClient } = useNuxtApp()
+const pendingPage = ref(true)
+
+const pageData = await $contentfulClient.getEntry('7oCO3dzkaXL7twOi6BKDEe').then((pageData) => {
+  pendingPage.value = false
+  return pageData;
+}).catch(console.error);  
+
 </script>
 
 <style>

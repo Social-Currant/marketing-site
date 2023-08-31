@@ -2,17 +2,24 @@
   <section class="container mx-auto px-6 md:px-8 mt-[83px]">
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-4">
       <div class="SC-text">
-        Social Currant which connects impact organizations with creators, has supported over 50 of the leading nonprofits to develop creator programs that have reached millions across TikTok, Instagram, and beyond. 
+        {{ pageData.fields.paragraph }}
       </div>
       <img
         class="sc-image"
-        src="~/assets/SCapp.png"
+        :src="pageData.fields.image.fields.file.url"
       >
     </div>
   </section>
 </template>
 
-<script>
+<script setup>
+const { $contentfulClient } = useNuxtApp()
+const pendingPage = ref(true)
+
+const pageData = await $contentfulClient.getEntry('3SUIXg3dDUjqlzm7PNdpvV').then((pageData) => {
+  pendingPage.value = false
+  return pageData;
+}).catch(console.error); 
 </script>
 
 <style>

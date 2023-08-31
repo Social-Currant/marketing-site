@@ -2,10 +2,10 @@
   <section class="container mx-auto px-6 md:px-8 mt-[83px] text-[#30104C]">
     <div class="flex flex-wrap flex-col xl:flex-nowrap items-center justify-center">
       <div class="font-semibold text-4xl leading-[60px] mb-6">
-        How Can We Help You?
+        {{ pageData.fields.header }}
       </div>
       <div class="text-center font-semibold text-2xl leading-[30px] mb-24">
-        Let's do great work together
+        {{ pageData.fields.subheader }}
       </div>
       <div class="flex">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -14,7 +14,7 @@
             :key="expect.image"
             class="flex flex-col items-center"
           >
-            <img src="~/assets/expect1.svg">
+            <img :src="expect.image">
             <div class="mt-2 text-center font-semibold text-3xl leading-[48px]">
               {{ expect.title }}
             </div>
@@ -29,21 +29,30 @@
 </template>
 
 <script setup>
+const { $contentfulClient } = useNuxtApp()
+const pendingPage = ref(true)
+
+const pageData = await $contentfulClient.getEntry('7tGM202FRABvBZDMp8RmSv').then((pageData) => {
+  pendingPage.value = false
+  console.log("fivueb", pageData)
+  return pageData;
+}).catch(console.error); 
+
 const expectations= [
         {
-          image: "~/assets/expect1.svg",
-          title:"Group Synergy for Collective Growth",
-          description: "Join six immersive group sessions that foster collaboration and knowledge exchange. Engage with experts and fellow participants, sharing insights and strategies to cultivate successful integrated creator programs. ",
+          image: pageData.fields.icons[0].fields.file.url,
+          title:pageData.fields.titles[0],
+          description: pageData.fields.text[0],
         },
         {
-          image: "~/assets/expect2.svg",
-          title:"Personalized 1-on-1 Guidance",
-          description: "Experience the personalized touch of 41:1 sessions, where our experts dedicate their undivided attention to your specific goals. Receive tailored advice, detailed feedback, and targeted solutions as you navigate the intricacies of creator campaigns.",
+          image: pageData.fields.icons[1].fields.file.url,
+          title:pageData.fields.titles[1],
+          description: pageData.fields.text[1],
         },
         {
-          image: "~/assets/expect3.svg",
-          title:"Unleash Creativity Across 7 Dynamic Collaborators",
-          description: "Collaborate with a diverse pool of seven talented creators, each bringing their unique perspectives to the table. Dive deep into content development for your campaign.",
+          image: pageData.fields.icons[2].fields.file.url,
+          title:pageData.fields.titles[2],
+          description: pageData.fields.text[2],
         },
       ]
 </script>
