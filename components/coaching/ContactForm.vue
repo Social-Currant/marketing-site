@@ -11,13 +11,26 @@
         Contact Us
       </h1>
       <p class="text-center font-inter text-lg font-normal leading-6 text-[#30104C] mb-16">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Discover program details or apply now. Your questions and thoughts are welcome – let's shape change together. 
       </p>
-      <form class="form-container">
+      <form
+        ref="myForm"
+        class="form-container"
+        name="coaching-program"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        @submit="handleSubmit"
+      >
+        <input
+          type="hidden"
+          name="form-name"
+          value="coaching-program"
+        >
         <div class="grid grid-cols-1 mb-8">
           <label>Brand Name</label>
           <input
-            name="Brand Name"
+            name="BrandName"
             type="text"
             placeholder=""
             required
@@ -60,6 +73,30 @@
             >
           </div>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <label>Position</label>
+            <input
+              name="position"
+              type="text"
+              placeholder=""
+              required
+            >
+          </div>
+          <div class="grid grid-cols-1 mb-8">
+            <div>
+              <label>Have you ever worked with creators?</label>
+              <select name="hasWorkedWithCreator">
+                <option value="Yes">
+                  Yes
+                </option>
+                <option value="No">
+                  No
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
         <div class="grid grid-cols-1 mb-8">
           <div>
             <label>Message</label>
@@ -79,13 +116,13 @@
               Submit
             </button>
           </div>
-          <!-- <div
+          <div
             v-if="errorMessage"
             class="text-red-500 inline-block error-message mx-8"
           >
             Something went wrong and the form was not submitted.
             Please stay on this page and try again in a few minutes.
-          </div> -->
+          </div>
         </div>
       </form>
     </section>
@@ -93,6 +130,29 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+const headerOverlay = ref(false);
+const newsletter = useState('newsletter', () => false)
+const myForm = ref(null);
+const errorMessage = ref(false);
+
+function handleSubmit(e) {
+  e.preventDefault();
+
+  const formElement = myForm.value;
+  const formData = new FormData(formElement);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      navigateTo({
+        path: '/success/',
+      });
+    })
+    .catch(() => (errorMessage.value = true));
+}
 </script>
 
 <style scoped lang="scss">
@@ -147,5 +207,16 @@ textarea {
 .form-container{
   max-width: 85%;
   margin: auto;
+}
+
+select,
+option {
+  display: block;
+  width: 95%;
+  height: 40px;
+  border: 1px solid #ACACAC;
+  border-radius: 5px;
+  background: #FFF;
+  padding: 8px 16px;
 }
 </style>

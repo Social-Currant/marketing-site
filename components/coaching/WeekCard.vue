@@ -36,6 +36,12 @@ description: {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+.square-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .title {
