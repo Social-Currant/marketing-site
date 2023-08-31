@@ -14,7 +14,11 @@
             :key="expect.image"
             class="flex flex-col items-center text-center font-['Inter', 'Poppins'] text-xl leading-[29.405px]"
           >
-            <img :src="expect.image">
+            <img
+              :src="expect.image"
+              height="108"
+              width="108"
+            >
             <div class="mt-2 text-center">
               {{ expect.description }}
             </div>
