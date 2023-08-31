@@ -30,7 +30,7 @@ height: 301px;
 .SC-text{
   color: #000;
 font-family: Inter;
-font-size: 24px;
+font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: normal; 

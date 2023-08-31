@@ -1,7 +1,7 @@
 <template>
   <section class=" w-full px-6 md:px-8 mt-[83px] background py-8 text-[#30104C]">
     <div class="container flex flex-wrap flex-col xl:flex-nowrap items-center justify-center m-auto">
-      <div class="font-semibold text-4xl leading-[60px] mb-6">
+      <div class="font-semibold text-5xl leading-[60px] mb-6 uppercase">
         {{ pageData.fields.header }}
       </div>
       <div class="text-center font-semibold text-2xl leading-[30px] mb-24">
@@ -12,7 +12,7 @@
           <div
             v-for="expect in expectations"
             :key="expect.image"
-            class="flex flex-col items-center text-center font-['Inter', 'Poppins'] text-xl leading-[29.405px]"
+            class="flex flex-col items-center text-center font-['Inter', 'Poppins']  leading-[29.405px]"
           >
             <img
               :src="expect.image"

@@ -10,9 +10,6 @@
       <h1 class="mb-4 title-form">
         Contact Us
       </h1>
-      <p class="text-center font-inter text-lg font-normal leading-6 text-[#30104C] mb-16">
-        Discover program details or apply now. Your questions and thoughts are welcome – let's shape change together. 
-      </p>
       <form
         ref="myForm"
         class="form-container"

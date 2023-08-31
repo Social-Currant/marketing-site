@@ -1,10 +1,10 @@
 <template>
   <section class="container mx-auto px-6 md:px-8 mt-[83px] text-[#30104C]">
     <div class="flex flex-wrap flex-col xl:flex-nowrap items-center justify-center">
-      <div class="font-semibold text-4xl leading-[60px] mb-6">
+      <div class="font-semibold text-5xl leading-[60px] mb-6 uppercase">
         {{ pageData.fields.header }}
       </div>
-      <div class="text-center font-semibold text-2xl leading-[30px] mb-24">
+      <div class="text-center font-semibold text-xl leading-[30px] mb-24">
         {{ pageData.fields.subheader }}
       </div>
       <div class="flex">
@@ -18,7 +18,7 @@
             <div class="mt-2 text-center font-semibold text-3xl leading-[48px]">
               {{ expect.title }}
             </div>
-            <div class="text-center font-['Inter', 'Poppins'] text-xl leading-[29.405px] mt-2 text-[#475467]">
+            <div class="text-center font-['Inter', 'Poppins']  leading-[29.405px] mt-2 text-[#475467]">
               {{ expect.description }}
             </div>
           </div>
