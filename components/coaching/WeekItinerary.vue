@@ -1,10 +1,10 @@
 <template>
   <section class="container mx-auto px-6 md:px-8 mt-[83px] py-8 text-[#30104C]">
     <div class="flex flex-wrap flex-col xl:flex-nowrap items-center justify-center">
-      <div class="font-semibold text-5xl leading-[60px] text-center mb-6 uppercase">
+      <div class="font-semibold text-3xl lg:text-5xl leading-tight text-center mb-6 uppercase">
         From Vision to Impact: A 6-Week Creator Program Success
       </div>
-      <div class="text-center font-semibold text-xl leading-[30px] mb-24">
+      <div class="text-center font-semibold text-xl leading-tight mb-11 lg:mb-24">
         Crafting, Launching, and Sustaining Effective Collaborative Campaigns
       </div>
       <div class="flex">

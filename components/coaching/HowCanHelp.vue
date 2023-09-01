@@ -1,10 +1,10 @@
 <template>
   <section class="container mx-auto px-6 md:px-8 mt-[83px] text-[#30104C]">
     <div class="flex flex-wrap flex-col xl:flex-nowrap items-center justify-center">
-      <div class="font-semibold text-5xl leading-[60px] mb-6 uppercase">
+      <div class="font-semibold text-3xl lg:text-5xl leading-tight text-center mb-6 uppercase">
         {{ pageData.fields.header }}
       </div>
-      <div class="text-center font-semibold text-xl leading-[30px] mb-24">
+      <div class="text-center font-semibold text-xl leading-tight mb-11 lg:mb-24">
         {{ pageData.fields.subheader }}
       </div>
       <div class="flex">
@@ -15,7 +15,7 @@
             class="flex flex-col items-center"
           >
             <img :src="expect.image">
-            <div class="mt-2 text-center font-semibold text-3xl leading-[48px]">
+            <div class="mt-2 text-center font-semibold text-xl lg:text-3xl leading-tight">
               {{ expect.title }}
             </div>
             <div class="text-center font-['Inter']  leading-[29.405px] mt-2 text-[#475467]">

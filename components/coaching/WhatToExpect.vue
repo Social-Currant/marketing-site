@@ -1,10 +1,10 @@
 <template>
   <section class=" w-full px-6 md:px-8 mt-[83px] background py-8 text-[#30104C]">
     <div class="container flex flex-wrap flex-col xl:flex-nowrap items-center justify-center m-auto">
-      <div class="font-semibold text-5xl leading-[60px] mb-6 uppercase">
+      <div class="font-semibold text-3xl lg:text-5xl leading-tight mb-6 uppercase">
         {{ pageData.fields.header }}
       </div>
-      <div class="text-center font-semibold text-2xl leading-[30px] mb-24">
+      <div class="text-center font-semibold text-2xl leading-tight mb-11 lg:mb-24">
         {{ pageData.fields.subheader }}
       </div>
       <div class="flex">

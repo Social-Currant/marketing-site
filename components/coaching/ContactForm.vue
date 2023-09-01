@@ -7,7 +7,7 @@
       <h3 class="mb-4 text-center font-poppins text-xl font-semibold leading-8 text-[#30104C]">
         Get in touch
       </h3>
-      <h1 class="mb-4 title-form">
+      <h1 class="mb-4 title-form text-2xl lg:text-3xl">
         Contact Us
       </h1>
       <form
@@ -168,7 +168,6 @@ function handleSubmit(e) {
   color: #30104C;
 text-align: center;
 font-family: Poppins;
-font-size: 40px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 48px */
