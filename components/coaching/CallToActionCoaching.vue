@@ -3,7 +3,10 @@
     <div class="cta-title">
       For priority consideration apply by September 15
     </div>
-    <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+    <a
+      href="#"
+      @click.prevent="scrollToContactUs"
+    >
       <div
         class="mx-2 border-2 border-primary text-primary py-1.5 px-3 rounded-lg text-xl hover:bg-primary hover:text-white cursor-pointer"
       >
@@ -12,6 +15,16 @@
   </div>
 </template>
 
+<script setup>
+const scrollToContactUs = () => {
+  const offset = document.querySelector("header")?.getBoundingClientRect().height || 0; // height of the navbar
+  const element = document.querySelector('#contact-us');
+  if (element) {
+    const top = element.offsetTop - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+}
+</script>
 
 <style scoped>
 .cta-container{

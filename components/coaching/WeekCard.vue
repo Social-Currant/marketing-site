@@ -57,7 +57,7 @@ description: {
 
 .description {
   color: var(--white, #FFF);
-  font-family: Poppins;
+  font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

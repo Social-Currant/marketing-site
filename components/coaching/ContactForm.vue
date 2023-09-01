@@ -35,19 +35,21 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <label>Brand Representative First name</label>
+            <label>Brand Representative First Name</label>
             <input
               name="FirstName"
               type="text"
               placeholder=""
+              required
             >
           </div>
           <div>
-            <label> Brand Representative Last name</label>
+            <label> Brand Representative Last Name</label>
             <input
               name="LastName"
               type="text"
               placeholder=""
+              required
             >
           </div>
         </div>
@@ -77,13 +79,22 @@
               name="position"
               type="text"
               placeholder=""
-              required
             >
           </div>
           <div class="grid grid-cols-1 mb-8">
             <div>
               <label>Have you ever worked with creators?</label>
-              <select name="hasWorkedWithCreator">
+              <select
+                name="hasWorkedWithCreator"
+                required
+              >
+                <option
+                  value=""
+                  disabled
+                  selected
+                >
+                  Select an option
+                </option>
                 <option value="Yes">
                   Yes
                 </option>
@@ -209,7 +220,7 @@ textarea {
 select,
 option {
   display: block;
-  width: 95%;
+  width: 100%;
   height: 40px;
   border: 1px solid #ACACAC;
   border-radius: 5px;

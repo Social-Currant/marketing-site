@@ -12,7 +12,7 @@
           <div
             v-for="expect in expectations"
             :key="expect.image"
-            class="flex flex-col items-center text-center font-['Inter', 'Poppins']  leading-[29.405px]"
+            class="flex flex-col items-center text-center font-['Inter']  leading-[29.405px]"
           >
             <img
               :src="expect.image"

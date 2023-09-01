@@ -18,7 +18,7 @@
             <div class="mt-2 text-center font-semibold text-3xl leading-[48px]">
               {{ expect.title }}
             </div>
-            <div class="text-center font-['Inter', 'Poppins']  leading-[29.405px] mt-2 text-[#475467]">
+            <div class="text-center font-['Inter']  leading-[29.405px] mt-2 text-[#475467]">
               {{ expect.description }}
             </div>
           </div>
