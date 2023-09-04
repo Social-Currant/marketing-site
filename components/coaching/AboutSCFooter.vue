@@ -1,9 +1,10 @@
 <template>
   <section class="container mx-auto px-6 md:px-8 mt-[83px]">
-    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-4">
-      <div class="SC-text">
-        {{ pageData.fields.paragraph }}
-      </div>
+    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-4 gap-x-12">
+      <div
+        class="SC-text"
+        v-html="renderedParagraph"
+      />
       <img
         class="sc-image"
         :src="pageData.fields.image.fields.file.url"
@@ -20,6 +21,10 @@ const pageData = await $contentfulClient.getEntry('3SUIXg3dDUjqlzm7PNdpvV').then
   pendingPage.value = false
   return pageData;
 }).catch(console.error); 
+
+const renderedParagraph = computed(() => {
+  return pageData.fields.paragraph.replace(/\n/g, '<br>');
+});
 </script>
 
 <style>
@@ -28,13 +33,12 @@ width: 536px;
 height: 301px; 
 }
 .SC-text{
-  color: #000;
+color: #30104C;
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: normal; 
 max-width: 494px;
-margin-right: 56px;
 }
 </style>

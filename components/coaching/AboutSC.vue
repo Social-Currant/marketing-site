@@ -1,13 +1,14 @@
 <template>
   <section class="container mx-auto px-6 md:px-8 mt-[83px]">
-    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
+    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-6 gap-x-12">
       <img
-        class="sc-image mb-6"
+        class="sc-image"
         :src="pageData.fields.image.fields.file.url"
       >
-      <div class="SC-text">
-        {{ pageData.fields.paragraph }}
-      </div>
+      <div
+        class="SC-text"
+        v-html="renderedParagraph"
+      />
     </div>
   </section>
 </template>
@@ -21,21 +22,23 @@ const pageData = await $contentfulClient.getEntry('7oCO3dzkaXL7twOi6BKDEe').then
   return pageData;
 }).catch(console.error);  
 
+const renderedParagraph = computed(() => {
+  return pageData.fields.paragraph.replace(/\n/g, '<br>');
+});
 </script>
 
-<style>
+<style scoped>
 .sc-image{
 width: 536px;
 height: 301px;
 }
 .SC-text{
-  color: #000;
+color: #30104C;
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: normal; 
 max-width: 494px;
-margin-left: 56px;
 }
 </style>

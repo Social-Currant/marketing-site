@@ -2,7 +2,7 @@
   <section
     class="w-full px-6 md:px-8 mt-[71px] hero-section p-8"
   >
-    <div class="container grid lg:grid-cols-2 max-w-screen-xl m-auto">
+    <div class="container grid lg:grid-cols-2 max-w-screen-xl m-auto items-center">
       <div class="order-last lg:order-first lg:w-10/12 xl:w-full">
         <h1 class="text-[24px] lg:text-[38px] font-bold text-primary">
           {{ pageData.fields.title }}
