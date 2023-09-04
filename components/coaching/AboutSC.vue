@@ -37,7 +37,6 @@ color: #30104C;
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
-font-weight: 500;
 line-height: normal; 
 max-width: 494px;
 }
