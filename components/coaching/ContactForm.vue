@@ -8,7 +8,7 @@
         Get in touch
       </h3>
       <h1 class="mb-4 title-form text-2xl lg:text-3xl">
-        Contact Us
+        Apply Now
       </h1>
       <form
         ref="myForm"
