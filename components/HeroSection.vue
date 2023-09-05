@@ -1,7 +1,6 @@
 <template>
   <!-- Section First Impression -->
   <section
-    :class="headerOverlay ? `blur-sm` : ``"
     class="container mx-auto px-6 md:px-8 mt-[71px]"
   >
     <div class="grid lg:grid-cols-2 max-w-screen-xl m-auto">
