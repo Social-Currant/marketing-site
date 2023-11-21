@@ -30,7 +30,7 @@
     </div>
     <div class="flex justify-between items-center py-[32px]">
       <div>
-        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+        <a href="http://crnt.link/ashwathcalendar">
           <div class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg">
             Book a Demo
           </div>

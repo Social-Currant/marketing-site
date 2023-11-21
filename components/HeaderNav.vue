@@ -40,7 +40,7 @@
         >{{ link.text }}</a>
       </div>
       <div class="ml-[44px] hidden lg:block">
-        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+        <a href="http://crnt.link/ashwathcalendar">
           <button
             class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
           >
@@ -91,11 +91,6 @@ const headerLinks = [
     text: "Contact Us",
     navigateTo: '/get-in-touch',
   },
-  {
-    text: "Coaching",
-    navigateTo: '/social-currant-brand-coaching-program',
-  },
- 
 ];
 
 </script>
