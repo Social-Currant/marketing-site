@@ -23,7 +23,7 @@
           {{ pageData.fields.subtitle }}
         </p>
         <div class="flex items-center mt-[32px]">
-          <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+          <a href="http://crnt.link/ashwathcalendar">
             <div class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue">
               {{ pageData.fields.buttonText1 }}
             </div>

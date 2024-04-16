@@ -154,7 +154,7 @@
             {{ pageData.fields.paragraphs[4] }}
           </p>
         </div>
-        <a href="https://calendly.com/ashwath-2/30min?month=2023-06">
+        <a href="http://crnt.link/ashwathcalendar">
           <button
             class="mt-5 border-secondary border-2 bg-secondary text-white font-medium border-secondary text-xl px-3 py-1.5 rounded-lg"
           >
