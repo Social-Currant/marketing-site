@@ -1,5 +1,6 @@
 <template>
   <section class="container mx-auto px-6 md:px-8 mt-[83px]">
+    <hr class="hidden lg:block">
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
       <div
         v-for="(image, index) in heroCarouselImages.images"
@@ -12,6 +13,7 @@
         >
       </div>
     </div>
+    <hr class="hidden lg:block">
   </section>
 </template>
 
@@ -32,4 +34,10 @@ const heroCarouselImages = {
   images: pageData.fields.images.map((image) => image.fields.file.url),
 };
 </script>
+<style scoped>
+hr{
+height: 1px;
+color: #D5C2E7;
+}
+</style>
 

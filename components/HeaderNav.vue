@@ -36,6 +36,7 @@
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"
           class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
+          :class="{'text-secondary': isActive(link)}"
           @click="navigateTo(link.navigateTo)"
         >{{ link.text }}</a>
       </div>
@@ -73,15 +74,19 @@ defineProps({
 })
 
 const headerOverlay = useState('headerOverlay')
+const router = useRouter();
 
 // const headerOverlay = ref(false);
 const emits = defineEmits(['activateSelector']);
 
 const headerLinks = [
-  
   {
-    text: "Home",
+    text: "Brand",
     navigateTo: '/',
+  },
+  {
+    text: "Creator",
+    navigateTo: '/creator',
   },
   {
     text: "Blog",
@@ -98,6 +103,9 @@ const headerLinks = [
  
 ];
 
+const isActive = (link) => {
+  return router.currentRoute.value.path === link.navigateTo;
+};
 </script>
 <style lang="scss">
 .header-overlay-width {

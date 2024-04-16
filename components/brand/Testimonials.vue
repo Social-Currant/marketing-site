@@ -261,8 +261,8 @@ onMounted(() => {
 .arrow-container {
   top: 60%;
 
-  @media (min-width: 443px) {
-    top: 50%;
+  @media (min-width: 625px) {
+    top: 0%;
   }
 }
 

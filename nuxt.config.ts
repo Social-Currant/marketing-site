@@ -9,8 +9,10 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
   ],
   components: [
-    "~/components",
-    "~/components/coaching",
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
   ],
   tailwindcss: {
     exposeConfig: true,
