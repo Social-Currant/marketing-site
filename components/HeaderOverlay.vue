@@ -48,7 +48,7 @@
 <script setup>
 const emit = defineEmits(["close"]);
 
-const props = defineProps({
+defineProps({
   headerNavLinks: {
     type: Array,
     required: true,

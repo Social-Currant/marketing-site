@@ -43,7 +43,7 @@ function activateSelector(headerNav) {
 }
 
 // global state
-const headerOverlay = useState('headerOverlay', () => false)
+// const headerOverlay = useState('headerOverlay', () => false)
 
 
 

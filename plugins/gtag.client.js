@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default defineNuxtPlugin((nuxtApp) => {
     const { gtagId } = useRuntimeConfig().public;
     

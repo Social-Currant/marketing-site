@@ -77,7 +77,7 @@ const headerOverlay = useState('headerOverlay')
 const router = useRouter();
 
 // const headerOverlay = ref(false);
-const emits = defineEmits(['activateSelector']);
+defineEmits(['activateSelector'])
 
 const headerLinks = [
   {
