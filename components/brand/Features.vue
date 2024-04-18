@@ -13,7 +13,10 @@
         <p class="feature-text text-center lg:text-left">
           {{ feature1.fields.paragraph }}
         </p>
-        <button class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue">
+        <button
+          class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+          @click="navigateTo('/book-a-demo/')"
+        >
           {{ feature1.fields.buttonText }}
         </button>
       </div>
@@ -34,7 +37,10 @@
         <p class="feature-text text-center lg:text-left">
           {{ feature2.fields.paragraph }}
         </p>
-        <button class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue">
+        <button
+          class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+          @click="navigateTo('/book-a-demo/')"
+        >
           {{ feature2.fields.buttonText }}
         </button>
       </div>
@@ -47,7 +53,10 @@
         <p class="feature-text text-center lg:text-left">
           {{ feature3.fields.paragraph }}
         </p>
-        <button class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue">
+        <button
+          class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+          @click="navigateTo('/book-a-demo/')"
+        >
           {{ feature3.fields.buttonText }}
         </button>
       </div>
@@ -68,7 +77,10 @@
         <p class="feature-text text-center lg:text-left">
           {{ feature4.fields.paragraph }}
         </p>
-        <button class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue">
+        <button
+          class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+          @click="navigateTo('/book-a-demo/')"
+        >
           {{ feature4.fields.buttonText }}
         </button>
       </div>
