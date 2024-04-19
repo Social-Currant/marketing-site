@@ -28,6 +28,8 @@ export default defineNuxtConfig({
       ctfAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       ctfPreviewToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
       gtagId: process.env.GOOGLE_ANALYTICS_TAG,
+      netlifyContext: process.env.CONTEXT,
+      netlify: process.env.NETLIFY,
     },
   },
 });
