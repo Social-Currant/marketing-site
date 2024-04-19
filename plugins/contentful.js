@@ -1,33 +1,31 @@
-import { createClient } from "contentful"
-import contentful from "contentful"
+import { createClient } from "contentful";
+import contentful from 'contentful'
+
 
 console.log("this is netlify", process.env.NETLIFY)
 console.log("this is context", process.env.CONTEXT)
+
 /* eslint-disable */
 export default defineNuxtPlugin((_) => {
-  let contentfulClient
   const config = useRuntimeConfig();
-  
-  const createClientFunc = process.env.NETLIFY !== 'true' ? createClient : contentful.createClient
-  
-  // https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
-  if (process.env.CONTEXT === "production") {
-    contentfulClient = createClientFunc({
-      space: config.public.ctfSpace,
-      accessToken: config.public.ctfAccessToken
-    })
-  }
-  else {
-    contentfulClient = createClientFunc({
-      space: config.public.ctfSpace,
-      accessToken: config.public.ctfPreviewToken,
-      host: 'preview.contentful.com',
-    })
-  }
+
+  const createClientFunc = process.env.NODE_ENV === 'development' ? createClient : contentful.createClient
+  const previewCreateClientFunc = process.env.NODE_ENV === 'development' ? createClient : contentful.createClient
+
+  const client = createClientFunc({
+    space: config.public.ctfSpace,
+    accessToken: config.public.ctfAccessToken
+  });
+  const previewClient = previewCreateClientFunc({
+    space: config.public.ctfSpace,
+    accessToken: config.public.ctfPreviewToken,
+    host: 'preview.contentful.com',
+  });
 
   return {
     provide: {
-      contentfulClient,
+      contentfulClient: client,
+      previewClient: previewClient
     },
-  }
+  };
 });
