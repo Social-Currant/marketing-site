@@ -4,13 +4,20 @@ import Stripe from "stripe";
 const stripeClient = new Stripe(process.env.STRIPE_API_KEY)
 
 const DEFAULT_PLANS = {
-
+  data: [
+    {
+      name: "Example Tier",
+    }
+  ]
 }
 
 export default defineEventHandler((event) => {
     if (event.req.method === 'GET') {
       try {
-        return stripeClient.products.list()
+        const activePlans = stripeClient.products.search({
+          query: "active:'true' AND name~'tier'",
+        })
+        return activePlans
       }
       catch(error) {
         console.error(error)
