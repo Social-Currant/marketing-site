@@ -2,13 +2,11 @@
   <section class="container mx-auto px-6 md:px-8 mt-[83px]">
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-4 gap-x-12">
       <div class="columns-1">
-        <h3 class="mb-3 font-semibold text-xl lg:text-3xl leading-tight">
-          {{ pageData.fields.title }}
-        </h3>
+        <h3 class="mb-3 font-semibold text-xl lg:text-3xl leading-tight">{{pageData.fields.title}}</h3>
         <div
-          class="SC-text"
-          v-html="renderedParagraph"
-        />
+        class="SC-text"
+        v-html="renderedParagraph"
+      />
       </div>
       <img
         class="sc-image"
