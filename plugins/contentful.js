@@ -1,16 +1,12 @@
 import { createClient } from "contentful";
 import contentful from 'contentful'
 
-
-console.log("this is netlify", process.env.NETLIFY)
-console.log("this is context", process.env.CONTEXT)
-
 /* eslint-disable */
 export default defineNuxtPlugin((_) => {
   const config = useRuntimeConfig();
 
-  const createClientFunc = process.env.NODE_ENV === 'development' ? createClient : contentful.createClient
-  const previewCreateClientFunc = process.env.NODE_ENV === 'development' ? createClient : contentful.createClient
+  const createClientFunc = process.env.NETLIFY !== 'true' ? createClient : contentful.createClient
+  const previewCreateClientFunc = process.env.NETLIFY !== 'true' ? createClient : contentful.createClient
 
   const client = createClientFunc({
     space: config.public.ctfSpace,
@@ -22,10 +18,20 @@ export default defineNuxtPlugin((_) => {
     host: 'preview.contentful.com',
   });
 
-  return {
-    provide: {
-      contentfulClient: client,
-      previewClient: previewClient
-    },
-  };
+  if (process.env.CONTEXT === "production") {
+    return {
+      provide: {
+        contentfulClient: client,
+        previewClient: previewClient
+      },
+    }
+  }
+  else {
+    return {
+      provide: {
+        contentfulClient: previewClient,
+        previewClient: previewClient
+      },
+    }
+  }
 });
