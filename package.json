@@ -24,7 +24,6 @@
     "@contentful/rich-text-html-renderer": "^16.1.0",
     "@contentful/rich-text-types": "^16.2.0",
     "contentful": "^10.3.6",
-    "klaviyo-api": "^4.0.1",
-    "stripe": "^15.3.0"
+    "klaviyo-api": "^4.0.1"
   }
 }

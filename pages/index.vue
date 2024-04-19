@@ -45,10 +45,6 @@ function activateSelector(headerNav) {
 
 // global state
 const headerOverlay = useState('headerOverlay', () => false)
-const config = useRuntimeConfig();
-
-console.log("this is the context", config.public.netlifyContext)
-console.log("this is the netlify", config.public.netlify)
 
 </script>
 <style lang="scss">
