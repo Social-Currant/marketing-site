@@ -5,7 +5,7 @@
     >
       PRODUCT FEATURES
     </h3>
-    <div class="flex flex-wrap-reverse xl:flex-nowrap items-center justify-center justify-between mb-12 lg:mb-24">
+    <div class="flex flex-wrap-reverse xl:flex-nowrap items-center justify-center xl:justify-between mb-12 lg:mb-24">
       <div class="flex flex-col items-center lg:items-start">
         <p class=" mt-6 mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
           {{ feature1.fields.title }}
@@ -22,7 +22,7 @@
         :src="feature1.fields.image.fields.file.url"
       >
     </div>
-    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center justify-between mb-12 lg:mb-24">
+    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-between mb-12 lg:mb-24">
       <img
         class="w-[342px] lg:w-[625px]"
         :src="feature2.fields.image.fields.file.url"
@@ -39,7 +39,7 @@
         </button>
       </div>
     </div>
-    <div class="flex flex-wrap-reverse xl:flex-nowrap items-center justify-center justify-between mb-12 lg:mb-24">
+    <div class="flex flex-wrap-reverse xl:flex-nowrap items-center justify-center xl:justify-between mb-12 lg:mb-24">
       <div class="flex flex-col items-center lg:items-start">
         <p class="mt-6 mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
           {{ feature3.fields.title }}
@@ -56,7 +56,7 @@
         :src="feature3.fields.image.fields.file.url"
       >
     </div>
-    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center justify-between mb-12 lg:mb-24">
+    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-between mb-12 lg:mb-24">
       <img
         class="w-[290px] lg:w-[417px]"
         :src="feature4.fields.image.fields.file.url"

@@ -14,12 +14,12 @@
       </div>
       <div class="lg:order-first lg:w-10/12 xl:w-full">
         <h2
-          class="font-bold text-[24px] lg:text-5xl text-primary"
+          class="font-bold text-[24px] text-center lg:text-start lg:text-5xl text-primary"
           style="line-height: 130%;"
         >
           {{ pageData.fields.title }}
         </h2>
-        <p class="font-semibold text-xl mt-[24px]">
+        <p class="font-semibold text-xl text-center lg:text-start mt-[24px]">
           {{ pageData.fields.subtitle }}
         </p>
         <div class="flex items-center mt-[32px]">
