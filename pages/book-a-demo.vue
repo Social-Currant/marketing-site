@@ -6,6 +6,7 @@
         <h1 class="mb-4 font-poppins text-4xl font-semibold leading-8 text-[#30104C]">
           Book a Tailored Demo
         </h1>
+        
         <p class="paragraph mb-6">
           Explore the features and capabilities of Social Currant through a detailed product demonstration. 
           Schedule your live demo today and discover why Social Currant is the preferred platform for your needs!
