@@ -8,7 +8,7 @@ export default defineNuxtPlugin((_) => {
   let contentfulClient
   const config = useRuntimeConfig();
   
-  const createClientFunc = process.env.NETLIFY === 'true' ? contentful.createClient : createClient
+  const createClientFunc = process.env.NETLIFY !== 'true' ? createClient : contentful.createClient
   
   // https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
   if (process.env.CONTEXT === "production") {
