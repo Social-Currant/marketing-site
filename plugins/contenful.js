@@ -1,18 +1,18 @@
-import { createClient } from "contentful";
-import contentful from 'contentful'
+const contentful = require('contentful');
+
+console.log("this is context", process.env.CONTEXT)
+console.log("this is netlify", process.env.NETLIFY)
+
 
 /* eslint-disable */
 export default defineNuxtPlugin((_) => {
   const config = useRuntimeConfig();
 
-  const createClientFunc = process.env.NETLIFY !== 'true' ? createClient : contentful.createClient
-  const previewCreateClientFunc = process.env.NETLIFY !== 'true' ? createClient : contentful.createClient
-
-  const client = createClientFunc({
+  const client = contentful.createClient({
     space: config.public.ctfSpace,
     accessToken: config.public.ctfAccessToken
   });
-  const previewClient = previewCreateClientFunc({
+  const previewClient = contentful.createClient({
     space: config.public.ctfSpace,
     accessToken: config.public.ctfPreviewToken,
     host: 'preview.contentful.com',
