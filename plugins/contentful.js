@@ -1,16 +1,16 @@
-import contentful, { createClient } from "contentful";
+import { createClient } from "contentful"
+import contentful from "contentful"
 
-// https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
-const NETLIFY_CONTEXT = ["production", "deploy-preview", "branch-deploy"]
-
+console.log("this is netlify", process.env.NETLIFY)
+console.log("this is context", process.env.CONTEXT)
 /* eslint-disable */
 export default defineNuxtPlugin((_) => {
-  const config = useRuntimeConfig();
-
-  const createClientFunc = NETLIFY_CONTEXT.includes(process.env.CONTEXT) ? contentful.createClient : createClient
-
   let contentfulClient
-
+  const config = useRuntimeConfig();
+  
+  const createClientFunc = process.env.NETLIFY === 'true' ? contentful.createClient : createClient
+  
+  // https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
   if (process.env.CONTEXT === "production") {
     contentfulClient = createClientFunc({
       space: config.public.ctfSpace,

@@ -130,7 +130,6 @@ useSeoMeta({
   ogType: 'website',
   ogUrl: `https://socialcurrant.co${route.path}`,
   ogImage: `https:` + blogEntry.value.fields.image.fields.file.url,
-  ogType: 'article',
 
   // twitter
   twitterCard: 'summary_large_image',
