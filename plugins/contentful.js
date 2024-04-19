@@ -1,21 +1,24 @@
-import contentful from "contentful";
+import contentful, { createClient } from "contentful";
+
+// https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
+const NETLIFY_CONTEXT = ["production", "deploy-preview", "branch-deploy"]
 
 /* eslint-disable */
 export default defineNuxtPlugin((_) => {
   const config = useRuntimeConfig();
 
+  const createClientFunc = NETLIFY_CONTEXT.includes(process.env.CONTEXT) ? contentful.createClient : createClient
+
   let contentfulClient
 
-  // https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
   if (process.env.CONTEXT === "production") {
-    console.log("let's quickly check the context", process.env.CONTEXT)
-    contentfulClient = contentful.createClient({
+    contentfulClient = createClientFunc({
       space: config.public.ctfSpace,
       accessToken: config.public.ctfAccessToken
     })
   }
   else {
-    contentfulClient = contentful.createClient({
+    contentfulClient = createClientFunc({
       space: config.public.ctfSpace,
       accessToken: config.public.ctfPreviewToken,
       host: 'preview.contentful.com',
