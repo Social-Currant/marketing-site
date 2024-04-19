@@ -5,8 +5,15 @@ import contentful from 'contentful'
 export default defineNuxtPlugin((_) => {
   const config = useRuntimeConfig();
 
-  const createClientFunc = config.public.netlify !== 'true' ? createClient : contentful.createClient
-  const previewCreateClientFunc = config.public.netlify !== 'true' ? createClient : contentful.createClient
+  let createClientFunc, previewCreateClientFunc
+
+  if (config.public.netlify === 'true' || process.env.NETLIFY === 'true') {
+    createClientFunc = contentful.createClient
+    previewCreateClientFunc = contentful.createClient
+  } else {
+    createClientFunc = createClient
+    previewCreateClientFunc = createClient
+  }
 
   const client = createClientFunc({
     space: config.public.ctfSpace,
