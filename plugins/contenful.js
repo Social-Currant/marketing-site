@@ -1,27 +1,27 @@
+/* eslint-disable no-undef */
 import { createClient } from "contentful";
 import contentful from 'contentful'
 
-/* eslint-disable */
-export default defineNuxtPlugin((_) => {
+export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig();
 
-  const createClientFunc = config.public.netlify === 'true' ? contentful.createClient : createClient
-  const previewCreateClientFunc = config.public.netlify === 'true' ? contentful.createClient : createClient
+  console.log("this is CONTEXT", process.env.CONTEXT)
+  console.log("this is NETLIFY", process.env.NETLIFY)
+  console.log("this is CONTEXT CONFIG", config.public.netlifyContext)
+  console.log("this is NETLIFY CONFIG", config.public.netlify)
+
+  const isNetlify = process.env.NETLIFY === 'true' || config.public.netlify === 'true'
+
+  const createClientFunc = isNetlify === 'development' ? contentful.createClient : createClient
 
   const client = createClientFunc({
     space: config.public.ctfSpace,
-    accessToken: config.public.ctfAccessToken
-  });
-  const previewClient = previewCreateClientFunc({
-    space: config.public.ctfSpace,
     accessToken: config.public.ctfPreviewToken,
-    host: 'preview.contentful.com',
   });
 
   return {
     provide: {
       contentfulClient: client,
-      previewClient: previewClient
     },
   };
 });
