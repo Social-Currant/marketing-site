@@ -138,6 +138,7 @@
   </div>
 </template>
 <script setup>
+console.log("process.env", process.env)
 
 useSeoMeta({
   title: 'Get in Touch'
