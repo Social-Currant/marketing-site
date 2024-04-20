@@ -27,13 +27,9 @@
   </div>
 </template>
 <script setup>
-
 useHead({
   title: 'Success - Social Currant'
 })
-
-const route = useRoute();
-
 </script>
 
 <style>
