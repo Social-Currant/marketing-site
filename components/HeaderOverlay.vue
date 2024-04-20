@@ -22,6 +22,7 @@
       v-for="(header, key) in headerNavLinks"
       :key="`header-nav-` + key"
       class="py-8 px-8 border-b border-primary cursor-pointer"
+      :class="{'text-secondary': isActive(header)}"
       @click="navigateToLink(header.navigateTo)"
     >
       <h3 class="text-[28px] font-semibold">
@@ -31,7 +32,7 @@
     <div class="flex justify-between items-center py-[32px]">
       <div>
         <a href="http://crnt.link/ashwathcalendar">
-          <div class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg">
+          <div class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap">
             Book a Demo
           </div>
         </a>
@@ -59,6 +60,12 @@ function navigateToLink(navigateTolink) {
   emit("close");
   navigateTo(navigateTolink)
 }
+
+const router = useRouter();
+
+const isActive = (link) => {
+  return router.currentRoute.value.path === link.navigateTo;
+};
 </script>
 
 <style lang="scss">
