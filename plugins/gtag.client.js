@@ -1,4 +1,5 @@
-export default defineNuxtPlugin((nuxtApp) => {
+/* eslint-disable no-undef */
+export default defineNuxtPlugin(() => {
     const { gtagId } = useRuntimeConfig().public;
     
     function gtag() {
