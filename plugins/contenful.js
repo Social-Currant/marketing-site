@@ -7,10 +7,8 @@ export default defineNuxtPlugin(() => {
 
   console.log("this is CONTEXT", process.env.CONTEXT)
   console.log("this is NETLIFY", process.env.NETLIFY)
-  console.log("this is CONTEXT CONFIG", config.public.netlifyContext)
-  console.log("this is NETLIFY CONFIG", config.public.netlify)
 
-  const isNetlify = process.env.NETLIFY === 'true' || config.public.netlify === 'true'
+  const isNetlify = process.env.NETLIFY === 'true'
 
   const createClientFunc = isNetlify === 'development' ? contentful.createClient : createClient
 
