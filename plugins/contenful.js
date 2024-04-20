@@ -5,9 +5,7 @@ import contentful from 'contentful'
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig();
 
-  const isNetlify = process.env.NETLIFY === 'true'
-
-  const createClientFunc = isNetlify ? contentful.createClient : createClient
+  const createClientFunc = process.env.NODE_ENV === 'development' ? createClient : contentful.createClient
 
   const client = createClientFunc({
     space: config.public.ctfSpace,
