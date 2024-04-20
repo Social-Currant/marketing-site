@@ -10,7 +10,7 @@ export default defineNuxtPlugin(() => {
 
   const isNetlify = process.env.NETLIFY === 'true'
 
-  const createClientFunc = isNetlify === 'development' ? contentful.createClient : createClient
+  const createClientFunc = isNetlify ? contentful.createClient : createClient
 
   const client = createClientFunc({
     space: config.public.ctfSpace,
