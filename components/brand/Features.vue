@@ -15,7 +15,7 @@
         </p>
         <button
           class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
-          @click="navigateTo('/book-a-demo/')"
+          @click="navigateTo('/plans')"
         >
           {{ feature1.fields.buttonText }}
         </button>
@@ -39,7 +39,7 @@
         </p>
         <button
           class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
-          @click="navigateTo('/book-a-demo/')"
+          @click="navigateTo('/plans')"
         >
           {{ feature2.fields.buttonText }}
         </button>
@@ -55,7 +55,7 @@
         </p>
         <button
           class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
-          @click="navigateTo('/book-a-demo/')"
+          @click="navigateTo('/plans')"
         >
           {{ feature3.fields.buttonText }}
         </button>
@@ -79,7 +79,7 @@
         </p>
         <button
           class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"
-          @click="navigateTo('/book-a-demo/')"
+          @click="navigateTo('/plans')"
         >
           {{ feature4.fields.buttonText }}
         </button>

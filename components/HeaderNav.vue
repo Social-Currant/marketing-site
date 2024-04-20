@@ -84,9 +84,13 @@ const headerLinks = [
     text: "Brand",
     navigateTo: '/',
   },
+  // {
+  //   text: "Creator",
+  //   navigateTo: '/creator',
+  // },
   {
-    text: "Creator",
-    navigateTo: '/creator',
+    text: "Plans",
+    navigateTo: '/plans',
   },
   {
     text: "Blog",
