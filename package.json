@@ -23,7 +23,7 @@
     "@contentful/live-preview": "^2.8.0",
     "@contentful/rich-text-html-renderer": "^16.1.0",
     "@contentful/rich-text-types": "^16.2.0",
-    "contentful": "^10.3.6",
+    "contentful": "^10.8.8",
     "klaviyo-api": "^4.0.1"
   }
 }
