@@ -68,9 +68,6 @@ const getIcon = (feature) => {
   }
   return feature.value ? check : cross;
 };
-const nameContainsEverything = computed(() => {
-  return features.value.find(feature => feature.name.toLowerCase().includes('everything'));
-});
 </script>
 
 <style scoped>
