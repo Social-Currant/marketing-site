@@ -15,6 +15,7 @@
           :features="plan.features"
         />
       </div>
+    </div>
       <div class="flex flex-wrap items-center gap-4 mt-12 bg-[#F5F6F6] py-2 justify-center">
         <img :src="calendar">
         <div class="font-poppins ml-6 lg:ml-0 text-center lg:text-left text-black font-semibold leading-[147.023%] ">
@@ -29,6 +30,7 @@
           Request Demo
         </div>
       </div>
+      <div class="container mx-auto mt-6 flex flex-col flex-wrap lg:flex-nowrap justify-center">
       <h1 class="text-center text-3xl lg:text-5xl items-center text-primary font-semibold mt-12 mb-8">
         PLAN BREAKDOWN
       </h1>
@@ -49,14 +51,8 @@
                   :key="plan.name"
                   class="min-w-[198px]"
                 >
-                  <span :class="{'purpleTag flex items-center gap-1': plan==='Growth Plan'} "> 
-                    <img
-                      v-if="plan==='Growth Plan'"
-                      style="width: 10px; height: 10px;"
-                      :src="star"
-                    >
                     <p>{{ plan }}</p>
-                  </span>
+
                 </th>
               </tr>
             </thead>

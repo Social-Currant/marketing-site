@@ -1,17 +1,7 @@
 <template>
   <div
     class="card-container relative"
-    :class="{ 'card-container-popular': title === 'GROWTH PLAN'}"
   >
-    <div
-      v-if="title === 'GROWTH PLAN'"
-      class="flex purpleTag gap-1"
-    >
-      <img
-        style="width: 10px; height: 10px;"
-        :src="star"
-      >Most Popular
-    </div>
     <h2 class="text-center font-poppins text-2xl font-bold leading-[147.023%] text-secondary mb-4">
       {{ title }}
     </h2>
@@ -31,7 +21,9 @@
           class="feature-icon"
         >
         <div class="flex flex-col">
-          <span>{{ feature.name }}</span>
+          <span :class="{'feature-value': true, 'font-bold': feature.name.toLowerCase().includes('everything') }">
+            {{ feature.name }}
+          </span>
           <span
             v-if="feature.name === 'Customer Support'"
             class="feature-value"
@@ -76,6 +68,9 @@ const getIcon = (feature) => {
   }
   return feature.value ? check : cross;
 };
+const nameContainsEverything = computed(() => {
+  return features.value.find(feature => feature.name.toLowerCase().includes('everything'));
+});
 </script>
 
 <style scoped>
