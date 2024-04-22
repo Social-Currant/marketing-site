@@ -27,7 +27,7 @@
         class="feature-item"
       >
         <img
-          :src="getIcon(feature.name)"
+          :src="getIcon(feature)"
           class="feature-icon"
         >
         <div class="flex flex-col">
@@ -48,8 +48,6 @@ import cross from "~/assets/icons/red-cross.svg";
 import headset from "~/assets/icons/headset.svg";
 import star from "~/assets/icons/star.svg";
 
-
-
 defineProps({
   title: {
     type: String,
@@ -67,17 +65,16 @@ defineProps({
     default:null
   },
   features: {
-    type: URL,
+    type: Array,
     required: false,
-    default:null
-  }
+    default:null,
+  },
 })
-const getIcon = (featureName) => {
-  if (featureName === "Customer Support") {
-    return headset; 
-  } else {
-    return featureName ? check : cross; 
+const getIcon = (feature) => {
+  if (feature.name === "Customer Support") {
+    return headset;
   }
+  return feature.value ? check : cross;
 };
 </script>
 
