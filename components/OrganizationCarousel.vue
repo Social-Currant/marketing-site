@@ -1,6 +1,6 @@
 <template>
-  <section class="container mx-auto px-6 md:px-8 mt-[83px]">
-    <hr class="hidden lg:block">
+  <hr class="hidden lg:block mt-[83px]">
+  <section class="container mx-auto px-6 md:px-8">
     <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
       <div
         v-for="(image, index) in heroCarouselImages.images"
@@ -13,8 +13,8 @@
         >
       </div>
     </div>
-    <hr class="hidden lg:block">
   </section>
+  <hr class="hidden lg:block">
 </template>
 
 <script setup>

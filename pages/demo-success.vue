@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderNav :display-banner="false" />
-    <section class="flex flex-col items-center px-6 md:px-8 mt-[57px]">
+    <section class="flex flex-col items-center px-6 md:px-8 mt-16">
       <img
         style="width: 290px; height: 235px;"
         src="~/assets/images/sales-team.png"

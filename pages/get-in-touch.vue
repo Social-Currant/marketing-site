@@ -3,7 +3,7 @@
     <HeaderNav :display-banner="false" />
 
     <section
-      class="container mx-auto px-6 md:px-8 mt-[57px]"
+      class="container mx-auto px-6 md:px-8 mt-16"
       :class="headerOverlay ? `blur-sm` : ``"
     >
       <h3 class="text-3xl mb-4">

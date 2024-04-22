@@ -1,9 +1,9 @@
 <template>
   <!-- Section First Impression -->
   <section
-    class="container mx-auto px-6 md:px-8 mt-[71px]"
+    class="container mx-auto px-6 md:px-8 mt-16"
   >
-    <div class="grid lg:grid-cols-2 max-w-screen-xl m-auto">
+    <div class="grid lg:grid-cols-2 m-auto">
       <div class="lg:order-last">
         <div>
           <img
@@ -12,7 +12,7 @@
           >
         </div>
       </div>
-      <div class="lg:order-first lg:w-10/12 xl:w-full">
+      <div class="text-center lg:text-left lg:order-first lg:w-10/12 xl:w-full">
         <h2
           class="font-bold text-[24px] lg:text-5xl text-primary"
           style="line-height: 130%;"
@@ -22,7 +22,7 @@
         <p class="font-semibold text-xl mt-[24px]">
           {{ pageData.fields.subtitle }}
         </p>
-        <div class="flex items-center mt-[32px]">
+        <div class="justify-center lg:justify-start flex items-center mt-[32px]">
           <button
             class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue"
             @click="navigateTo('/book-a-demo/')"
