@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderNav :display-banner="false" />
-    <section class="container mx-auto px-6 md:px-8 mt-[57px]">
+    <section class="container mx-auto px-6 md:px-8 mt-16">
       <div class="circle">
         <img
           style=""

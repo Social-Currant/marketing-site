@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderNav @activate-selector="activateSelector" />
-    <div class="container mx-auto mt-6 flex flex-col flex-wrap lg:flex-nowrap justify-center">
+    <div class="container mx-auto mt-16 flex flex-col flex-wrap lg:flex-nowrap justify-center">
       <h1 class="text-center text-3xl lg:text-5xl text-primary font-semibold">
         PREVIEW OUR PLANS
       </h1>

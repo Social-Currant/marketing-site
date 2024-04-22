@@ -8,7 +8,8 @@ module.exports = {
       purple: "#7F6B90",
       secondary: "#2565F4",
       white: "#FFF",
-      black: '#343538'
+      black: '#343538',
+      gray: '606060'
     },
     extend: {
       spacing: {
