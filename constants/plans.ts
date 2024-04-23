@@ -19,7 +19,7 @@ export const plans = [
     },
     {
       name: "GROWTH PLAN",
-      description:"Perfect for small or medium-sized organizations running 1-2 campaigns",
+      description:"Perfect for small or medium-sized organizations running smaller campaigns",
       image: growth,
       features: [
         { name: "Everything in Starter Plan", value: true },
@@ -33,7 +33,7 @@ export const plans = [
     },
     {
       name: "SCALE PLAN",
-      description:"Best for long-running or repeated campaigns and access to expert support",
+      description:"Best for organizations running long-term campaigns at scale",
       image: union,
       features: [
         { name: "Everything in Growth Plan", value: true },
@@ -48,7 +48,7 @@ export const plans = [
     {
       name: "ENTERPRISE PLAN",
       image: enterprise,
-      description:"Tailored for organizations looking for fully managed services",
+      description:"For organizations looking for custom support, strategy and done for you services",
       features: [
         { name: "Everything in Scale Plan", value: true },
         { name: "Dedicated Account Manager", value: true },
