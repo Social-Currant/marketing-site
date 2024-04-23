@@ -256,20 +256,32 @@ onMounted(() => {
   }
 }
 
-.arrow-container {
-  top: 60%;
-
-  @media (min-width: 625px) {
-    top: 0%;
-  }
-}
-
 .arrow-container.left {
   left: 8%;
 }
 
 .arrow-container.right {
   right: 8%;
+}
+
+.arrow-container {
+  top: 60%;
+
+  @media (min-width: 625px) {
+    top: 0%;
+  }
+
+  @media (max-width: 624px) {
+    max-width: 32px;
+
+    &.left {
+      left: 4%;
+    }
+
+    &.right {
+      right: 4%;
+    }
+  }
 }
 
 // animate slide
