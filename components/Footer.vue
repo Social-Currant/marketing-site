@@ -20,7 +20,7 @@
       </h4>
       <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb">
         <button
-          class="border-2 text-white font-medium border-secondary px-6 py-2 rounded-lg my-8 lg:my-12 text-left block"
+          class="border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-8 lg:my-12 text-left block"
         >
           Subscribe
         </button>
