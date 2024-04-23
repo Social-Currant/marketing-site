@@ -35,7 +35,7 @@
         <a
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"
-          class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
+          class="hover:text-primary ml-[24px] text-xl cursor-pointer"
           :class="{'text-secondary': isActive(link)}"
           @click="navigateTo(link.navigateTo)"
         >{{ link.text }}</a>
