@@ -86,7 +86,7 @@
               required
             >
           </div>
-          <div>
+          <!-- <div>
             <label>Organization Type</label>
             <select name="OrganizationType">
               <option value="Startup">
@@ -98,14 +98,25 @@
               <option value="Non-Profit">
                 Non-Profit
               </option>
-              <option value="Advertisement">
+              <option value="Enterprise">
                 Enterprise
               </option>
+              <option value="Other">
+                Other
+              </option>
             </select>
+          </div> -->
+          <div>
+            <label>Phone Number</label>
+            <input
+              name="PhoneNumber"
+              type="text"
+              placeholder=""
+            >
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div>
+          <!-- <div>
             <label for="industry">Industry</label>
             <select
               id="industry"
@@ -120,15 +131,15 @@
                 {{ industry }}
               </option>
             </select>
-          </div>
-          <div>
-            <label>Phone Number</label>
-            <input
-              name="PhoneNumber"
-              type="text"
-              placeholder=""
-            >
-          </div>
+          </div> -->
+        </div>
+        <div>
+            <label>Anything else you'd like us to know?</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message"
+            ></textarea>
         </div>
         <div class="mt-8">
           <label class="mb-2">Are you actively working with influencers?</label>
@@ -306,6 +317,14 @@ input[type="email"] {
   width: 100%;
   padding: 8px 16px;
   height: 40px;
+  margin-top: 4px;
+}
+textarea {
+  display: block;
+  border: 1px solid #ACACAC;
+  border-radius: 5px;
+  width: 100%;
+  padding: 8px 16px;
   margin-top: 4px;
 }
 .paragraph{
