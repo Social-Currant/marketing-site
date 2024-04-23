@@ -50,7 +50,7 @@
         >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label>Brand Representative First Name</label>
+            <label>First Name</label>
             <input
               name="FirstName"
               type="text"
@@ -59,7 +59,7 @@
             >
           </div>
           <div>
-            <label> Brand Representative Last Name</label>
+            <label>Last Name</label>
             <input
               name="LastName"
               type="text"
@@ -288,7 +288,7 @@ function handleSubmit(e) {
 }
 </script>
 
-<style>
+<style lang="scss">
 label {
   color: #343538;
   font-family: Poppins;
@@ -327,8 +327,16 @@ option {
   background: #FFF;
   padding: 8px 16px;
   margin-top: 4px;
-  }
+  color: #343538;
+}
 
+select {
+  appearance: none;
+  background-image: url("assets/icons/arrow-down-gray.svg");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+}
 .error-message {
   max-width: 550px;
   color: #C24664;
