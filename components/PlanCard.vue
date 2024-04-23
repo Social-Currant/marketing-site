@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card-container relative"
+    class="card-container bg-white relative"
   >
     <h2 class="text-center font-poppins text-2xl font-bold leading-[147.023%] text-secondary mb-4">
       {{ title }}
@@ -38,7 +38,6 @@
 import check from "~/assets/icons/green-check.svg";
 import cross from "~/assets/icons/red-cross.svg";
 import headset from "~/assets/icons/headset.svg";
-import star from "~/assets/icons/star.svg";
 
 defineProps({
   title: {
