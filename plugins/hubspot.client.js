@@ -1,21 +1,21 @@
 /* eslint-disable */
 export default defineNuxtPlugin((nuxtApp) => {
-    const { gtagId } = useRuntimeConfig().public;
     
-    function gtag() {
+    function hubspot() {
       window.dataLayer.push(arguments);
     }
     
     window.dataLayer = window.dataLayer || [];
     
-    gtag("js", new Date());
-    gtag("config", gtagId);
+    hubspot("js", new Date());
     
     useHead({
       script: [
         {
-          src: `https://www.googletagmanager.com/gtag/js?id=${gtagId}`,
+          src: `//js.hs-scripts.com/45910870.js`,
           async: true,
+          defer: true,
+          id: "hs-script-loader"
         },
       ],
     });

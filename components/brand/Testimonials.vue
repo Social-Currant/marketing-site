@@ -1,6 +1,6 @@
 <template>
   <!-- What people are saying -->
-  <section class="mt-32 relative testimonials-height">
+  <section class="mt-36 relative testimonials-height">
     <h3 class="uppercase text-center text-primary text-[32px] md:text-5xl font-semibold leading-tight mx-4">
       What people are saying
     </h3>
@@ -47,7 +47,6 @@
             :key="`active-review-` + activeReview"
             :src="image"
             class="z-20 mx-auto"
-            style="height: 250px; width: 400px;"
           >
         </Transition>
       </div>
@@ -70,7 +69,6 @@
             :key="`active-review-` + activeReview"
             :src="image"
             class="z-20 mx-auto"
-            style="height: 250px; width: 400px;"
           >
         </Transition>
       </div>
@@ -111,7 +109,7 @@
         <img
           :key="`mobile-review-carousel` + activeReviewMobile"
           :src="reviews[activeReviewMobile]"
-          class="z-20 mx-auto my-auto"
+          class="z-20 mx-auto my-auto image-container"
         >
       </Transition>
       <div class="flex mt-8 justify-center">
@@ -258,20 +256,32 @@ onMounted(() => {
   }
 }
 
-.arrow-container {
-  top: 60%;
-
-  @media (min-width: 443px) {
-    top: 50%;
-  }
-}
-
 .arrow-container.left {
   left: 8%;
 }
 
 .arrow-container.right {
   right: 8%;
+}
+
+.arrow-container {
+  top: 60%;
+
+  @media (min-width: 625px) {
+    top: 0%;
+  }
+
+  @media (max-width: 624px) {
+    max-width: 32px;
+
+    &.left {
+      left: 4%;
+    }
+
+    &.right {
+      right: 4%;
+    }
+  }
 }
 
 // animate slide
@@ -287,5 +297,13 @@ onMounted(() => {
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+.image-container{
+  @media (min-width: 1024px) {
+    height: 250px; 
+    width: 400px;
+  }
+    height: 170px; 
+    width: 320px;
 }
 </style>

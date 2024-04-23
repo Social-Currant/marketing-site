@@ -9,8 +9,7 @@
     >
     <OrganizationCarousel />
     <HowItWorks />
-    <GetInvolved />
-    <AboutUs />
+    <Features />
     <WaysToApply />
     <Testimonials />
     <Footer />
@@ -44,7 +43,7 @@ function activateSelector(headerNav) {
 }
 
 // global state
-const headerOverlay = useState('headerOverlay', () => false)
+// const headerOverlay = useState('headerOverlay', () => false)
 
 
 
@@ -64,9 +63,6 @@ const headerOverlay = useState('headerOverlay', () => false)
   top: 5015px;
   z-index: -10;
 }
-
-
-
 
 .hover-button-blue:hover {
   background: #4780ff;

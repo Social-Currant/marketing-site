@@ -3,7 +3,7 @@
     <HeaderNav :display-banner="false" />
 
     <section
-      class="container mx-auto px-6 md:px-8 mt-[57px]"
+      class="container mx-auto px-6 md:px-8 mt-16"
       :class="headerOverlay ? `blur-sm` : ``"
     >
       <h3 class="text-3xl mb-4">
@@ -115,7 +115,7 @@
             Sign up for our Newsletter to stay up to date with new platform features and trends in the influencer space
           </div>
         </div> -->
-        <div class="flex my-6">
+        <div class="flex my-6 mb-24 md:mb-0">
           <div>
             <button
               type="submit"

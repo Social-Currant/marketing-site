@@ -2,7 +2,7 @@
   <div
     class="fixed top-0 right-0 w-full h-full bg-white opacity-99 overflow-x-auto "
   >
-    <div class="flex py-16 px-8 justify-between">
+    <div class="flex py-8 md:py-16 px-8 justify-between">
       <img src="~/assets/icons/logo.svg">
       <div
         class=" bg-sky-500"
@@ -21,7 +21,8 @@
     <div
       v-for="(header, key) in headerNavLinks"
       :key="`header-nav-` + key"
-      class="py-8 px-8 border-b border-primary cursor-pointer"
+      class="p-4 md:p-8 border-b border-primary cursor-pointer"
+      :class="{'text-secondary': isActive(header)}"
       @click="navigateToLink(header.navigateTo)"
     >
       <h3 class="text-[28px] font-semibold">
@@ -30,11 +31,12 @@
     </div>
     <div class="flex justify-between items-center py-[32px]">
       <div>
-        <a href="http://crnt.link/ashwathcalendar">
-          <div class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg">
-            Book a Demo
-          </div>
-        </a>
+        <div
+          class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap"
+          @click="navigateToLink('/book-a-demo')"
+        >
+          Book a Demo
+        </div>
       </div>
       <div>
         <div style="height: 80px; width: 100%">
@@ -48,7 +50,7 @@
 <script setup>
 const emit = defineEmits(["close"]);
 
-const props = defineProps({
+defineProps({
   headerNavLinks: {
     type: Array,
     required: true,
@@ -59,6 +61,12 @@ function navigateToLink(navigateTolink) {
   emit("close");
   navigateTo(navigateTolink)
 }
+
+const router = useRouter();
+
+const isActive = (link) => {
+  return router.currentRoute.value.path === link.navigateTo;
+};
 </script>
 
 <style lang="scss">

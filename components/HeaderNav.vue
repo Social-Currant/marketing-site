@@ -35,18 +35,18 @@
         <a
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"
-          class="hover:text-primary hover:font-medium ml-[24px] text-xl cursor-pointer"
+          class="hover:text-primary ml-[24px] text-xl cursor-pointer"
+          :class="{'text-secondary': isActive(link)}"
           @click="navigateTo(link.navigateTo)"
         >{{ link.text }}</a>
       </div>
       <div class="ml-[44px] hidden lg:block">
-        <a href="http://crnt.link/ashwathcalendar">
           <button
+            @click="navigateTo('/book-a-demo')"
             class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
           >
             Get Started
           </button>
-        </a>
       </div>
       <div
         class="block lg:hidden cursor-pointer"
@@ -73,15 +73,23 @@ defineProps({
 })
 
 const headerOverlay = useState('headerOverlay')
+const router = useRouter();
 
 // const headerOverlay = ref(false);
-const emits = defineEmits(['activateSelector']);
+defineEmits(['activateSelector'])
 
 const headerLinks = [
-  
   {
-    text: "Home",
+    text: "Brand",
     navigateTo: '/',
+  },
+  // {
+  //   text: "Creator",
+  //   navigateTo: '/creator',
+  // },
+  {
+    text: "Plans",
+    navigateTo: '/plans',
   },
   {
     text: "Blog",
@@ -93,6 +101,9 @@ const headerLinks = [
   },
 ];
 
+const isActive = (link) => {
+  return router.currentRoute.value.path === link.navigateTo;
+};
 </script>
 <style lang="scss">
 .header-overlay-width {

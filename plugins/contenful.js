@@ -18,10 +18,20 @@ export default defineNuxtPlugin((_) => {
     host: 'preview.contentful.com',
   });
 
-  return {
-    provide: {
-      contentfulClient: client,
-      previewClient: previewClient
-    },
-  };
+  if (process.env.NODE_ENV === "production") {
+    return {
+      provide: {
+        contentfulClient: client,
+        previewClient: previewClient
+      },
+    }
+  }
+  else {
+    return {
+      provide: {
+        contentfulClient: previewClient,
+        previewClient: previewClient
+      },
+    }
+  }
 });

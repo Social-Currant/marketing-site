@@ -1,9 +1,9 @@
 <template>
   <!-- Section First Impression -->
   <section
-    class="container mx-auto px-6 md:px-8 mt-[71px]"
+    class="container mx-auto px-6 md:px-8 mt-16"
   >
-    <div class="grid lg:grid-cols-2 max-w-screen-xl m-auto">
+    <div class="grid lg:grid-cols-2 m-auto">
       <div class="lg:order-last">
         <div>
           <img
@@ -12,19 +12,23 @@
           >
         </div>
       </div>
-      <div class="lg:order-first lg:w-10/12 xl:w-full">
-        <h2 class="font-bold text-[24px] lg:text-[38px] text-primary">
+      <div class="text-center lg:text-left lg:order-first lg:w-10/12 xl:w-full">
+        <h2
+          class="font-bold text-[24px] lg:text-5xl text-primary"
+          style="line-height: 130%;"
+        >
           {{ pageData.fields.title }}
         </h2>
         <p class="font-semibold text-xl mt-[24px]">
           {{ pageData.fields.subtitle }}
         </p>
-        <div class="flex items-center mt-[32px]">
-          <a href="http://crnt.link/ashwathcalendar">
-            <div class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue">
-              {{ pageData.fields.buttonText1 }}
-            </div>
-          </a>
+        <div class="justify-center lg:justify-start flex items-center mt-[32px]">
+          <button
+            class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+            @click="navigateTo('/book-a-demo/')"
+          >
+            {{ pageData.fields.buttonText1 }}
+          </button>
           <a @click="navigateTo('/get-in-touch')">
             <div
               class="mx-2 border-2 border-primary text-primary py-1.5 px-3 rounded-lg text-xl hover:bg-primary hover:text-white cursor-pointer"

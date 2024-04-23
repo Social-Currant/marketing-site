@@ -140,7 +140,7 @@
 <script setup>
 import { ref } from 'vue';
 const headerOverlay = ref(false);
-const newsletter = useState('newsletter', () => false)
+// const newsletter = useState('newsletter', () => false)
 const myForm = ref(null);
 const errorMessage = ref(false);
 
