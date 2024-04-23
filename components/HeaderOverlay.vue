@@ -31,11 +31,9 @@
     </div>
     <div class="flex justify-between items-center py-[32px]">
       <div>
-        <a href="http://crnt.link/ashwathcalendar">
-          <div class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap">
+          <div @click="navigateTo('/book-a-demo')" class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap">
             Book a Demo
           </div>
-        </a>
       </div>
       <div>
         <div style="height: 80px; width: 100%">

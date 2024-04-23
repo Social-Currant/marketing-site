@@ -94,12 +94,9 @@
             </p>
           </div>
         </div>
-
-        <a href="http://crnt.link/ashwathcalendar">
-          <button class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5">
+          <button @click="navigateTo('/book-a-demo')" class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5">
             {{ pageData.fields.btnText }}
           </button>
-        </a>
       </div>
     </div>
   </section>

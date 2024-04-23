@@ -145,13 +145,12 @@
             {{ pageData.fields.paragraphs[4] }}
           </p>
         </div>
-        <a href="http://crnt.link/ashwathcalendar">
           <button
+            @click="navigateTo('/book-a-demo')"
             class="mt-5 border-secondary border-2 bg-secondary text-white font-medium text-xl px-3 py-1.5 rounded-lg hover:bg-[#4780ff]"
           >
             {{ pageData.fields.btnText }}
           </button>
-        </a>
       </div>
       <div class="hidden lg:block">
         <img

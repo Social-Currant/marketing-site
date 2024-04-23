@@ -41,13 +41,12 @@
         >{{ link.text }}</a>
       </div>
       <div class="ml-[44px] hidden lg:block">
-        <a href="http://crnt.link/ashwathcalendar">
           <button
+            @click="navigateTo('/book-a-demo')"
             class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
           >
             Get Started
           </button>
-        </a>
       </div>
       <div
         class="block lg:hidden cursor-pointer"
