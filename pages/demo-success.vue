@@ -12,8 +12,11 @@
       <p class="text-message-info mt-6">
         Our sales team will get back to you soon. If you'd like to choose a timeslot that works for you, reserve a spot on our calendar and schedule your today
       </p>
-      <div class="mt-6 flex justify-center">
-        <a href="http://crnt.link/ashwathcalendar" target="_blank">
+      <div class="mt-6 flex justify-center mb-24 md:mb-0">
+        <a
+          href="http://crnt.link/ashwathcalendar"
+          target="_blank"
+        >
           <button
             type="submit"
             class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl "

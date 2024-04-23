@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderNav @activate-selector="activateSelector" />
-    <div class="container mx-auto mt-16 flex flex-wrap lg:flex-nowrap justify-center">
+    <div class="container mx-auto mt-16 flex flex-wrap lg:flex-nowrap justify-center mb-24 md:mb-0">
       <div class="mx-6">
         <h1 class="mb-4 font-poppins text-4xl font-semibold leading-8 text-[#30104C]">
           Book a Tailored Demo

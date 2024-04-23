@@ -31,9 +31,12 @@
     </div>
     <div class="flex justify-between items-center py-[32px]">
       <div>
-          <div @click="navigateTo('/book-a-demo')" class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap">
-            Book a Demo
-          </div>
+        <div
+          class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap"
+          @click="navigateToLink('/book-a-demo')"
+        >
+          Book a Demo
+        </div>
       </div>
       <div>
         <div style="height: 80px; width: 100%">
