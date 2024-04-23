@@ -59,12 +59,11 @@
             >
           </div>
           <div>
-            <label>Last Name*</label>
+            <label>Last Name</label>
             <input
               name="LastName"
               type="text"
               placeholder=""
-              required
             >
           </div>
         </div>
@@ -79,11 +78,12 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div>
-            <label>Organization Name</label>
+            <label>Organization Name*</label>
             <input
               name="OrganizationName"
               type="text"
               placeholder=""
+              required
             >
           </div>
           <div>
