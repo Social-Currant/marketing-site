@@ -16,21 +16,21 @@
         />
       </div>
     </div>
-      <div class="flex flex-wrap items-center gap-4 mt-12 bg-[#F5F6F6] py-2 justify-center">
-        <img :src="calendar">
-        <div class="font-poppins ml-6 lg:ml-0 text-center lg:text-left text-black font-semibold leading-[147.023%] ">
-          If you 
-          would like to speak with someone on our team to figure out which plan 
-          is best for you, request a demo today!
-        </div>
-        <div
-          class="button-outline"
-          @click="navigateTo('/book-a-demo/')"
-        >
-          Request Demo
-        </div>
+    <div class="flex flex-wrap items-center gap-4 mt-12 bg-[#F5F6F6] py-2 justify-center">
+      <img :src="calendar">
+      <div class="font-poppins ml-6 lg:ml-0 text-center lg:text-left text-black font-semibold leading-[147.023%] ">
+        If you 
+        would like to speak with someone on our team to figure out which plan 
+        is best for you, request a demo today!
       </div>
-      <div class="container mx-auto mt-6 flex flex-col flex-wrap lg:flex-nowrap justify-center">
+      <div
+        class="button-outline"
+        @click="navigateTo('/book-a-demo/')"
+      >
+        Request Demo
+      </div>
+    </div>
+    <div class="container mx-auto mt-6 flex flex-col flex-wrap lg:flex-nowrap justify-center">
       <h1 class="text-center text-3xl lg:text-5xl items-center text-primary font-semibold mt-12 mb-8">
         PLAN BREAKDOWN
       </h1>
@@ -51,8 +51,7 @@
                   :key="plan.name"
                   class="min-w-[198px]"
                 >
-                    <p>{{ plan }}</p>
-
+                  <p>{{ plan }}</p>
                 </th>
               </tr>
             </thead>
@@ -89,7 +88,7 @@
         </div>
       </div>
       <div class="flex items-center justify-center flex-wrap gap-4 mt-20">
-        <p class="font-semibold text-black text-center lg:text-text-left">
+        <p class="font-semibold text-black mx-6 text-center lg:text-text-left">
           You can learn more about our plans and services by requesting a demo today!
         </p> <button
           class="bg-secondary text-white my-4 py-1.5 px-3 rounded-lg text-xl hover-button-blue"

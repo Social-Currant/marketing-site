@@ -1,7 +1,7 @@
 <template>
   <div id="howItWorks" />
   <section class="container mx-auto px-6 md:px-8 lg:mt-[140px]">
-    <h3 class="uppercase text-center lg:mb-16 text-primary font-semibold leading-tight text-3xl sm:text-5xl">
+    <h3 class="uppercase mt-5 lg:mt-0 text-center lg:mb-16 text-primary font-semibold leading-tight text-3xl sm:text-5xl">
       {{ pageData.fields.title }}
     </h3>
     <div class="grid lg:grid-cols-3 gap-x-16">
