@@ -7,10 +7,10 @@
     </h3>
     <div class="flex flex-wrap-reverse xl:flex-nowrap items-center justify-center mb-12 lg:mb-24 xl:justify-between">
       <div class="flex flex-col items-center lg:items-start">
-        <p class=" mt-6 mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
+        <p class=" mt-6 mb-6 md:mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
           {{ feature1.fields.title }}
         </p>
-        <p class="feature-text text-center lg:text-left">
+        <p class="feature-text md:text-2xl text-center lg:text-left leading-normal">
           {{ feature1.fields.paragraph }}
         </p>
         <button
@@ -31,10 +31,10 @@
         :src="feature2.fields.image.fields.file.url"
       >
       <div class="flex flex-col items-center lg:items-start">
-        <p class="mt-6 mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
+        <p class="mt-6 mb-6 md:mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
           {{ feature2.fields.title }}
         </p>
-        <p class="feature-text text-center lg:text-left">
+        <p class="feature-text md:text-2xl text-center lg:text-left leading-normal">
           {{ feature2.fields.paragraph }}
         </p>
         <button
@@ -47,10 +47,10 @@
     </div>
     <div class="flex flex-wrap-reverse xl:flex-nowrap items-center justify-center mb-12 lg:mb-24 xl:justify-between">
       <div class="flex flex-col items-center lg:items-start">
-        <p class="mt-6 mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
+        <p class="mt-6 mb-6 md:mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
           {{ feature3.fields.title }}
         </p>
-        <p class="feature-text text-center lg:text-left">
+        <p class="feature-text md:text-2xl text-center lg:text-left leading-normal">
           {{ feature3.fields.paragraph }}
         </p>
         <button
@@ -71,10 +71,10 @@
         :src="feature4.fields.image.fields.file.url"
       >
       <div class="flex flex-col items-center lg:items-start">
-        <p class="mt-6 mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
+        <p class="mt-6 mb-6 md:mb-8 lg:mb-6 lg:mt-0 text-3xl font-bold text-primary text-center lg:text-left">
           {{ feature4.fields.title }}
         </p>
-        <p class="feature-text text-center lg:text-left">
+        <p class="feature-text md:text-2xl text-center lg:text-left leading-normal">
           {{ feature4.fields.paragraph }}
         </p>
         <button
@@ -122,10 +122,8 @@ const feature4 = await $contentfulClient.getEntry('2Us7NBeuPRdjz0GenrkpDt').then
 .feature-text{
 color:  #343538;
 font-family: Inter;
-font-size: 24px;
 font-style: normal;
 font-weight: 400;
-line-height: 36px; /* 150% */
 max-width: 557.333px;
 }
 </style>
