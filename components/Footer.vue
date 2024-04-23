@@ -6,7 +6,7 @@
     <div class="container mx-auto px-6 md:px-8 mt-16 lg:mt-48 pt-28 text-center md:text-left">
       <!-- Sign Up Links -->
       <div
-        class="bg-white text-black container mx-auto px-6 md:px-8 absolute drop-shadow-lg rounded-lg mx-auto py-16"
+        class="bg-white text-black container px-6 md:px-8 absolute drop-shadow-lg rounded-lg mx-auto py-16"
         style="top: -80px; width: 85%"
       >
         <CallToAction />
@@ -20,7 +20,7 @@
       </h4>
       <a href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb">
         <button
-          class="border-secondary  border-2 bg-secondary text-white font-medium border-secondary px-6 py-2 rounded-lg my-8 lg:my-12 text-left block"
+          class="border-2 text-white font-medium border-secondary px-6 py-2 rounded-lg my-8 lg:my-12 text-left block"
         >
           Subscribe
         </button>
