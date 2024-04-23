@@ -1,6 +1,10 @@
 <template>
   <div>
     <HeaderNav @activate-selector="activateSelector" />
+    <img
+      class="background-gradient"
+      src="~/assets/images/backgroundgradientcircle.svg"
+    >
     <div class="container mx-auto mt-16 flex flex-col flex-wrap lg:flex-nowrap justify-center">
       <h1 class="text-center text-3xl lg:text-5xl text-primary font-semibold">
         PREVIEW OUR PLANS
@@ -30,7 +34,8 @@
         Request Demo
       </div>
     </div>
-    <div class="container mx-auto mt-6 flex flex-col flex-wrap lg:flex-nowrap justify-center">
+    <div class="container mx-auto mt-6 flex flex-col flex-wrap lg:flex-nowrap justify-center relative">
+      <div class="background-gradient-right" />
       <h1 class="text-center text-3xl lg:text-5xl items-center text-primary font-semibold mt-12 mb-8">
         PLAN BREAKDOWN
       </h1>
@@ -40,7 +45,7 @@
           :key="featuresGroup.name"
           class="table-container"
         >
-          <table>
+          <table class="bg-white">
             <thead>
               <tr>
                 <th class=" text-xl h-[90px]">
@@ -129,6 +134,18 @@ const getFeatureValue = (planName, feature) => {
 
 </script>
 <style lang="scss" scoped>
+.background-gradient-right {
+  position: absolute;
+  height: 354px;
+  width: 354px;
+  border-radius: 354px;
+  background: #D5C2E7;
+  filter: blur(250px);
+  z-index: -1;
+  right: 0;
+  top: 30%;
+}
+
 .purpleTag{
     border-radius: 4px;
     background: #EBE2F4;

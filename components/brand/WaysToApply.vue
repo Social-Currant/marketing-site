@@ -2,7 +2,7 @@
   <div id="help" />
   <section
     ref="waysToApply"
-    class="container mx-auto px-6 md:px-8 mt-36 md:mt-64 relative"
+    class="container mx-auto px-6 md:px-8 mt-36 relative"
   >
     <h3
       class="uppercase text-primary text-[32px] md:text-5xl text-center md:text-center font-semibold leading-tight mb-16"
@@ -145,12 +145,12 @@
             {{ pageData.fields.paragraphs[4] }}
           </p>
         </div>
-          <button
-            @click="navigateTo('/book-a-demo')"
-            class="mt-5 border-secondary border-2 bg-secondary text-white font-medium text-xl px-3 py-1.5 rounded-lg hover:bg-[#4780ff]"
-          >
-            {{ pageData.fields.btnText }}
-          </button>
+        <button
+          class="mt-5 border-secondary border-2 bg-secondary text-white font-medium text-xl px-3 py-1.5 rounded-lg hover:bg-[#4780ff]"
+          @click="navigateTo('/book-a-demo')"
+        >
+          {{ pageData.fields.btnText }}
+        </button>
       </div>
       <div class="hidden lg:block">
         <img

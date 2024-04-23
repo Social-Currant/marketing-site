@@ -1,6 +1,6 @@
 <template>
   <!-- What people are saying -->
-  <section class="mt-32 relative testimonials-height">
+  <section class="mt-36 relative testimonials-height">
     <h3 class="uppercase text-center text-primary text-[32px] md:text-5xl font-semibold leading-tight mx-4">
       What people are saying
     </h3>

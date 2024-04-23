@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto px-6 md:px-8 mt-[83px]">
+  <section class="container mx-auto px-6 md:px-8 mt-36">
     <h3
       class="uppercase text-primary text-[32px] md:text-5xl text-center font-semibold leading-tight mb-16"
     >
