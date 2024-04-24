@@ -1,53 +1,45 @@
 <template>
   <!-- About Us -->
   <div id="aboutUs" />
-  <section class="container mx-auto px-6 md:px-8 mt-12">
-    <div>
-      <img
-        src="~/assets/icons/about-us-egg-left.svg"
-        class="egg-left"
-      >
-    </div>
-    <div>
-      <img
-        class="purple-shape"
-        src="~/assets/images/purpleshape.svg"
-      >
-    </div>
-    <div class="flex flex-col lg:flex-row-reverse">
-      <div class="w-full lg:w-[500px] text-center md:text-left">
-        <h4 class="uppercase text-[32px] md:text-5xl text-primary font-semibold leading-tight">
+  <section class="container mx-auto px-6 md:px-8 lg:mt-12">
+    <div class="relative mb-6">
+      <div class="lg:absolute md:text-left lg:p-14">
+        <h4 class=" p-4 sm:p-8 lg:p-0 max-w-[240] lg:max-w-none absolute lg:static text-[32px] mb-6 md:text-5xl text-primary leading-tight font-bold">
           {{ pageData.fields.title }}
         </h4>
-        <p class="mb-4 mt-4 text-[20px] font-semibold text-primary">
-          {{ pageData.fields.subtitle }}
-        </p>
         <RichText
+          class="hidden lg:block font-semibold text-black text-xl "
           style="margin-top: 0; padding: 0;"
           :content="pageData.fields.paragraph"
         />
       </div>
+      
+      <img
+        class=" z-[-1] w-full lg:block"
+        src="~/assets/images/Illustration.png"
+      >
     </div>
+    <RichText
+      class="lg:hidden text-center lg:text-left block font-semibold text-black text-xl "
+      style="margin-top: 0; padding: 0;"
+      :content="pageData.fields.paragraph"
+    />
+    <div class="flex flex-col lg:flex-row-reverse" />
+ 
+    <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
+      Our Mission
+    </h4>
+    <p class="text-black text-xl text-inter text-center lg:text-left font-['Inter'] ">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc scelerisque. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Vitae et leo duis ut. Nisl suscipit adipiscing bibendum est ultricies integer. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+    </p>
+    
+    <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
+      {{ pageData.fields.team }}
+    </h4>
+   
     <!-- mobile version of meet the team with carousel -->
     <div class="block lg:hidden">
       <div
-        class="flex uppercase justify-center cursor-pointer my-8"
-        @click="showMeetTeam = !showMeetTeam"
-      >
-        <h4 class="mr-2 font-semibold text-xl text-primary">
-          {{ pageData.fields.team }}
-        </h4>
-        <img
-          v-if="showMeetTeam"
-          src="~/assets/icons/drop-arrow-up.svg"
-        >
-        <img
-          v-else
-          src="~/assets/icons/drop-arrow-down.svg"
-        >
-      </div>
-      <div
-        v-show="showMeetTeam"
         class="flex flex-nowrap mobile-meet-the-team"
         style="min-height: 300px"
       >
@@ -70,14 +62,9 @@
         </div>
       </div>
     </div>
-    <!-- / - mobile version -->
-    <div class="flex hidden lg:block">
-      <h4 class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-tight">
-        {{ pageData.fields.team }}
-      </h4>
-    </div>
+   
     <!-- First Row - Team Members -->
-    <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 mt-16 hidden lg:flex">
+    <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 hidden lg:flex">
       <div
         v-for="team in teamFirstRow"
         :key="`team-` + team.name"

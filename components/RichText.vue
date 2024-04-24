@@ -2,7 +2,7 @@
 <template>
   <div
     v-if="content"
-    class="rich-text mx-auto mt-14 md:p-6"
+    class="rich-text text-black mt-14 md:p-6"
     v-html="renderContent()"
   />
 </template>
@@ -78,9 +78,11 @@ export default {
         font-family: 'Inter', 'Poppins';
         font-size: 18px;
         font-style: normal;
-        font-weight: 400;
         line-height: 150%; /* 27px */
         margin-bottom: 12px;
+        @media (min-width: 625px) {
+          font-size: 20px;
+        }
     }
     max-width: 794px;
     

@@ -41,12 +41,12 @@
         >{{ link.text }}</a>
       </div>
       <div class="ml-[44px] hidden lg:block">
-          <button
-            @click="navigateTo('/book-a-demo')"
-            class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
-          >
-            Get Started
-          </button>
+        <button
+          class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
+          @click="navigateTo('/book-a-demo')"
+        >
+          Get Started
+        </button>
       </div>
       <div
         class="block lg:hidden cursor-pointer"
@@ -87,6 +87,10 @@ const headerLinks = [
   //   text: "Creator",
   //   navigateTo: '/creator',
   // },
+  {
+    text: "About Us",
+    navigateTo: '/about-us',
+  },
   {
     text: "Plans",
     navigateTo: '/plans',
