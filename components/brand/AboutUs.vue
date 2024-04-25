@@ -41,19 +41,17 @@
     <div class="block lg:hidden">
       <div
         class="flex flex-nowrap mobile-meet-the-team"
-        style="min-height: 300px"
       >
         <div
           v-for="(team, index) in teamRow"
           :key="`teamrow-` + index"
           class="mx-4"
-          style="min-width: 180px; height: 180px"
         >
           <img
-            class="h-full w-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
+            class="object-cover rounded-full mx-auto mb-8 sm:mb-5 min-w-[180px] h-[180px]"
             :src="team.image"
           >
-          <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
+          <h6 class="text-center text-primary text-xl mt-4 mb-1 font-semibold">
             {{ team.name }}
           </h6>
           <p class="text-black text-center">
@@ -64,7 +62,7 @@
     </div>
    
     <!-- First Row - Team Members -->
-    <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 hidden lg:flex">
+    <div class="flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 hidden lg:flex">
       <div
         v-for="team in teamFirstRow"
         :key="`team-` + team.name"
@@ -108,18 +106,6 @@
       <div />
     </div>
   </section>
-  <div class="container mx-auto px-6 md:px-8 mt-16 relative">
-    <img
-      src="~/assets/icons/about-us-line-left.svg"
-      style="position: absolute; left: -100px"
-      class="z-0 overflow-hidden"
-    >
-    <img
-      src="~/assets/icons/about-us-line-right.svg"
-      class="overflow-hidden"
-      style="position: absolute; right: -100px"
-    >
-  </div>
 </template>
 
 <script setup>
