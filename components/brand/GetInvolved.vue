@@ -94,9 +94,12 @@
             </p>
           </div>
         </div>
-          <button @click="navigateTo('/book-a-demo')" class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5">
-            {{ pageData.fields.btnText }}
-          </button>
+        <button
+          class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5"
+          @click="navigateTo('/book-a-demo')"
+        >
+          {{ pageData.fields.btnText }}
+        </button>
       </div>
     </div>
   </section>

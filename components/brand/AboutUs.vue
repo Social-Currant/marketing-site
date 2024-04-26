@@ -1,67 +1,58 @@
 <template>
   <!-- About Us -->
   <div id="aboutUs" />
-  <section class="container mx-auto px-6 md:px-8 mt-12">
-    <div>
-      <img
-        src="~/assets/icons/about-us-egg-left.svg"
-        class="egg-left"
-      >
-    </div>
-    <div>
-      <img
-        class="purple-shape"
-        src="~/assets/images/purpleshape.svg"
-      >
-    </div>
-    <div class="flex flex-col lg:flex-row-reverse">
-      <div class="w-full lg:w-[500px] text-center md:text-left">
-        <h4 class="uppercase text-[32px] md:text-5xl text-primary font-semibold leading-tight">
+  <section class="container mx-auto px-6 md:px-8 lg:mt-12">
+    <div class="relative mb-6">
+      <div class="lg:absolute md:text-left lg:p-14">
+        <h4 class=" p-4 sm:p-8 lg:p-0 max-w-[240] lg:max-w-none absolute lg:static text-[32px] mb-6 md:text-5xl text-primary leading-tight font-bold">
           {{ pageData.fields.title }}
         </h4>
-        <p class="mb-4 mt-4 text-[20px] font-semibold text-primary">
-          {{ pageData.fields.subtitle }}
-        </p>
         <RichText
+          class="hidden lg:block font-semibold text-black text-xl max-w-[794px]"
           style="margin-top: 0; padding: 0;"
-          :content="pageData.fields.paragraph"
+          :content="pageData.fields.heroText"
         />
       </div>
+      <img
+        class=" z-[-1] w-full lg:block"
+        :src="pageData.fields.heroImage.fields.file.url"
+      >
     </div>
+    <RichText
+      class="lg:hidden text-center lg:text-left block font-semibold text-black text-xl max-w-[794px]"
+      style="margin-top: 0; padding: 0;"
+      :content="pageData.fields.heroText"
+    />
+    <div class="flex flex-col lg:flex-row-reverse" />
+ 
+    <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
+      {{ pageData.fields.bodyTitle }}
+    </h4>
+    <RichText
+      class="text-black text-xl text-inter text-center lg:text-left font-['Inter'] "
+      style="margin-top: 0; padding: 0;"
+      :content="pageData.fields.paragraph"
+    />
+    
+    <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
+      {{ pageData.fields.team }}
+    </h4>
+   
     <!-- mobile version of meet the team with carousel -->
     <div class="block lg:hidden">
       <div
-        class="flex uppercase justify-center cursor-pointer my-8"
-        @click="showMeetTeam = !showMeetTeam"
-      >
-        <h4 class="mr-2 font-semibold text-xl text-primary">
-          {{ pageData.fields.team }}
-        </h4>
-        <img
-          v-if="showMeetTeam"
-          src="~/assets/icons/drop-arrow-up.svg"
-        >
-        <img
-          v-else
-          src="~/assets/icons/drop-arrow-down.svg"
-        >
-      </div>
-      <div
-        v-show="showMeetTeam"
         class="flex flex-nowrap mobile-meet-the-team"
-        style="min-height: 300px"
       >
         <div
           v-for="(team, index) in teamRow"
           :key="`teamrow-` + index"
           class="mx-4"
-          style="min-width: 180px; height: 180px"
         >
           <img
-            class="h-full w-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
+            class="object-cover rounded-full mx-auto mb-8 sm:mb-5 min-w-[180px] h-[180px]"
             :src="team.image"
           >
-          <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
+          <h6 class="text-center text-primary text-xl mt-4 mb-1 font-semibold">
             {{ team.name }}
           </h6>
           <p class="text-black text-center">
@@ -70,14 +61,9 @@
         </div>
       </div>
     </div>
-    <!-- / - mobile version -->
-    <div class="flex hidden lg:block">
-      <h4 class="uppercase text-primary font-semibold mt-32 sm:mt-12 text-[38px] leading-tight">
-        {{ pageData.fields.team }}
-      </h4>
-    </div>
+   
     <!-- First Row - Team Members -->
-    <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 mt-16 hidden lg:flex">
+    <div class="flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 hidden lg:flex">
       <div
         v-for="team in teamFirstRow"
         :key="`team-` + team.name"
@@ -89,7 +75,7 @@
             :src="team.image"
           >
         </div>
-        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
+        <h6 class="text-center text-primary text-xl mt-4 mb-1 font-semibold">
           {{ team.name }}
         </h6>
         <p class="text-black text-center">
@@ -98,7 +84,7 @@
       </div>
     </div>
     <!-- Second Row - Team Members -->
-    <div class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex">
+    <div class="flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex">
       <div />
       <div
         v-for="team in teamSecondRow"
@@ -121,18 +107,6 @@
       <div />
     </div>
   </section>
-  <div class="container mx-auto px-6 md:px-8 mt-16 relative">
-    <img
-      src="~/assets/icons/about-us-line-left.svg"
-      style="position: absolute; left: -100px"
-      class="z-0 overflow-hidden"
-    >
-    <img
-      src="~/assets/icons/about-us-line-right.svg"
-      class="overflow-hidden"
-      style="position: absolute; right: -100px"
-    >
-  </div>
 </template>
 
 <script setup>
@@ -147,20 +121,20 @@ const [pageData, assets] = await $contentfulClient.getEntries({
   return [pageData.items[0], pageData.includes.Asset];
 }).catch(console.error);
 
-const teamFirstRow = [];
-const teamSecondRow = [];
+const teamFirstRow = ref([]);
+const teamSecondRow = ref([]);
 
 for (let i = 0; i < assets.length; i++) {
   const asset = assets[i];
   
   if (asset.fields.description.includes("Chief ")) {
-    teamFirstRow.push({
+    teamFirstRow.value.push({
       name: asset.fields.title,
       desc: asset.fields.description,
       image: asset.fields.file.url,
     });
-  }  else {
-    teamSecondRow.push({
+  }  else if (asset.fields.file.url !== pageData.fields.heroImage.fields.file.url)  {
+    teamSecondRow.value.push({
       name: asset.fields.title,
       desc: asset.fields.description,
       image: asset.fields.file.url,
@@ -168,11 +142,11 @@ for (let i = 0; i < assets.length; i++) {
   }
 }
 
-const teamRow = computed(() => {
-  return teamFirstRow.concat(teamSecondRow);
-});
+const teamRow = ref([])
 
-const showMeetTeam=ref(false)
+watchEffect(() => {
+  teamRow.value = [...teamFirstRow.value, ...teamSecondRow.value]
+})
 
 </script>
 

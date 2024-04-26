@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderNav @activate-selector="activateSelector" />
+    <HeaderNav />
     <img
       class="background-gradient"
       src="~/assets/images/backgroundgradientcircle.svg"
@@ -111,7 +111,6 @@ import {plans, plansTable} from "~/constants/plans"
 import calendar from "~/assets/images/calendar.png";
 import check from "~/assets/icons/green-check.svg";
 import cross from "~/assets/icons/red-cross.svg";
-import star from "~/assets/icons/star.svg";
 
 
 const planOptions = ['Starter Plan', 'Growth Plan', 'Scale Plan', 'Enterprise']
