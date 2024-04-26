@@ -48,7 +48,7 @@ export const plans = [
     {
       name: "ENTERPRISE PLAN",
       image: enterprise,
-      description:"For organizations looking for custom support, strategy and done for you services",
+      description:"For organizations looking for custom support, strategy and managed services",
       features: [
         { name: "Everything in Scale Plan", value: true },
         { name: "Dedicated Account Manager", value: true },
