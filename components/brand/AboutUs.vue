@@ -13,7 +13,6 @@
           :content="pageData.fields.heroText"
         />
       </div>
-      
       <img
         class=" z-[-1] w-full lg:block"
         :src="pageData.fields.heroImage.fields.file.url"
@@ -29,12 +28,11 @@
     <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
       {{ pageData.fields.bodyTitle }}
     </h4>
-    <p class="text-black text-xl text-inter text-center lg:text-left font-['Inter'] ">
-      <RichText
-        style="margin-top: 0; padding: 0;"
-        :content="pageData.fields.paragraph"
-      />
-    </p>
+    <RichText
+      class="text-black text-xl text-inter text-center lg:text-left font-['Inter'] "
+      style="margin-top: 0; padding: 0;"
+      :content="pageData.fields.paragraph"
+    />
     
     <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
       {{ pageData.fields.team }}
@@ -123,20 +121,20 @@ const [pageData, assets] = await $contentfulClient.getEntries({
   return [pageData.items[0], pageData.includes.Asset];
 }).catch(console.error);
 
-const teamFirstRow = [];
-const teamSecondRow = [];
+const teamFirstRow = ref([]);
+const teamSecondRow = ref([]);
 
 for (let i = 0; i < assets.length; i++) {
   const asset = assets[i];
   
   if (asset.fields.description.includes("Chief ")) {
-    teamFirstRow.push({
+    teamFirstRow.value.push({
       name: asset.fields.title,
       desc: asset.fields.description,
       image: asset.fields.file.url,
     });
-  }  else {
-    teamSecondRow.push({
+  }  else if (asset.fields.file.url !== pageData.fields.heroImage.fields.file.url)  {
+    teamSecondRow.value.push({
       name: asset.fields.title,
       desc: asset.fields.description,
       image: asset.fields.file.url,
@@ -144,9 +142,11 @@ for (let i = 0; i < assets.length; i++) {
   }
 }
 
-const teamRow = computed(() => {
-  return teamFirstRow.concat(teamSecondRow);
-});
+const teamRow = ref([])
+
+watchEffect(() => {
+  teamRow.value = [...teamFirstRow.value, ...teamSecondRow.value]
+})
 
 const showMeetTeam=ref(false)
 
