@@ -39,12 +39,6 @@
         </div>
       </div>
     </div>
-    <div class="relative">
-      <img
-        src="~/assets/icons/dots-bg-hero.svg"
-        class="hero-dots"
-      >
-    </div>
   </section>
 </template>
 
