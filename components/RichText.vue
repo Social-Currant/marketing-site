@@ -84,7 +84,6 @@ export default {
           font-size: 20px;
         }
     }
-    max-width: 794px;
     
 
     ul {

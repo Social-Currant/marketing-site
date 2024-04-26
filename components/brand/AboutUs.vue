@@ -8,29 +8,32 @@
           {{ pageData.fields.title }}
         </h4>
         <RichText
-          class="hidden lg:block font-semibold text-black text-xl "
+          class="hidden lg:block font-semibold text-black text-xl max-w-[794px]"
           style="margin-top: 0; padding: 0;"
-          :content="pageData.fields.paragraph"
+          :content="pageData.fields.heroText"
         />
       </div>
       
       <img
         class=" z-[-1] w-full lg:block"
-        src="~/assets/images/Illustration.png"
+        :src="pageData.fields.heroImage.fields.file.url"
       >
     </div>
     <RichText
-      class="lg:hidden text-center lg:text-left block font-semibold text-black text-xl "
+      class="lg:hidden text-center lg:text-left block font-semibold text-black text-xl max-w-[794px]"
       style="margin-top: 0; padding: 0;"
-      :content="pageData.fields.paragraph"
+      :content="pageData.fields.heroText"
     />
     <div class="flex flex-col lg:flex-row-reverse" />
  
     <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
-      Our Mission
+      {{ pageData.fields.bodyTitle }}
     </h4>
     <p class="text-black text-xl text-inter text-center lg:text-left font-['Inter'] ">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc scelerisque. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Vitae et leo duis ut. Nisl suscipit adipiscing bibendum est ultricies integer. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+      <RichText
+        style="margin-top: 0; padding: 0;"
+        :content="pageData.fields.paragraph"
+      />
     </p>
     
     <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
