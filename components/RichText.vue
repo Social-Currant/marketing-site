@@ -2,7 +2,7 @@
 <template>
   <div
     v-if="content"
-    class="rich-text text-black mt-14 md:p-6"
+    class="rich-text mx-auto text-black mt-14 md:p-6"
     v-html="renderContent()"
   />
 </template>

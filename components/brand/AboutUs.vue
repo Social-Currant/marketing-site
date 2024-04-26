@@ -77,7 +77,7 @@
             :src="team.image"
           >
         </div>
-        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
+        <h6 class="text-center text-primary text-xl mt-4 mb-1 font-semibold">
           {{ team.name }}
         </h6>
         <p class="text-black text-center">
@@ -86,7 +86,7 @@
       </div>
     </div>
     <!-- Second Row - Team Members -->
-    <div class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex">
+    <div class="flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex">
       <div />
       <div
         v-for="team in teamSecondRow"
