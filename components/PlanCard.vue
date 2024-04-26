@@ -51,7 +51,7 @@ defineProps({
     default:null
   },
   imagelink: {
-    type: URL,
+    type: String,
     required: false,
     default:null
   },

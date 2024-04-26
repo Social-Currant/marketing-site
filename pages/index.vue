@@ -1,6 +1,6 @@
 <template class="z-0">
   <div>
-    <HeaderNav @activate-selector="activateSelector" />
+    <HeaderNav />
     <HeroSection />
     <!-- / - Section First Impression -->
     <img
@@ -32,18 +32,9 @@ defineComponent({
       meta: [{ name: "description", content: "Social Currant." }],
     });
 
-    // Your component setup logic here
-
     return {};
   },
 });
-
-function activateSelector(headerNav) {
-  activeBrandCreatorSelector.value = headerNav;
-}
-
-// global state
-// const headerOverlay = useState('headerOverlay', () => false)
 
 
 

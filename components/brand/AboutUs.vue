@@ -148,8 +148,6 @@ watchEffect(() => {
   teamRow.value = [...teamFirstRow.value, ...teamSecondRow.value]
 })
 
-const showMeetTeam=ref(false)
-
 </script>
 
 <style lang="scss" scoped>

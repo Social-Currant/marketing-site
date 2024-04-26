@@ -75,9 +75,6 @@ defineProps({
 const headerOverlay = useState('headerOverlay')
 const router = useRouter();
 
-// const headerOverlay = ref(false);
-defineEmits(['activateSelector'])
-
 const headerLinks = [
   {
     text: "Brand",

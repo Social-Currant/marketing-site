@@ -1,6 +1,6 @@
 <template class="z-0">
   <div>
-    <HeaderNav @activate-selector="activateSelector" />
+    <HeaderNav />
     <HeroSection />
     
     <Footer />
