@@ -67,7 +67,6 @@ export const plansTable = [
         features: [
           { name: "Creator Profile", value: "25 Profiles" },
           { name: "Add to Campaign", value: "no" },
-          { name: "Campaign Creator Matches", value: "no" },
           { name: "Profile Access", value: "yes" },
           { name: "Save Creators", value: "5" },
           { name: "Search Filters", value: "Basic" },
@@ -79,6 +78,8 @@ export const plansTable = [
         features: [
           { name: "Campaign Draft", value: "yes" },
           { name: "Campaign Creation", value: "no" },
+          { name: "Campaign Creator Matches", value: "no" },
+          { name: "Creator Outreach", value: "no" },
           { name: "Creator Proposal", value: "no" },
           { name: "Content Management", value: "no" },
           { name: "Campaign Metrics Report", value: "no" },
@@ -103,7 +104,6 @@ export const plansTable = [
           features: [
             { name: "Creator Profile", value: "Unlimited" },
             { name: "Add to Campaign", value: "yes" },
-            { name: "Campaign Creator Matches", value: "3 Rounds" },
             { name: "Profile Access", value: "yes" },
             { name: "Save Creators", value: "10" },
             { name: "Search Filters", value: "Advanced" },
@@ -115,6 +115,8 @@ export const plansTable = [
           features: [
             { name: "Campaign Draft", value: "yes" },
             { name: "Campaign Creation", value: "yes" },
+            { name: "Campaign Creator Matches", value: "no" },
+            { name: "Creator Outreach", value: "yes" },
             { name: "Creator Proposal", value: "25 Proposals" },
             { name: "Content Management", value: "yes" },
             { name: "Campaign Metrics Report", value: "Limited" },
@@ -139,7 +141,6 @@ export const plansTable = [
           features: [
             { name: "Creator Profile", value: "Unlimited" },
             { name: "Add to Campaign", value: "yes" },
-            { name: "Campaign Creator Matches", value: "Unlimited" },
             { name: "Profile Access", value: "yes" },
             { name: "Save Creators", value: "25" },
             { name: "Search Filters", value: "Advanced" },
@@ -151,6 +152,8 @@ export const plansTable = [
           features: [
             { name: "Campaign Draft", value: "yes" },
             { name: "Campaign Creation", value: "yes" },
+            { name: "Campaign Creator Matches", value: "3 rounds" },
+            { name: "Creator Outreach", value: "yes" },
             { name: "Creator Proposal", value: "50 Proposals" },
             { name: "Content Management", value: "yes" },
             { name: "Campaign Metrics Report", value: "Advanced" },
@@ -175,7 +178,6 @@ export const plansTable = [
           features: [
             { name: "Creator Profile", value: "Unlimited" },
             { name: "Add to Campaign", value: "yes" },
-            { name: "Campaign Creator Matches", value: "Unlimited" },
             { name: "Profile Access", value: "yes" },
             { name: "Save Creators", value: "Unlimited" },
             { name: "Search Filters", value: "Advanced" },
@@ -187,6 +189,8 @@ export const plansTable = [
           features: [
             { name: "Campaign Draft", value: "yes" },
             { name: "Campaign Creation", value: "yes" },
+            { name: "Campaign Creator Matches", value: "Unlimited" },
+            { name: "Creator Outreach", value: "yes" },
             { name: "Creator Proposal", value: "Unlimited" },
             { name: "Content Management", value: "yes" },
             { name: "Campaign Metrics Report", value: "Advanced" },
