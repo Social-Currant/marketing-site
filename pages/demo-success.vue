@@ -10,18 +10,18 @@
         Your form was sent!
       </h1>
       <p class="text-message-info mt-6">
-        Our sales team will get back to you soon. If you'd like to choose a timeslot that works for you, reserve a spot on our calendar and schedule your today
+        Thanks for reaching out! Our sales team will get back to you within the next 24 hours. In the meantime, check out our 2023 Impact Report to learn how we've helped organizations like yours maximize the Creator Economy to reach audiences.
       </p>
       <div class="mt-6 flex justify-center mb-24 md:mb-0">
         <a
-          href="http://crnt.link/websiteleadsashwath"
+          href="http://crnt.link/impactreportwebsite"
           target="_blank"
         >
           <button
             type="submit"
             class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl "
           >
-            Schedule Now
+            Learn More
           </button>
         </a>
       </div>
