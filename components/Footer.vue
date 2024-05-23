@@ -61,6 +61,17 @@
           </div>
         </div>
       </div>
+     
+      <div class="pt-12 pb-20 flex gap-6 underline font-semibold">
+        <a
+          href="https://currantsocial.notion.site/Terms-and-Conditions-2276f38bb72a46a194e4bc6496b8b259"
+          target="_blank"
+        >Terms & Conditions</a>
+        <a
+          href="https://currantsocial.notion.site/Privacy-Policy-d56fe485223342c79d4d4447e7aca468"
+          target="_blank"
+        >Privacy Policy</a>
+      </div>
     </div>
   </footer>
 </template>
