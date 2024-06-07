@@ -24,7 +24,7 @@ export const plans = [
       features: [
         { name: "Everything in Starter Plan", value: true },
         { name: "Campaign Tools", value: true },
-        { name: "Creator Matching", value: true },
+        { name: "Creator Outreach", value: true },
         { name: "Metrics Report", value: true },
         { name: "Creator Spend", value: true },
         { name: "Campaign Check-ins", value: true },
@@ -37,11 +37,11 @@ export const plans = [
       image: union,
       features: [
         { name: "Everything in Growth Plan", value: true },
+        { name: "Dedicated Account Manager", value: true },
         { name: "Dedicated Slack Channel", value: true },
         { name: "Weekly Campaign Check-Ins", value: true },
         { name: "Advanced Metrics Report", value: true },
-        { name: "Unlimited Creator Matches", value: true },
-        { name: "Unlimited Analytics Access", value: true },
+        { name: "Creator Matches", value: true },
         { name: "Customer Support", value: "Dedicated Slack Channel" },
       ],
     },
@@ -51,7 +51,6 @@ export const plans = [
       description:"For organizations looking for custom support, strategy and managed services",
       features: [
         { name: "Everything in Scale Plan", value: true },
-        { name: "Dedicated Account Manager", value: true },
         { name: "Managed Campaigns", value: true },
         { name: "Creator Communication", value: true },
       ],
