@@ -80,10 +80,10 @@ const headerLinks = [
     text: "Brand",
     navigateTo: '/',
   },
-  // {
-  //   text: "Creator",
-  //   navigateTo: '/creator',
-  // },
+  {
+    text: "Creator",
+    navigateTo: '/creator',
+  },
   {
     text: "About Us",
     navigateTo: '/about-us',
