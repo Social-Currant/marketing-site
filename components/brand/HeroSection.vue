@@ -48,7 +48,7 @@ const pendingPage = ref(true)
 
 const pageData = await $contentfulClient.getEntry('2EceAK9q8HxBhzkzaQTKap').then((pageData) => {
   pendingPage.value = false
-  return pageData.items[0];
+  return pageData;
 }).catch(console.error);
 </script>
 
