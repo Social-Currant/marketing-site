@@ -29,7 +29,7 @@
     <MissionDriven></MissionDriven>
     <TestimonialsCreator></TestimonialsCreator>
     <OrganizationCarousel />
-    <Footer />
+    <CreatorFooter />
   </div>
 </template>
 

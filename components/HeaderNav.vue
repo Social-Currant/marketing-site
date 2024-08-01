@@ -31,16 +31,16 @@
           @click="navigateTo('/')"
         >
       </h1>
-      <div class="flex nav-links hidden lg:block headerLink font-semibold">
+            <div class="flex nav-links hidden lg:block headerLink font-semibold">
         <a
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"
-          class="hover:text-primary ml-[24px] text-xl cursor-pointer"
+          class="hover:text-primary ml-3 xl:ml-6 text-xl cursor-pointer"
           :class="{'text-secondary': isActive(link)}"
           @click="navigateTo(link.navigateTo)"
         >{{ link.text }}</a>
       </div>
-      <div class="ml-[44px] hidden lg:block">
+      <div class="ml-6 xl:ml-11 hidden lg:block">
         <button
           class="border-secondary border-2 bg-secondary text-white text-xl border-secondary text-xl px-3 py-1.5 rounded-lg hover-button-blue"
           @click="navigateTo('/book-a-demo')"

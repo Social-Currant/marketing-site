@@ -24,7 +24,7 @@
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
           <button
-            class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue"
+            class="bg-secondary text-white py-2 px-3 rounded-lg text-xl hover-button-blue"
           
           >
            {{ pageData.fields.buttonText1 }}
