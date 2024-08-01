@@ -1,22 +1,21 @@
 <template>
    <!-- Testimonial -->
  <section class="container mx-auto px-4 mt-40">
-    <div class="flex items-center justify-between">
+    <div :class="{'flex items-center justify-between': pageData.items.length > 3, 'flex items-center justify-center': pageData.items.length <= 3}">
       <!-- Left arrow -->
-      <div @click="prevPage">
+      <div v-if="pageData.items.length > 3" @click="prevPage">
         <img src="~/assets/icons/left-arrow.svg" class="mx-auto hidden lg:block cursor-pointer">
         <img src="~/assets/icons/left-arrow-small.svg" class="mx-auto block lg:hidden cursor-pointer">
       </div>
-      <span class=" text-3xl lg:text-5xl font-semibold text-primary text-center block">TESTIMONIALS</span>
+      <span class="text-3xl lg:text-5xl font-semibold text-primary text-center block">TESTIMONIALS</span>
       <!-- Right arrow -->
-      <div @click="nextPage">
+      <div v-if="pageData.items.length > 3" @click="nextPage">
         <img src="~/assets/icons/right-arrow.svg" class="mx-auto hidden lg:block cursor-pointer">
         <img src="~/assets/icons/right-arrow-small.svg" class="mx-auto block lg:hidden cursor-pointer">
       </div>
     </div>
-
     <transition name="fade" mode="out-in">
-      <div v-if="showCards" :key="currentPage" class="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 mt-24">
+      <div v-if="showCards" :key="currentPage" class="container mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-6 mt-24">
         <div v-for="(card, index) in paginatedCards" :key="card.name + index" class="card-container mt-24">
           <div class="relative profile-image-container">
             <img class="profile-image" :src="card.image" alt="Profile Image">
@@ -24,7 +23,7 @@
           <p class="text-center mt-20">{{ card.testimonial }}</p>
           <div class="flex flex-col items-center">
             <span class="font-bold text-primary">{{ card.name }}</span>
-            <span class="font-semibold">{{ card.role }}</span>
+            <NuxtLink class="font-semibold" target="_blank" :to="card.linkToSocialMedia"> {{ card.role }}</NuxtLink>
           </div>
         </div>
       </div>
@@ -52,6 +51,7 @@ const cards = computed(() => pageData.items.map((item) => ({
   testimonial: item.fields.testimonial,
   name: item.fields.name,
   role:item.fields.role,
+  linkToSocialMedia:item.fields.linkToSocialMedia,
   image: item.fields.image.fields.file.url,
 })))
 
@@ -105,6 +105,7 @@ const prevPage = () => {
   position: relative;
   text-align: center;
   max-width: 400px;
+  flex:1 1 0px;
 }
 
 .profile-image-container {
