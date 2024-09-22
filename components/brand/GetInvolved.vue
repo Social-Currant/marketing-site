@@ -44,12 +44,16 @@
             </p>
           </div>
         </div>
-        <button
-          class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5"
-          @click="navigateTo('/book-a-demo')"
-        >
-          {{ pageData.fields.btnText }}
-        </button>
+        <a 
+        href="https://app.currant.social" 
+        target="_blank" 
+        rel="noopener noreferrer">
+          <button
+            class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5"
+          >
+            {{ pageData.fields.btnText }}
+          </button>
+        </a>
       </div>
     </div>
   </section>
