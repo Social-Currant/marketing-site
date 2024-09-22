@@ -15,7 +15,7 @@
       </div>
     </div>
     <transition name="fade" mode="out-in">
-      <div v-if="showCards" :key="currentPage" class="container mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-6 mt-24">
+      <div v-if="showCards" :key="currentPage" class="container mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-6 mt-24">
         <div v-for="(card, index) in paginatedCards" :key="card.name + index" class="card-container mt-24">
           <div class="relative profile-image-container">
             <img class="profile-image" :src="card.image" alt="Profile Image">

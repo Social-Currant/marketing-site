@@ -23,19 +23,21 @@
           {{ pageData.fields.subtitle }}
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
-          <button
-            class="bg-secondary text-white py-2 px-3 rounded-lg text-xl hover-button-blue"
-          
-          >
-           {{ pageData.fields.buttonText1 }}
-          </button>
-          <a @click="navigateTo('/get-in-touch')">
+          <a 
+          href="https://app.currant.social" 
+          target="_blank" 
+          rel="noopener noreferrer">
+            <button class="bg-secondary text-white py-2 px-3 rounded-lg text-xl hover-button-blue">
+            {{ pageData.fields.buttonText1 }}
+            </button>
+          </a>
+          <NuxtLink @click="navigateTo('/get-in-touch')">
             <div
               class="mx-2 border-2 border-primary text-primary py-1.5 px-3 rounded-lg text-xl hover:bg-primary hover:text-white cursor-pointer"
             >
               {{ pageData.fields.buttonText2 }}
             </div>
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>

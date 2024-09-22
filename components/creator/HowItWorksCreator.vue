@@ -24,9 +24,14 @@
      
     </div>
     <div class="flex justify-center mt-10">
-      <button class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue">
-        Sign Up Onboarding
-      </button>
+      <a 
+        href="https://app.currant.social" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        <button class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue">
+        Sign Up Today
+        </button>
+      </a>
     </div>
   </section>
 
