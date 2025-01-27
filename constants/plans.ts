@@ -19,7 +19,7 @@ export const plans = [
     },
     {
       name: "GROWTH",
-      description:"Our self service plan perfect for small or medium-sized organizations running smaller campaigns",
+      description:"Our self service plan is perfect for small or medium-sized organizations running smaller campaigns",
       image: growth,
       features: [
         { name: "Creator Database", value: true},
@@ -27,7 +27,7 @@ export const plans = [
         { name: "Creator Sourcing", value: true },
         { name: "Metrics Report", value: true },
         { name: "Creator Spend", value: true },
-        { name: "Customer Support", value: "Priority - 24h Response" },
+        { name: "Customer Support", value: "Standard" },
       ],
     },
     {
@@ -39,10 +39,10 @@ export const plans = [
         { name: "Campaign Check-ins", value: true },
         { name: "Dedicated Campaign Strategist", value: true },
         { name: "Dedicated Slack Channel", value: true },
-        { name: "Weekly Campaign Check-Ins", value: true },
+        { name: "Campaign Check-Ins", value: "true" },
         { name: "Advanced Metrics Report", value: true },
-        { name: "Creator Matches", value: true },
-        { name: "Customer Support", value: "Dedicated Slack Channel" },
+        { name: "Creator Introductions", value: true },
+        { name: "Customer Support", value: "Priority" },
       ],
     },
     {
