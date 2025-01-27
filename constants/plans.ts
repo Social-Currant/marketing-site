@@ -32,7 +32,7 @@ export const plans = [
     },
     {
       name: "SCALE",
-      description:"Best for organizations running long-term campaigns at scale with Social Currant guidance",
+      description:"Best for organizations running long-term campaigns at scale with Social Currant support",
       image: union,
       features: [
         { name: "Everything in Growth Plan", value: true },
