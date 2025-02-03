@@ -1,6 +1,6 @@
 <template>
-  <!-- Section First Impression -->
-  <section
+    <!-- HERO SECTION -->
+     <section
     class="container mx-auto px-6 md:px-8 mt-16"
   >
     <div class="grid lg:grid-cols-2 m-auto">
@@ -23,50 +23,33 @@
           {{ pageData.fields.subtitle }}
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
-          <button
-            class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue"
-            @click="navigateTo('/book-a-demo/')"
-          >
+          <a 
+          href="https://app.currant.social/creator/signup" 
+          target="_blank" 
+          rel="noopener noreferrer">
+            <button class="bg-secondary text-white py-2 px-3 rounded-lg text-xl hover-button-blue">
             {{ pageData.fields.buttonText1 }}
-          </button>
-          <a @click="navigateTo('/get-in-touch')">
+            </button>
+          </a>
+          <NuxtLink @click="navigateTo('/get-in-touch')">
             <div
               class="mx-2 border-2 border-primary text-primary py-1.5 px-3 rounded-lg text-xl hover:bg-primary hover:text-white cursor-pointer"
             >
               {{ pageData.fields.buttonText2 }}
             </div>
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
-  </section>
+    </section>
 </template>
 
 <script setup>
 const { $contentfulClient } = useNuxtApp()
 const pendingPage = ref(true)
 
-const pageData = await $contentfulClient.getEntry('2EceAK9q8HxBhzkzaQTKap').then((pageData) => {
+const pageData = await $contentfulClient.getEntry('32spGG0c1g1LTeb5tyyfRH').then((pageData) => {
   pendingPage.value = false
   return pageData;
 }).catch(console.error);
 </script>
-
-<style>
-    .hero-dots {
-  position: absolute;
-  right: -2rem;
-  top: -5rem;
-  z-index: -1;
-  height: 20rem;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.hover-button-blue:hover {
-  background: #4780ff;
-}
-.hover-primary:hover {
-  background: #4f3467;
-}
-</style>
