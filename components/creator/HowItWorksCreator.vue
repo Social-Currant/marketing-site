@@ -25,7 +25,7 @@
     </div>
     <div class="flex justify-center mt-10">
       <a 
-        href="https://app.currant.social" 
+        href="https://app.currant.social/creator/signup" 
         target="_blank" 
         rel="noopener noreferrer">
         <button class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue">

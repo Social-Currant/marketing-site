@@ -36,6 +36,6 @@ const pageData = await $contentfulClient.getEntries({
 
 const columnOne = computed(() => pageData.fields.items)
 const columnTwo = computed(() => pageData.fields.secondColumn)
-const columnThree = computed(() => pageData.fields.secondColumn)
+const columnThree = computed(() => pageData.fields.thirdColumn)
 
 </script>

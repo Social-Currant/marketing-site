@@ -45,7 +45,7 @@
           </div>
         </div>
         <a 
-        href="https://app.currant.social" 
+        href="https://app.currant.social/creator/signup" 
         target="_blank" 
         rel="noopener noreferrer">
           <button

@@ -9,6 +9,9 @@
     <p class="text-center font-poppins text-base leading-[125%] text-gray-800 mt-4 max-w-[238px]">
       {{ description }}
     </p>
+    <p class="text-center font-poppins text-base leading-[125%] text-gray-800 mt-4 max-w-[238px]">
+      $1,250
+    </p>
     <hr>
     <div class="flex flex-col max-w-[238px]">
       <div
