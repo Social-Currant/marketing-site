@@ -6,7 +6,7 @@ import enterprise from "~/assets/images/enterprise.png";
 export const plans = [
     {
       name: "GROWTH PLAN",
-      description:"Perfect for small or medium-sized organizations running smaller campaigns",
+      description:"Our self-service plan perfect for small or medium-sized organizations running smaller campaigns",
       image: growth,
       features: [
         { name: "Everything in Starter Plan", value: true },
@@ -14,28 +14,25 @@ export const plans = [
         { name: "Creator Outreach", value: true },
         { name: "Metrics Report", value: true },
         { name: "Creator Spend", value: true },
-        { name: "Campaign Check-ins", value: true },
         { name: "Customer Support", value: "Standard" },
       ],
     },
     {
       name: "SCALE PLAN",
-      description:"Best for organizations running long-term campaigns at scale",
+      description:"Best for organizations running long-term campaigns at scale with Social Currant support",
       image: union,
       features: [
         { name: "Everything in Growth Plan", value: true },
         { name: "Dedicated Campaign Strategist", value: true },
-        { name: "Dedicated Slack Channel", value: true },
-        { name: "Weekly Campaign Check-Ins", value: true },
         { name: "Advanced Metrics Report", value: true },
-        { name: "Creator Matches", value: true },
+        { name: "Campaign Check-ins", value: true },
         { name: "Customer Support", value: "Priority - 24h response" },
       ],
     },
     {
       name: "ENTERPRISE PLAN",
       image: enterprise,
-      description:"For organizations looking for custom support, strategy and managed services",
+      description:"For organizations looking for custom support, strategy and managed services for their creator work",
       features: [
         { name: "Everything in Scale Plan", value: true },
         { name: "Managed Campaigns", value: true },
