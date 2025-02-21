@@ -5,19 +5,6 @@ import enterprise from "~/assets/images/enterprise.png";
 
 export const plans = [
     {
-      name: "STARTER PLAN",
-      description:"Exclusive Entry Level Access to Social Currant's Creator Database",
-      image: startup,
-      features: [
-        { name: "Creator Database", value: true },
-        { name: "Sort and Filter", value: true },
-        { name: "Search", value: true },
-        { name: "Save Creators", value: true },
-        { name: "Profile Analytics", value: true },
-        { name: "Customer Support", value: "Standard" },
-      ],
-    },
-    {
       name: "GROWTH PLAN",
       description:"Perfect for small or medium-sized organizations running smaller campaigns",
       image: growth,
@@ -28,7 +15,7 @@ export const plans = [
         { name: "Metrics Report", value: true },
         { name: "Creator Spend", value: true },
         { name: "Campaign Check-ins", value: true },
-        { name: "Customer Support", value: "Priority - 24h Response" },
+        { name: "Customer Support", value: "Standard" },
       ],
     },
     {
@@ -37,12 +24,12 @@ export const plans = [
       image: union,
       features: [
         { name: "Everything in Growth Plan", value: true },
-        { name: "Dedicated Account Manager", value: true },
+        { name: "Dedicated Campaign Strategist", value: true },
         { name: "Dedicated Slack Channel", value: true },
         { name: "Weekly Campaign Check-Ins", value: true },
         { name: "Advanced Metrics Report", value: true },
         { name: "Creator Matches", value: true },
-        { name: "Customer Support", value: "Dedicated Slack Channel" },
+        { name: "Customer Support", value: "Priority - 24h response" },
       ],
     },
     {
@@ -59,72 +46,33 @@ export const plans = [
 
 export const plansTable = [
   {
-    name: "Starter Plan",
-    features: [
-      {
-        name: "Creator Database",
-        features: [
-          { name: "Creator Profile", value: "25 Profiles" },
-          { name: "Add to Campaign", value: "no" },
-          { name: "Profile Access", value: "yes" },
-          { name: "Save Creators", value: "5" },
-          { name: "Search Filters", value: "Basic" },
-          { name: "Creator Spend", value: "no" },
-        ],
-      },
-      {
-        name: "Campaign Tools",
-        features: [
-          { name: "Campaign Draft", value: "yes" },
-          { name: "Campaign Creation", value: "no" },
-          { name: "Campaign Creator Matches", value: "no" },
-          { name: "Creator Outreach", value: "no" },
-          { name: "Content Management", value: "no" },
-          { name: "Campaign Metrics Report", value: "no" },
-        ],
-      },
-      {
-        name: "Additional Services",
-        features: [
-          { name: "Customer Support", value: "Standard" },
-          { name: "Campaign Check-ins", value: "no" },
-          { name: "Dedicated Account Manager", value: "no" },
-          { name: "Managed Campaigns", value: "no" },
-        ],
-      },
-    ],
-  },
-  {
       name: "Growth Plan",
       features: [
         {
           name: "Creator Database",
           features: [
-            { name: "Creator Profile", value: "Unlimited" },
             { name: "Add to Campaign", value: "yes" },
             { name: "Profile Access", value: "yes" },
             { name: "Save Creators", value: "10" },
-            { name: "Search Filters", value: "Advanced" },
-            { name: "Creator Spend", value: "8% Transaction Fee" },
           ],
         },
         {
           name: "Campaign Tools",
           features: [
-            { name: "Campaign Draft", value: "yes" },
             { name: "Campaign Creation", value: "yes" },
-            { name: "Campaign Creator Matches", value: "no" },
+            { name: "Messaging", value: "yes" },
             { name: "Creator Outreach", value: "yes" },
             { name: "Content Management", value: "yes" },
             { name: "Campaign Metrics Report", value: "Limited" },
+            { name: "Creator Spend", value: "8% Transaction Fee" },
           ],
         },
         {
           name: "Additional Services",
           features: [
-            { name: "Customer Support", value: "Priority (24h response)" },
-            { name: "Campaign Check-ins", value: "Bi-Weekly" },
-            { name: "Dedicated Account Manager", value: "no" },
+            { name: "Customer Support", value: "Standard" },
+            { name: "Campaign Check-ins", value: "no" },
+            { name: "Dedicated Campaign Strategist", value: "no" },
             { name: "Managed Campaigns", value: "no" },
           ],
         },
@@ -136,31 +84,28 @@ export const plansTable = [
         {
           name: "Creator Database",
           features: [
-            { name: "Creator Profile", value: "Unlimited" },
             { name: "Add to Campaign", value: "yes" },
             { name: "Profile Access", value: "yes" },
             { name: "Save Creators", value: "25" },
-            { name: "Search Filters", value: "Advanced" },
-            { name: "Creator Spend", value: "5% Transaction Fee" },
           ],
         },
         {
           name: "Campaign Tools",
           features: [
-            { name: "Campaign Draft", value: "yes" },
             { name: "Campaign Creation", value: "yes" },
-            { name: "Campaign Creator Matches", value: "3 rounds" },
+            { name: "Messaging", value: "yes" },
             { name: "Creator Outreach", value: "yes" },
             { name: "Content Management", value: "yes" },
             { name: "Campaign Metrics Report", value: "Advanced" },
+            { name: "Creator Spend", value: "5% Transaction Fee" },
           ],
         },
         {
           name: "Additional Services",
           features: [
-            { name: "Customer Support", value: "Dedicated Slack Channel" },
-            { name: "Campaign Check-ins", value: "Weekly" },
-            { name: "Dedicated Account Manager", value: "yes" },
+            { name: "Customer Support", value: "Priority - 24 hours" },
+            { name: "Campaign Check-ins", value: "Bi-Weekly" },
+            { name: "Dedicated Campaign Strategist", value: "yes" },
             { name: "Managed Campaigns", value: "no" },
           ],
       },
@@ -172,31 +117,28 @@ export const plansTable = [
         {
           name: "Creator Database",
           features: [
-            { name: "Creator Profile", value: "Unlimited" },
             { name: "Add to Campaign", value: "yes" },
             { name: "Profile Access", value: "yes" },
             { name: "Save Creators", value: "Unlimited" },
-            { name: "Search Filters", value: "Advanced" },
-            { name: "Creator Spend", value: "No Transaction Fee" },
           ],
         },
         {
           name: "Campaign Tools",
           features: [
-            { name: "Campaign Draft", value: "yes" },
             { name: "Campaign Creation", value: "yes" },
-            { name: "Campaign Creator Matches", value: "Unlimited" },
+            { name: "Messaging", value: "yes" },
             { name: "Creator Outreach", value: "yes" },
             { name: "Content Management", value: "yes" },
             { name: "Campaign Metrics Report", value: "Advanced" },
+            { name: "Creator Spend", value: "No Transaction Fee" },
           ],
         },
         {
           name: "Additional Services",
           features: [
             { name: "Customer Support", value: "Dedicated Slack Channel" },
-            { name: "Campaign Check-ins", value: "Weekly" },
-            { name: "Dedicated Account Manager", value: "yes" },
+            { name: "Campaign Check-ins", value: "As Needed" },
+            { name: "Dedicated Campaign Strategist", value: "yes" },
             { name: "Managed Campaigns", value: "yes" },
           ],
       },

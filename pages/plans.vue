@@ -113,7 +113,7 @@ import check from "~/assets/icons/green-check.svg";
 import cross from "~/assets/icons/red-cross.svg";
 
 
-const planOptions = ['Starter Plan', 'Growth Plan', 'Scale Plan', 'Enterprise']
+const planOptions = ['Growth Plan', 'Scale Plan', 'Enterprise']
 
 const getFeatureValue = (planName, feature) => {
     const plan = plansTable.find(({name}) => name === planName)
