@@ -9,7 +9,6 @@ export const plans = [
       description:"Our self-service plan perfect for small or medium-sized organizations running smaller campaigns",
       image: growth,
       features: [
-        { name: "Everything in Starter Plan", value: true },
         { name: "Campaign Tools", value: true },
         { name: "Creator Outreach", value: true },
         { name: "Metrics Report", value: true },
