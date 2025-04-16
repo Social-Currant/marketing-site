@@ -25,7 +25,7 @@
           value="coaching-program"
         >
         <div class="grid grid-cols-1 mb-8">
-          <label>Brand Name</label>
+          <label>Organization Name</label>
           <input
             name="BrandName"
             type="text"
@@ -35,7 +35,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <label>Brand Representative First Name</label>
+            <label>First Name</label>
             <input
               name="FirstName"
               type="text"
@@ -44,7 +44,7 @@
             >
           </div>
           <div>
-            <label> Brand Representative Last Name</label>
+            <label> Last Name</label>
             <input
               name="LastName"
               type="text"

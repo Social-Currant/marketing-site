@@ -1,7 +1,7 @@
 <template>
   <div class="cta-container flex items-center mt-[32px] flex-col py-8 md:py-16 lg:py-24">
     <div class="cta-title">
-      For priority consideration apply by September 15
+      For priority consideration apply by April 30th
     </div>
     <a
       href="#"
