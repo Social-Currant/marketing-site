@@ -1,5 +1,5 @@
 <template>
-  <section class=" w-full px-6 md:px-8 mt-[83px] background py-8">
+  <section class=" w-full px-6 md:px-8 mt-[83px] background py-16">
     <div class="container flex flex-wrap flex-col xl:flex-nowrap items-center justify-center m-auto">
       <h2 class="font-semibold text-3xl lg:text-5xl leading-tight mb-6 uppercase text-[#30104C]">
         {{ pageData.fields.header }}
