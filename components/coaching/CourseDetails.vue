@@ -20,7 +20,7 @@
             <h3 class="text-lg font-medium text-gray-700 mb-2">Price</h3>
             <p class="text-gray-600">
               <span class="text-xl font-bold text-indigo-600 block mb-1">$1,900</span>
-              Includes the full program + 2 free months on our platform with special pricing.
+              Includes the full program + 3 free months on our newly launched platform providing access to the Social Currant Creator network
             </p>
           </div>
         </div>
