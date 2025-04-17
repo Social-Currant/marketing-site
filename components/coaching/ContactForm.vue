@@ -1,7 +1,7 @@
 <template>
   <div id="contact-us">
     <section
-      class="container mx-auto px-6 md:px-8 mt-[57px]"
+      class="container mx-auto px-6 md:px-8 py-8 mt-[83px]"
       :class="headerOverlay ? `blur-sm` : ``"
     >
       <h3 class="mb-4 text-center font-poppins text-xl font-semibold leading-8 text-[#30104C]">

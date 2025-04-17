@@ -27,7 +27,7 @@ description: {
 
 <style scoped>
 .square-card {
-  width: 400px;
+  width: 100%;
   height: 400px;
   flex-shrink: 0;
   border-radius: 0px 50px;

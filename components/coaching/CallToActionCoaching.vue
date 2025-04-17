@@ -1,5 +1,5 @@
 <template>
-  <div class="cta-container flex items-center mt-[32px] flex-col py-8 md:py-16 lg:py-24">
+  <div class="cta-container flex items-center mt-[83px] flex-col px-6 md:px-8 py-8">
     <div class="cta-title">
       For priority consideration apply by April 30th
     </div>

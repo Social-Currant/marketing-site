@@ -1,12 +1,12 @@
 <template>
-  <section class="container mx-auto px-6 md:px-8 mt-[83px]">
+  <section class="container mx-auto px-6 md:px-8 py-8 mt-[83px]">
     <div class="flex flex-wrap xl:flex-nowrap justify-center gap-y-6 gap-x-12">
       <img
         class="sc-image"
         :src="pageData.fields.image.fields.file.url"
       >
       <div class="flex-col">
-        <h3 class="mb-3 font-semibold text-xl lg:text-3xl leading-tight">
+        <h3 class="mb-3 font-semibold text-xl lg:text-3xl leading-tight text-[#30104C]">
           {{ pageData.fields.title }}
         </h3>
         <div
@@ -38,7 +38,7 @@ width: 536px;
 height: 301px;
 }
 .SC-text{
-color: #30104C;
+color:#343538;
 font-family: Inter;
 font-size: 16px;
 font-style: normal;

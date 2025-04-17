@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto px-6 md:px-8 mt-[83px] text-[#30104C]">
+  <section class="container mx-auto px-6 md:px-8 py-8 mt-[83px] text-[#30104C]">
     <div class="flex flex-wrap flex-col xl:flex-nowrap items-center justify-center">
       <div class="font-semibold text-3xl lg:text-5xl leading-tight text-center mb-6 uppercase">
         {{ pageData.fields.header }}

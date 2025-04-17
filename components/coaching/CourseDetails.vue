@@ -1,7 +1,7 @@
 <template>
-    <section class="bg-gray-100 py-12 px-6 md:px-12">
+    <section class="container mx-auto px-6 md:px-8 mt-[83px] py-8">
       <div class="max-w-5xl mx-auto text-center">
-        <h2 class="font-semibold text-3xl lg:text-5xl leading-tight mb-6 uppercase">
+        <h2 class="font-semibold text-3xl lg:text-5xl leading-tight mb-6 uppercase text-[#30104C]">
           Course Details
         </h2>
         <div class="grid md:grid-cols-3 gap-6 text-left">
