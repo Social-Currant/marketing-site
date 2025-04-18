@@ -11,7 +11,6 @@
       <HowCanHelp />
       <CallToActionCoaching />
       <WeekItinerary />
-      <!-- <AboutSCFooter /> -->
       <CourseDetails />
       <ContactForm />
       <Footer />

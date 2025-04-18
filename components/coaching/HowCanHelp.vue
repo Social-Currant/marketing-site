@@ -18,9 +18,6 @@
             <div class="mt-2 text-center font-semibold text-xl leading-tight">
               {{ expect.title }}
             </div>
-            <!-- <div class="text-center font-['Inter']  leading-[29.405px] mt-2 text-[#475467]">
-              {{ expect.description }}
-            </div> -->
           </div>
         </div>
       </div>
@@ -42,17 +39,14 @@ const expectations= [
         {
           image: pageData.fields.icons[0].fields.file.url,
           title:pageData.fields.titles[0],
-          // description: pageData.fields.text[0],
         },
         {
           image: pageData.fields.icons[1].fields.file.url,
           title:pageData.fields.titles[1],
-          // description: pageData.fields.text[1],
         },
         {
           image: pageData.fields.icons[2].fields.file.url,
           title:pageData.fields.titles[2],
-          // description: pageData.fields.text[2],
         },
       ]
 </script>
