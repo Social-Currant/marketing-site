@@ -1,7 +1,7 @@
 <template>
   <div id="contact-us">
     <section
-      class="container mx-auto px-6 md:px-8 mt-[57px]"
+      class="container mx-auto px-6 md:px-8 py-8 mt-[83px]"
       :class="headerOverlay ? `blur-sm` : ``"
     >
       <h3 class="mb-4 text-center font-poppins text-xl font-semibold leading-8 text-[#30104C]">
@@ -25,7 +25,7 @@
           value="coaching-program"
         >
         <div class="grid grid-cols-1 mb-8">
-          <label>Brand Name</label>
+          <label>Organization Name</label>
           <input
             name="BrandName"
             type="text"
@@ -35,7 +35,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <label>Brand Representative First Name</label>
+            <label>First Name</label>
             <input
               name="FirstName"
               type="text"
@@ -44,7 +44,7 @@
             >
           </div>
           <div>
-            <label> Brand Representative Last Name</label>
+            <label> Last Name</label>
             <input
               name="LastName"
               type="text"
@@ -156,7 +156,7 @@ function handleSubmit(e) {
   })
     .then(() => {
       navigateTo({
-        path: '/success/',
+        path: '/demo-success/',
       });
     })
     .catch(() => (errorMessage.value = true));

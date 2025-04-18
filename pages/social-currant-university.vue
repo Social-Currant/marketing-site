@@ -9,9 +9,9 @@
       <AboutSC />
       <WhatToExpect />
       <HowCanHelp />
-      <WeekItinerary />
       <CallToActionCoaching />
-      <AboutSCFooter />
+      <WeekItinerary />
+      <CourseDetails />
       <ContactForm />
       <Footer />
     </div>

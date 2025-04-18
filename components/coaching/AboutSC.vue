@@ -1,14 +1,19 @@
 <template>
-  <section class="container mx-auto px-6 md:px-8 mt-[83px]">
-    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-6 gap-x-12">
+  <section class="container mx-auto px-6 md:px-8 py-8 mt-[83px]">
+    <div class="flex flex-wrap xl:flex-nowrap justify-center gap-y-6 gap-x-12">
       <img
         class="sc-image"
         :src="pageData.fields.image.fields.file.url"
       >
-      <div
+      <div class="flex-col">
+        <h3 class="mb-3 font-semibold text-xl lg:text-3xl leading-tight text-[#30104C]">
+          {{ pageData.fields.title }}
+        </h3>
+        <div
         class="SC-text"
         v-html="renderedParagraph"
-      />
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -33,11 +38,10 @@ width: 536px;
 height: 301px;
 }
 .SC-text{
-color: #30104C;
+color:#343538;
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
 line-height: normal; 
-max-width: 494px;
 }
 </style>

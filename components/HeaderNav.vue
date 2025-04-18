@@ -7,11 +7,11 @@
     <div class="container mx-auto px-4 h-full flex items-center">
       <div class="grow text-center">
         <p class="font-semibold text-white text-base sm:text-xl">
-          <a
-            href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WQW4wi&g=YpNHVb"
+          <NuxtLink
+            to="/social-currant-university"
             class="underline text-secondary cursor-pointer"
-          >Sign up</a>
-          for our newsletter for updates + previews of new platform features!
+          >Sign up</NuxtLink>
+          for our NEW and EXCLUSIVE Creator Accelerator Program to build relationships with Creators
         </p>
       </div>
       <!-- <div class="flex-none hidden lg:block">

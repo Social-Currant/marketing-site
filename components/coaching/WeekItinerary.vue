@@ -2,13 +2,13 @@
   <section class="container mx-auto px-6 md:px-8 mt-[83px] py-8 text-[#30104C]">
     <div class="flex flex-wrap flex-col xl:flex-nowrap items-center justify-center">
       <div class="font-semibold text-3xl lg:text-5xl leading-tight text-center mb-6 uppercase">
-        From Vision to Impact: A 6-Week Creator Program Success
+        From Vision to Impact: An 8 Session Program for Creator Success
       </div>
       <div class="text-center font-semibold text-xl leading-tight mb-11 lg:mb-24">
         Crafting, Launching, and Sustaining Effective Collaborative Campaigns
       </div>
       <div class="flex">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <WeekCard
             v-for="week in itinerary"
             :key="week.title"
@@ -24,28 +24,36 @@
 <script setup>
 const itinerary= [
         {
-          title: "Week 1",
-          description: "Questions that your organization should answer before launching a creator program",
+          title: "Session 1",
+          description: "The Far Right’s Digital Playbook and Creator Ecosystem",
         },
         {
-          title: "Week 2",
-          description: "Defining your messaging and call-to-actions",
+          title: "Session 2",
+          description: "The Boom & Bust Problem – Why We Can’t Win with One-Off Content",
         },
         {
-          title: "Week 3",
-          description: "Setting your creator program up for metrics, success, and overall impact",
+          title: "Session 3",
+          description: "The Budget Myth – How to Fund a Winning Digital Strategy",
         },
         {
-          title: "Week 4",
-          description: " Identifying creators that align with your mission and vision",
+          title: "Session 4",
+          description: "Messaging, Narrative & How to Write a Great Creative Brief",
         },
         {
-          title: "Week 5",
-          description: "Integrating creators into your ongoing communications plan",
+          title: "Session 5",
+          description: "Finding & Partnering with Creators – The Messenger Matters",
         },
         {
-          title: "Week 6",
-          description: "Tactics to ensure continued engagement with creators ",
+          title: "Session 6",
+          description: "Contracts, Timelines & Reviewing Creator Content",
+        },
+        {
+          title: "Session 7",
+          description: "How to Measure Success in Creator Campaigns",
+        },
+        {
+          title: "Session 8",
+          description: "Final Presentations – Scaling for the Future",
         },
        
       ]

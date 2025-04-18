@@ -10,11 +10,11 @@
         Your form was sent!
       </h1>
       <p class="text-message-info mt-6">
-        Thanks for reaching out! Our sales team will get back to you within the next 24 hours. In the meantime, check out our 2023 Impact Report to learn how we've helped organizations like yours maximize the Creator Economy to reach audiences.
+        Thanks for reaching out! Our sales team will get back to you within the next 24 hours. In the meantime, check out our 2024 Impact Report to learn how we've helped organizations like yours maximize the Creator Economy to reach audiences.
       </p>
       <div class="mt-6 flex justify-center mb-24 md:mb-0">
         <a
-          href="http://crnt.link/impactreportwebsite"
+          href="https://docsend.com/view/ugp32yybxnettw2n?utm=platform_bhlid=5b1d18dafe0aeefe3da1255486cc538b9b6b74f0"
           target="_blank"
         >
           <button

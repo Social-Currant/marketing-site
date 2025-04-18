@@ -1,12 +1,12 @@
 <template>
-  <section class=" w-full px-6 md:px-8 mt-[83px] background py-8 text-[#30104C]">
+  <section class=" w-full px-6 md:px-8 mt-[83px] background py-16">
     <div class="container flex flex-wrap flex-col xl:flex-nowrap items-center justify-center m-auto">
-      <div class="font-semibold text-3xl lg:text-5xl leading-tight mb-6 uppercase">
+      <h2 class="font-semibold text-3xl lg:text-5xl leading-tight mb-6 uppercase text-[#30104C]">
         {{ pageData.fields.header }}
-      </div>
-      <div class="text-center font-semibold text-2xl leading-tight mb-11 lg:mb-24">
+      </h2>
+      <h3 class="text-center font-semibold text-2xl leading-tight mb-11 lg:mb-24 text-[#30104C]">
         {{ pageData.fields.subheader }}
-      </div>
+      </h3>
       <div class="flex">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div
