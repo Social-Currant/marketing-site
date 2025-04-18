@@ -156,7 +156,7 @@ function handleSubmit(e) {
   })
     .then(() => {
       navigateTo({
-        path: '/success/',
+        path: '/demo-success/',
       });
     })
     .catch(() => (errorMessage.value = true));
