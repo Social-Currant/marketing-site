@@ -24,18 +24,18 @@
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
           <button
-            class="bg-secondary text-white py-1.5 px-3 rounded-lg text-xl hover-button-blue"
-            @click="navigateTo('/book-a-demo/')"
+          class="text-base px-3 py-2 rounded-lg bg-secondary text-white hover-button-blue sm:text-xl sm:py-1.5 sm:px-3"
+          @click="navigateTo('/book-a-demo/')"
+        >
+          {{ pageData.fields.buttonText1 }}
+        </button>
+        <NuxtLink to='/social-currant-university'>
+          <div
+            class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
           >
-            {{ pageData.fields.buttonText1 }}
-          </button>
-          <a @click="navigateTo('/get-in-touch')">
-            <div
-              class="mx-2 border-2 border-primary text-primary py-1.5 px-3 rounded-lg text-xl hover:bg-primary hover:text-white cursor-pointer"
-            >
-              {{ pageData.fields.buttonText2 }}
-            </div>
-          </a>
+            {{ pageData.fields.buttonText2 }}
+          </div>
+        </NuxtLink>
         </div>
       </div>
     </div>
@@ -68,5 +68,11 @@ const pageData = await $contentfulClient.getEntry('2EceAK9q8HxBhzkzaQTKap').then
 }
 .hover-primary:hover {
   background: #4f3467;
+}
+
+@media (max-width: 600px) {
+  .mobile-button {
+    padding: 8px;
+  }
 }
 </style>
