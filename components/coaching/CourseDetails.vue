@@ -8,7 +8,7 @@
           <!-- Dates -->
           <div class="bg-white rounded-lg shadow-md p-6">
             <h3 class="text-lg font-medium text-gray-700 mb-2">Dates</h3>
-            <p class="text-gray-600">Fridays (3pm – 4:30pm EST)<br>May 2 – June 20, 2025</p>
+            <p class="text-gray-600">Fridays (3pm – 4:30pm EST)<br>June 6th – August 1st, 2025</p>
           </div>
           <!-- Format -->
           <div class="bg-white rounded-lg shadow-md p-6">
