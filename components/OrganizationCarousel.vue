@@ -1,7 +1,9 @@
 <template>
   <hr class="hidden lg:block mt-[96px]">
   <section class="container mt-[96px] lg:mt-0 mx-auto px-6 md:px-8">
-    <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
+    <div class="flex-col xl:flex-nowrap items-center justify-center">
+      <h3 class="font-poppins text-center font-bold text-4xl leading-tight text-[#30104C]">Recognized By</h3>
+      <div class="flex flex-wrap xl:flex-nowrap items-center justify-center">
       <div
         v-for="(image, index) in heroCarouselImages.images"
         :key="`carouselimage-` + index"
@@ -11,6 +13,7 @@
           :src="image"
           class="w-200 mx-4"
         >
+      </div>
       </div>
     </div>
   </section>

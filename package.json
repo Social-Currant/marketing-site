@@ -23,6 +23,8 @@
     "@contentful/live-preview": "^2.8.0",
     "@contentful/rich-text-html-renderer": "^16.1.0",
     "@contentful/rich-text-types": "^16.2.0",
+    "@heroicons/vue": "^2.2.0",
+    "@vueuse/motion": "^3.0.3",
     "contentful": "^10.3.6",
     "klaviyo-api": "^4.0.1"
   }

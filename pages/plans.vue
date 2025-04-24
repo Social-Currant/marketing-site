@@ -20,6 +20,53 @@
         />
       </div>
     </div>
+    <div class="grid gap-8 md:grid-cols-3">
+          <div
+            v-for="subscription in subscriptions"
+            :key="subscription.id"
+            class="bg-secondary/10 rounded-2xl shadow-lg p-8 flex flex-col"
+          >
+            <!-- subscription Header -->
+            <h2 class="text-2xl font-semibold text-primary mb-1">{{ subscription.name }}</h2>
+            <div class="text-3xl font-bold text-primary mb-4">{{ subscription.subscriptionPrice }}</div>
+
+            <!-- Features -->
+            <ul class="flex-1 space-y-2 mb-6">
+              <li
+                v-for="feature in subscription.features"
+                :key="feature"
+                class="flex items-center text-gray-700"
+              >
+                <CheckIcon class="w-5 h-5 text-secondary mr-2" />
+                <span>{{ feature }}</span>
+              </li>
+            </ul>
+
+            <!-- Spend Packages -->
+            <div class="space-y-4">
+              <div
+                v-for="spend in subscription.spendOptions"
+                :key="spend"
+                class="border-2 border-primary rounded-lg p-4 hover:bg-primary hover:text-white transition"
+              >
+                <div class="font-medium">
+                  <span v-if="spend === 'Custom'">Custom</span>
+                  <span v-else>${{ spend }}</span>
+                  Creator Spend
+                </div>
+                <p class="text-sm opacity-75 mt-1">
+                  All‑in‑one with {{ subscription.name }}
+                </p>
+                <NuxtLink
+                  to="/book-a-demo"
+                  class="mt-3 inline-block font-semibold text-primary group-hover:text-white"
+                >
+                  Select
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+        </div>
     <div class="flex flex-wrap items-center gap-4 mt-12 bg-[#F5F6F6] py-2 justify-center">
       <img :src="calendar">
       <div class="font-poppins ml-6 lg:ml-0 text-center lg:text-left text-black font-semibold leading-[147.023%] ">
@@ -129,7 +176,41 @@ const getFeatureValue = (planName, feature) => {
             return value
     }
 };
-
+const subscriptions = ref([
+  {
+    id: 'growth',
+    name: 'Growth Plan',
+    subscriptionPrice: '$1,000/mo',
+    features: [
+      'Creator Network Access',
+      'Basic Content Management',
+      'Standard Analytics'
+    ],
+    spendOptions: [2000, 5000, 10000, 'Custom']
+  },
+  {
+    id: 'scale',
+    name: 'Scale Plan',
+    subscriptionPrice: '$2,000/mo',
+    features: [
+      'Everything in Growth',
+      'Advanced Messaging Tools',
+      'Custom Reporting'
+    ],
+    spendOptions: [2000, 5000, 10000, 'Custom']
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise Plan',
+    subscriptionPrice: 'Custom Pricing',
+    features: [
+      'Dedicated Strategist',
+      'White‑Glove Support',
+      'Fully Custom Workflows'
+    ],
+    spendOptions: [2000, 5000, 10000, 'Custom']
+  }
+])
 
 </script>
 <style lang="scss" scoped>
