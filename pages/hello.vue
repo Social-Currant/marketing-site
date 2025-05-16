@@ -367,7 +367,7 @@
 
     <!-- Description -->
     <p class="text-gray-700 text-lg text-center lg:text-left max-w-2xl">
-      Our roster of Creators are vetted and Social Currant approved so you can focus on nurturing creator partnerships over time to amplify your narrative and drive sustainable impact.
+      Our roster of Creators are vetted and approved so you can focus on nurturing creator partnerships over time to amplify your narrative and drive sustainable impact.
     </p>
 
     <!-- Image Grid -->
