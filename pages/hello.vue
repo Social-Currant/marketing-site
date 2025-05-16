@@ -418,7 +418,7 @@
         From Strategy to Results, We’ve Got You Covered
       </h2>
       <NuxtLink
-        to="/contact"
+        to="/"
         class="mt-6 lg:mt-0 inline-flex items-center border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-2 px-4 rounded-lg transition"
       >
         Schedule a Demo
@@ -607,7 +607,7 @@
       <!-- View all button -->
       <div class="text-center mt-8">
         <NuxtLink
-          to="/frequently-asked-questions"
+          to="/"
           class="inline-block border-2 border-primary text-primary font-semibold py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition"
         >
           View All FAQs
