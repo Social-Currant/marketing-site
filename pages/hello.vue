@@ -45,18 +45,95 @@
       class="background-gradient"
       src="~/assets/images/backgroundgradientcircle.svg"
     >
-    <section class="py-16 bg-white" id="about">
-  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:gap-x-16 items-center">
+      <!-- Center TExt -->
+      <section id="narrative-bridge" class="py-20 bg-white">
+    <div class="container mx-auto px-6 space-y-12">
+      <!-- Enhanced Headline -->
+      <h2
+        class="text-[48px] font-bold text-center leading-tight filter drop-shadow-md"
+      >
+        We help
+        <span class="text-secondary">nonprofits</span>
+        and
+        <span class="text-secondary">impact-driven organizations</span>
+        build relationships with
+        <span
+          class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+        >
+          passionate
+          <span class="text-secondary">content creators</span>
+        </span>
+        to create
+        <span
+          class="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
+        >
+          <span class="text-secondary">narrative change</span>
+        </span>
+        around
+        <span class="underline text-secondary decoration-primary decoration-2">
+          causes they care about
+        </span>
+      </h2>
+    </div>
+  </section>
+    <!-- Creative 8-tile Collage -->
+    <!-- <section
+    id="impact-collage"
+    class="relative w-full py-16 mt-[80px]"
+  > -->
+    <!-- decorative blobs -->
+    <!-- <div
+      class="absolute -top-20 -right-20 w-[500px] h-[500px]
+      bg-gradient-to-tr from-[#2565F4] to-[#30104C] rounded-full"
+    ></div>
+    <div
+      class="absolute -bottom-16 -left-16 w-[600px] h-[600px]
+             bg-gradient-to-tr bg-[#2565F4]
+             rounded-full"
+    ></div>
+
+    <div class="relative container mx-auto px-6">
+      <div
+        class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8
+               auto-rows-[100px] sm:auto-rows-[150px] md:auto-rows-[200px]
+               gap-2"
+      >
+        <div
+          v-for="(img, i) in impactHighlightImages"
+          :key="i"
+          v-motion
+          :initial="{ opacity: 1, y: 20 }"
+          :enter="{ opacity: 1, y: 0, transition: { delay: i * 0.1 } }"
+          :class="img.span"
+        >
+          <div class="relative w-full h-full overflow-hidden rounded-xl">
+            <img
+              :src="img.src"
+              alt=""
+              class="w-full h-full object-cover rounded-xl shadow-lg
+                     transition-transform duration-300 ease-out
+                     hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
+            /> -->
+            <!-- subtle color overlay -->
+            <!-- <div class="absolute inset-0 bg-primary/15 mix-blend-color-burn rounded-xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+        <!-- About -->
+        <!-- <section class="py-16 bg-white" id="about">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:gap-x-16 items-center"> -->
     <!-- Image -->
-    <div class="flex justify-center md:justify-end">
+    <!-- <div class="flex justify-center md:justify-end">
       <img
         src="~/assets/images/currantheroimage.png"
         alt="About Social Currant"
         class="w-full max-w-md rounded-lg shadow-lg"
       />
-    </div>
+    </div> -->
     <!-- Text -->
-    <div class="space-y-6">
+    <!-- <div class="space-y-6">
       <h2 class="text-3xl md:text-4xl font-bold text-primary">Building Lasting Partnerships for Social Impact</h2>
       <p class="text-gray-700 text-lg">
         Social Currant bridges nonprofits and impact-driven startups with passionate content creators. Our intuitive platform guides you through campaign setup, creator matchmaking, and content management—so you can focus on what matters: making a real-world difference and partnering with content creators to get there.
@@ -69,16 +146,40 @@
       </NuxtLink>
     </div>
   </div>
-  <!-- The Problem -->
-  <section id="the-problem" class="py-24 mt-[80px] bg-white bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
-    <div class="container mx-auto px-6 flex flex-col items-center space-y-12">
+</section> -->
+<!-- <section
+    id="media-insights"
+    class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10"
+  >
+    <div class="container mx-auto px-6 space-y-12"> -->
       <!-- Headline -->
-      <h2 class="text-3xl md:text-4xl font-bold text-primary text-center">
+      <!-- <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary text-center">
+        The old media model is breaking—creators are where audiences live now
+      </h2> -->
+
+      <!-- Unified grid of insights -->
+      <!-- <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <InsightCard
+          v-for="(item,i) in insights"
+          :key="i"
+          :item="item"
+          :delay="i * 100"
+        />
+      </div>
+    </div>
+  </section> -->
+  <!-- The Problem -->
+  <!-- <section id="the-problem" class="py-24 mt-[80px] bg-white bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
+    <div class="container mx-auto px-6 flex flex-col items-center space-y-12"> -->
+      <!-- Headline -->
+      <!-- <h2 class="text-3xl md:text-4xl font-bold text-primary text-center">
         Traditional media is fragmenting—viewership and trust in TV &amp; news outlets have plunged.
-      </h2>
+      </h2> -->
 
       <!-- Icons Row -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-12">
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-3 gap-12">
         <div
           v-motion-fade-in-up.visible-once
           class="flex flex-col items-center text-center space-y-3"
@@ -115,23 +216,20 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Why Creators -->
-  <section id="why-creators" class="py-20 bg-white">
+  <section id="why-creators" class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
       <!-- Column 1: Heading + Intro -->
       <div class="space-y-6">
         <h2 class="text-4xl md:text-4xl font-bold text-primary">
-          Reaching Younger Audiences Where They're At
+          The old media model is breaking—creators are where audiences live now
         </h2>
         <p class="text-lg text-gray-700 max-w-lg">
           While traditional outlets lose grip, creators on TikTok, Instagram &amp; YouTube capture attention—and drive engagement that legacy media simply can’t match.
         </p>
-      </div>
-
-      <!-- Column 2: Stat Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="(s,i) in stats"
           :key="s.label"
@@ -143,10 +241,41 @@
           <div class="text-gray-700">{{ s.label }}</div>
         </div>
       </div>
+      </div>
+
+      <!-- Column 2: Stat Cards -->
+<div class="relative container mx-auto px-6 overflow-hidden">
+  <div
+    class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8
+           auto-rows-[100px] sm:auto-rows-[150px] md:auto-rows-[200px]
+           gap-2"
+  >
+    <div
+      v-for="(img, i) in impactHighlightImages"
+      :key="i"
+      v-motion
+      :initial="{ opacity: 0, y: 20 }"
+      :enter="{ opacity: 1, y: 0, transition: { delay: i * 0.1 } }"
+      :class="img.span"
+    >
+      <div class="relative w-full h-full overflow-hidden rounded-xl">
+        <img
+          :src="img.src"
+          alt=""
+          class="w-full h-full object-cover rounded-xl shadow-lg
+                 transition-transform duration-300 ease-out
+                 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
+        />
+        <!-- subtle color overlay -->
+        <div class="absolute inset-0 bg-primary/15 mix-blend-color-burn rounded-xl"></div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </section>
         <!-- METRICS -->
-        <section class="bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
+        <section class="py-20">
   <div class="container mx-auto px-6 text-center space-y-8">
     <h2 class="text-4xl font-bold text-primary">Our Reach & Impact</h2>
     <p class="text-gray-600 max-w-2xl mx-auto">
@@ -201,21 +330,21 @@
   </div>
 </section>
 <!-- Get Started CTA -->
-<section
+<!-- <section
   id="get-started"
   class="py-20 bg-gradient-to-tr from-[#4780FF] to-[#A2BBF7]"
 >
   <div
     v-motion-fade-in-up.visible-once
     class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0"
-  >
+  > -->
     <!-- Headline -->
-    <h2 class="text-3xl lg:text-4xl font-bold text-white text-center lg:text-left">
+    <!-- <h2 class="text-3xl lg:text-4xl font-bold text-white text-center lg:text-left">
       Ready to turn your mission into a movement?
-    </h2>
+    </h2> -->
 
     <!-- Actions -->
-    <div class="flex flex-col sm:flex-row gap-4">
+    <!-- <div class="flex flex-col sm:flex-row gap-4">
       <NuxtLink
         to="/book-a-demo"
         class="border-2 border-primary text-primary font-semibold py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition"
@@ -224,20 +353,41 @@
       </NuxtLink>
     </div>
   </div>
-</section>
+</section> -->
   <!-- Relationships -->
   <section id="relationships" class="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <!-- Left Column: Title & Intro -->
-        <div class="space-y-4 lg:pr-8">
-          <h2 class="text-3xl lg:text-4xl font-bold text-primary text-left">
-            We Help You Build Relationships and Execute Creator Work That Drives Results
-          </h2>
-          <p class="text-gray-700 text-lg">
-            Meeting audiences where they are and nurturing creator partnerships over time amplifies your narrative and drives sustainable impact.
-          </p>
-        </div>
+        <div class="container mx-auto px-6 space-y-8">
+    <!-- Title -->
+    <h2 class="text-3xl lg:text-4xl font-bold text-primary text-center lg:text-left">
+      A Roster of Creators Aligned With Your Values to Build Relationships and Execute Work That Drives Results
+    </h2>
+
+    <!-- Description -->
+    <p class="text-gray-700 text-lg text-center lg:text-left max-w-2xl">
+      Our roster of Creators are vetted and Social Currant approved so you can focus on nurturing creator partnerships over time to amplify your narrative and drive sustainable impact.
+    </p>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div
+        v-for="(img, i) in ourCreators"
+        :key="i"
+        v-motion-fade-in-up.visible-once
+        :style="{ transitionDelay: `${i * 100}ms` }"
+        class="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+      >
+        <img
+          :src="img.src"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-primary/15 mix-blend-color-burn rounded-xl"></div>
+      </div>
+    </div>
+  </div>
 
         <!-- Right Column: Tactics Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -254,6 +404,7 @@
             <div>
               <h3 class="text-xl font-semibold text-primary">{{ item.title }}</h3>
               <p class="text-gray-700 mt-1">{{ item.description }}</p>
+              <p class="text-gray-700 mt-1 font-semibold">Best for: {{ item.bestFor }}</p>
             </div>
           </div>
         </div>
@@ -363,8 +514,7 @@
       </p>
     </div>
   </section>
-</section>
-<WaysToApply />
+<!-- <WaysToApply /> -->
 <!-- Narrative Change Timeline -->
 <!-- <section id="narrative-change" class="py-20 bg-secondary-50">
   <div class="container mx-auto px-6 text-center mb-12">
@@ -401,7 +551,7 @@
   </div>
 </section> -->
 <!-- Testimonials -->
-<section id="testimonials" class="py-20 bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
+<section id="testimonials" class="py-20 py-20">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-24 text-primary">What Organizations Are Saying</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -474,9 +624,23 @@
 import { ref } from 'vue'
 import MetricCard from '@/components/MetricCard.vue'
 import { useMotion } from '@vueuse/motion'
-import { ArrowRightIcon, PresentationChartBarIcon, HomeIcon, BuildingOffice2Icon, GiftIcon, EyeIcon, UserGroupIcon, DocumentTextIcon, ChatBubbleLeftRightIcon, PaperAirplaneIcon, CurrencyDollarIcon, DocumentCheckIcon, ChartBarIcon, HeartIcon, ChatBubbleOvalLeftIcon as ChatIcon, ArrowUpOnSquareIcon as ShareIcon } from '@heroicons/vue/24/outline'
+import { ArrowRightIcon, ChatBubbleOvalLeftIcon, PresentationChartBarIcon, HomeIcon, BuildingOffice2Icon, GiftIcon, EyeIcon, UserGroupIcon, DocumentTextIcon, ChatBubbleLeftRightIcon, PaperAirplaneIcon, CurrencyDollarIcon, DocumentCheckIcon, ChartBarIcon, HeartIcon, ChatBubbleOvalLeftIcon as ChatIcon, ArrowUpOnSquareIcon as ShareIcon } from '@heroicons/vue/24/outline'
 
-
+const impactHighlightImages = [
+  // large square
+  // { src: '/assets/images/creators/creatorindc.png',      span: 'col-span-2 row-span-2' },
+  // medium rectangle
+  { src: '/assets/images/creators/andrewgovwalz.png',           span: 'col-span-4 row-span-2' },
+  // tall rectangle
+  { src: '/assets/images/creators/americacreators.jpg', span: 'col-span-4 row-span-2' },
+  // small square
+  // { src: '/assets/images/creators/valuepropimage.jpg',       span: 'col-span-2 row-span-1' },
+  // repeat to fill 8 tiles
+  { src: '/assets/images/creators/valuepropimage.jpg',      span: 'col-span-4 row-span-2' },
+  { src: '/assets/images/creators/haleydwc.png',           span: 'col-span-4 row-span-1' },
+  // { src: '/assets/images/creators/groupcreators.jpg', span: 'col-span-2 row-span-1' },
+  { src: '/assets/images/creators/creatorfilming.jpg',       span: 'col-span-4 row-span-1' },
+]
 
 const tabs = [
   {
@@ -630,7 +794,8 @@ const relationships = [
     bgClass: 'bg-secondary/10',
     title: 'Run Campaigns',
     description:
-      'Launch targeted creator campaigns to introduce your message to new and relevant audiences at scale.'
+      'Launch targeted creator campaigns to introduce your message to new and relevant audiences at scale.',
+    bestFor: "Activation and Education & Awareness"
   },
   {
     id: 'ambassadors',
@@ -638,7 +803,8 @@ const relationships = [
     bgClass: 'bg-secondary/10',
     title: 'Brand Ambassador & Fellowship Programs',
     description:
-      'Cultivate long‑term ambassadors or fellowship cohorts to deepen creator advocacy and brand alignment.'
+      'Cultivate long‑term ambassadors or fellowship cohorts to deepen creator advocacy and brand alignment.',
+    bestFor: "Persuasion & Narrative Change"
   },
   {
     id: 'events',
@@ -646,15 +812,17 @@ const relationships = [
     bgClass: 'bg-secondary/10',
     title: 'Speaking Engagements & Events',
     description:
-      'Host webinars, panels, and in‑person events to train creators and foster collaborative campaign ideation.'
-  },
+      'Host webinars, panels, and in‑person events to train creators and foster collaborative campaign ideation.',
+    bestFor: "Education & Awareness"
+    },
   {
     id: 'houses',
     icon: HomeIcon,
     bgClass: 'bg-secondary/10',
     title: 'Creator Houses',
     description:
-      'Create immersive co‑living or co‑working spaces where creators can collaborate on high‑impact content.'
+      'Create immersive co‑living or co‑working spaces where creators can collaborate on high‑impact content.',
+    bestFor: "Activation"
   },
   {
     id: 'dinners',
@@ -662,7 +830,8 @@ const relationships = [
     bgClass: 'bg-secondary/10',
     title: 'Hosting Creator Dinners',
     description:
-      'Organize intimate dinners and networking sessions to build genuine relationships and brainstorm ideas.'
+      'Organize intimate dinners and networking sessions to build genuine relationships and brainstorm ideas.',
+    bestFor: "Relationship Building"
   },
   {
     id: 'brand-events',
@@ -670,7 +839,8 @@ const relationships = [
     bgClass: 'bg-secondary/10',
     title: 'Brand‑Hosted Events',
     description:
-      'Partner with creators on live activations—workshops, meetups, and brand experiences that engage communities.'
+      'Partner with creators on live activations—workshops, meetups, and brand experiences that engage communities.',
+     bestFor: "Education & Awareness"
   }
 ]
 
@@ -689,8 +859,16 @@ const stats = [
   },
   {
     number: '68%',
-    label: 'of TikTok news consumers get news from creators'
-  }
+    label: 'of TikTok consumers get news from creators'
+  },
+  {
+    number: '#1',
+    label: 'YouTube is the #1 channel in the U.S (Per Nielsen)'
+  },
+  {
+    number: '39%',
+    label: 'of people report no trust at all in traditional media '
+  },
 ]
 
 const faqs = ref([
@@ -727,6 +905,47 @@ const metrics = ref([
   { label: 'Comments',           value: '85K'    },
   { label: 'Shares',             value: '42K'    },
 ])
+
+const insights = [
+  // Problem‐style cards
+  {
+    type: 'problem',
+    icon: PresentationChartBarIcon,
+    title: 'Declining TV Reach',
+    text: 'Under-49s tuning into cable or broadcast TV has dropped below 40%.'
+  },
+  {
+    type: 'problem',
+    icon: UserGroupIcon,
+    title: 'Falling Trust',
+    text: 'Over half of Americans report decreasing trust in traditional news media.'
+  },
+  {
+    type: 'problem',
+    icon: ChatBubbleOvalLeftIcon,
+    title: 'Passive News',
+    text: 'Younger generations don’t seek out news—they encounter it while scrolling.'
+  },
+  // Stat‐style cards
+  { type: 'stat', icon: EyeIcon,    number: '86%',  label: '18–29s get news via social' },
+  { type: 'stat', icon: HeartIcon,  number: '37%',  label: '18–29s follow creators for news' },
+  { type: 'stat', icon: ChartBarIcon, number: '21%', label: 'All Americans get news from creators' },
+  { type: 'stat', icon: DocumentTextIcon, number: '68%', label: 'TikTok news consumers use creators equally' },
+]
+
+const ourCreators = [
+  { src: '/assets/images/creators/andrewtownsend.png' },
+  { src: '/assets/images/creators/sylvia.png' },
+  { src: '/assets/images/creators/yeganeh.png' },
+  { src: '/assets/images/creators/kary.png' },
+  { src: '/assets/images/creators/abburns.png' },
+  { src: '/assets/images/creators/barrie.jpg' },
+  // { src: '/assets/images/creators/andrewtownsend.png' },
+  // { src: '/assets/images/creators/andrewtownsend.png' },
+  // { src: '/assets/images/creators/andrewtownsend.png' },
+  // { src: '/assets/images/creators/andrewtownsend.png' },
+]
+
   </script>
   
   <style scoped lang="scss">
