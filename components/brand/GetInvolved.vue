@@ -45,9 +45,10 @@
           </div>
         </div>
         <a 
-        href="https://app.currant.social/creator/signup" 
-        target="_blank" 
-        rel="noopener noreferrer">
+          href="https://app.currant.social/creator/signup" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
           <button
             class="bg-secondary text-white rounded-lg mx-14 mt-8 text-xl px-3 py-1.5"
           >

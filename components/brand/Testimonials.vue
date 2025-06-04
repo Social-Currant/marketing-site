@@ -1,33 +1,42 @@
 <template>
-<section id="testimonials" class="py-20 py-20">
-<div class="container mx-auto px-6">
-  <h2 class="text-3xl font-bold text-center mb-24 text-primary">What Organizations Are Saying</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div
-      v-for="(t,i) in testimonials"
-      :key="i"
-      v-motion-fade-in-step
-      class="relative bg-white rounded-lg border border-purple p-6 pt-16 shadow-lg"
-    >
-      <!-- Avatar -->
-      <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
-        <img
-          :src="t.image"
-          alt="Photo of {{ t.name }}"
-          class="w-24 h-24 rounded-full border-4 border-purple"
-        />
+  <section
+    id="testimonials"
+    class="py-20 py-20"
+  >
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-24 text-primary">
+        What Organizations Are Saying
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          v-for="(t,i) in testimonials"
+          :key="i"
+          v-motion-fade-in-step
+          class="relative bg-white rounded-lg border border-purple p-6 pt-16 shadow-lg"
+        >
+          <!-- Avatar -->
+          <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+            <img
+              :src="t.image"
+              alt="Photo of {{ t.name }}"
+              class="w-24 h-24 rounded-full border-4 border-purple"
+            >
+          </div>
+          <!-- Quote -->
+          <p class="text-gray-700 text-center mb-6 leading-relaxed">
+            "{{ t.quote }}"
+          </p>
+          <!-- Name & Role -->
+          <h4 class="text-center font-semibold text-primary">
+            {{ t.name }}
+          </h4>
+          <p class="text-center text-gray-500">
+            {{ t.role }}
+          </p>
+        </div>
       </div>
-      <!-- Quote -->
-      <p class="text-gray-700 text-center mb-6 leading-relaxed">
-        "{{ t.quote }}"
-      </p>
-      <!-- Name & Role -->
-      <h4 class="text-center font-semibold text-primary">{{ t.name }}</h4>
-      <p class="text-center text-gray-500">{{ t.role }}</p>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 </template>
 
 <script setup>

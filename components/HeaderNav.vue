@@ -10,7 +10,9 @@
           <NuxtLink
             to="/social-currant-university"
             class="underline text-secondary cursor-pointer"
-          >Sign up</NuxtLink>
+          >
+            Sign up
+          </NuxtLink>
           for our NEW and EXCLUSIVE Creator Accelerator Program to build relationships with Creators
         </p>
       </div>
@@ -31,7 +33,7 @@
           @click="navigateTo('/')"
         >
       </h1>
-            <div class="flex nav-links hidden lg:block headerLink font-semibold">
+      <div class="flex nav-links hidden lg:block headerLink font-semibold">
         <a
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"

@@ -24,18 +24,18 @@
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
           <button
-          class="text-base px-3 py-2 rounded-lg bg-secondary text-white hover-button-blue sm:text-xl sm:py-1.5 sm:px-3"
-          @click="navigateTo('/book-a-demo/')"
-        >
-          {{ pageData.fields.buttonText1 }}
-        </button>
-        <NuxtLink to='/social-currant-university'>
-          <div
-            class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
+            class="text-base px-3 py-2 rounded-lg bg-secondary text-white hover-button-blue sm:text-xl sm:py-1.5 sm:px-3"
+            @click="navigateTo('/book-a-demo/')"
           >
-            {{ pageData.fields.buttonText2 }}
-          </div>
-        </NuxtLink>
+            {{ pageData.fields.buttonText1 }}
+          </button>
+          <NuxtLink to="/social-currant-university">
+            <div
+              class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
+            >
+              {{ pageData.fields.buttonText2 }}
+            </div>
+          </NuxtLink>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
-    <!-- HERO SECTION -->
-     <section
+  <!-- HERO SECTION -->
+  <section
     class="container mx-auto px-6 md:px-8 mt-16"
   >
     <div class="grid lg:grid-cols-2 m-auto">
@@ -24,11 +24,12 @@
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
           <a 
-          href="https://app.currant.social/creator/signup" 
-          target="_blank" 
-          rel="noopener noreferrer">
+            href="https://app.currant.social/creator/signup" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <button class="bg-secondary text-white py-2 px-3 rounded-lg text-xl hover-button-blue">
-            {{ pageData.fields.buttonText1 }}
+              {{ pageData.fields.buttonText1 }}
             </button>
           </a>
           <NuxtLink @click="navigateTo('/get-in-touch')">
@@ -41,7 +42,7 @@
         </div>
       </div>
     </div>
-    </section>
+  </section>
 </template>
 
 <script setup>
