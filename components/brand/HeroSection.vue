@@ -29,7 +29,7 @@
         >
           {{ pageData.fields.buttonText1 }}
         </button>
-        <NuxtLink to='/social-currant-university'>
+        <NuxtLink to='/get-in-touch'>
           <div
             class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
           >
