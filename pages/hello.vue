@@ -28,18 +28,14 @@
             <span
               class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
             >
-              passionate
-              <span class="text-secondary">content creators</span>
+              value aligned
+              <span class="text-secondary">creators</span>
             </span>
-            to create
+            to reach
             <span
               class="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
             >
-              <span class="text-secondary">narrative change</span>
-            </span>
-            around
-            <span class="underline text-secondary decoration-primary decoration-2">
-              causes they care about
+              <span class="text-secondary">audiences more effectively</span>
             </span>
           </h2>
           <MissionDriven />
@@ -55,7 +51,7 @@
           <!-- Column 1: Heading + Intro -->
           <div class="space-y-6">
             <h2 class="text-4xl md:text-4xl font-bold text-primary">
-              The old media model is breaking—creators are where audiences live now
+              The old media model is broken-creators are where audiences live now
             </h2>
             <p class="text-lg text-gray-700 max-w-lg">
               While traditional outlets lose grip, creators on TikTok, Instagram &amp; YouTube capture attention—and drive engagement that legacy media simply can't match.
@@ -154,12 +150,12 @@
             <div class="container mx-auto px-6 space-y-8">
               <!-- Title -->
               <h2 class="text-3xl lg:text-4xl font-bold text-primary text-center lg:text-left">
-                A Roster of Creators Aligned With Your Values to Build Relationships and Execute Work That Drives Results
+                A network of value aligned creators that are passionate about a range of causes
               </h2>
 
               <!-- Description -->
               <p class="text-gray-700 text-lg text-center lg:text-left max-w-2xl">
-                Our roster of Creators are vetted and approved so you can focus on nurturing creator partnerships over time to amplify your narrative and drive sustainable impact.
+                Our network of Creators are vetted and approved so you can focus on nurturing creator partnerships over time to amplify your narrative and drive sustainable impact.
               </p>
 
               <!-- Image Grid -->
@@ -241,30 +237,22 @@
             :style="{ transitionDelay: `${i * 100}ms` }"
           >
             <!-- Top Content -->
-            <div class="px-6 py-4 border-b">
-              <span class="inline-block text-xs uppercase tracking-wider text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                {{ card.pill }}
-              </span>
+            <div class="px-6 py-4 ">
+              <div class="flex items-center space-x-2">
+                <!-- dynamically render the heroicon component -->
+                <component :is="card.icon" class="h-6 w-6 text-primary" />
+                <span
+                  class="inline-block text-xs uppercase tracking-wider text-gray-500 bg-gray-100 px-2 py-1 rounded-full"
+                >
+                  {{ card.pill }}
+                </span>
+              </div>
               <h3 class="mt-3 text-xl font-bold text-gray-900">
                 {{ card.title }}
               </h3>
               <p class="mt-2 text-gray-700">
                 {{ card.description }}
               </p>
-            </div>
-
-            <!-- Illustration Placeholder -->
-            <div class="p-8 bg-gray-100 flex items-center justify-center">
-              <img
-                v-if="card.image"
-                :src="card.image"
-                alt=""
-                class="object-cover"
-              >
-              <span
-                v-else
-                class="text-gray-400"
-              >{{ card.imagePlaceholder }}</span>
             </div>
           </div>
         </div>
@@ -347,6 +335,8 @@ import {
   PaperAirplaneIcon,
   ChartBarIcon,
   HeartIcon,
+  LightBulbIcon,
+  SparklesIcon
 } from '@heroicons/vue/24/outline'
 
 // ——————————————————————————
@@ -357,26 +347,22 @@ import {
 import backgroundGradientCircle from '~/assets/images/backgroundgradientcircle.svg'
 
 // impactHighlightImages
-import imgAndrewGovWalz from '~/assets/images/creators/andrewgovwalz.png'
+import trendingUp from '~/assets/images/trendingup.jpeg'
 import imgAmericaCreators from '~/assets/images/creators/americacreators.jpg'
 import imgArianaPalestine from '~/assets/images/creators/arianapalestine.png'
 import imgHaleyDWC from '~/assets/images/creators/haleydwc.png'
 import imgCreatorFilming from '~/assets/images/creators/creatorfilming.jpg'
 
 // ourCreators grid
-import imgAndrewTownsend from '~/assets/images/creators/andrewtownsend.png'
-import imgSylvia from '~/assets/images/creators/sylvia.png'
-import imgYeganeh from '~/assets/images/creators/yeganeh.png'
-import imgKary from '~/assets/images/creators/kary.png'
-import imgABBurns from '~/assets/images/creators/abburns.png'
-import imgBarrie from '~/assets/images/creators/barrie.png'
-
-// expertiseCards
-import imgTeamAbbyEllie from '~/assets/images/team/abbyellie.jpg'
-import imgAccountManagers from '~/assets/images/team/accountmanagers.png'
+import imgAndrewTownsend from '~/assets/images/creators/andrewtownsend.jpg'
+import imgSylvia from '~/assets/images/creators/sylvia.jpg'
+import imgDeja from '~/assets/images/creators/dejafoxx.jpg'
+import imgKary from '~/assets/images/creators/karysantayana.jpg'
+import imgABBurns from '~/assets/images/creators/abburns.jpg'
+import imgSyanne from '~/assets/images/creators/syannebloom.jpg'
 
 // tabs section images
-import imgCreatorDatabase from '~/assets/images/platform/creatordatabase.png'
+import imgCreatorDatabase from '~/assets/images/platform/creatordatabase.jpg'
 import imgProposal from '~/assets/images/platform/proposal.png'
 import imgMessaging from '~/assets/images/platform/messaging.png'
 import imgContentManagement from '~/assets/images/platform/contentmanagement.png'
@@ -400,7 +386,7 @@ const currentImage = computed(() => active.value.image)
 
 const impactHighlightImages = [
   {
-    src: imgAndrewGovWalz,
+    src: trendingUp,
     span: 'col-span-4 row-span-2',
   },
   {
@@ -424,10 +410,10 @@ const impactHighlightImages = [
 const ourCreators = [
   { src: imgAndrewTownsend },
   { src: imgSylvia },
-  { src: imgYeganeh },
+  { src: imgDeja },
   { src: imgKary },
   { src: imgABBurns },
-  { src: imgBarrie },
+  { src: imgSyanne },
 ]
 
 const expertiseCards = [
@@ -437,8 +423,7 @@ const expertiseCards = [
     title: 'An Extension of Your Team',
     description:
       'Think of us as part of your team. From strategy to execution, we handle the heavy lifting to ensure seamless campaigns and measurable success.',
-    imagePlaceholder: 'Team Illustration',
-    image: imgTeamAbbyEllie,
+    icon: UserGroupIcon,
   },
   {
     id: 'strategist',
@@ -446,17 +431,15 @@ const expertiseCards = [
     title: 'A Strategist Just For You',
     description:
       'On existing plans, get a personal Social Currant Strategist to help you build effective campaigns and relationships with Creators.',
-    imagePlaceholder: 'Strategist Illustration',
-    image: imgAccountManagers,
+    icon: LightBulbIcon,
   },
   {
     id: 'dfy',
     pill: 'Done-For-You',
-    title: 'Work Done For You',
+    title: 'Managed Service',
     description:
       'Have a strategist working directly on your campaigns and communicating with Creators on behalf of your organization on our high-end subscription.',
-    imagePlaceholder: 'DFY Illustration',
-    image: imgAccountManagers, 
+    icon: SparklesIcon,
   },
 ]
 
@@ -504,8 +487,8 @@ const tabs = [
 ]
 
 const impactMetrics = [
-  { icon: EyeIcon, value: '350M', label: 'Views' },
-  { icon: HeartIcon, value: '30.6M', label: 'Engagements' },
+  { icon: EyeIcon, value: '350M+', label: 'Views' },
+  { icon: HeartIcon, value: '30.6M+', label: 'Engagements' },
   { icon: ChartBarIcon, value: '8.6%', label: 'Avg Engagement' },
   { icon: DocumentTextIcon, value: '4000+', label: 'Content Pieces' },
 ]
@@ -573,16 +556,16 @@ const stats = [
     label: 'of 18–29 year-olds get news from social media',
   },
   {
-    number: '37%',
-    label: 'of 18–29 year-olds regularly get news from creators',
+    number: '54%',
+    label: 'of all Americans access news via social media & video networks',
   },
   {
-    number: '21%',
-    label: 'of all Americans regularly get news from creators',
+    number: '72%',
+    label: 'of Americans consume news video weekly on social platforms',
   },
   {
-    number: '68%',
-    label: 'of TikTok consumers get news from creators',
+    number: '6',
+    label: 'social platforms with weekly news reach ≥ 10% (Facebook, YouTube, Instagram, WhatsApp, X, TikTok)',
   },
   {
     number: '#1',
@@ -598,3 +581,4 @@ const stats = [
 <style scoped lang="scss">
 /* styles */
 </style>
+  
