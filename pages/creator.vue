@@ -12,7 +12,7 @@
         <div class="relative flex items-center w-full max-w-screen-xl h-[422px] lg:h-[570px] p-8 lg:p-0">
           <div class="relative flex flex-col justify-center items-center p-8 bg-[#2565F4] rounded-[20px] mx-auto">
             <h1 class="text-5xl lg:text-[180px]  font-extrabold text-white text-center">
-              2+ Million
+              9+ Million
             </h1>
             <p class=" text-3xl lg:text-[60px] font-medium text-white text-center mt-8">
               Total paid out to creators

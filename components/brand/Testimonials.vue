@@ -4,14 +4,13 @@
     class="py-20 py-20"
   >
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-24 text-primary">
-        What Organizations Are Saying
+      <h2 class="text-4xl font-bold text-center mb-24 text-primary">
+        What Our Network Is Saying
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
           v-for="(t,i) in testimonials"
           :key="i"
-          v-motion-fade-in-step
           class="relative bg-white rounded-lg border border-purple p-6 pt-16 shadow-lg"
         >
           <!-- Avatar -->
@@ -43,22 +42,22 @@
 
 const testimonials = [
 {
-  image: '/assets/images/team/will.jpeg',
-  quote: 'Working with Social Currant has been a game‑changer for our brand. Their platform seamlessly connects us with top‑notch creators who perfectly align with our values. Highly recommend!',
-  name: 'Noah Fisher',
-  role: 'Creator Relations Manager'
+  image: '/assets/images/testimonials/mikka.jpeg',
+  quote: 'I cannot speak highly enough about Social Currant. Watching them grow, perfect their craft, and push our campaigns to impact more people across the country has been nothing short of inspiring. Their team is what the future of political change looks like: fearlessly creative, compassionate, and egoless strategy that prioritizes the creators.',
+  name: 'Mikka Kei Macdonald',
+  role: 'Creative Director - Community Change'
 },
 {
-  image: '/assets/images/team/ashwath.png',
-  quote: 'Partnering with Social Currant boosted our campaign engagement by 45%. The streamlined dashboard made it so easy!',
-  name: 'Jordan Smith',
-  role: 'Marketing Director'
+  image: '/assets/images/testimonials/chezik.jpeg',
+  quote: 'We are deeply grateful to Social Currant for helping us spread awareness and reach new audiences through thoughtful influencer partnerships. Their team brought creativity, flexibility, and deep expertise to the process. They truly made the process seamless, which allowed us to stay focused on our mission,  message, and impact',
+  name: 'Chezik Tsunoda',
+  role: 'Founder - No More Under'
 },
 {
-  image: '/assets/images/team/jasmine.png',
-  quote: 'The proposal tools and metrics dashboard gave us the confidence to scale our influencer efforts efficiently.',
-  name: 'Samuel Lee',
-  role: 'Campaign Lead'
+  image: '/assets/images/testimonials/lauren.jpeg',
+  quote: 'As political and/or climate creators, we have a responsibility not just to educate our communities about what is happening, but to direct them toward tangible ways they can take action. In moments of crisis, many people want to help but do not know how. By partnering with Social Currant, we can make this invitation for action seamless and obvious.',
+  name: 'Lauren Bash',
+  role: 'Creator'
 }
 ]
 

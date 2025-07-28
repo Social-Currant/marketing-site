@@ -79,7 +79,7 @@ const router = useRouter();
 
 const headerLinks = [
   {
-    text: "Brand",
+    text: "Organizations",
     navigateTo: '/',
   },
   {
@@ -87,7 +87,7 @@ const headerLinks = [
     navigateTo: '/creator',
   },
   {
-    text: "About Us",
+    text: "About",
     navigateTo: '/about-us',
   },
   {
@@ -99,7 +99,7 @@ const headerLinks = [
     navigateTo: '/blog',
   },
   {
-    text: "Contact Us",
+    text: "Contact",
     navigateTo: '/get-in-touch',
   },
 ];
