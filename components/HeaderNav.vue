@@ -8,12 +8,10 @@
       <div class="grow text-center">
         <p class="font-semibold text-white text-base sm:text-xl">
           <NuxtLink
-            to="/social-currant-university"
+            to="/book-a-demo"
             class="underline text-secondary cursor-pointer"
-          >
-            Sign up
-          </NuxtLink>
-          for our NEW and EXCLUSIVE Creator Accelerator Program to build relationships with Creators
+          >Book a Demo</NuxtLink>
+          today and start partnering with top content creators to amplify your mission and drive narrative change
         </p>
       </div>
       <!-- <div class="flex-none hidden lg:block">

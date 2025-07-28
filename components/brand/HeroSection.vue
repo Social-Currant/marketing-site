@@ -32,7 +32,7 @@
           to="/get-in-touch"
           class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
           >
-              {{ pageData.fields.buttonText2 }}
+            {{ pageData.fields.buttonText2 }}
           </NuxtLink>
         </div>
       </div>
