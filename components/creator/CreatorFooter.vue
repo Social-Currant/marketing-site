@@ -4,7 +4,6 @@
     class="bg-primary text-white min-h-full relative mt-84"
   >
     <div class="container mx-auto px-6 md:px-8 mt-16 pt-24 text-center md:text-left">
-
       <h4 class="text-[32px] md:text-3xl lg:w-3/4 font-semibold text-left">
         Stay updated on how you can use your platform for social impact.
       </h4>

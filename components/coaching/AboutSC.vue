@@ -10,8 +10,8 @@
           {{ pageData.fields.title }}
         </h3>
         <div
-        class="SC-text"
-        v-html="renderedParagraph"
+          class="SC-text"
+          v-html="renderedParagraph"
         />
       </div>
     </div>

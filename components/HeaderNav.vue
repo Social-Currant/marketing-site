@@ -31,7 +31,7 @@
           @click="navigateTo('/')"
         >
       </h1>
-            <div class="flex nav-links hidden lg:block headerLink font-semibold">
+      <div class="flex nav-links hidden lg:block headerLink font-semibold">
         <a
           v-for="link in headerLinks"
           :key="link.scrollTo + `-link`"
@@ -77,7 +77,7 @@ const router = useRouter();
 
 const headerLinks = [
   {
-    text: "Brand",
+    text: "Organizations",
     navigateTo: '/',
   },
   {
@@ -85,7 +85,7 @@ const headerLinks = [
     navigateTo: '/creator',
   },
   {
-    text: "About Us",
+    text: "About",
     navigateTo: '/about-us',
   },
   {
@@ -97,7 +97,7 @@ const headerLinks = [
     navigateTo: '/blog',
   },
   {
-    text: "Contact Us",
+    text: "Contact",
     navigateTo: '/get-in-touch',
   },
 ];

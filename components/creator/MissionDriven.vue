@@ -1,18 +1,42 @@
 <template>
-   <!-- Mission Driven -->
+  <!-- Mission Driven -->
   <section class="container mx-auto">
-    <span class=" text-3xl lg:text-5xl font-semibold text-primary text-center block">MISSION DRIVEN</span>
+    <!-- <span class=" text-3xl lg:text-5xl font-semibold text-primary text-center block">MISSION DRIVEN</span> -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 lg:mt-24 max-w-fit ml-auto mr-auto">
-      <div v-for="(item, index) in columnOne" :key="'col1-' + index" class="flex items-center gap-2">
-        <img class="w-fit" src="~/assets/images/green-check.png" alt="Green check">
+      <div
+        v-for="(item, index) in columnOne"
+        :key="'col1-' + index"
+        class="flex items-center gap-2"
+      >
+        <img
+          class="w-fit"
+          src="~/assets/images/green-check.png"
+          alt="Green check"
+        >
         <span class="text-2xl">{{ item }}</span>
       </div>
-      <div v-for="(item, index) in columnTwo" :key="'col2-' + index" class="flex items-center gap-2">
-        <img class="w-fit" src="~/assets/images/green-check.png" alt="Green check">
+      <div
+        v-for="(item, index) in columnTwo"
+        :key="'col2-' + index"
+        class="flex items-center gap-2"
+      >
+        <img
+          class="w-fit"
+          src="~/assets/images/green-check.png"
+          alt="Green check"
+        >
         <span class="text-2xl">{{ item }}</span>
       </div>
-      <div v-for="(item, index) in columnThree" :key="'col3-' + index" class="flex items-center gap-2">
-        <img class="w-fit" src="~/assets/images/green-check.png" alt="Green check">
+      <div
+        v-for="(item, index) in columnThree"
+        :key="'col3-' + index"
+        class="flex items-center gap-2"
+      >
+        <img
+          class="w-fit"
+          src="~/assets/images/green-check.png"
+          alt="Green check"
+        >
         <span class="text-2xl">{{ item }}</span>
       </div>
     </div>

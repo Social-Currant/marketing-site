@@ -1,37 +1,78 @@
 <template>
-   <!-- Testimonial -->
- <section class="container mx-auto px-4 mt-40">
+  <!-- Testimonial -->
+  <section class="container mx-auto px-4 mt-40">
     <div :class="{'flex items-center justify-between': pageData.items.length > 3, 'flex items-center justify-center': pageData.items.length <= 3}">
       <!-- Left arrow -->
-      <div v-if="pageData.items.length > 3" @click="prevPage">
-        <img src="~/assets/icons/left-arrow.svg" class="mx-auto hidden lg:block cursor-pointer">
-        <img src="~/assets/icons/left-arrow-small.svg" class="mx-auto block lg:hidden cursor-pointer">
+      <div
+        v-if="pageData.items.length > 3"
+        @click="prevPage"
+      >
+        <img
+          src="~/assets/icons/left-arrow.svg"
+          class="mx-auto hidden lg:block cursor-pointer"
+        >
+        <img
+          src="~/assets/icons/left-arrow-small.svg"
+          class="mx-auto block lg:hidden cursor-pointer"
+        >
       </div>
       <span class="text-3xl lg:text-5xl font-semibold text-primary text-center block">TESTIMONIALS</span>
       <!-- Right arrow -->
-      <div v-if="pageData.items.length > 3" @click="nextPage">
-        <img src="~/assets/icons/right-arrow.svg" class="mx-auto hidden lg:block cursor-pointer">
-        <img src="~/assets/icons/right-arrow-small.svg" class="mx-auto block lg:hidden cursor-pointer">
+      <div
+        v-if="pageData.items.length > 3"
+        @click="nextPage"
+      >
+        <img
+          src="~/assets/icons/right-arrow.svg"
+          class="mx-auto hidden lg:block cursor-pointer"
+        >
+        <img
+          src="~/assets/icons/right-arrow-small.svg"
+          class="mx-auto block lg:hidden cursor-pointer"
+        >
       </div>
     </div>
-    <transition name="fade" mode="out-in">
-      <div v-if="showCards" :key="currentPage" class="container mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-6 mt-24">
-        <div v-for="(card, index) in paginatedCards" :key="card.name + index" class="card-container mt-24">
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <div
+        v-if="showCards"
+        :key="currentPage"
+        class="container mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-6 mt-24"
+      >
+        <div
+          v-for="(card, index) in paginatedCards"
+          :key="card.name + index"
+          class="card-container mt-24"
+        >
           <div class="relative profile-image-container">
-            <img class="profile-image" :src="card.image" alt="Profile Image">
+            <img
+              class="profile-image"
+              :src="card.image"
+              alt="Profile Image"
+            >
           </div>
-          <p class="text-center mt-20">{{ card.testimonial }}</p>
+          <p class="text-center mt-20">
+            {{ card.testimonial }}
+          </p>
           <div class="flex flex-col items-center">
             <span class="font-bold text-primary">{{ card.name }}</span>
-            <NuxtLink class="font-semibold" target="_blank" :to="card.linkToSocialMedia"> {{ card.role }}</NuxtLink>
+            <NuxtLink
+              class="font-semibold"
+              target="_blank"
+              :to="card.linkToSocialMedia"
+            >
+              {{ card.role }}
+            </NuxtLink>
           </div>
         </div>
       </div>
     </transition>
-</section>
+  </section>
 </template>
 
-<script setup >
+<script setup>
 
 const { $contentfulClient } = useNuxtApp()
 const pendingPage = ref(true)

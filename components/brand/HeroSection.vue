@@ -1,5 +1,4 @@
 <template>
-  <!-- Section First Impression -->
   <section
     class="container mx-auto px-6 md:px-8 mt-16"
   >
@@ -23,19 +22,18 @@
           {{ pageData.fields.subtitle }}
         </p>
         <div class="justify-center lg:justify-start flex items-center mt-[32px]">
-          <button
-          class="text-base px-3 py-2 rounded-lg bg-secondary text-white hover-button-blue sm:text-xl sm:py-1.5 sm:px-3"
-          @click="navigateTo('/book-a-demo/')"
-        >
-          {{ pageData.fields.buttonText1 }}
-        </button>
-        <NuxtLink to='/get-in-touch'>
-          <div
-            class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
+          <NuxtLink
+          to="/book-a-demo"
+          class="inline-block text-base px-3 py-2 rounded-lg bg-secondary text-white hover:bg-[#4780ff] cursor-pointer sm:text-xl sm:py-1.5 sm:px-3"
+          >
+            {{ pageData.fields.buttonText1 }}
+          </NuxtLink>
+          <NuxtLink 
+          to="/get-in-touch"
+          class="text-base px-3 py-2 rounded-lg border-2 border-primary text-primary mx-2 cursor-pointer hover:bg-primary hover:text-white sm:text-xl sm:py-1.5 sm:px-3"
           >
             {{ pageData.fields.buttonText2 }}
-          </div>
-        </NuxtLink>
+          </NuxtLink>
         </div>
       </div>
     </div>
