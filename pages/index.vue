@@ -449,7 +449,7 @@ const tabs = [
     icon: UserGroupIcon,
     image: imgCreatorDatabase,
     description:
-      'Browse & filter thousands of creators by cause, platform & demographics—and receive inbound pitches on your open campaigns.',
+      'Browse & filter hundreds of vetted creators by cause, platform & demographics—and receive inbound pitches on your open campaigns.',
   },
   {
     id: 'proposals',
