@@ -14,13 +14,10 @@
           today and start partnering with top content creators to amplify your mission and drive narrative change
         </p>
       </div>
-      <!-- <div class="flex-none hidden lg:block">
-        <img src="~/assets/icons/close.svg" />
-      </div> -->
     </div>
   </div>
   <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
-    <div class="container mx-auto px-6 md:px-8 flex items-center bg-white z-50">
+    <div class="container mx-auto px-6 md:px-4 flex items-center bg-white z-50">
       <h1
         class="grow"
         :class="headerOverlay ? `blur-sm` : ``"
