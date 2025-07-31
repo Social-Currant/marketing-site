@@ -86,10 +86,6 @@ const headerLinks = [
     navigateTo: '/about-us',
   },
   {
-    text: "Plans",
-    navigateTo: '/plans',
-  },
-  {
     text: "Blog",
     navigateTo: '/blog',
   },
