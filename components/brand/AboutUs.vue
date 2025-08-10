@@ -33,10 +33,6 @@
       style="margin-top: 0; padding: 0;"
       :content="pageData.fields.paragraph"
     />
-    
-    <h4 class="uppercase text-primary text-center font-semibold mb-6 lg:mb-8 mt-12 lg:mt-14 text-[32px] lg:text-[50px] leading-tight">
-      {{ pageData.fields.team }}
-    </h4>
    
     <!-- mobile version of meet the team with carousel -->
     <div class="block lg:hidden">
@@ -60,51 +56,6 @@
           </p>
         </div>
       </div>
-    </div>
-   
-    <!-- First Row - Team Members -->
-    <div class="flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-4 hidden lg:flex">
-      <div
-        v-for="team in teamFirstRow"
-        :key="`team-` + team.name"
-        class="mb-5"
-      >
-        <div class="w-40 h-40 mx-auto">
-          <img
-            class="w-full h-full object-cover rounded-full mx-auto mb-8 sm:mb-5"
-            :src="team.image"
-          >
-        </div>
-        <h6 class="text-center text-primary text-xl mt-4 mb-1 font-semibold">
-          {{ team.name }}
-        </h6>
-        <p class="text-black text-center">
-          {{ team.desc }}
-        </p>
-      </div>
-    </div>
-    <!-- Second Row - Team Members -->
-    <div class="flex-wrap lg:flex-nowrap justify-center items-center lg:justify-between hidden lg:flex">
-      <div />
-      <div
-        v-for="team in teamSecondRow"
-        :key="`team-` + team.name"
-        class="mb-5 mx-2"
-      >
-        <div class="w-40 h-40 mx-auto">
-          <img
-            class="w-full h-full object-cover rounded-full mx-auto"
-            :src="team.image"
-          >
-        </div>
-        <h6 class="text-center text-primary font-bold text-xl mt-4 mb-1 font-semibold">
-          {{ team.name }}
-        </h6>
-        <p class="text-black text-center">
-          {{ team.desc }}
-        </p>
-      </div>
-      <div />
     </div>
   </section>
 </template>

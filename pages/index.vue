@@ -137,7 +137,7 @@
           to="/book-a-demo"
           class="inline-block text-base px-3 py-2 rounded-lg bg-secondary text-white hover:bg-[#4780ff] cursor-pointer sm:text-xl sm:py-1.5 sm:px-3"
           >
-            Book a Demo
+            Talk to an Expert
           </NuxtLink>
         </div>
       </section>
@@ -223,7 +223,7 @@
           to="/book-a-demo"
           class="inline-block text-base px-3 py-2 rounded-lg bg-secondary text-white hover:bg-[#4780ff] cursor-pointer sm:text-xl sm:py-1.5 sm:px-3 sm:mt-8 lg:mt-0"
           >
-            Book a Demo
+            Talk to an Expert
           </NuxtLink>
         </div>
 

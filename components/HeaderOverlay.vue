@@ -35,7 +35,7 @@
           class="mx-8 bg-secondary text-white py-1.5 px-3 rounded-lg text-lg whitespace-nowrap"
           @click="navigateToLink('/book-a-demo')"
         >
-          Book a Demo
+          Talk to an Expert
         </div>
       </div>
       <div>
