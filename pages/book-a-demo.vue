@@ -97,6 +97,7 @@
           <div>
             <label>Where did you hear about us?</label>
             <select name="Referral">
+              <option value="" selected>Select one</option>
               <option value="Conference/Event">
                 Conference or Event
               </option>
@@ -113,7 +114,8 @@
           </div>
           <div>
             <label>What is your estimated budget?</label>
-            <select name="Referral">
+            <select name="Budget">
+              <option value="" selected>Select one</option>
               <option value="0-10k">
                 $0-$10,000
               </option>
