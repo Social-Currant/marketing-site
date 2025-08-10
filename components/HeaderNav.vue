@@ -10,7 +10,7 @@
           <NuxtLink
             to="/book-a-demo"
             class="underline text-secondary cursor-pointer"
-          >Book a Demo</NuxtLink>
+          >Talk to an expert</NuxtLink>
           today and start partnering with top content creators to amplify your mission and drive narrative change
         </p>
       </div>

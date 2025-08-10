@@ -4,7 +4,7 @@
     <div class="container mx-auto mt-16 flex flex-wrap lg:flex-nowrap justify-center mb-24 md:mb-0">
       <div class="mx-6">
         <h1 class="mb-4 font-poppins text-4xl font-semibold leading-8 text-[#30104C]">
-          Book a Tailored Demo
+          Talk to an Expert
         </h1>
         
         <p class="paragraph mb-6">
@@ -86,26 +86,6 @@
               required
             >
           </div>
-          <!-- <div>
-            <label>Organization Type</label>
-            <select name="OrganizationType">
-              <option value="Startup">
-                Startup
-              </option>
-              <option value="Political Org">
-                Political Org
-              </option>
-              <option value="Non-Profit">
-                Non-Profit
-              </option>
-              <option value="Enterprise">
-                Enterprise
-              </option>
-              <option value="Other">
-                Other
-              </option>
-            </select>
-          </div> -->
           <div>
             <label>Phone Number</label>
             <input
@@ -113,6 +93,43 @@
               type="text"
               placeholder=""
             >
+          </div>
+          <div>
+            <label>Where did you hear about us?</label>
+            <select name="Referral">
+              <option value="Conference/Event">
+                Conference or Event
+              </option>
+              <option value="Search">
+                Online Search
+              </option>
+              <option value="Social Media">
+                Social Media
+              </option>
+              <option value="Other">
+                Other
+              </option>
+            </select>
+          </div>
+          <div>
+            <label>What is your estimated budget?</label>
+            <select name="Referral">
+              <option value="0-10k">
+                $0-$10,000
+              </option>
+              <option value="10-25k">
+                $10,000-$25,000
+              </option>
+              <option value="25-50k">
+                $25,000-$50,000
+              </option>
+              <option value="50-100k">
+                $50,000-$100,000
+              </option>
+              <option value="100k or more">
+                $100,000 or more
+              </option>
+            </select>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
