@@ -19,7 +19,7 @@
   <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
     <div class="container mx-auto px-6 md:px-4 flex items-center bg-white z-50">
       <h1
-        class="grow w-fit"
+        class="grow"
         :class="headerOverlay ? `blur-sm` : ``"
       >
         <img
