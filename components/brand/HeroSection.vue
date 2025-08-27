@@ -1,6 +1,6 @@
 <template>
   <section
-    class="container mx-auto px-6 md:px-8 mt-16"
+    class="container mx-auto px-4 mt-16"
   >
     <div class="grid lg:grid-cols-2 m-auto">
       <div class="lg:order-last">

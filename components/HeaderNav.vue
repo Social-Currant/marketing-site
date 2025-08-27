@@ -23,8 +23,8 @@
         :class="headerOverlay ? `blur-sm` : ``"
       >
         <img
-          src="~/assets/images/currant-logo.svg"
-          class="cursor-pointer"
+          src="~/assets/images/socialcurrantlogo.webp"
+          class="h-10 md:h-12 lg:h-16 mb-2 w-auto block cursor-pointer"
           @click="navigateTo('/')"
         >
       </h1>
