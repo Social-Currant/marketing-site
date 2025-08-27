@@ -19,12 +19,12 @@
   <header class="mt-[16px] lg:mt-[54px] sticky top-0 bg-white z-50">
     <div class="container mx-auto px-6 md:px-4 flex items-center bg-white z-50">
       <h1
-        class="grow"
+        class="grow w-fit"
         :class="headerOverlay ? `blur-sm` : ``"
       >
         <img
-          src="~/assets/images/currant-logo.svg"
-          class="cursor-pointer"
+          src="~/assets/images/socialcurrantlogo.webp"
+          class="h-10 md:h-12 lg:h-16 mb-2 w-auto block cursor-pointer"
           @click="navigateTo('/')"
         >
       </h1>
