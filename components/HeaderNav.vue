@@ -6,12 +6,13 @@
   >
     <div class="container mx-auto px-4 h-full flex items-center">
       <div class="grow text-center">
-        <p class="font-semibold text-white text-base sm:text-xl">
-          <NuxtLink
-            to="/book-a-demo"
+        <p class="font-semibold text-white text-base sm:text-lg text-sm">
+          <a
+            href="https://docsend.com/view/75asdrjpkv5kt44t"
             class="underline text-secondary cursor-pointer"
-          >Talk to an expert</NuxtLink>
-          today and start partnering with top content creators to amplify your mission and drive narrative change
+            target="_blank"
+          >Download Our 2025 Impact Report</a>
+          to explore the key trends, insights, and outcomes shaping the creator economy.
         </p>
       </div>
     </div>
