@@ -11,7 +11,7 @@
             href="https://docsend.com/view/75asdrjpkv5kt44t"
             class="underline text-secondary cursor-pointer"
             target="_blank"
-          >Download Our 2025 Impact Report</a>
+          >Check out our 2025 Impact Report</a>
           to explore the key trends, insights, and outcomes shaping the creator economy.
         </p>
       </div>
